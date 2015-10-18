@@ -229,3 +229,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.tlog
+*.pyc
+*.exp
+*.iobj
+*.ipdb
