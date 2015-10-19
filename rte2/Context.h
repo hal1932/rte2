@@ -7,7 +7,7 @@ namespace rte
 
 	class Node;
 
-	class Context
+	class Context : noncopyable, nonmovable
 	{
 	public:
 		Context();

@@ -9,7 +9,7 @@ namespace rte {
 
 	class NodeBase;
 
-	class NodeDictionary RTE_FINAL
+	class NodeDictionary RTE_FINAL : noncopyable, nonmovable
 	{
 	public:
 		NodeDictionary() = default;

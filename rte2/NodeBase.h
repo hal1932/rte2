@@ -10,7 +10,7 @@ namespace rte
 
 	class Context;
 
-	class NodeBase
+	class NodeBase : noncopyable, nonmovable
 	{
 	public:
 		NodeBase(const std::string& name, NodeBase* pParent);

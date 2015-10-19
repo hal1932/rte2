@@ -40,6 +40,21 @@ namespace rte {
 		Unknown,
 	};
 
+	class noncopyable
+	{
+	public:
+		noncopyable() = default;
+		noncopyable(const noncopyable&) = delete;
+		noncopyable& operator=(const noncopyable&) = delete;
+	};
+
+	class nonmovable
+	{
+	public:
+		nonmovable() = default;
+		nonmovable(nonmovable&&) = delete;
+	};
+
 	namespace log {
 		inline void info_(const char* function, const std::string& msg)
 		{
@@ -214,14 +229,14 @@ namespace rte {
 				++trimEnd;
 			}
 
-			return str.substr(trimBegin, str.length() - (trimBegin + trimEnd));
+			return std::move(str.substr(trimBegin, str.length() - (trimBegin + trimEnd)));
 		}
 
 		inline std::string trim1(const std::string& str, char trimChar = ' ')
 		{
 			const int trimBegin = (*str.begin() == trimChar) ? 1 : 0;
 			const int trimEnd = (str.length() > 1 && *str.rbegin() == trimChar) ? 1 : 0;
-			return str.substr(trimBegin, str.length() - (trimBegin + trimEnd));
+			return std::move(str.substr(trimBegin, str.length() - (trimBegin + trimEnd)));
 		}
 
 		inline void split(std::vector<std::string>* pOut, const std::string& str, char delimiter)
@@ -236,10 +251,10 @@ namespace rte {
 				{
 					break;
 				}
-				pOut->push_back(str.substr(current, next));
+				pOut->emplace_back(str.substr(current, next));
 				current = next + 1;
 			}
-			pOut->push_back(str.substr(current));
+			pOut->emplace_back(str.substr(current));
 		}
 
 		inline void join(std::string* pOut, const std::vector<std::string> strList, char delimiter)
@@ -272,9 +287,9 @@ namespace rte {
 			assert(result.length() != 0);
 			if (*result.rbegin() == '/')
 			{
-				result = result.substr(0, result.length() - 1);
+				result = std::move(result.substr(0, result.length() - 1));
 			}
-			return result;
+			return std::move(result);
 		}
 
 		inline bool exista(const std::string& path)
@@ -312,7 +327,7 @@ namespace rte {
 
 			if (index != std::string::npos)
 			{
-				return path.substr(index + 1);
+				return std::move(path.substr(index + 1));
 			}
 			return path;
 		}
@@ -325,7 +340,7 @@ namespace rte {
 				index = path.find_last_of('\\');
 			}
 			assert(index != std::string::npos);
-			return path.substr(0, index);
+			return std::move(path.substr(0, index));
 		}
 
 		inline std::string combine(const std::string& lhs, const std::string& rhs)
@@ -337,14 +352,14 @@ namespace rte {
 			if (rhs.length() == 0)
 			{
 				assert(lhs.length() > 0);
-				return (*lhs.rbegin() == '/') ? lhs.substr(0, rhs.length() - 1) : lhs;
+				return (*lhs.rbegin() == '/') ? std::move(lhs.substr(0, rhs.length() - 1)) : lhs;
 			}
 
 			assert(lhs.length() > 0);
 			assert(rhs.length() > 0);
-			std::string l = (*lhs.rbegin() != '/') ? lhs + '/' : lhs;
-			std::string r = (*rhs.begin() == '/') ? rhs.substr(1, rhs.length() - 1) : rhs;
-			return l + r;
+			std::string l = (*lhs.rbegin() != '/') ? std::move(lhs + '/') : lhs;
+			std::string r = (*rhs.begin() == '/') ? std::move(rhs.substr(1, rhs.length() - 1)) : rhs;
+			return std::move(l + r);
 		}
 	}// namespace path
 
@@ -367,12 +382,12 @@ namespace rte {
 
 			LocalFree(msg);
 
-			return string::trim(result);
+			return std::move(string::trim(result));
 		}
 
 		inline std::string formatLastError()
 		{
-			return formatError(GetLastError());
+			return std::move(formatError(GetLastError()));
 		}
 
 	}// namespace win32

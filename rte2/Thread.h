@@ -6,15 +6,11 @@ namespace rte {
 
 	// SWIGでC++11のスレッド系APIが使えないから、勉強も兼ねてそれっぽいのを自前で用意する
 
-	class Thread RTE_FINAL
+	class Thread RTE_FINAL : noncopyable, nonmovable
 	{
 	public:
 		Thread();
 		~Thread();
-
-		Thread(Thread&) = delete;
-		Thread(Thread&&) = delete;
-		Thread& operator=(Thread&) = delete;
 
 		void start(std::function<void(void*)> threadFunc, void* arg = nullptr);
 		void join();
@@ -30,39 +26,34 @@ namespace rte {
 		Mutex();
 		~Mutex() = default;
 
-		Mutex(Mutex&) = delete;
-		Mutex(Mutex&&) = delete;
-		Mutex& operator=(Mutex&) = delete;
+		Mutex(const Mutex&) = default;
+		Mutex(Mutex&&) = default;
+		Mutex& operator=(const Mutex&) = default;
 
 		void lock();
 		bool tryLock();
 		void unlock();
 	};
 
-	class UniqueLock RTE_FINAL
+	class UniqueLock RTE_FINAL : nonmovable
 	{
 	public:
 		UniqueLock(Mutex& mutex) : mMutex(mutex) { mMutex.lock(); }
 		~UniqueLock() { mMutex.unlock(); }
 
 		UniqueLock() = delete;
-		UniqueLock(UniqueLock&) = delete;
-		UniqueLock(UniqueLock&&) = delete;
-		UniqueLock& operator=(UniqueLock&) = delete;
+		UniqueLock(const UniqueLock&) = default;
+		UniqueLock& operator=(const UniqueLock&) = default;
 
 	private:
 		Mutex& mMutex;
 	};
 
-	class ConditionVariable RTE_FINAL
+	class ConditionVariable RTE_FINAL : noncopyable, nonmovable
 	{
 	public:
 		ConditionVariable() = default;
 		~ConditionVariable() = default;
-
-		ConditionVariable(ConditionVariable&) = delete;
-		ConditionVariable(ConditionVariable&&) = delete;
-		ConditionVariable& operator=(ConditionVariable&) = delete;
 
 		void notifyOne();
 		void notifyAll();

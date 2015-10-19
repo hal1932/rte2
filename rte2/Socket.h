@@ -3,7 +3,7 @@
 
 namespace rte {
 
-	class Socket RTE_FINAL
+	class Socket RTE_FINAL : noncopyable, nonmovable
 	{
 	public:
 		enum class ProtocolType : uint8_t
@@ -15,10 +15,6 @@ namespace rte {
 	public:
 		Socket();
 		~Socket() = default;
-
-		Socket(Socket&) = delete;
-		Socket(Socket&&) = delete;
-		Socket& operator=(Socket&) = delete;
 
 		static bool setup();
 		static void shutdown();

@@ -117,7 +117,7 @@ namespace rte {
 #ifdef _SWIG_PY
 				result.push_back(new Node(path::basename(path), nullptr));
 #else
-				result.push_back(std::move(std::unique_ptr<Node>(new Node(path::basename(path), nullptr))));
+				result.emplace_back(std::unique_ptr<Node>(new Node(path::basename(path), nullptr)));
 #endif
 			}
 			else
@@ -130,7 +130,7 @@ namespace rte {
 #ifdef _SWIG_PY
 						result.push_back(new Node(path::basename(path), pNode));
 #else
-						result.push_back(std::move(std::unique_ptr<Node>(new Node(path::basename(path), pNode.get()))));
+						result.emplace_back(std::unique_ptr<Node>(new Node(path::basename(path), pNode.get())));
 #endif
 						foundParent = true;
 						break;
@@ -213,7 +213,7 @@ namespace rte {
 
 	void NodeNameListCommand::add(const Node* pNode)
 	{
-		mPathList.push_back(pNode->getPath());
+		mPathList.emplace_back(pNode->getPath());
 	}
 
 	/*------------------------------------------------------------------*/

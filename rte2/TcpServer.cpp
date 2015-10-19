@@ -179,7 +179,7 @@ namespace rte {
 		for (auto client : mClientThreadDic)
 		{
 			auto id = socketToId(client.first);
-			result.push_back(send(id, buffer, bufferSize));
+			result.emplace_back(send(id, buffer, bufferSize));
 		}
 		return std::move(result);
 	}

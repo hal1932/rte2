@@ -7,7 +7,7 @@ namespace rte {
 
 	class Socket;
 
-	class TcpServer RTE_FINAL
+	class TcpServer RTE_FINAL : noncopyable, nonmovable
 	{
 	public:
 		typedef void (*OnAcceptClient)(int id);
@@ -32,9 +32,6 @@ namespace rte {
 	public:
 		TcpServer();
 		~TcpServer();
-
-		TcpServer(TcpServer&) = delete;
-		TcpServer& operator=(TcpServer&) = delete;
 
 		bool configure(const Config& config);
 
