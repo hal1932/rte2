@@ -59,7 +59,7 @@ namespace rte {
 		void notifyAll();
 
 		void wait(UniqueLock& lock);
-		void waitFor(UniqueLock& lock, int timeoutMilliSeconds, std::function<void()> pred);
+		void wait(UniqueLock& lock, std::function<void(void)> pred);
 	};
 
 }// namespace rte

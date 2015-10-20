@@ -3,6 +3,7 @@
 #include <algorithm>
 
 namespace {
+
 	int socketToId(rte::Socket* pSocket)
 	{
 		return reinterpret_cast<int>(pSocket);
@@ -12,6 +13,8 @@ namespace {
 	{
 		return reinterpret_cast<rte::Socket*>(id);
 	}
+
+	static const int cThreadPollingInterval = 10;
 }
 
 namespace rte {
@@ -23,7 +26,7 @@ namespace rte {
 	TcpServer::~TcpServer()
 	{
 		assert(!mAcceptThread.isAlive());
-		assert(mClientThreadDic.size() == 0);
+		assert(mClientDic.size() == 0);
 
 		mem::safeDelete(&mpSocket);
 	}
@@ -33,7 +36,6 @@ namespace rte {
 		assert(mpSocket == nullptr);
 
 		mConfig = config;
-		mNextPort = config.portBegin;
 
 		mpSocket = new Socket();
 		if (!mpSocket->configure(Socket::ProtocolType::Tcp))
@@ -60,84 +62,9 @@ namespace rte {
 			return false;
 		}
 
-		// TODO: 排他処理
-
-		// クライアント受付スレッド起動
-		mAcceptThread.start([this](void*)
-		{
-			auto pClient = new Socket();
-			while (true)
-			{
-				auto result = mpSocket->accept(pClient);
-				if (result == TriBool::True)
-				{
-					// クライアント受付コールバック
-					auto clientId = socketToId(pClient);
-					mConfig.onAcceptClient(clientId);
-
-					// データ受信スレッド起動
-					auto pClientThraed = new Thread();
-					pClientThraed->start([this, pClient, clientId](void*)
-					{
-						const int bufferSize = 1024;
-						mem::SafeArray<uint8_t> buffer(bufferSize);
-
-						while (true)
-						{
-							// 停止リクエストをチェック
-							auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
-							if (closeRequest != mCloseRequestList.end())
-							{
-								mCloseRequestList.erase(closeRequest);
-								break;
-							}
-
-							// データ受信
-							auto recvBytes = pClient->recv(buffer.get(), buffer.size());
-							if (recvBytes > 0)
-							{
-								buffer.resize(recvBytes);
-
-								// キューが空になるまで受信
-								mem::SafeArray<uint8_t> tmp(bufferSize);
-								while (pClient->getAvailabieSize() > 0)
-								{
-									recvBytes = pClient->recv(tmp.get(), tmp.size());
-									if (recvBytes > 0)
-									{
-										tmp.resize(recvBytes);
-										buffer.append(tmp.get(), tmp.size());
-									}
-								}
-
-								// 受信コールバック
-								mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
-							}
-							else if (recvBytes == 0)
-							{
-								// 何もしない
-							}
-							else
-							{
-								// エラー
-								logError("receiving from client failed");
-								closeConnection(clientId);
-								break;
-							}
-
-							Sleep(1);// スレッド切り替えタイミング
-						}
-					});
-
-					mClientThreadDic[pClient] = pClientThraed;
-					pClient = new Socket();
-				}
-
-				Sleep(1);// スレッド切り替えタイミング
-			}
-
-			mem::safeDelete(&pClient);
-		});
+		mIsClosed = false;
+		mAcceptThread.start(std::bind(&TcpServer::acceptThread_, this, std::placeholders::_1));
+		mSendThread.start(std::bind(&TcpServer::sendThread_, this, std::placeholders::_1));
 
 		return true;
 	}
@@ -146,42 +73,44 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
+		// 全部まとめて止める
+		mIsClosed = true;
+
 		mAcceptThread.join();
 
-		for (std::pair<Socket*, Thread*> item : mClientThreadDic)
+		for (std::pair<Socket*, ClientInfo> item : mClientDic)
 		{
+			item.second.pReceiveThread->join();
+			mem::safeDelete(&item.second.pReceiveThread);
+			mem::safeDelete(&item.second.mpLock);
+
 			mem::safeDelete(&item.first);
-			item.second->join();
-			mem::safeDelete(&item.second);
 		}
-		mClientThreadDic.clear();
+		mClientDic.clear();
 
 		mpSocket->close();
 	}
 
-	TcpServer::SendResult TcpServer::send(int id, const uint8_t* buffer, int bufferSize)
+	void TcpServer::sendAsync(int id, const uint8_t* buffer, int bufferSize)
 	{
 		assert(mpSocket != nullptr);
 
-		TcpServer::SendResult result;
-		auto pSocket = idToSocket(id);
-		result.id = id;
-		result.sendBytes = pSocket->send(buffer, bufferSize);
-
-		return result;
+		SendData data;
+		data.pClientSocket = idToSocket(id);
+		data.buffer = buffer;
+		data.bufferSize = bufferSize;
+		mSendDataList.emplace_back(data);
 	}
 
-	std::vector<TcpServer::SendResult> TcpServer::broadcast(const uint8_t* buffer, int bufferSize)
+	void TcpServer::broadcastAsync(const uint8_t* buffer, int bufferSize)
 	{
 		assert(mpSocket != nullptr);
 
-		std::vector<SendResult> result;
-		for (auto client : mClientThreadDic)
+		for (auto client : mClientDic)
 		{
 			auto id = socketToId(client.first);
-			result.emplace_back(send(id, buffer, bufferSize));
+			sendAsync(id, buffer, bufferSize);
 		}
-		return std::move(result);
 	}
 
 	void TcpServer::closeConnection(int id)
@@ -189,23 +118,158 @@ namespace rte {
 		assert(mpSocket != nullptr);
 
 		auto ptr = idToSocket(id);
-		auto pClient = mClientThreadDic.find(ptr);
-		if (pClient == mClientThreadDic.end())
+		auto found = mClientDic.find(ptr);
+		if (found == mClientDic.end())
 		{
 			return;
 		}
+		auto clientInfo = *found;
+		mClientDic.erase(found);
 
-		auto pClientSocket = pClient->first;
-		auto pClientThread = pClient->second;
+		auto pClientSocket = clientInfo.first;
+		auto pReceiveThread = clientInfo.second.pReceiveThread;
 
-		mCloseRequestList.push_back(socketToId(pClientSocket));
-		pClientThread->join();
-		mem::safeDelete(&pClientThread);
+		// 指定クライアントのスレッドに停止リクエストを発行
+		{
+			UniqueLock lock(mCloseRequestLock);
+			mCloseRequestList.push_back(socketToId(pClientSocket));
+		}
+
+		pReceiveThread->join();
+		mem::safeDelete(&pReceiveThread);
+		mem::safeDelete(&clientInfo.second.mpLock);
 
 		pClientSocket->close();
 		mem::safeDelete(&pClientSocket);
+	}
 
-		mClientThreadDic.erase(pClient);
+	void TcpServer::acceptThread_(void*)
+	{
+		auto pClient = new Socket();
+
+		while (true)
+		{
+			if (mIsClosed)
+			{
+				break;
+			}
+
+			auto result = mpSocket->accept(pClient);
+			if (result == TriBool::True)
+			{
+				// クライアント受付コールバック
+				auto clientId = socketToId(pClient);
+				mConfig.onAcceptClient(clientId);
+
+				// データ受信スレッド起動
+				auto pReceiveThread = new Thread();
+				pReceiveThread->start(std::bind(&TcpServer::receiveThread_, this, std::placeholders::_1), pClient);
+
+				ClientInfo info;
+				info.pReceiveThread = pReceiveThread;
+				info.mpLock = new Mutex();
+				mClientDic[pClient] = info;
+
+				pClient = new Socket();
+			}
+
+			Sleep(cThreadPollingInterval);
+		}
+
+		mem::safeDelete(&pClient);
+	}
+
+	void TcpServer::receiveThread_(void* arg)
+	{
+		auto pClientSocket = static_cast<Socket*>(arg);
+		auto clientId = socketToId(pClientSocket);
+		Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
+
+		const int bufferSize = 1024;
+		mem::SafeArray<uint8_t> buffer(bufferSize);
+
+		while (true)
+		{
+			// 停止リクエストをチェック
+			{
+				UniqueLock lock(mCloseRequestLock);
+
+				auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
+				if (mIsClosed || closeRequest != mCloseRequestList.end())
+				{
+					mCloseRequestList.erase(closeRequest);
+					break;
+				}
+			}
+
+			// データ受信
+			int recvBytes;
+			{
+				UniqueLock lock(clientLock);
+
+				recvBytes = pClientSocket->recv(buffer.get(), buffer.size());
+				if (recvBytes > 0)
+				{
+					buffer.resize(recvBytes);
+
+					// キューが空になるまで受信
+					mem::SafeArray<uint8_t> tmp(bufferSize);
+					while (pClientSocket->getAvailabieSize() > 0)
+					{
+						recvBytes = pClientSocket->recv(tmp.get(), tmp.size());
+						if (recvBytes > 0)
+						{
+							tmp.resize(recvBytes);
+							buffer.append(tmp.get(), tmp.size());
+						}
+					}
+				}
+			}
+
+			if (recvBytes > 0)
+			{
+				// 受信コールバック
+				mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
+			}
+			else if (recvBytes == 0)
+			{
+				// 何もしない
+			}
+			else
+			{
+				// エラー
+				logError("receiving from client failed");
+				closeConnection(clientId);
+				break;
+			}
+
+			Sleep(cThreadPollingInterval);
+		}
+	}
+
+	void TcpServer::sendThread_(void*)
+	{
+		while (true)
+		{
+			// キューが空になるまで送信
+			for (auto data : mSendDataList)
+			{
+				auto pClientSocket = data.pClientSocket;
+				Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
+
+				int sendBytes;
+				{
+					UniqueLock lock(clientLock);
+					sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
+				}
+
+				// 送信コールバック
+				auto id = socketToId(pClientSocket);
+				mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+			}
+
+			Sleep(cThreadPollingInterval);
+		}
 	}
 
 }// namespace rte

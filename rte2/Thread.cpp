@@ -65,7 +65,7 @@ namespace rte {
 	{
 	}
 
-	void ConditionVariable::waitFor(UniqueLock& lock, int timeoutMilliSeconds, std::function<void()> pred)
+	void ConditionVariable::wait(UniqueLock& lock, std::function<void(void)> pred)
 	{
 	}
 

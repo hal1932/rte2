@@ -11,22 +11,16 @@ namespace rte {
 	{
 	public:
 		typedef void (*OnAcceptClient)(int id);
+		typedef void (*OnSendData)(int id, const uint8_t* buffer, int bufferSize, int sendBytes);
 		typedef void (*OnReceiveData)(int id, const uint8_t* buffer, int bufferSize);
 		typedef void (*OnCloseConnection)(int id);
 
 		struct Config
 		{
-			uint16_t portBegin;
-			uint16_t portEnd;
 			OnAcceptClient onAcceptClient;
+			OnSendData onSendData;
 			OnReceiveData onReceiveData;
 			OnCloseConnection onCloseConnection;
-		};
-
-		struct SendResult
-		{
-			int id;
-			int sendBytes;
 		};
 
 	public:
@@ -38,20 +32,43 @@ namespace rte {
 		bool open(int port);
 		void close();
 
-		SendResult send(int id, const uint8_t* buffer, int bufferSize);
-		std::vector<SendResult> broadcast(const uint8_t* buffer, int bufferSize);
+		void sendAsync(int id, const uint8_t* buffer, int bufferSize);
+		void broadcastAsync(const uint8_t* buffer, int bufferSize);
 
 		void closeConnection(int id);
 
 	private:
 		Config mConfig;
-		int mNextPort;
 
 		Socket* mpSocket;
 
 		Thread mAcceptThread;
-		std::map<Socket*, Thread*> mClientThreadDic;
+
+		struct ClientInfo
+		{
+			Thread* pReceiveThread;
+			Mutex* mpLock;
+		};
+		std::map<Socket*, ClientInfo> mClientDic;
+
+		Thread mSendThread;
+
 		std::vector<int> mCloseRequestList;
+		Mutex mCloseRequestLock;
+
+		volatile bool mIsClosed;
+
+		struct SendData
+		{
+			Socket* pClientSocket;
+			const uint8_t* buffer;
+			int bufferSize;
+		};
+		std::vector<SendData> mSendDataList;
+
+		void acceptThread_(void*);
+		void receiveThread_(void* arg);
+		void sendThread_(void*);
 	};
 
 }// namespace rte
