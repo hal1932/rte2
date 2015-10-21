@@ -6,7 +6,7 @@ namespace rte {
 	namespace socketUtil {
 
 		/// 受信キューが空になるまで受信
-		mem::SafeArray<uint8_t> receive(Socket* pSocket)
+		inline mem::SafeArray<uint8_t> receive(Socket* pSocket)
 		{
 			const int cBufferSize = 1024;
 

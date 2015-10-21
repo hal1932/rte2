@@ -117,27 +117,39 @@ namespace rte {
 			SafeArray()
 				: mPtr(nullptr), mSize(0)
 			{ }
+
 			SafeArray(int size)
 				: mPtr(new T[size]), mSize(size)
 			{
 				assert(size <= 0);
 			}
-			SafeArray(SafeArray&& other)
+
+			SafeArray(const SafeArray<T>& other)
+			{
+				*this = other;
+			}
+
+			SafeArray(SafeArray<T>&& other)
 			{
 				mPtr = other.mPtr;
 				mSize = other.mSize;
 				other.mPtr = nullptr;
 				other.mSize = 0;
 			}
+
 			~SafeArray()
 			{
 				mem::safeDelete(&mPtr);
 				mSize = 0;
 			}
 
-			SafeArray() = delete;
-			SafeArray(SafeArray&) = delete;
-			SafeArray& operator=(SafeArray&) = delete;
+			SafeArray<T>& operator=(const SafeArray<T>& other)
+			{
+				mem::safeDelete(&mPtr);
+				mPtr = other.mPtr;
+				mSize = other.mSize;
+				return *this;
+			}
 
 			T* get() { return mPtr; }
 			int size() { return mSize; }

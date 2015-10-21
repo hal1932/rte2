@@ -212,7 +212,7 @@ namespace rte {
 			mem::SafeArray<uint8_t> receivedData;
 			{
 				UniqueLock lock(clientLock);
-				receivedData.swap(socketUtil::receive(pClientSocket));
+				receivedData = socketUtil::receive(pClientSocket);
 			}
 
 			if (receivedData.size() > 0)
@@ -249,15 +249,9 @@ namespace rte {
 		while (true)
 		{
 			// 停止リクエストをチェック
+			if (mIsConnectionClosed)
 			{
-				UniqueLock lock(mCloseRequestLock);
-
-				auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
-				if (mIsConnectionClosed || closeRequest != mCloseRequestList.end())
-				{
-					mCloseRequestList.erase(closeRequest);
-					break;
-				}
+				break;
 			}
 
 			if (mSendDataList.size() > 0)
