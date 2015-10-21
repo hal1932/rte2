@@ -139,7 +139,7 @@ namespace rte {
 
 			~SafeArray()
 			{
-				mem::safeDelete(&mPtr);
+				mem::safeDeleteArray(&mPtr);
 				mSize = 0;
 			}
 
@@ -155,7 +155,7 @@ namespace rte {
 
 			void shallowCopyFrom(const SafeArray<T>& other)
 			{
-				mem::safeDelete(&mPtr);
+				mem::safeDeleteArray(&mPtr);
 				mPtr = other.mPtr;
 				mSize = other.mSize;
 			}
@@ -179,7 +179,7 @@ namespace rte {
 				auto ptr = new T[size];
 				memcpy(ptr, mPtr, size);
 
-				mem::safeDelete(&mPtr);
+				mem::safeDeleteArray(&mPtr);
 				mPtr = ptr;
 				mSize = size;
 			}
@@ -190,7 +190,7 @@ namespace rte {
 				memcpy(combined, mPtr, mSize);
 				memcpy(combined + mSize, ptr, size);
 
-				mem::safeDelete(&mPtr);
+				mem::safeDeleteArray(&mPtr);
 				mPtr = combined;
 				mSize += size;
 			}
