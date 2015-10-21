@@ -70,6 +70,7 @@ namespace rte {
 			int bufferSize;
 		};
 		std::vector<SendData> mSendDataList;
+		Mutex mSendDataLock;
 
 		void acceptThread_(void*);
 		void receiveThread_(void* arg);

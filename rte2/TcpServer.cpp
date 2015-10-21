@@ -95,6 +95,8 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
+		UniqueLock lock(mSendDataLock);
+
 		SendData data;
 		data.pClientSocket = idToSocket(id);
 		data.buffer = buffer;
@@ -257,23 +259,32 @@ namespace rte {
 	{
 		while (true)
 		{
-			// キューが空になるまで送信
-			for (auto data : mSendDataList)
+			if (mSendDataList.size() > 0)
 			{
-				auto pClientSocket = data.pClientSocket;
-				Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
-
-				int sendBytes;
+				// キューが空になるまで送信
+				std::vector<SendData> dataList;
 				{
-					UniqueLock lock(clientLock);
-					sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
+					UniqueLock lock(mSendDataLock);
+					mSendDataList.swap(dataList);
 				}
 
-				// 送信コールバック
-				if (mConfig.onSendData)
+				for (auto data : dataList)
 				{
-					auto id = socketToId(pClientSocket);
-					mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+					auto pClientSocket = data.pClientSocket;
+					Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
+
+					int sendBytes;
+					{
+						UniqueLock lock(clientLock);
+						sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
+					}
+
+					// 送信コールバック
+					if (mConfig.onSendData)
+					{
+						auto id = socketToId(pClientSocket);
+						mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+					}
 				}
 			}
 
