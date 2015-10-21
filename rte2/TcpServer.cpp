@@ -27,8 +27,7 @@ namespace rte {
 	{
 		assert(!mAcceptThread.isAlive());
 		assert(mClientDic.size() == 0);
-
-		mem::safeDelete(&mpSocket);
+		assert(mpSocket == nullptr);
 	}
 
 	bool TcpServer::configure(const Config& config)
@@ -89,6 +88,7 @@ namespace rte {
 		mClientDic.clear();
 
 		mpSocket->close();
+		mem::safeDelete(&mpSocket);
 	}
 
 	void TcpServer::sendAsync(int id, const uint8_t* buffer, int bufferSize)
