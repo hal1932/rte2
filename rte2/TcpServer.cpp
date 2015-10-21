@@ -21,7 +21,7 @@ namespace rte {
 
 	TcpServer::TcpServer()
 		: mpSocket(nullptr)
-	{}
+	{ }
 
 	TcpServer::~TcpServer()
 	{
@@ -62,7 +62,7 @@ namespace rte {
 			return false;
 		}
 
-		mIsClosed = false;
+		mIsConnectionClosed = false;
 		mAcceptThread.start(std::bind(&TcpServer::acceptThread_, this, std::placeholders::_1));
 		mSendThread.start(std::bind(&TcpServer::sendThread_, this, std::placeholders::_1));
 
@@ -74,7 +74,7 @@ namespace rte {
 		assert(mpSocket != nullptr);
 
 		// ‘S•”‚Ü‚Æ‚ß‚ÄŽ~‚ß‚é
-		mIsClosed = true;
+		mIsConnectionClosed = true;
 
 		mAcceptThread.join();
 
@@ -149,7 +149,7 @@ namespace rte {
 
 		while (true)
 		{
-			if (mIsClosed)
+			if (mIsConnectionClosed)
 			{
 				break;
 			}
@@ -198,7 +198,7 @@ namespace rte {
 				UniqueLock lock(mCloseRequestLock);
 
 				auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
-				if (mIsClosed || closeRequest != mCloseRequestList.end())
+				if (mIsConnectionClosed || closeRequest != mCloseRequestList.end())
 				{
 					mCloseRequestList.erase(closeRequest);
 					break;

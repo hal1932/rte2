@@ -61,7 +61,7 @@ namespace rte {
 		std::vector<int> mCloseRequestList;
 		Mutex mCloseRequestLock;
 
-		volatile bool mIsClosed;
+		volatile bool mIsConnectionClosed;
 
 		struct SendData
 		{
