@@ -284,7 +284,7 @@ namespace rte {
 					if (sendBytes == data.bufferSize)
 					{
 						// 送信コールバック
-						if (mConfig.onSendData)
+						if (mConfig.onSendData != nullptr)
 						{
 							mConfig.onSendData(clientId, data.buffer, data.bufferSize, sendBytes);
 						}
