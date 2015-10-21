@@ -1,5 +1,6 @@
 #include "TcpServer.h"
 #include "Socket.h"
+#include "socketUtil.h"
 #include <algorithm>
 
 namespace {
@@ -208,30 +209,13 @@ namespace rte {
 			}
 
 			// データ受信
-			int recvBytes;
+			mem::SafeArray<uint8_t> receivedData;
 			{
 				UniqueLock lock(clientLock);
-
-				recvBytes = pClientSocket->recv(buffer.get(), buffer.size());
-				if (recvBytes > 0)
-				{
-					buffer.resize(recvBytes);
-
-					// キューが空になるまで受信
-					mem::SafeArray<uint8_t> tmp(bufferSize);
-					while (pClientSocket->getAvailabieSize() > 0)
-					{
-						recvBytes = pClientSocket->recv(tmp.get(), tmp.size());
-						if (recvBytes > 0)
-						{
-							tmp.resize(recvBytes);
-							buffer.append(tmp.get(), tmp.size());
-						}
-					}
-				}
+				receivedData.swap(socketUtil::receive(pClientSocket));
 			}
 
-			if (recvBytes > 0)
+			if (receivedData.size() > 0)
 			{
 				// 受信コールバック
 				if (mConfig.onReceiveData != nullptr)
@@ -239,7 +223,7 @@ namespace rte {
 					mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
 				}
 			}
-			else if (recvBytes == 0)
+			else if (receivedData.size() == 0)
 			{
 				// 何もしない
 			}
@@ -247,8 +231,13 @@ namespace rte {
 			{
 				// エラー
 				logError("receiving from client failed");
-				closeConnection(clientId);
-				break;
+				if (mConfig.onConnectionError != nullptr)
+				{
+					if (!mConfig.onConnectionError(clientId, nullptr, 0))
+					{
+						break;
+					}
+				}
 			}
 
 			Sleep(cThreadPollingInterval);
@@ -279,11 +268,26 @@ namespace rte {
 						sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
 					}
 
-					// 送信コールバック
-					if (mConfig.onSendData)
+					auto clientId = socketToId(pClientSocket);
+					if (sendBytes == data.bufferSize)
 					{
-						auto id = socketToId(pClientSocket);
-						mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+						// 送信コールバック
+						if (mConfig.onSendData)
+						{
+							mConfig.onSendData(clientId, data.buffer, data.bufferSize, sendBytes);
+						}
+					}
+					else
+					{
+						// エラー
+						logError("sending to client failed");
+						if (mConfig.onConnectionError != nullptr)
+						{
+							if (!mConfig.onConnectionError(clientId, data.buffer, data.bufferSize))
+							{
+								break;
+							}
+						}
 					}
 				}
 			}

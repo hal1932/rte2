@@ -114,9 +114,14 @@ namespace rte {
 		class SafeArray
 		{
 		public:
+			SafeArray()
+				: mPtr(nullptr), mSize(0)
+			{ }
 			SafeArray(int size)
 				: mPtr(new T[size]), mSize(size)
-			{ }
+			{
+				assert(size <= 0);
+			}
 			SafeArray(SafeArray&& other)
 			{
 				mPtr = other.mPtr;
@@ -136,6 +141,12 @@ namespace rte {
 
 			T* get() { return mPtr; }
 			int size() { return mSize; }
+
+			void swap(SafeArray<T>& other)
+			{
+				std::swap(mPtr, other.mPtr);
+				std::swap(mSize, other.mSize);
+			}
 
 			void resize(int size)
 			{
