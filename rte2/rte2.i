@@ -9,6 +9,8 @@
 #include "Command.h"
 #include "Context.h"
 #include "Socket.h"
+#include "TcpClient.h"
+#include "TcpServer.h"
 %}
 
 %include "std_string.i"
@@ -24,6 +26,8 @@
 %include "Command.h"
 %include "Context.h"
 %include "Socket.h"
+%include "TcpClient.h"
+%include "TcpServer.h"
 
 %include "carrays.i"
 %array_class(uint8_t, buffer);

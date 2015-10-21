@@ -7,31 +7,30 @@ namespace rte {
 
 	class Socket;
 
-	class TcpClient RTE_FINAL : noncopyable, nonmovable
+	struct TcpClientConfig
 	{
-	public:
-		typedef void (*OnSendData)(const uint8_t* buffer, int bufferSize);
-		typedef void (*OnReceiveData)(const uint8_t* buffer, int bufferSize);
-		typedef bool (*OnConnectionError)(const uint8_t* buffer, int bufferSize);
+		typedef void(*OnSendData)(const uint8_t* buffer, int bufferSize);
+		typedef void(*OnReceiveData)(const uint8_t* buffer, int bufferSize);
+		typedef bool(*OnConnectionError)(const uint8_t* buffer, int bufferSize);
 
-		struct Config
-		{
-			OnSendData onSendData;
-			OnReceiveData onReceiveData;
-			OnConnectionError onConnectionError;
+		OnSendData onSendData;
+		OnReceiveData onReceiveData;
+		OnConnectionError onConnectionError;
 
-			Config()
-				: onSendData(nullptr),
-				  onReceiveData(nullptr),
-				  onConnectionError(nullptr)
-			{ }
-		};
+		TcpClientConfig()
+			: onSendData(nullptr),
+			  onReceiveData(nullptr),
+			  onConnectionError(nullptr)
+		{ }
+	};
 
+	class TcpClient RTE_FINAL : private noncopyable, private nonmovable
+	{
 	public:
 		TcpClient();
 		~TcpClient();
 
-		bool configure(const Config& config);
+		bool configure(const TcpClientConfig& config);
 
 		bool connect(const std::string& host, int port);
 		void close();
@@ -39,7 +38,7 @@ namespace rte {
 		void sendAsync(const uint8_t* buffer, int bufferSize);
 
 	private:
-		Config mConfig;
+		TcpClientConfig mConfig;
 
 		Socket* mpSocket;
 		Mutex mSocketLock;

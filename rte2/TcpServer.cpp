@@ -31,7 +31,7 @@ namespace rte {
 		assert(mpSocket == nullptr);
 	}
 
-	bool TcpServer::configure(const Config& config)
+	bool TcpServer::configure(const TcpServerConfig& config)
 	{
 		assert(mpSocket == nullptr);
 
@@ -212,7 +212,7 @@ namespace rte {
 			mem::SafeArray<uint8_t> receivedData;
 			{
 				UniqueLock lock(clientLock);
-				receivedData = socketUtil::receive(pClientSocket);
+				receivedData.shallowCopyFrom(socketUtil::receive(pClientSocket));
 			}
 
 			if (receivedData.size() > 0)

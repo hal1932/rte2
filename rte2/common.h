@@ -143,12 +143,21 @@ namespace rte {
 				mSize = 0;
 			}
 
-			SafeArray<T>& operator=(const SafeArray<T>& other)
+			// http://stackoverflow.com/questions/8102244/swig-c-to-python-warning362-operator-ignored
+			//SafeArray<T>& operator=(const SafeArray<T>& other)
+			//{
+			//	mem::safeDelete(&mPtr);
+			//	mPtr = other.mPtr;
+			//	mSize = other.mSize;
+			//	return *this;
+			//}
+			SafeArray<T>& operator=(const SafeArray<T>&) = delete;
+
+			void shallowCopyFrom(const SafeArray<T>& other)
 			{
 				mem::safeDelete(&mPtr);
 				mPtr = other.mPtr;
 				mSize = other.mSize;
-				return *this;
 			}
 
 			T* get() { return mPtr; }

@@ -155,6 +155,51 @@ SwigPyIterator_swigregister = _rte2.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
 
+_rte2.TriBool_False_swigconstant(_rte2)
+TriBool_False = _rte2.TriBool_False
+
+_rte2.TriBool_True_swigconstant(_rte2)
+TriBool_True = _rte2.TriBool_True
+
+_rte2.TriBool_Unknown_swigconstant(_rte2)
+TriBool_Unknown = _rte2.TriBool_Unknown
+class noncopyable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, noncopyable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, noncopyable, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_noncopyable()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_noncopyable
+    __del__ = lambda self: None
+noncopyable_swigregister = _rte2.noncopyable_swigregister
+noncopyable_swigregister(noncopyable)
+
+class nonmovable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, nonmovable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, nonmovable, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_nonmovable()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_nonmovable
+    __del__ = lambda self: None
+nonmovable_swigregister = _rte2.nonmovable_swigregister
+nonmovable_swigregister(nonmovable)
+
+
 def info_(function, msg):
     return _rte2.info_(function, msg)
 info_ = _rte2.info_
@@ -722,6 +767,9 @@ class Socket(_object):
     def close(self):
         return _rte2.Socket_close(self)
 
+    def setBlocking(self, enable):
+        return _rte2.Socket_setBlocking(self, enable)
+
     def getAvailabieSize(self):
         return _rte2.Socket_getAvailabieSize(self)
 
@@ -755,6 +803,136 @@ Socket_setup = _rte2.Socket_setup
 def Socket_shutdown():
     return _rte2.Socket_shutdown()
 Socket_shutdown = _rte2.Socket_shutdown
+
+class TcpClientConfig(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpClientConfig, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpClientConfig, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["onSendData"] = _rte2.TcpClientConfig_onSendData_set
+    __swig_getmethods__["onSendData"] = _rte2.TcpClientConfig_onSendData_get
+    if _newclass:
+        onSendData = _swig_property(_rte2.TcpClientConfig_onSendData_get, _rte2.TcpClientConfig_onSendData_set)
+    __swig_setmethods__["onReceiveData"] = _rte2.TcpClientConfig_onReceiveData_set
+    __swig_getmethods__["onReceiveData"] = _rte2.TcpClientConfig_onReceiveData_get
+    if _newclass:
+        onReceiveData = _swig_property(_rte2.TcpClientConfig_onReceiveData_get, _rte2.TcpClientConfig_onReceiveData_set)
+    __swig_setmethods__["onConnectionError"] = _rte2.TcpClientConfig_onConnectionError_set
+    __swig_getmethods__["onConnectionError"] = _rte2.TcpClientConfig_onConnectionError_get
+    if _newclass:
+        onConnectionError = _swig_property(_rte2.TcpClientConfig_onConnectionError_get, _rte2.TcpClientConfig_onConnectionError_set)
+
+    def __init__(self):
+        this = _rte2.new_TcpClientConfig()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_TcpClientConfig
+    __del__ = lambda self: None
+TcpClientConfig_swigregister = _rte2.TcpClientConfig_swigregister
+TcpClientConfig_swigregister(TcpClientConfig)
+
+class TcpClient(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpClient, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpClient, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_TcpClient()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_TcpClient
+    __del__ = lambda self: None
+
+    def configure(self, config):
+        return _rte2.TcpClient_configure(self, config)
+
+    def connect(self, host, port):
+        return _rte2.TcpClient_connect(self, host, port)
+
+    def close(self):
+        return _rte2.TcpClient_close(self)
+
+    def sendAsync(self, buffer, bufferSize):
+        return _rte2.TcpClient_sendAsync(self, buffer, bufferSize)
+TcpClient_swigregister = _rte2.TcpClient_swigregister
+TcpClient_swigregister(TcpClient)
+
+class TcpServerConfig(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpServerConfig, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpServerConfig, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["onAcceptClient"] = _rte2.TcpServerConfig_onAcceptClient_set
+    __swig_getmethods__["onAcceptClient"] = _rte2.TcpServerConfig_onAcceptClient_get
+    if _newclass:
+        onAcceptClient = _swig_property(_rte2.TcpServerConfig_onAcceptClient_get, _rte2.TcpServerConfig_onAcceptClient_set)
+    __swig_setmethods__["onSendData"] = _rte2.TcpServerConfig_onSendData_set
+    __swig_getmethods__["onSendData"] = _rte2.TcpServerConfig_onSendData_get
+    if _newclass:
+        onSendData = _swig_property(_rte2.TcpServerConfig_onSendData_get, _rte2.TcpServerConfig_onSendData_set)
+    __swig_setmethods__["onReceiveData"] = _rte2.TcpServerConfig_onReceiveData_set
+    __swig_getmethods__["onReceiveData"] = _rte2.TcpServerConfig_onReceiveData_get
+    if _newclass:
+        onReceiveData = _swig_property(_rte2.TcpServerConfig_onReceiveData_get, _rte2.TcpServerConfig_onReceiveData_set)
+    __swig_setmethods__["onConnectionError"] = _rte2.TcpServerConfig_onConnectionError_set
+    __swig_getmethods__["onConnectionError"] = _rte2.TcpServerConfig_onConnectionError_get
+    if _newclass:
+        onConnectionError = _swig_property(_rte2.TcpServerConfig_onConnectionError_get, _rte2.TcpServerConfig_onConnectionError_set)
+
+    def __init__(self):
+        this = _rte2.new_TcpServerConfig()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_TcpServerConfig
+    __del__ = lambda self: None
+TcpServerConfig_swigregister = _rte2.TcpServerConfig_swigregister
+TcpServerConfig_swigregister(TcpServerConfig)
+
+class TcpServer(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpServer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpServer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_TcpServer()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_TcpServer
+    __del__ = lambda self: None
+
+    def configure(self, config):
+        return _rte2.TcpServer_configure(self, config)
+
+    def open(self, port):
+        return _rte2.TcpServer_open(self, port)
+
+    def close(self):
+        return _rte2.TcpServer_close(self)
+
+    def sendAsync(self, id, buffer, bufferSize):
+        return _rte2.TcpServer_sendAsync(self, id, buffer, bufferSize)
+
+    def broadcastAsync(self, buffer, bufferSize):
+        return _rte2.TcpServer_broadcastAsync(self, buffer, bufferSize)
+
+    def closeConnection(self, id):
+        return _rte2.TcpServer_closeConnection(self, id)
+TcpServer_swigregister = _rte2.TcpServer_swigregister
+TcpServer_swigregister(TcpServer)
 
 class buffer(_object):
     __swig_setmethods__ = {}

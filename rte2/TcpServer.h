@@ -7,34 +7,33 @@ namespace rte {
 
 	class Socket;
 
-	class TcpServer RTE_FINAL : noncopyable, nonmovable
+	struct TcpServerConfig
 	{
-	public:
-		typedef void (*OnAcceptClient)(int id);
-		typedef void (*OnSendData)(int id, const uint8_t* buffer, int bufferSize, int sendBytes);
-		typedef void (*OnReceiveData)(int id, const uint8_t* buffer, int bufferSize);
-		typedef bool (*OnConnectionError)(int id, const uint8_t* buffer, int bufferSize);
+		typedef void(*OnAcceptClient)(int id);
+		typedef void(*OnSendData)(int id, const uint8_t* buffer, int bufferSize, int sendBytes);
+		typedef void(*OnReceiveData)(int id, const uint8_t* buffer, int bufferSize);
+		typedef bool(*OnConnectionError)(int id, const uint8_t* buffer, int bufferSize);
 
-		struct Config
-		{
-			OnAcceptClient onAcceptClient;
-			OnSendData onSendData;
-			OnReceiveData onReceiveData;
-			OnConnectionError onConnectionError;
+		OnAcceptClient onAcceptClient;
+		OnSendData onSendData;
+		OnReceiveData onReceiveData;
+		OnConnectionError onConnectionError;
 
-			Config()
-				: onAcceptClient(nullptr),
-				  onSendData(nullptr),
-				  onReceiveData(nullptr),
-				  onConnectionError(nullptr)
-			{ }
-		};
+		TcpServerConfig()
+			: onAcceptClient(nullptr),
+			  onSendData(nullptr),
+			  onReceiveData(nullptr),
+			  onConnectionError(nullptr)
+		{ }
+	};
 
+	class TcpServer RTE_FINAL : private noncopyable, private nonmovable
+	{
 	public:
 		TcpServer();
 		~TcpServer();
 
-		bool configure(const Config& config);
+		bool configure(const TcpServerConfig& config);
 
 		bool open(int port);
 		void close();
@@ -45,7 +44,7 @@ namespace rte {
 		void closeConnection(int id);
 
 	private:
-		Config mConfig;
+		TcpServerConfig mConfig;
 
 		Socket* mpSocket;
 

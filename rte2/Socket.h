@@ -3,7 +3,7 @@
 
 namespace rte {
 
-	class Socket RTE_FINAL : noncopyable, nonmovable
+	class Socket RTE_FINAL : private noncopyable, private nonmovable
 	{
 	public:
 		enum class ProtocolType : uint8_t
