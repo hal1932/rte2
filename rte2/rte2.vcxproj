@@ -135,6 +135,7 @@
     <ClCompile Include="NodeParameter.cpp" />
     <ClCompile Include="NodeParameterValueSerializer.cpp" />
     <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="TcpClient.cpp" />
     <ClCompile Include="TcpServer.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Thread.cpp" />
@@ -151,6 +152,8 @@
     <ClInclude Include="NodeParameter.h" />
     <ClInclude Include="NodeParameterValueSerializer.h" />
     <ClInclude Include="Socket.h" />
+    <ClInclude Include="TcpClient.h" />
+    <ClInclude Include="socketUtil.h" />
     <ClInclude Include="TcpServer.h" />
     <ClInclude Include="Thread.h" />
   </ItemGroup>
