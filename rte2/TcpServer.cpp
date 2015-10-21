@@ -158,8 +158,11 @@ namespace rte {
 			if (result == TriBool::True)
 			{
 				// クライアント受付コールバック
-				auto clientId = socketToId(pClient);
-				mConfig.onAcceptClient(clientId);
+				if (mConfig.onAcceptClient != nullptr)
+				{
+					auto clientId = socketToId(pClient);
+					mConfig.onAcceptClient(clientId);
+				}
 
 				// データ受信スレッド起動
 				auto pReceiveThread = new Thread();
@@ -229,7 +232,10 @@ namespace rte {
 			if (recvBytes > 0)
 			{
 				// 受信コールバック
-				mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
+				if (mConfig.onReceiveData != nullptr)
+				{
+					mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
+				}
 			}
 			else if (recvBytes == 0)
 			{
@@ -264,8 +270,11 @@ namespace rte {
 				}
 
 				// 送信コールバック
-				auto id = socketToId(pClientSocket);
-				mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+				if (mConfig.onSendData)
+				{
+					auto id = socketToId(pClientSocket);
+					mConfig.onSendData(id, data.buffer, data.bufferSize, sendBytes);
+				}
 			}
 
 			Sleep(cThreadPollingInterval);

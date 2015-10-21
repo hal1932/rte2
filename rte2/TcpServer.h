@@ -20,7 +20,12 @@ namespace rte {
 			OnAcceptClient onAcceptClient;
 			OnSendData onSendData;
 			OnReceiveData onReceiveData;
-			OnCloseConnection onCloseConnection;
+
+			Config()
+				: onAcceptClient(nullptr),
+				  onSendData(nullptr),
+				  onReceiveData(nullptr)
+			{ }
 		};
 
 	public:
