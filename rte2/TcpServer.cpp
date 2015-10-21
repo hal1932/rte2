@@ -248,6 +248,18 @@ namespace rte {
 	{
 		while (true)
 		{
+			// 停止リクエストをチェック
+			{
+				UniqueLock lock(mCloseRequestLock);
+
+				auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
+				if (mIsConnectionClosed || closeRequest != mCloseRequestList.end())
+				{
+					mCloseRequestList.erase(closeRequest);
+					break;
+				}
+			}
+
 			if (mSendDataList.size() > 0)
 			{
 				// キューが空になるまで送信
