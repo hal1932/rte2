@@ -9,6 +9,7 @@
 #include "Command.h"
 #include "Context.h"
 #include "Socket.h"
+#include "Thread.h"
 #include "TcpClient.h"
 #include "TcpServer.h"
 %}
@@ -26,6 +27,7 @@
 %include "Command.h"
 %include "Context.h"
 %include "Socket.h"
+%include "Thread.h"
 %include "TcpClient.h"
 %include "TcpServer.h"
 

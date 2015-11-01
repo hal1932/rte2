@@ -17,7 +17,6 @@ namespace rte {
 	TcpClient::~TcpClient()
 	{
 		assert(mIsConnectionClosed);
-		assert(!mReceiveThread.isAlive());
 		assert(mpSocket == nullptr);
 	}
 
@@ -77,8 +76,10 @@ namespace rte {
 		mSendDataList.emplace_back(data);
 	}
 
-	void TcpClient::receiveThread_(void*)
+	unsigned int TcpClient::receiveThread_(void*)
 	{
+		unsigned int result = 0;
+
 		while (true)
 		{
 			// 停止チェック
@@ -114,6 +115,7 @@ namespace rte {
 				{
 					if (!mConfig.onConnectionError(nullptr, 0))
 					{
+						result = 1;
 						break;
 					}
 				}
@@ -121,10 +123,14 @@ namespace rte {
 
 			Sleep(cThreadPollingInterval);
 		}
+
+		return result;
 	}
 
-	void TcpClient::sendThread_(void*)
+	unsigned int TcpClient::sendThread_(void*)
 	{
+		unsigned int result = 0;
+
 		while (true)
 		{
 			// 停止チェック
@@ -166,6 +172,7 @@ namespace rte {
 						{
 							if (!mConfig.onConnectionError(data.buffer, data.bufferSize))
 							{
+								result = 1;
 								break;
 							}
 						}
@@ -175,6 +182,8 @@ namespace rte {
 
 			Sleep(cThreadPollingInterval);
 		}
+
+		return result;
 	}
 
 }// namespace rte

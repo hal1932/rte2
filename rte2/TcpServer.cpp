@@ -26,7 +26,7 @@ namespace rte {
 
 	TcpServer::~TcpServer()
 	{
-		assert(!mAcceptThread.isAlive());
+		assert(mIsConnectionClosed);
 		assert(mClientDic.size() == 0);
 		assert(mpSocket == nullptr);
 	}
@@ -146,10 +146,11 @@ namespace rte {
 		mem::safeDelete(&pClientSocket);
 	}
 
-	void TcpServer::acceptThread_(void*)
+	unsigned int TcpServer::acceptThread_(void*)
 	{
-		auto pClient = new Socket();
+		unsigned int result = 0;
 
+		auto pClient = new Socket();
 		while (true)
 		{
 			if (mIsConnectionClosed)
@@ -157,8 +158,8 @@ namespace rte {
 				break;
 			}
 
-			auto result = mpSocket->accept(pClient);
-			if (result == TriBool::True)
+			auto accepted = mpSocket->accept(pClient);
+			if (accepted == TriBool::True)
 			{
 				// クライアント受付コールバック
 				if (mConfig.onAcceptClient != nullptr)
@@ -173,7 +174,7 @@ namespace rte {
 
 				ClientInfo info;
 				info.pReceiveThread = pReceiveThread;
-				info.mpLock = new Mutex();
+				info.mpLock = new CriticalSection();
 				mClientDic[pClient] = info;
 
 				pClient = new Socket();
@@ -183,13 +184,16 @@ namespace rte {
 		}
 
 		mem::safeDelete(&pClient);
+		return result;
 	}
 
-	void TcpServer::receiveThread_(void* arg)
+	unsigned int TcpServer::receiveThread_(void* arg)
 	{
+		unsigned int result = 0;
+
 		auto pClientSocket = static_cast<Socket*>(arg);
 		auto clientId = socketToId(pClientSocket);
-		Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
+		CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
 
 		const int bufferSize = 1024;
 		mem::SafeArray<uint8_t> buffer(bufferSize);
@@ -235,6 +239,7 @@ namespace rte {
 				{
 					if (!mConfig.onConnectionError(clientId, nullptr, 0))
 					{
+						result = 1;
 						break;
 					}
 				}
@@ -242,10 +247,14 @@ namespace rte {
 
 			Sleep(cThreadPollingInterval);
 		}
+
+		return result;
 	}
 
-	void TcpServer::sendThread_(void*)
+	unsigned int TcpServer::sendThread_(void*)
 	{
+		unsigned int result = 0;
+
 		while (true)
 		{
 			// 停止リクエストをチェック
@@ -266,7 +275,7 @@ namespace rte {
 				for (auto data : dataList)
 				{
 					auto pClientSocket = data.pClientSocket;
-					Mutex& clientLock = *mClientDic[pClientSocket].mpLock;
+					CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
 
 					int sendBytes;
 					{
@@ -291,6 +300,7 @@ namespace rte {
 						{
 							if (!mConfig.onConnectionError(clientId, data.buffer, data.bufferSize))
 							{
+								result = 1;
 								break;
 							}
 						}
@@ -300,6 +310,8 @@ namespace rte {
 
 			Sleep(cThreadPollingInterval);
 		}
+
+		return result;
 	}
 
 }// namespace rte

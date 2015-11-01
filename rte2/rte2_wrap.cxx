@@ -2958,46 +2958,53 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_p_unsigned_long swig_types[18]
 #define SWIGTYPE_p_reference swig_types[19]
 #define SWIGTYPE_p_rte__Command swig_types[20]
-#define SWIGTYPE_p_rte__Context swig_types[21]
-#define SWIGTYPE_p_rte__File swig_types[22]
-#define SWIGTYPE_p_rte__Node swig_types[23]
-#define SWIGTYPE_p_rte__NodeBase swig_types[24]
-#define SWIGTYPE_p_rte__NodeCommand swig_types[25]
-#define SWIGTYPE_p_rte__NodeNameListCommand swig_types[26]
-#define SWIGTYPE_p_rte__NodeParameter swig_types[27]
-#define SWIGTYPE_p_rte__NodeParameterValueSerializer swig_types[28]
-#define SWIGTYPE_p_rte__ParamUpdateCommand swig_types[29]
-#define SWIGTYPE_p_rte__PingCommand swig_types[30]
-#define SWIGTYPE_p_rte__Socket swig_types[31]
-#define SWIGTYPE_p_rte__TcpClient swig_types[32]
-#define SWIGTYPE_p_rte__TcpClientConfig swig_types[33]
-#define SWIGTYPE_p_rte__TcpServer swig_types[34]
-#define SWIGTYPE_p_rte__TcpServerConfig swig_types[35]
-#define SWIGTYPE_p_rte__Vector3 swig_types[36]
-#define SWIGTYPE_p_rte__noncopyable swig_types[37]
-#define SWIGTYPE_p_rte__nonmovable swig_types[38]
-#define SWIGTYPE_p_short swig_types[39]
-#define SWIGTYPE_p_signed___int64 swig_types[40]
-#define SWIGTYPE_p_signed_char swig_types[41]
-#define SWIGTYPE_p_size_type swig_types[42]
-#define SWIGTYPE_p_std__allocatorT_rte__NodeParameter_p_t swig_types[43]
-#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[44]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[45]
-#define SWIGTYPE_p_std__invalid_argument swig_types[46]
-#define SWIGTYPE_p_std__string swig_types[47]
-#define SWIGTYPE_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t swig_types[48]
-#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[49]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[50]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[51]
-#define SWIGTYPE_p_unsigned___int64 swig_types[52]
-#define SWIGTYPE_p_unsigned_char swig_types[53]
-#define SWIGTYPE_p_unsigned_int swig_types[54]
-#define SWIGTYPE_p_unsigned_long swig_types[55]
-#define SWIGTYPE_p_unsigned_long_long swig_types[56]
-#define SWIGTYPE_p_unsigned_short swig_types[57]
-#define SWIGTYPE_p_value_type swig_types[58]
-static swig_type_info *swig_types[60];
-static swig_module_info swig_module = {swig_types, 59, 0, 0, 0, 0};
+#define SWIGTYPE_p_rte__ConditionVariable swig_types[21]
+#define SWIGTYPE_p_rte__Context swig_types[22]
+#define SWIGTYPE_p_rte__CriticalSection swig_types[23]
+#define SWIGTYPE_p_rte__File swig_types[24]
+#define SWIGTYPE_p_rte__LockObject swig_types[25]
+#define SWIGTYPE_p_rte__Node swig_types[26]
+#define SWIGTYPE_p_rte__NodeBase swig_types[27]
+#define SWIGTYPE_p_rte__NodeCommand swig_types[28]
+#define SWIGTYPE_p_rte__NodeNameListCommand swig_types[29]
+#define SWIGTYPE_p_rte__NodeParameter swig_types[30]
+#define SWIGTYPE_p_rte__NodeParameterValueSerializer swig_types[31]
+#define SWIGTYPE_p_rte__ParamUpdateCommand swig_types[32]
+#define SWIGTYPE_p_rte__PingCommand swig_types[33]
+#define SWIGTYPE_p_rte__Socket swig_types[34]
+#define SWIGTYPE_p_rte__TcpClient swig_types[35]
+#define SWIGTYPE_p_rte__TcpClientConfig swig_types[36]
+#define SWIGTYPE_p_rte__TcpServer swig_types[37]
+#define SWIGTYPE_p_rte__TcpServerConfig swig_types[38]
+#define SWIGTYPE_p_rte__Thread swig_types[39]
+#define SWIGTYPE_p_rte__UniqueLock swig_types[40]
+#define SWIGTYPE_p_rte__Vector3 swig_types[41]
+#define SWIGTYPE_p_rte__noncopyable swig_types[42]
+#define SWIGTYPE_p_rte__nonmovable swig_types[43]
+#define SWIGTYPE_p_short swig_types[44]
+#define SWIGTYPE_p_signed___int64 swig_types[45]
+#define SWIGTYPE_p_signed_char swig_types[46]
+#define SWIGTYPE_p_size_type swig_types[47]
+#define SWIGTYPE_p_std__allocatorT_rte__NodeParameter_p_t swig_types[48]
+#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[49]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[50]
+#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[51]
+#define SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t swig_types[52]
+#define SWIGTYPE_p_std__invalid_argument swig_types[53]
+#define SWIGTYPE_p_std__string swig_types[54]
+#define SWIGTYPE_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t swig_types[55]
+#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[56]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[57]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[58]
+#define SWIGTYPE_p_unsigned___int64 swig_types[59]
+#define SWIGTYPE_p_unsigned_char swig_types[60]
+#define SWIGTYPE_p_unsigned_int swig_types[61]
+#define SWIGTYPE_p_unsigned_long swig_types[62]
+#define SWIGTYPE_p_unsigned_long_long swig_types[63]
+#define SWIGTYPE_p_unsigned_short swig_types[64]
+#define SWIGTYPE_p_value_type swig_types[65]
+static swig_type_info *swig_types[67];
+static swig_module_info swig_module = {swig_types, 66, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3110,6 +3117,7 @@ namespace swig {
 #include "Command.h"
 #include "Context.h"
 #include "Socket.h"
+#include "Thread.h"
 #include "TcpClient.h"
 #include "TcpServer.h"
 
@@ -10414,6 +10422,880 @@ SWIGINTERN PyObject *Socket_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObjec
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_new_Thread(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_Thread")) SWIG_fail;
+  result = (rte::Thread *)new rte::Thread();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Thread, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Thread(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_Thread",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Thread" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Thread_start__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  std::function< unsigned int (void *) > arg2 ;
+  void *arg3 = (void *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  int res3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Thread_start",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_start" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'");
+    } else {
+      std::function< unsigned int (void *) > * temp = reinterpret_cast< std::function< unsigned int (void *) > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2,SWIG_as_voidptrptr(&arg3), 0, 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Thread_start" "', argument " "3"" of type '" "void *""'"); 
+  }
+  (arg1)->start(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Thread_start__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  std::function< unsigned int (void *) > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Thread_start",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_start" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'");
+    } else {
+      std::function< unsigned int (void *) > * temp = reinterpret_cast< std::function< unsigned int (void *) > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  (arg1)->start(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Thread_start(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Thread, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Thread_start__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Thread, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *ptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &ptr, 0, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_Thread_start__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Thread_start'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::Thread::start(std::function< unsigned int (void *) >,void *)\n"
+    "    rte::Thread::start(std::function< unsigned int (void *) >)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Thread_join(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Thread_join",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_join" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  result = (unsigned int)(arg1)->join();
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Thread_getId(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Thread_getId",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_getId" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  result = (int)(arg1)->getId();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *Thread_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__Thread, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_LockObject_lock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = (rte::LockObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:LockObject_lock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__LockObject, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LockObject_lock" "', argument " "1"" of type '" "rte::LockObject *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  (arg1)->lock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_LockObject_tryLock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = (rte::LockObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:LockObject_tryLock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__LockObject, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LockObject_tryLock" "', argument " "1"" of type '" "rte::LockObject *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  result = (bool)(arg1)->tryLock();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_LockObject_unlock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = (rte::LockObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:LockObject_unlock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__LockObject, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LockObject_unlock" "', argument " "1"" of type '" "rte::LockObject *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  (arg1)->unlock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_LockObject_isLocked(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = (rte::LockObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:LockObject_isLocked",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__LockObject, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LockObject_isLocked" "', argument " "1"" of type '" "rte::LockObject *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  result = (bool)(arg1)->isLocked();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_LockObject(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = (rte::LockObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_LockObject",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__LockObject, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_LockObject" "', argument " "1"" of type '" "rte::LockObject *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *LockObject_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__LockObject, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_CriticalSection(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_CriticalSection")) SWIG_fail;
+  result = (rte::CriticalSection *)new rte::CriticalSection();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__CriticalSection, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_CriticalSection(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *arg1 = (rte::CriticalSection *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_CriticalSection",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__CriticalSection, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_CriticalSection" "', argument " "1"" of type '" "rte::CriticalSection *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::CriticalSection * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CriticalSection_lock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *arg1 = (rte::CriticalSection *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:CriticalSection_lock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__CriticalSection, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CriticalSection_lock" "', argument " "1"" of type '" "rte::CriticalSection *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::CriticalSection * >(argp1);
+  (arg1)->lock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CriticalSection_tryLock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *arg1 = (rte::CriticalSection *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:CriticalSection_tryLock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__CriticalSection, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CriticalSection_tryLock" "', argument " "1"" of type '" "rte::CriticalSection *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::CriticalSection * >(argp1);
+  result = (bool)(arg1)->tryLock();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CriticalSection_unlock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *arg1 = (rte::CriticalSection *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:CriticalSection_unlock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__CriticalSection, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CriticalSection_unlock" "', argument " "1"" of type '" "rte::CriticalSection *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::CriticalSection * >(argp1);
+  (arg1)->unlock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CriticalSection_isLocked(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::CriticalSection *arg1 = (rte::CriticalSection *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:CriticalSection_isLocked",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__CriticalSection, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CriticalSection_isLocked" "', argument " "1"" of type '" "rte::CriticalSection *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::CriticalSection * >(argp1);
+  result = (bool)(arg1)->isLocked();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *CriticalSection_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__CriticalSection, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_UniqueLock__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  rte::UniqueLock *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_UniqueLock",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_rte__LockObject,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UniqueLock" "', argument " "1"" of type '" "rte::LockObject &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UniqueLock" "', argument " "1"" of type '" "rte::LockObject &""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  ecode2 = SWIG_AsVal_bool(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_UniqueLock" "', argument " "2"" of type '" "bool""'");
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = (rte::UniqueLock *)new rte::UniqueLock(*arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__UniqueLock, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_UniqueLock__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::LockObject *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::UniqueLock *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_UniqueLock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_rte__LockObject,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UniqueLock" "', argument " "1"" of type '" "rte::LockObject &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UniqueLock" "', argument " "1"" of type '" "rte::LockObject &""'"); 
+  }
+  arg1 = reinterpret_cast< rte::LockObject * >(argp1);
+  result = (rte::UniqueLock *)new rte::UniqueLock(*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__UniqueLock, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_UniqueLock(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__LockObject, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_UniqueLock__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__LockObject, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_new_UniqueLock__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_UniqueLock'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::UniqueLock::UniqueLock(rte::LockObject &,bool)\n"
+    "    rte::UniqueLock::UniqueLock(rte::LockObject &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_UniqueLock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::UniqueLock *arg1 = (rte::UniqueLock *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_UniqueLock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__UniqueLock, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UniqueLock" "', argument " "1"" of type '" "rte::UniqueLock *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::UniqueLock * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UniqueLock_lock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::UniqueLock *arg1 = (rte::UniqueLock *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UniqueLock_lock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__UniqueLock, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniqueLock_lock" "', argument " "1"" of type '" "rte::UniqueLock *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::UniqueLock * >(argp1);
+  (arg1)->lock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UniqueLock_tryLock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::UniqueLock *arg1 = (rte::UniqueLock *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UniqueLock_tryLock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__UniqueLock, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniqueLock_tryLock" "', argument " "1"" of type '" "rte::UniqueLock *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::UniqueLock * >(argp1);
+  result = (bool)(arg1)->tryLock();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UniqueLock_unlock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::UniqueLock *arg1 = (rte::UniqueLock *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UniqueLock_unlock",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__UniqueLock, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniqueLock_unlock" "', argument " "1"" of type '" "rte::UniqueLock *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::UniqueLock * >(argp1);
+  (arg1)->unlock();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UniqueLock_isLocked(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::UniqueLock *arg1 = (rte::UniqueLock *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UniqueLock_isLocked",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__UniqueLock, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniqueLock_isLocked" "', argument " "1"" of type '" "rte::UniqueLock *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::UniqueLock * >(argp1);
+  result = (bool)(arg1)->isLocked();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *UniqueLock_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__UniqueLock, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_ConditionVariable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::ConditionVariable *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_ConditionVariable")) SWIG_fail;
+  result = (rte::ConditionVariable *)new rte::ConditionVariable();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__ConditionVariable, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_ConditionVariable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::ConditionVariable *arg1 = (rte::ConditionVariable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_ConditionVariable",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__ConditionVariable, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ConditionVariable" "', argument " "1"" of type '" "rte::ConditionVariable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::ConditionVariable * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ConditionVariable_notifyOne(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::ConditionVariable *arg1 = (rte::ConditionVariable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ConditionVariable_notifyOne",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__ConditionVariable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConditionVariable_notifyOne" "', argument " "1"" of type '" "rte::ConditionVariable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::ConditionVariable * >(argp1);
+  (arg1)->notifyOne();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ConditionVariable_wait__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::ConditionVariable *arg1 = (rte::ConditionVariable *) 0 ;
+  rte::UniqueLock *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ConditionVariable_wait",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__ConditionVariable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConditionVariable_wait" "', argument " "1"" of type '" "rte::ConditionVariable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::ConditionVariable * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__UniqueLock,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ConditionVariable_wait" "', argument " "2"" of type '" "rte::UniqueLock &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ConditionVariable_wait" "', argument " "2"" of type '" "rte::UniqueLock &""'"); 
+  }
+  arg2 = reinterpret_cast< rte::UniqueLock * >(argp2);
+  (arg1)->wait(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ConditionVariable_wait__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::ConditionVariable *arg1 = (rte::ConditionVariable *) 0 ;
+  rte::UniqueLock *arg2 = 0 ;
+  std::function< bool (void) > arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:ConditionVariable_wait",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__ConditionVariable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConditionVariable_wait" "', argument " "1"" of type '" "rte::ConditionVariable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::ConditionVariable * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__UniqueLock,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ConditionVariable_wait" "', argument " "2"" of type '" "rte::UniqueLock &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ConditionVariable_wait" "', argument " "2"" of type '" "rte::UniqueLock &""'"); 
+  }
+  arg2 = reinterpret_cast< rte::UniqueLock * >(argp2);
+  {
+    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__functionT_bool_fvoidF_t,  0  | 0);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ConditionVariable_wait" "', argument " "3"" of type '" "std::function< bool (void) >""'"); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ConditionVariable_wait" "', argument " "3"" of type '" "std::function< bool (void) >""'");
+    } else {
+      std::function< bool (void) > * temp = reinterpret_cast< std::function< bool (void) > * >(argp3);
+      arg3 = *temp;
+      if (SWIG_IsNewObj(res3)) delete temp;
+    }
+  }
+  (arg1)->wait(*arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ConditionVariable_wait(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__ConditionVariable, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_rte__UniqueLock, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_ConditionVariable_wait__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__ConditionVariable, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_rte__UniqueLock, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__functionT_bool_fvoidF_t, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_ConditionVariable_wait__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'ConditionVariable_wait'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::ConditionVariable::wait(rte::UniqueLock &)\n"
+    "    rte::ConditionVariable::wait(rte::UniqueLock &,std::function< bool (void) >)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *ConditionVariable_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__ConditionVariable, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN PyObject *_wrap_TcpClientConfig_onSendData_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
@@ -17299,6 +18181,37 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Socket_accept", _wrap_Socket_accept, METH_VARARGS, NULL},
 	 { (char *)"Socket_connect", _wrap_Socket_connect, METH_VARARGS, NULL},
 	 { (char *)"Socket_swigregister", Socket_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_Thread", _wrap_new_Thread, METH_VARARGS, NULL},
+	 { (char *)"delete_Thread", _wrap_delete_Thread, METH_VARARGS, NULL},
+	 { (char *)"Thread_start", _wrap_Thread_start, METH_VARARGS, NULL},
+	 { (char *)"Thread_join", _wrap_Thread_join, METH_VARARGS, NULL},
+	 { (char *)"Thread_getId", _wrap_Thread_getId, METH_VARARGS, NULL},
+	 { (char *)"Thread_swigregister", Thread_swigregister, METH_VARARGS, NULL},
+	 { (char *)"LockObject_lock", _wrap_LockObject_lock, METH_VARARGS, NULL},
+	 { (char *)"LockObject_tryLock", _wrap_LockObject_tryLock, METH_VARARGS, NULL},
+	 { (char *)"LockObject_unlock", _wrap_LockObject_unlock, METH_VARARGS, NULL},
+	 { (char *)"LockObject_isLocked", _wrap_LockObject_isLocked, METH_VARARGS, NULL},
+	 { (char *)"delete_LockObject", _wrap_delete_LockObject, METH_VARARGS, NULL},
+	 { (char *)"LockObject_swigregister", LockObject_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_CriticalSection", _wrap_new_CriticalSection, METH_VARARGS, NULL},
+	 { (char *)"delete_CriticalSection", _wrap_delete_CriticalSection, METH_VARARGS, NULL},
+	 { (char *)"CriticalSection_lock", _wrap_CriticalSection_lock, METH_VARARGS, NULL},
+	 { (char *)"CriticalSection_tryLock", _wrap_CriticalSection_tryLock, METH_VARARGS, NULL},
+	 { (char *)"CriticalSection_unlock", _wrap_CriticalSection_unlock, METH_VARARGS, NULL},
+	 { (char *)"CriticalSection_isLocked", _wrap_CriticalSection_isLocked, METH_VARARGS, NULL},
+	 { (char *)"CriticalSection_swigregister", CriticalSection_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_UniqueLock", _wrap_new_UniqueLock, METH_VARARGS, NULL},
+	 { (char *)"delete_UniqueLock", _wrap_delete_UniqueLock, METH_VARARGS, NULL},
+	 { (char *)"UniqueLock_lock", _wrap_UniqueLock_lock, METH_VARARGS, NULL},
+	 { (char *)"UniqueLock_tryLock", _wrap_UniqueLock_tryLock, METH_VARARGS, NULL},
+	 { (char *)"UniqueLock_unlock", _wrap_UniqueLock_unlock, METH_VARARGS, NULL},
+	 { (char *)"UniqueLock_isLocked", _wrap_UniqueLock_isLocked, METH_VARARGS, NULL},
+	 { (char *)"UniqueLock_swigregister", UniqueLock_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_ConditionVariable", _wrap_new_ConditionVariable, METH_VARARGS, NULL},
+	 { (char *)"delete_ConditionVariable", _wrap_delete_ConditionVariable, METH_VARARGS, NULL},
+	 { (char *)"ConditionVariable_notifyOne", _wrap_ConditionVariable_notifyOne, METH_VARARGS, NULL},
+	 { (char *)"ConditionVariable_wait", _wrap_ConditionVariable_wait, METH_VARARGS, NULL},
+	 { (char *)"ConditionVariable_swigregister", ConditionVariable_swigregister, METH_VARARGS, NULL},
 	 { (char *)"TcpClientConfig_onSendData_set", _wrap_TcpClientConfig_onSendData_set, METH_VARARGS, NULL},
 	 { (char *)"TcpClientConfig_onSendData_get", _wrap_TcpClientConfig_onSendData_get, METH_VARARGS, NULL},
 	 { (char *)"TcpClientConfig_onReceiveData_set", _wrap_TcpClientConfig_onReceiveData_set, METH_VARARGS, NULL},
@@ -17456,26 +18369,26 @@ static void *_p_rte__NodeTo_p_rte__NodeBase(void *x, int *SWIGUNUSEDPARM(newmemo
 static void *_p_rte__NodeParameterTo_p_rte__NodeBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::NodeBase *)  ((rte::NodeParameter *) x));
 }
-static void *_p_rte__NodeBaseTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::NodeBase *) x));
+static void *_p_rte__UniqueLockTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::LockObject *)  ((rte::UniqueLock *) x));
 }
-static void *_p_rte__TcpServerTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::TcpServer *) x));
+static void *_p_rte__CriticalSectionTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::LockObject *)  ((rte::CriticalSection *) x));
 }
-static void *_p_rte__ContextTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::Context *) x));
-}
-static void *_p_rte__SocketTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::Socket *) x));
-}
-static void *_p_rte__TcpClientTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::TcpClient *) x));
+static void *_p_rte__ThreadTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::noncopyable *)  ((rte::Thread *) x));
 }
 static void *_p_rte__NodeBaseTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::NodeBase *) x));
 }
+static void *_p_rte__ConditionVariableTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::noncopyable *)  ((rte::ConditionVariable *) x));
+}
 static void *_p_rte__TcpServerTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::TcpServer *) x));
+}
+static void *_p_rte__LockObjectTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::noncopyable *)  ((rte::LockObject *) x));
 }
 static void *_p_rte__ContextTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::Context *) x));
@@ -17485,6 +18398,30 @@ static void *_p_rte__SocketTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(ne
 }
 static void *_p_rte__TcpClientTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::TcpClient *) x));
+}
+static void *_p_rte__ThreadTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Thread *) x));
+}
+static void *_p_rte__NodeBaseTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::NodeBase *) x));
+}
+static void *_p_rte__ConditionVariableTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::ConditionVariable *) x));
+}
+static void *_p_rte__TcpServerTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::TcpServer *) x));
+}
+static void *_p_rte__LockObjectTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::LockObject *) x));
+}
+static void *_p_rte__ContextTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Context *) x));
+}
+static void *_p_rte__SocketTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Socket *) x));
+}
+static void *_p_rte__TcpClientTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::TcpClient *) x));
 }
 static void *_p_rte__PingCommandTo_p_rte__Command(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::Command *)  ((rte::PingCommand *) x));
@@ -17519,8 +18456,11 @@ static swig_type_info _swigt__p_p_char = {"_p_p_char", "PTCH *|PCTSTR *|LPCTSTR 
 static swig_type_info _swigt__p_p_unsigned_long = {"_p_p_unsigned_long", "unsigned long **|PLCID *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_reference = {"_p_reference", "reference *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Command = {"_p_rte__Command", "rte::Command *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__ConditionVariable = {"_p_rte__ConditionVariable", "rte::ConditionVariable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Context = {"_p_rte__Context", "rte::Context *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__CriticalSection = {"_p_rte__CriticalSection", "rte::CriticalSection *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__File = {"_p_rte__File", "rte::File *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__LockObject = {"_p_rte__LockObject", "rte::LockObject *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Node = {"_p_rte__Node", "std::vector< rte::Node * >::value_type|rte::Node *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__NodeBase = {"_p_rte__NodeBase", "rte::NodeBase *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__NodeCommand = {"_p_rte__NodeCommand", "rte::NodeCommand *", 0, 0, (void*)0, 0};
@@ -17534,6 +18474,8 @@ static swig_type_info _swigt__p_rte__TcpClient = {"_p_rte__TcpClient", "rte::Tcp
 static swig_type_info _swigt__p_rte__TcpClientConfig = {"_p_rte__TcpClientConfig", "rte::TcpClientConfig *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__TcpServer = {"_p_rte__TcpServer", "rte::TcpServer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__TcpServerConfig = {"_p_rte__TcpServerConfig", "rte::TcpServerConfig *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__Thread = {"_p_rte__Thread", "rte::Thread *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__UniqueLock = {"_p_rte__UniqueLock", "rte::UniqueLock *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Vector3 = {"_p_rte__Vector3", "rte::Vector3 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__noncopyable = {"_p_rte__noncopyable", "rte::noncopyable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__nonmovable = {"_p_rte__nonmovable", "rte::nonmovable *", 0, 0, (void*)0, 0};
@@ -17544,6 +18486,8 @@ static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0
 static swig_type_info _swigt__p_std__allocatorT_rte__NodeParameter_p_t = {"_p_std__allocatorT_rte__NodeParameter_p_t", "std::vector< rte::NodeParameter * >::allocator_type *|std::allocator< rte::NodeParameter * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_rte__Node_p_t = {"_p_std__allocatorT_rte__Node_p_t", "std::vector< rte::Node * >::allocator_type *|std::allocator< rte::Node * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_std__string_t = {"_p_std__allocatorT_std__string_t", "std::vector< std::string >::allocator_type *|std::allocator< std::string > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__functionT_bool_fvoidF_t = {"_p_std__functionT_bool_fvoidF_t", "std::function< bool (void) > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__functionT_unsigned_int_fvoid_pF_t = {"_p_std__functionT_unsigned_int_fvoid_pF_t", "std::function< unsigned int (void *) > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t = {"_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t", "std::vector< rte::NodeParameter * > *|std::vector< rte::NodeParameter *,std::allocator< rte::NodeParameter * > > *", 0, 0, (void*)0, 0};
@@ -17580,8 +18524,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_p_unsigned_long,
   &_swigt__p_reference,
   &_swigt__p_rte__Command,
+  &_swigt__p_rte__ConditionVariable,
   &_swigt__p_rte__Context,
+  &_swigt__p_rte__CriticalSection,
   &_swigt__p_rte__File,
+  &_swigt__p_rte__LockObject,
   &_swigt__p_rte__Node,
   &_swigt__p_rte__NodeBase,
   &_swigt__p_rte__NodeCommand,
@@ -17595,6 +18542,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_rte__TcpClientConfig,
   &_swigt__p_rte__TcpServer,
   &_swigt__p_rte__TcpServerConfig,
+  &_swigt__p_rte__Thread,
+  &_swigt__p_rte__UniqueLock,
   &_swigt__p_rte__Vector3,
   &_swigt__p_rte__noncopyable,
   &_swigt__p_rte__nonmovable,
@@ -17605,6 +18554,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__allocatorT_rte__NodeParameter_p_t,
   &_swigt__p_std__allocatorT_rte__Node_p_t,
   &_swigt__p_std__allocatorT_std__string_t,
+  &_swigt__p_std__functionT_bool_fvoidF_t,
+  &_swigt__p_std__functionT_unsigned_int_fvoid_pF_t,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t,
@@ -17641,8 +18592,11 @@ static swig_cast_info _swigc__p_p_char[] = {  {&_swigt__p_p_char, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_p_unsigned_long[] = {  {&_swigt__p_p_unsigned_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_reference[] = {  {&_swigt__p_reference, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Command[] = {  {&_swigt__p_rte__Command, 0, 0, 0},  {&_swigt__p_rte__PingCommand, _p_rte__PingCommandTo_p_rte__Command, 0, 0},  {&_swigt__p_rte__NodeNameListCommand, _p_rte__NodeNameListCommandTo_p_rte__Command, 0, 0},  {&_swigt__p_rte__NodeCommand, _p_rte__NodeCommandTo_p_rte__Command, 0, 0},  {&_swigt__p_rte__ParamUpdateCommand, _p_rte__ParamUpdateCommandTo_p_rte__Command, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__ConditionVariable[] = {  {&_swigt__p_rte__ConditionVariable, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Context[] = {  {&_swigt__p_rte__Context, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__CriticalSection[] = {  {&_swigt__p_rte__CriticalSection, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__File[] = {  {&_swigt__p_rte__File, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__LockObject[] = {  {&_swigt__p_rte__UniqueLock, _p_rte__UniqueLockTo_p_rte__LockObject, 0, 0},  {&_swigt__p_rte__LockObject, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, _p_rte__CriticalSectionTo_p_rte__LockObject, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Node[] = {  {&_swigt__p_rte__Node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeBase[] = {  {&_swigt__p_rte__NodeBase, 0, 0, 0},  {&_swigt__p_rte__NodeParameter, _p_rte__NodeParameterTo_p_rte__NodeBase, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__NodeBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeCommand[] = {  {&_swigt__p_rte__NodeCommand, 0, 0, 0},{0, 0, 0, 0}};
@@ -17656,9 +18610,11 @@ static swig_cast_info _swigc__p_rte__TcpClient[] = {  {&_swigt__p_rte__TcpClient
 static swig_cast_info _swigc__p_rte__TcpClientConfig[] = {  {&_swigt__p_rte__TcpClientConfig, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpServer[] = {  {&_swigt__p_rte__TcpServer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpServerConfig[] = {  {&_swigt__p_rte__TcpServerConfig, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__Thread[] = {  {&_swigt__p_rte__Thread, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__UniqueLock[] = {  {&_swigt__p_rte__UniqueLock, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Vector3[] = {  {&_swigt__p_rte__Vector3, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__noncopyable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__noncopyable, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__noncopyable, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__nonmovable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__nonmovable, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__nonmovable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__noncopyable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__noncopyable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__noncopyable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__nonmovable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__nonmovable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__nonmovable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed___int64[] = {  {&_swigt__p_signed___int64, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -17666,6 +18622,8 @@ static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0}
 static swig_cast_info _swigc__p_std__allocatorT_rte__NodeParameter_p_t[] = {  {&_swigt__p_std__allocatorT_rte__NodeParameter_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_rte__Node_p_t[] = {  {&_swigt__p_std__allocatorT_rte__Node_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_std__string_t[] = {  {&_swigt__p_std__allocatorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__functionT_bool_fvoidF_t[] = {  {&_swigt__p_std__functionT_bool_fvoidF_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__functionT_unsigned_int_fvoid_pF_t[] = {  {&_swigt__p_std__functionT_unsigned_int_fvoid_pF_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t[] = {  {&_swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -17702,8 +18660,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_p_unsigned_long,
   _swigc__p_reference,
   _swigc__p_rte__Command,
+  _swigc__p_rte__ConditionVariable,
   _swigc__p_rte__Context,
+  _swigc__p_rte__CriticalSection,
   _swigc__p_rte__File,
+  _swigc__p_rte__LockObject,
   _swigc__p_rte__Node,
   _swigc__p_rte__NodeBase,
   _swigc__p_rte__NodeCommand,
@@ -17717,6 +18678,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_rte__TcpClientConfig,
   _swigc__p_rte__TcpServer,
   _swigc__p_rte__TcpServerConfig,
+  _swigc__p_rte__Thread,
+  _swigc__p_rte__UniqueLock,
   _swigc__p_rte__Vector3,
   _swigc__p_rte__noncopyable,
   _swigc__p_rte__nonmovable,
@@ -17727,6 +18690,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__allocatorT_rte__NodeParameter_p_t,
   _swigc__p_std__allocatorT_rte__Node_p_t,
   _swigc__p_std__allocatorT_std__string_t,
+  _swigc__p_std__functionT_bool_fvoidF_t,
+  _swigc__p_std__functionT_unsigned_int_fvoid_pF_t,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t,

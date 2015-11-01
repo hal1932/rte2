@@ -41,7 +41,7 @@ namespace rte {
 		TcpClientConfig mConfig;
 
 		Socket* mpSocket;
-		Mutex mSocketLock;
+		CriticalSection mSocketLock;
 
 		Thread mReceiveThread;
 		Thread mSendThread;
@@ -54,10 +54,10 @@ namespace rte {
 			int bufferSize;
 		};
 		std::vector<SendData> mSendDataList;
-		Mutex mSendDataLock;
+		CriticalSection mSendDataLock;
 
-		void receiveThread_(void*);
-		void sendThread_(void*);
+		unsigned int receiveThread_(void*);
+		unsigned int sendThread_(void*);
 	};
 
 }// namespace rte

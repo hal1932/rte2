@@ -53,14 +53,14 @@ namespace rte {
 		struct ClientInfo
 		{
 			Thread* pReceiveThread;
-			Mutex* mpLock;
+			CriticalSection* mpLock;
 		};
 		std::map<Socket*, ClientInfo> mClientDic;
 
 		Thread mSendThread;
 
 		std::vector<int> mCloseRequestList;
-		Mutex mCloseRequestLock;
+		CriticalSection mCloseRequestLock;
 
 		volatile bool mIsConnectionClosed;
 
@@ -71,11 +71,11 @@ namespace rte {
 			int bufferSize;
 		};
 		std::vector<SendData> mSendDataList;
-		Mutex mSendDataLock;
+		CriticalSection mSendDataLock;
 
-		void acceptThread_(void*);
-		void receiveThread_(void* arg);
-		void sendThread_(void*);
+		unsigned int acceptThread_(void*);
+		unsigned int receiveThread_(void* arg);
+		unsigned int sendThread_(void*);
 	};
 
 }// namespace rte

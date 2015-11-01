@@ -804,6 +804,151 @@ def Socket_shutdown():
     return _rte2.Socket_shutdown()
 Socket_shutdown = _rte2.Socket_shutdown
 
+class Thread(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Thread, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Thread, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_Thread()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_Thread
+    __del__ = lambda self: None
+
+    def start(self, threadFunc, arg=None):
+        return _rte2.Thread_start(self, threadFunc, arg)
+
+    def join(self):
+        return _rte2.Thread_join(self)
+
+    def getId(self):
+        return _rte2.Thread_getId(self)
+Thread_swigregister = _rte2.Thread_swigregister
+Thread_swigregister(Thread)
+
+class LockObject(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, LockObject, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, LockObject, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def lock(self):
+        return _rte2.LockObject_lock(self)
+
+    def tryLock(self):
+        return _rte2.LockObject_tryLock(self)
+
+    def unlock(self):
+        return _rte2.LockObject_unlock(self)
+
+    def isLocked(self):
+        return _rte2.LockObject_isLocked(self)
+    __swig_destroy__ = _rte2.delete_LockObject
+    __del__ = lambda self: None
+LockObject_swigregister = _rte2.LockObject_swigregister
+LockObject_swigregister(LockObject)
+
+class CriticalSection(LockObject):
+    __swig_setmethods__ = {}
+    for _s in [LockObject]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, CriticalSection, name, value)
+    __swig_getmethods__ = {}
+    for _s in [LockObject]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, CriticalSection, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_CriticalSection()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_CriticalSection
+    __del__ = lambda self: None
+
+    def lock(self):
+        return _rte2.CriticalSection_lock(self)
+
+    def tryLock(self):
+        return _rte2.CriticalSection_tryLock(self)
+
+    def unlock(self):
+        return _rte2.CriticalSection_unlock(self)
+
+    def isLocked(self):
+        return _rte2.CriticalSection_isLocked(self)
+CriticalSection_swigregister = _rte2.CriticalSection_swigregister
+CriticalSection_swigregister(CriticalSection)
+
+class UniqueLock(LockObject):
+    __swig_setmethods__ = {}
+    for _s in [LockObject]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UniqueLock, name, value)
+    __swig_getmethods__ = {}
+    for _s in [LockObject]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, UniqueLock, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, lockObj, deferLock=False):
+        this = _rte2.new_UniqueLock(lockObj, deferLock)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_UniqueLock
+    __del__ = lambda self: None
+
+    def lock(self):
+        return _rte2.UniqueLock_lock(self)
+
+    def tryLock(self):
+        return _rte2.UniqueLock_tryLock(self)
+
+    def unlock(self):
+        return _rte2.UniqueLock_unlock(self)
+
+    def isLocked(self):
+        return _rte2.UniqueLock_isLocked(self)
+UniqueLock_swigregister = _rte2.UniqueLock_swigregister
+UniqueLock_swigregister(UniqueLock)
+
+class ConditionVariable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ConditionVariable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ConditionVariable, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_ConditionVariable()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_ConditionVariable
+    __del__ = lambda self: None
+
+    def notifyOne(self):
+        return _rte2.ConditionVariable_notifyOne(self)
+
+    def wait(self, *args):
+        return _rte2.ConditionVariable_wait(self, *args)
+ConditionVariable_swigregister = _rte2.ConditionVariable_swigregister
+ConditionVariable_swigregister(ConditionVariable)
+
 class TcpClientConfig(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, TcpClientConfig, name, value)
