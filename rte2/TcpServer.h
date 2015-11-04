@@ -1,31 +1,13 @@
 #pragma once
-#include "common.h"
+#include "tcpCommon.h"
 #include "Thread.h"
+#include <vector>
 #include <map>
+#include <functional>
 
 namespace rte {
 
 	class Socket;
-
-	struct TcpServerConfig
-	{
-		typedef void(*OnAcceptClient)(int id);
-		typedef void(*OnSendData)(int id, const uint8_t* buffer, int bufferSize, int sendBytes);
-		typedef void(*OnReceiveData)(int id, const uint8_t* buffer, int bufferSize);
-		typedef bool(*OnConnectionError)(int id, const uint8_t* buffer, int bufferSize);
-
-		OnAcceptClient onAcceptClient;
-		OnSendData onSendData;
-		OnReceiveData onReceiveData;
-		OnConnectionError onConnectionError;
-
-		TcpServerConfig()
-			: onAcceptClient(nullptr),
-			  onSendData(nullptr),
-			  onReceiveData(nullptr),
-			  onConnectionError(nullptr)
-		{ }
-	};
 
 	class TcpServer RTE_FINAL : private noncopyable, private nonmovable
 	{
@@ -33,22 +15,27 @@ namespace rte {
 		TcpServer();
 		~TcpServer();
 
-		bool configure(const TcpServerConfig& config);
-
 		bool open(int port);
 		void close();
 
 		void sendAsync(int id, const uint8_t* buffer, int bufferSize);
 		void broadcastAsync(const uint8_t* buffer, int bufferSize);
 
+		int getClientCount() { return mClientDic.size(); }
+		std::vector<int> getClientList();
+
+		std::vector<int> popAcceptedQueue();
+		std::vector<TcpReceivedData> popReceivedQueue();
+		std::vector<TcpSentData> popSentQueue();
+		std::vector<int> popClosedQueue();
+
 		void closeConnection(int id);
 
 	private:
-		TcpServerConfig mConfig;
-
 		Socket* mpSocket;
 
 		Thread mAcceptThread;
+		Thread mSendThread;
 
 		struct ClientInfo
 		{
@@ -57,21 +44,13 @@ namespace rte {
 		};
 		std::map<Socket*, ClientInfo> mClientDic;
 
-		Thread mSendThread;
-
-		std::vector<int> mCloseRequestList;
-		CriticalSection mCloseRequestLock;
+		rte::InterlockedVector<int> mAcceptedList;
+		rte::InterlockedVector<TcpReceivedData> mReceivedList;
+		rte::InterlockedVector<int> mClosedList;
+		rte::InterlockedVector<int> mCloseRequestList;
+		rte::InterlockedVector<TcpSentData> mSentList;
 
 		volatile bool mIsConnectionClosed;
-
-		struct SendData
-		{
-			Socket* pClientSocket;
-			const uint8_t* buffer;
-			int bufferSize;
-		};
-		std::vector<SendData> mSendDataList;
-		CriticalSection mSendDataLock;
 
 		unsigned int acceptThread_(void*);
 		unsigned int receiveThread_(void* arg);

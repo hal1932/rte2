@@ -31,11 +31,9 @@ namespace rte {
 		assert(mpSocket == nullptr);
 	}
 
-	bool TcpServer::configure(const TcpServerConfig& config)
+	bool TcpServer::open(int port)
 	{
 		assert(mpSocket == nullptr);
-
-		mConfig = config;
 
 		mpSocket = new Socket();
 		if (!mpSocket->configure(Socket::ProtocolType::Tcp))
@@ -45,13 +43,6 @@ namespace rte {
 		}
 
 		mpSocket->setBlocking(true);
-
-		return true;
-	}
-
-	bool TcpServer::open(int port)
-	{
-		assert(mpSocket != nullptr);
 
 		if (!mpSocket->bind(port))
 		{
@@ -96,13 +87,11 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
-		UniqueLock lock(mSendDataLock);
-
-		SendData data;
-		data.pClientSocket = idToSocket(id);
-		data.buffer = buffer;
+		TcpSentData data;
+		data.clientId = id;
+		data.buffer = const_cast<uint8_t*>(buffer);
 		data.bufferSize = bufferSize;
-		mSendDataList.emplace_back(data);
+		mSentList.emplaceBack(std::move(data));
 	}
 
 	void TcpServer::broadcastAsync(const uint8_t* buffer, int bufferSize)
@@ -114,6 +103,45 @@ namespace rte {
 			auto id = socketToId(client.first);
 			sendAsync(id, buffer, bufferSize);
 		}
+	}
+
+	std::vector<int> TcpServer::getClientList()
+	{
+		std::vector<int> result;
+		for (auto client : mClientDic)
+		{
+			result.push_back(socketToId(client.first));
+		}
+		return result;
+	}
+
+	std::vector<int> TcpServer::popAcceptedQueue()
+	{
+		std::vector<int> result;
+		mAcceptedList.swap(&result);
+		return std::move(result);
+	}
+
+	std::vector<TcpReceivedData> TcpServer::popReceivedQueue()
+	{
+		std::vector<TcpReceivedData> result;
+		mReceivedList.swap(&result);
+		return std::move(result);
+	}
+
+	std::vector<TcpSentData> TcpServer::popSentQueue()
+	{
+		std::vector<TcpSentData> result;
+		mSentList.swap(&result);
+		return std::move(result);
+	}
+
+	std::vector<int> TcpServer::popClosedQueue()
+	{
+		std::vector<int> result;
+		mClosedList.swap(&result);
+
+		return std::move(result);
 	}
 
 	void TcpServer::closeConnection(int id)
@@ -133,10 +161,10 @@ namespace rte {
 		auto pReceiveThread = clientInfo.second.pReceiveThread;
 
 		// 指定クライアントのスレッドに停止リクエストを発行
-		{
-			UniqueLock lock(mCloseRequestLock);
-			mCloseRequestList.push_back(socketToId(pClientSocket));
-		}
+		auto clientId = socketToId(pClientSocket);
+		mCloseRequestList.pushBack(clientId);
+
+		mClosedList.erase(clientId);
 
 		pReceiveThread->join();
 		mem::safeDelete(&pReceiveThread);
@@ -148,6 +176,8 @@ namespace rte {
 
 	unsigned int TcpServer::acceptThread_(void*)
 	{
+		logInfo("enter");
+
 		unsigned int result = 0;
 
 		auto pClient = new Socket();
@@ -161,11 +191,12 @@ namespace rte {
 			auto accepted = mpSocket->accept(pClient);
 			if (accepted == TriBool::True)
 			{
-				// クライアント受付コールバック
-				if (mConfig.onAcceptClient != nullptr)
+				logInfo("accept");
+
+				// クライアント記録
 				{
 					auto clientId = socketToId(pClient);
-					mConfig.onAcceptClient(clientId);
+					mAcceptedList.pushBack(clientId);
 				}
 
 				// データ受信スレッド起動
@@ -189,6 +220,8 @@ namespace rte {
 
 	unsigned int TcpServer::receiveThread_(void* arg)
 	{
+		logInfo("");
+
 		unsigned int result = 0;
 
 		auto pClientSocket = static_cast<Socket*>(arg);
@@ -196,36 +229,31 @@ namespace rte {
 		CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
 
 		const int bufferSize = 1024;
-		mem::SafeArray<uint8_t> buffer(bufferSize);
 
 		while (true)
 		{
 			// 停止リクエストをチェック
+			if (mCloseRequestList.erase(clientId) || mIsConnectionClosed)
 			{
-				UniqueLock lock(mCloseRequestLock);
-
-				auto closeRequest = std::find(mCloseRequestList.begin(), mCloseRequestList.end(), clientId);
-				if (mIsConnectionClosed || closeRequest != mCloseRequestList.end())
-				{
-					mCloseRequestList.erase(closeRequest);
-					break;
-				}
+				break;
 			}
 
 			// データ受信
-			mem::SafeArray<uint8_t> receivedData;
+			mem::Array<uint8_t> receivedData;
 			{
 				UniqueLock lock(clientLock);
-				receivedData.shallowCopyFrom(socketUtil::receive(pClientSocket));
+				receivedData = std::move(socketUtil::receive(pClientSocket));
 			}
 
 			if (receivedData.size() > 0)
 			{
-				// 受信コールバック
-				if (mConfig.onReceiveData != nullptr)
-				{
-					mConfig.onReceiveData(clientId, buffer.get(), buffer.size());
-				}
+				// 受信データをキューに詰める
+				TcpReceivedData result;
+				result.clientId = clientId;
+				result.buffer = receivedData.get();
+				result.bufferSize = receivedData.size();
+
+				mReceivedList.emplaceBack(std::move(result));
 			}
 			else if (receivedData.size() == 0)
 			{
@@ -235,14 +263,14 @@ namespace rte {
 			{
 				// エラー
 				logError("receiving from client failed");
-				if (mConfig.onConnectionError != nullptr)
-				{
-					if (!mConfig.onConnectionError(clientId, nullptr, 0))
-					{
-						result = 1;
-						break;
-					}
-				}
+
+				// 不正データをキューに詰める
+				TcpReceivedData result;
+				result.clientId = clientId;
+				result.buffer = nullptr;
+				result.bufferSize = -1;
+
+				mReceivedList.emplaceBack(std::move(result));
 			}
 
 			Sleep(cThreadPollingInterval);
@@ -263,18 +291,15 @@ namespace rte {
 				break;
 			}
 
-			if (mSendDataList.size() > 0)
+			if (mSentList.size() > 0)
 			{
 				// キューが空になるまで送信
-				std::vector<SendData> dataList;
-				{
-					UniqueLock lock(mSendDataLock);
-					mSendDataList.swap(dataList);
-				}
+				std::vector<TcpSentData> dataList;
+				mSentList.swap(&dataList);
 
 				for (auto data : dataList)
 				{
-					auto pClientSocket = data.pClientSocket;
+					auto pClientSocket = idToSocket(data.clientId);
 					CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
 
 					int sendBytes;
@@ -283,27 +308,16 @@ namespace rte {
 						sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
 					}
 
-					auto clientId = socketToId(pClientSocket);
-					if (sendBytes == data.bufferSize)
 					{
-						// 送信コールバック
-						if (mConfig.onSendData != nullptr)
-						{
-							mConfig.onSendData(clientId, data.buffer, data.bufferSize, sendBytes);
-						}
-					}
-					else
-					{
-						// エラー
-						logError("sending to client failed");
-						if (mConfig.onConnectionError != nullptr)
-						{
-							if (!mConfig.onConnectionError(clientId, data.buffer, data.bufferSize))
-							{
-								result = 1;
-								break;
-							}
-						}
+						auto clientId = socketToId(pClientSocket);
+
+						TcpSentData result;
+						result.clientId = clientId;
+						result.buffer = const_cast<uint8_t*>(data.buffer);
+						result.bufferSize = data.bufferSize;
+						result.sentSize = sendBytes;
+
+						mSentList.emplaceBack(std::move(result));
 					}
 				}
 			}

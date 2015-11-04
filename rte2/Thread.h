@@ -1,6 +1,8 @@
 #pragma once
 #include "common.h"
 #include <functional>
+#include <vector>
+#include <algorithm>
 
 namespace rte {
 
@@ -74,7 +76,7 @@ namespace rte {
 		LockObject& mLockObj;
 	};
 
-	class ConditionVariable RTE_FINAL : noncopyable, nonmovable
+	class ConditionVariable RTE_FINAL : private noncopyable, private nonmovable
 	{
 	public:
 		ConditionVariable();
@@ -88,4 +90,61 @@ namespace rte {
 		HANDLE mHandle;
 		CriticalSection mLock;
 	};
+
+	template<class T>
+	class InterlockedVector RTE_FINAL : private noncopyable, private nonmovable
+	{
+	public:
+		InterlockedVector() = default;
+		~InterlockedVector() = default;
+
+		std::vector<T>& get() { return mVec; }
+
+		int size()
+		{
+			UniqueLock lock(mLock);
+			return mVec.size();
+		}
+
+		void pushBack(T obj)
+		{
+			UniqueLock lock(mLock);
+			mVec.push_back(obj);
+		}
+
+		void emplaceBack(T&& obj)
+		{
+			UniqueLock lock(mLock);
+			mVec.emplace_back(std::move(obj));
+		}
+
+		void swap(std::vector<T>* pOther)
+		{
+			UniqueLock lock(mLock);
+			std::swap(mVec, *pOther);
+		}
+
+		void swap(InterlockedVector<T>* pOther)
+		{
+			UniqueLock lock(pOther->mLock);
+			swap(pOther->mVec);
+		}
+
+		bool erase(T obj)
+		{
+			UniqueLock lock(mLock);
+			auto found = std::find(mVec.begin(), mVec.end(), obj);
+			if (found != mVec.end())
+			{
+				mVec.erase(found);
+				return true;
+			}
+			return false;
+		}
+
+	private:
+		std::vector<T> mVec;
+		CriticalSection mLock;
+	};
+
 }// namespace rte

@@ -111,35 +111,125 @@ namespace rte {
 		}
 
 		template<class T>
+		class Array
+		{
+		public:
+			Array()
+				: mPtr(nullptr), mSize(0)
+			{ }
+
+			explicit Array(int size)
+				: mPtr(nullptr), mSize(0)
+			{
+				allocate(size);
+			}
+
+			Array(Array&& other)
+			{
+				*this = std::move(other);
+			}
+
+			Array& operator=(Array&& other)
+			{
+				mPtr = other.mPtr;
+				mSize = other.mSize;
+
+				other.mPtr = nullptr;
+				other.mSize = 0;
+
+				return *this;
+			}
+
+			Array(Array&) = delete;
+			Array& operator=(Array&) = delete;
+			~Array() = default;
+
+			T* get() { return mPtr; }
+			int size() { return mSize; }
+
+			void allocate(int size)
+			{
+				deallocate();
+				mPtr = new T[size];
+				mSize = size;
+			}
+
+			void deallocate()
+			{
+				mem::safeDelete(&mPtr);
+				mSize = 0;
+			}
+
+			void resize(int size)
+			{
+				assert(size > 0);
+
+				auto ptr = new T[size];
+				if (mPtr != nullptr)
+				{
+					memcpy(ptr, mPtr, size);
+				}
+				
+				mem::safeDelete(&mPtr);
+				mPtr = ptr;
+				mSize = size;
+			}
+
+			void append(Array&& other)
+			{
+				if (other.mSize == 0)
+				{
+					return;
+				}
+
+				auto ptr = new T[mSize + other.mSize];
+				memcpy(ptr, mPtr, mSize);
+				memcpy(ptr + mSize, other.mPtr, other.mSize);
+
+				mSize += other.mSize;
+
+				mem::safeDelete(&other.mPtr);
+				other.mSize = 0;
+			}
+
+		private:
+			T* mPtr;
+			int mSize;
+		};
+
+		template<class T>
 		class SafeArray
 		{
 		public:
 			SafeArray()
-				: mPtr(nullptr), mSize(0)
+				: mPtr(nullptr), mSize(0), mOwnPtr(false)
 			{ }
 
-			SafeArray(int size)
-				: mPtr(new T[size]), mSize(size)
+			explicit SafeArray(int size)
+				: mPtr(nullptr), mSize(size)
 			{
-				assert(size <= 0);
-			}
-
-			SafeArray(const SafeArray<T>& other)
-			{
-				*this = other;
+				if (size > 0)
+				{
+					mPtr = new T[size];
+					mOwnPtr = true;
+				}
 			}
 
 			SafeArray(SafeArray<T>&& other)
 			{
 				mPtr = other.mPtr;
 				mSize = other.mSize;
+				mOwnPtr = true;
 				other.mPtr = nullptr;
 				other.mSize = 0;
 			}
 
 			~SafeArray()
 			{
-				mem::safeDeleteArray(&mPtr);
+				if (mOwnPtr)
+				{
+					mem::safeDeleteArray(&mPtr);
+				}
 				mSize = 0;
 			}
 
@@ -151,13 +241,16 @@ namespace rte {
 			//	mSize = other.mSize;
 			//	return *this;
 			//}
+			SafeArray(const SafeArray<T>&) = delete;
 			SafeArray<T>& operator=(const SafeArray<T>&) = delete;
 
-			void shallowCopyFrom(const SafeArray<T>& other)
+			void moveFrom(SafeArray<T>&& other)
 			{
-				mem::safeDeleteArray(&mPtr);
 				mPtr = other.mPtr;
 				mSize = other.mSize;
+
+				other.mPtr = nullptr;
+				other.mSize = 0;
 			}
 
 			T* get() { return mPtr; }
@@ -167,6 +260,7 @@ namespace rte {
 			{
 				std::swap(mPtr, other.mPtr);
 				std::swap(mSize, other.mSize);
+				std::swap(mOwnPtr, other.mOwnPtr);
 			}
 
 			void resize(int size)
@@ -176,12 +270,20 @@ namespace rte {
 					return;
 				}
 
+				if (size < 0)
+				{
+					mem::safeDeleteArray(&mPtr);
+					mSize = size;
+					return;
+				}
+
 				auto ptr = new T[size];
 				memcpy(ptr, mPtr, size);
 
 				mem::safeDeleteArray(&mPtr);
 				mPtr = ptr;
 				mSize = size;
+				mOwnPtr = true;
 			}
 
 			void append(T* ptr, int size)
@@ -204,6 +306,7 @@ namespace rte {
 		private:
 			T* mPtr;
 			int mSize;
+			bool mOwnPtr;
 		};
 	}
 

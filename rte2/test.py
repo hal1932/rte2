@@ -215,5 +215,8 @@ class Test(unittest.TestCase):
         rt.Socket.setup()
         rt.Socket.shutdown()
 
+    def test_common(self):
+        arr = rt.SafeArrayUInt8(256)
+
 if __name__ == "__main__":
     unittest.main()

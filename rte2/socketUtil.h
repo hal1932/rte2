@@ -6,24 +6,26 @@ namespace rte {
 	namespace socketUtil {
 
 		/// 受信キューが空になるまで受信
-		inline mem::SafeArray<uint8_t> receive(Socket* pSocket)
+		inline mem::Array<uint8_t> receive(Socket* pSocket)
 		{
 			const int cBufferSize = 1024;
 
-			mem::SafeArray<uint8_t> received(cBufferSize);
+			mem::Array<uint8_t> received(cBufferSize);
 			auto recvBytes = pSocket->recv(received.get(), received.size());
 			received.resize(recvBytes);
 
 			if (recvBytes > 0)
 			{
-				mem::SafeArray<uint8_t> tmp(cBufferSize);
+				received.resize(recvBytes);
+
+				mem::Array<uint8_t> tmp(cBufferSize);
 				while (pSocket->getAvailabieSize() > 0)
 				{
 					recvBytes = pSocket->recv(tmp.get(), tmp.size());
 					if (recvBytes > 0)
 					{
 						tmp.resize(recvBytes);
-						received.append(tmp.get(), tmp.size());
+						received.append(std::move(tmp));
 					}
 				}
 			}
