@@ -154,6 +154,7 @@
     <ClInclude Include="Socket.h" />
     <ClInclude Include="TcpClient.h" />
     <ClInclude Include="socketUtil.h" />
+    <ClInclude Include="tcpCommon.h" />
     <ClInclude Include="TcpServer.h" />
     <ClInclude Include="Thread.h" />
   </ItemGroup>

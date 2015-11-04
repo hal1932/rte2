@@ -16,23 +16,33 @@ def main():
         acceped = server.getAcceptedQueue()
         for clientId in acceped:
             print "accept: " + clientId
+            
+            clientCount = server.getClientCount()
+            if clientCount > 0:
+                clients = server.getClientList()
+                for client in clients:
+                    print "client: ", client.Id
+            
             server.sendAsync(clientId, b"accpet", 6)
         
-        clientCount = server.getClientCount()
-        if clientCount > 0:
-            clients = server.getClientList()
-            for client in clients:
-                print "client: ", client.Id
-        
-        received = server.getReceivedQueue()
+        received = server.popReceivedQueue()
         for data in received:
             if data.bufferSize > 0:
                 print data.clientId, data.buffer, data.bufferSize
-                server.sendAsync(data) # echo back
+                server.sendAsync(data.clientId, data.buffer, data.bufferSize) # echo back
             else:
                 print "error recv: ", data.clientId
+                server.closeConnection(data.clientId)
+
+        send = server.popSentQueue()
+        for data in send:
+            if data.bufferSize == data.sendSize:
+                print "send: ", data.clientId
+            else:
+                print "error send: ", data.clientId
+                server.closeConnection(data.clientId)
         
-        closed = server.getClosedQueue()
+        closed = server.popClosedQueue()
         for clientId in cloesd:
             print "closed: ", clientId
         
