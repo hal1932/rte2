@@ -40,7 +40,7 @@ namespace rte {
 		struct ClientInfo
 		{
 			Thread* pReceiveThread;
-			CriticalSection* mpLock;
+			CriticalSection* pLock;
 		};
 		std::map<Socket*, ClientInfo> mClientDic;
 

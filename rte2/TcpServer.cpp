@@ -73,7 +73,7 @@ namespace rte {
 		{
 			item.second.pReceiveThread->join();
 			mem::safeDelete(&item.second.pReceiveThread);
-			mem::safeDelete(&item.second.mpLock);
+			mem::safeDelete(&item.second.pLock);
 
 			mem::safeDelete(&item.first);
 		}
@@ -168,7 +168,7 @@ namespace rte {
 
 		pReceiveThread->join();
 		mem::safeDelete(&pReceiveThread);
-		mem::safeDelete(&clientInfo.second.mpLock);
+		mem::safeDelete(&clientInfo.second.pLock);
 
 		pClientSocket->close();
 		mem::safeDelete(&pClientSocket);
@@ -205,7 +205,7 @@ namespace rte {
 
 				ClientInfo info;
 				info.pReceiveThread = pReceiveThread;
-				info.mpLock = new CriticalSection();
+				info.pLock = new CriticalSection();
 				mClientDic[pClient] = info;
 
 				pClient = new Socket();
@@ -226,7 +226,7 @@ namespace rte {
 
 		auto pClientSocket = static_cast<Socket*>(arg);
 		auto clientId = socketToId(pClientSocket);
-		CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
+		CriticalSection& clientLock = *mClientDic[pClientSocket].pLock;
 
 		const int bufferSize = 1024;
 
@@ -300,7 +300,7 @@ namespace rte {
 				for (auto data : dataList)
 				{
 					auto pClientSocket = idToSocket(data.clientId);
-					CriticalSection& clientLock = *mClientDic[pClientSocket].mpLock;
+					CriticalSection& clientLock = *mClientDic[pClientSocket].pLock;
 
 					int sendBytes;
 					{
