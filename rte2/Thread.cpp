@@ -31,7 +31,7 @@ namespace rte {
 		assert(mHandle == nullptr);
 	}
 
-	void Thread::start(std::function<unsigned int(void*)> threadFunc, void* arg)
+	void Thread::start(std::function<int(void*)> threadFunc, void* arg)
 	{
 		assert(mHandle == nullptr);
 

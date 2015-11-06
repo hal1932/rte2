@@ -2943,68 +2943,69 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_char swig_types[3]
 #define SWIGTYPE_p_const_reference swig_types[4]
 #define SWIGTYPE_p_difference_type swig_types[5]
-#define SWIGTYPE_p_f_int__void swig_types[6]
-#define SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__bool swig_types[7]
-#define SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__void swig_types[8]
-#define SWIGTYPE_p_f_int_p_q_const__unsigned_char_int_int__void swig_types[9]
-#define SWIGTYPE_p_f_p_q_const__unsigned_char_int__bool swig_types[10]
-#define SWIGTYPE_p_f_p_q_const__unsigned_char_int__void swig_types[11]
-#define SWIGTYPE_p_float swig_types[12]
-#define SWIGTYPE_p_int swig_types[13]
-#define SWIGTYPE_p_long swig_types[14]
-#define SWIGTYPE_p_long_long swig_types[15]
-#define SWIGTYPE_p_p_PyObject swig_types[16]
-#define SWIGTYPE_p_p_char swig_types[17]
-#define SWIGTYPE_p_p_unsigned_long swig_types[18]
-#define SWIGTYPE_p_reference swig_types[19]
-#define SWIGTYPE_p_rte__Command swig_types[20]
-#define SWIGTYPE_p_rte__ConditionVariable swig_types[21]
-#define SWIGTYPE_p_rte__Context swig_types[22]
-#define SWIGTYPE_p_rte__CriticalSection swig_types[23]
-#define SWIGTYPE_p_rte__File swig_types[24]
-#define SWIGTYPE_p_rte__LockObject swig_types[25]
-#define SWIGTYPE_p_rte__Node swig_types[26]
-#define SWIGTYPE_p_rte__NodeBase swig_types[27]
-#define SWIGTYPE_p_rte__NodeCommand swig_types[28]
-#define SWIGTYPE_p_rte__NodeNameListCommand swig_types[29]
-#define SWIGTYPE_p_rte__NodeParameter swig_types[30]
-#define SWIGTYPE_p_rte__NodeParameterValueSerializer swig_types[31]
-#define SWIGTYPE_p_rte__ParamUpdateCommand swig_types[32]
-#define SWIGTYPE_p_rte__PingCommand swig_types[33]
-#define SWIGTYPE_p_rte__Socket swig_types[34]
-#define SWIGTYPE_p_rte__TcpClient swig_types[35]
-#define SWIGTYPE_p_rte__TcpClientConfig swig_types[36]
-#define SWIGTYPE_p_rte__TcpServer swig_types[37]
-#define SWIGTYPE_p_rte__TcpServerConfig swig_types[38]
-#define SWIGTYPE_p_rte__Thread swig_types[39]
-#define SWIGTYPE_p_rte__UniqueLock swig_types[40]
-#define SWIGTYPE_p_rte__Vector3 swig_types[41]
-#define SWIGTYPE_p_rte__noncopyable swig_types[42]
-#define SWIGTYPE_p_rte__nonmovable swig_types[43]
-#define SWIGTYPE_p_short swig_types[44]
-#define SWIGTYPE_p_signed___int64 swig_types[45]
-#define SWIGTYPE_p_signed_char swig_types[46]
-#define SWIGTYPE_p_size_type swig_types[47]
-#define SWIGTYPE_p_std__allocatorT_rte__NodeParameter_p_t swig_types[48]
-#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[49]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[50]
-#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[51]
-#define SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t swig_types[52]
-#define SWIGTYPE_p_std__invalid_argument swig_types[53]
-#define SWIGTYPE_p_std__string swig_types[54]
-#define SWIGTYPE_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t swig_types[55]
-#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[56]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[57]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[58]
-#define SWIGTYPE_p_unsigned___int64 swig_types[59]
-#define SWIGTYPE_p_unsigned_char swig_types[60]
-#define SWIGTYPE_p_unsigned_int swig_types[61]
-#define SWIGTYPE_p_unsigned_long swig_types[62]
-#define SWIGTYPE_p_unsigned_long_long swig_types[63]
-#define SWIGTYPE_p_unsigned_short swig_types[64]
-#define SWIGTYPE_p_value_type swig_types[65]
-static swig_type_info *swig_types[67];
-static swig_module_info swig_module = {swig_types, 66, 0, 0, 0, 0};
+#define SWIGTYPE_p_float swig_types[6]
+#define SWIGTYPE_p_int swig_types[7]
+#define SWIGTYPE_p_long swig_types[8]
+#define SWIGTYPE_p_long_long swig_types[9]
+#define SWIGTYPE_p_p_PyObject swig_types[10]
+#define SWIGTYPE_p_p_char swig_types[11]
+#define SWIGTYPE_p_p_unsigned_long swig_types[12]
+#define SWIGTYPE_p_reference swig_types[13]
+#define SWIGTYPE_p_rte__Command swig_types[14]
+#define SWIGTYPE_p_rte__ConditionVariable swig_types[15]
+#define SWIGTYPE_p_rte__Context swig_types[16]
+#define SWIGTYPE_p_rte__CriticalSection swig_types[17]
+#define SWIGTYPE_p_rte__File swig_types[18]
+#define SWIGTYPE_p_rte__LockObject swig_types[19]
+#define SWIGTYPE_p_rte__Node swig_types[20]
+#define SWIGTYPE_p_rte__NodeBase swig_types[21]
+#define SWIGTYPE_p_rte__NodeCommand swig_types[22]
+#define SWIGTYPE_p_rte__NodeNameListCommand swig_types[23]
+#define SWIGTYPE_p_rte__NodeParameter swig_types[24]
+#define SWIGTYPE_p_rte__NodeParameterValueSerializer swig_types[25]
+#define SWIGTYPE_p_rte__ParamUpdateCommand swig_types[26]
+#define SWIGTYPE_p_rte__PingCommand swig_types[27]
+#define SWIGTYPE_p_rte__Socket swig_types[28]
+#define SWIGTYPE_p_rte__TcpClient swig_types[29]
+#define SWIGTYPE_p_rte__TcpReceivedData swig_types[30]
+#define SWIGTYPE_p_rte__TcpSentData swig_types[31]
+#define SWIGTYPE_p_rte__TcpServer swig_types[32]
+#define SWIGTYPE_p_rte__Thread swig_types[33]
+#define SWIGTYPE_p_rte__UniqueLock swig_types[34]
+#define SWIGTYPE_p_rte__Vector3 swig_types[35]
+#define SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t swig_types[36]
+#define SWIGTYPE_p_rte__noncopyable swig_types[37]
+#define SWIGTYPE_p_rte__nonmovable swig_types[38]
+#define SWIGTYPE_p_short swig_types[39]
+#define SWIGTYPE_p_signed___int64 swig_types[40]
+#define SWIGTYPE_p_signed_char swig_types[41]
+#define SWIGTYPE_p_size_type swig_types[42]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[43]
+#define SWIGTYPE_p_std__allocatorT_rte__NodeParameter_p_t swig_types[44]
+#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[45]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t swig_types[46]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t swig_types[47]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[48]
+#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[49]
+#define SWIGTYPE_p_std__functionT_int_fvoid_pF_t swig_types[50]
+#define SWIGTYPE_p_std__invalid_argument swig_types[51]
+#define SWIGTYPE_p_std__string swig_types[52]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[53]
+#define SWIGTYPE_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t swig_types[54]
+#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[55]
+#define SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t swig_types[56]
+#define SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t swig_types[57]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[58]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[59]
+#define SWIGTYPE_p_unsigned___int64 swig_types[60]
+#define SWIGTYPE_p_unsigned_char swig_types[61]
+#define SWIGTYPE_p_unsigned_int swig_types[62]
+#define SWIGTYPE_p_unsigned_long swig_types[63]
+#define SWIGTYPE_p_unsigned_long_long swig_types[64]
+#define SWIGTYPE_p_unsigned_short swig_types[65]
+#define SWIGTYPE_p_value_type swig_types[66]
+static swig_type_info *swig_types[68];
+static swig_module_info swig_module = {swig_types, 67, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3118,6 +3119,7 @@ namespace swig {
 #include "Context.h"
 #include "Socket.h"
 #include "Thread.h"
+#include "tcpCommon.h"
 #include "TcpClient.h"
 #include "TcpServer.h"
 
@@ -3498,13 +3500,6 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <stdint.h>		// Use the C99 official header
 
 
-SWIGINTERNINLINE PyObject*
-  SWIG_From_int  (int value)
-{
-  return PyInt_FromLong((long) value);
-}
-
-
 SWIGINTERN swig_type_info*
 SWIG_pchar_descriptor(void)
 {
@@ -3594,9 +3589,6 @@ SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize, int *alloc)
 }
 
 
-
-
-
 SWIGINTERN int
 SWIG_AsPtr_std_string (PyObject * obj, std::string **val) 
 {
@@ -3626,6 +3618,16 @@ SWIG_AsPtr_std_string (PyObject * obj, std::string **val)
   }
   return SWIG_ERROR;
 }
+
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_int  (int value)
+{
+  return PyInt_FromLong((long) value);
+}
+
+
+
 
 
 #include <limits.h>
@@ -4885,39 +4887,21 @@ namespace swig
 }
 
 
-SWIGINTERN int
-SWIG_AsVal_std_string (PyObject * obj, std::string *val)
-{
-  std::string* v = (std::string *) 0;
-  int res = SWIG_AsPtr_std_string (obj, &v);
-  if (!SWIG_IsOK(res)) return res;
-  if (v) {
-    if (val) *val = *v;
-    if (SWIG_IsNewObj(res)) {
-      delete v;
-      res = SWIG_DelNewMask(res);
-    }
-    return res;
-  }
-  return SWIG_ERROR;
-}
-
-
 namespace swig {
-  template <> struct traits<std::string > {
+  template <> struct traits<int > {
     typedef value_category category;
-    static const char* type_name() { return"std::string"; }
+    static const char* type_name() { return"int"; }
   };  
-  template <>  struct traits_asval<std::string > {   
-    typedef std::string value_type;
+  template <>  struct traits_asval<int > {   
+    typedef int value_type;
     static int asval(PyObject *obj, value_type *val) { 
-      return SWIG_AsVal_std_string (obj, val);
+      return SWIG_AsVal_int (obj, val);
     }
   };
-  template <>  struct traits_from<std::string > {
-    typedef std::string value_type;
+  template <>  struct traits_from<int > {
+    typedef int value_type;
     static PyObject *from(const value_type& val) {
-      return SWIG_From_std_string  (val);
+      return SWIG_From_int  (val);
     }
   };
 }
@@ -5022,6 +5006,149 @@ namespace swig {
 
 
       namespace swig {
+	template <>  struct traits<std::vector<int, std::allocator< int > > > {
+	  typedef pointer_category category;
+	  static const char* type_name() {
+	    return "std::vector<" "int" "," "std::allocator< int >" " >";
+	  }
+	};
+      }
+    
+SWIGINTERN swig::SwigPyIterator *std_vector_Sl_int_Sg__iterator(std::vector< int > *self,PyObject **PYTHON_SELF){
+      return swig::make_output_iterator(self->begin(), self->begin(), self->end(), *PYTHON_SELF);
+    }
+SWIGINTERN bool std_vector_Sl_int_Sg____nonzero__(std::vector< int > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN bool std_vector_Sl_int_Sg____bool__(std::vector< int > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN std::vector< int >::size_type std_vector_Sl_int_Sg____len__(std::vector< int > const *self){
+      return self->size();
+    }
+
+SWIGINTERNINLINE PyObject *
+SWIG_From_size_t  (size_t value)
+{    
+  return SWIG_From_unsigned_SS_long  (static_cast< unsigned long >(value));
+}
+
+SWIGINTERN std::vector< int >::value_type std_vector_Sl_int_Sg__pop(std::vector< int > *self){
+      if (self->size() == 0)
+	throw std::out_of_range("pop from empty container");
+      std::vector<int,std::allocator< int > >::value_type x = self->back();
+      self->pop_back();
+      return x;
+    }
+SWIGINTERN std::vector< int,std::allocator< int > > *std_vector_Sl_int_Sg____getslice__(std::vector< int > *self,std::vector< int >::difference_type i,std::vector< int >::difference_type j){
+      return swig::getslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____setslice____SWIG_0(std::vector< int > *self,std::vector< int >::difference_type i,std::vector< int >::difference_type j,std::vector< int,std::allocator< int > > const &v=std::vector< int,std::allocator< int > >()){
+      swig::setslice(self, i, j, 1, v);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____delslice__(std::vector< int > *self,std::vector< int >::difference_type i,std::vector< int >::difference_type j){
+      swig::delslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____delitem____SWIG_0(std::vector< int > *self,std::vector< int >::difference_type i){
+      self->erase(swig::getpos(self,i));
+    }
+SWIGINTERN std::vector< int,std::allocator< int > > *std_vector_Sl_int_Sg____getitem____SWIG_0(std::vector< int > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return NULL;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<int,std::allocator< int > >::difference_type id = i;
+      std::vector<int,std::allocator< int > >::difference_type jd = j;
+      return swig::getslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____setitem____SWIG_0(std::vector< int > *self,PySliceObject *slice,std::vector< int,std::allocator< int > > const &v){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<int,std::allocator< int > >::difference_type id = i;
+      std::vector<int,std::allocator< int > >::difference_type jd = j;
+      swig::setslice(self, id, jd, step, v);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____setitem____SWIG_1(std::vector< int > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<int,std::allocator< int > >::difference_type id = i;
+      std::vector<int,std::allocator< int > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____delitem____SWIG_1(std::vector< int > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<int,std::allocator< int > >::difference_type id = i;
+      std::vector<int,std::allocator< int > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN std::vector< int >::value_type const &std_vector_Sl_int_Sg____getitem____SWIG_1(std::vector< int > const *self,std::vector< int >::difference_type i){
+      return *(swig::cgetpos(self, i));
+    }
+SWIGINTERN void std_vector_Sl_int_Sg____setitem____SWIG_2(std::vector< int > *self,std::vector< int >::difference_type i,std::vector< int >::value_type const &x){
+      *(swig::getpos(self,i)) = x;
+    }
+SWIGINTERN void std_vector_Sl_int_Sg__append(std::vector< int > *self,std::vector< int >::value_type const &x){
+      self->push_back(x);
+    }
+SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__erase__SWIG_0(std::vector< int > *self,std::vector< int >::iterator pos){ return self->erase(pos); }
+SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__erase__SWIG_1(std::vector< int > *self,std::vector< int >::iterator first,std::vector< int >::iterator last){ return self->erase(first, last); }
+SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__insert__SWIG_0(std::vector< int > *self,std::vector< int >::iterator pos,std::vector< int >::value_type const &x){ return self->insert(pos, x); }
+SWIGINTERN void std_vector_Sl_int_Sg__insert__SWIG_1(std::vector< int > *self,std::vector< int >::iterator pos,std::vector< int >::size_type n,std::vector< int >::value_type const &x){ self->insert(pos, n, x); }
+
+SWIGINTERN int
+SWIG_AsVal_std_string (PyObject * obj, std::string *val)
+{
+  std::string* v = (std::string *) 0;
+  int res = SWIG_AsPtr_std_string (obj, &v);
+  if (!SWIG_IsOK(res)) return res;
+  if (v) {
+    if (val) *val = *v;
+    if (SWIG_IsNewObj(res)) {
+      delete v;
+      res = SWIG_DelNewMask(res);
+    }
+    return res;
+  }
+  return SWIG_ERROR;
+}
+
+
+namespace swig {
+  template <> struct traits<std::string > {
+    typedef value_category category;
+    static const char* type_name() { return"std::string"; }
+  };  
+  template <>  struct traits_asval<std::string > {   
+    typedef std::string value_type;
+    static int asval(PyObject *obj, value_type *val) { 
+      return SWIG_AsVal_std_string (obj, val);
+    }
+  };
+  template <>  struct traits_from<std::string > {
+    typedef std::string value_type;
+    static PyObject *from(const value_type& val) {
+      return SWIG_From_std_string  (val);
+    }
+  };
+}
+
+
+      namespace swig {
 	template <>  struct traits<std::vector<std::string, std::allocator< std::string > > > {
 	  typedef pointer_category category;
 	  static const char* type_name() {
@@ -5042,13 +5169,6 @@ SWIGINTERN bool std_vector_Sl_std_string_Sg____bool__(std::vector< std::string >
 SWIGINTERN std::vector< std::string >::size_type std_vector_Sl_std_string_Sg____len__(std::vector< std::string > const *self){
       return self->size();
     }
-
-SWIGINTERNINLINE PyObject *
-SWIG_From_size_t  (size_t value)
-{    
-  return SWIG_From_unsigned_SS_long  (static_cast< unsigned long >(value));
-}
-
 SWIGINTERN std::vector< std::string >::value_type std_vector_Sl_std_string_Sg__pop(std::vector< std::string > *self){
       if (self->size() == 0)
 	throw std::out_of_range("pop from empty container");
@@ -5337,6 +5457,218 @@ SWIGINTERN std::vector< rte::NodeParameter * >::iterator std_vector_Sl_rte_NodeP
 SWIGINTERN std::vector< rte::NodeParameter * >::iterator std_vector_Sl_rte_NodeParameter_Sm__Sg__erase__SWIG_1(std::vector< rte::NodeParameter * > *self,std::vector< rte::NodeParameter * >::iterator first,std::vector< rte::NodeParameter * >::iterator last){ return self->erase(first, last); }
 SWIGINTERN std::vector< rte::NodeParameter * >::iterator std_vector_Sl_rte_NodeParameter_Sm__Sg__insert__SWIG_0(std::vector< rte::NodeParameter * > *self,std::vector< rte::NodeParameter * >::iterator pos,std::vector< rte::NodeParameter * >::value_type x){ return self->insert(pos, x); }
 SWIGINTERN void std_vector_Sl_rte_NodeParameter_Sm__Sg__insert__SWIG_1(std::vector< rte::NodeParameter * > *self,std::vector< rte::NodeParameter * >::iterator pos,std::vector< rte::NodeParameter * >::size_type n,std::vector< rte::NodeParameter * >::value_type x){ self->insert(pos, n, x); }
+
+  namespace swig {
+    template <>  struct traits<rte::TcpReceivedData > {
+      typedef pointer_category category;
+      static const char* type_name() { return"rte::TcpReceivedData"; }
+    };
+  }
+
+
+      namespace swig {
+	template <>  struct traits<std::vector<rte::TcpReceivedData, std::allocator< rte::TcpReceivedData > > > {
+	  typedef pointer_category category;
+	  static const char* type_name() {
+	    return "std::vector<" "rte::TcpReceivedData" "," "std::allocator< rte::TcpReceivedData >" " >";
+	  }
+	};
+      }
+    
+SWIGINTERN swig::SwigPyIterator *std_vector_Sl_rte_TcpReceivedData_Sg__iterator(std::vector< rte::TcpReceivedData > *self,PyObject **PYTHON_SELF){
+      return swig::make_output_iterator(self->begin(), self->begin(), self->end(), *PYTHON_SELF);
+    }
+SWIGINTERN bool std_vector_Sl_rte_TcpReceivedData_Sg____nonzero__(std::vector< rte::TcpReceivedData > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN bool std_vector_Sl_rte_TcpReceivedData_Sg____bool__(std::vector< rte::TcpReceivedData > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData >::size_type std_vector_Sl_rte_TcpReceivedData_Sg____len__(std::vector< rte::TcpReceivedData > const *self){
+      return self->size();
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData >::value_type std_vector_Sl_rte_TcpReceivedData_Sg__pop(std::vector< rte::TcpReceivedData > *self){
+      if (self->size() == 0)
+	throw std::out_of_range("pop from empty container");
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::value_type x = self->back();
+      self->pop_back();
+      return x;
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *std_vector_Sl_rte_TcpReceivedData_Sg____getslice__(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::difference_type i,std::vector< rte::TcpReceivedData >::difference_type j){
+      return swig::getslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____setslice____SWIG_0(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::difference_type i,std::vector< rte::TcpReceivedData >::difference_type j,std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &v=std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >()){
+      swig::setslice(self, i, j, 1, v);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____delslice__(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::difference_type i,std::vector< rte::TcpReceivedData >::difference_type j){
+      swig::delslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____delitem____SWIG_0(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::difference_type i){
+      self->erase(swig::getpos(self,i));
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *std_vector_Sl_rte_TcpReceivedData_Sg____getitem____SWIG_0(std::vector< rte::TcpReceivedData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return NULL;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type id = i;
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type jd = j;
+      return swig::getslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_0(std::vector< rte::TcpReceivedData > *self,PySliceObject *slice,std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &v){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type id = i;
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type jd = j;
+      swig::setslice(self, id, jd, step, v);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_1(std::vector< rte::TcpReceivedData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type id = i;
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____delitem____SWIG_1(std::vector< rte::TcpReceivedData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type id = i;
+      std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData >::value_type const &std_vector_Sl_rte_TcpReceivedData_Sg____getitem____SWIG_1(std::vector< rte::TcpReceivedData > const *self,std::vector< rte::TcpReceivedData >::difference_type i){
+      return *(swig::cgetpos(self, i));
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_2(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::difference_type i,std::vector< rte::TcpReceivedData >::value_type const &x){
+      *(swig::getpos(self,i)) = x;
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg__append(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::value_type const &x){
+      self->push_back(x);
+    }
+SWIGINTERN std::vector< rte::TcpReceivedData >::iterator std_vector_Sl_rte_TcpReceivedData_Sg__erase__SWIG_0(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::iterator pos){ return self->erase(pos); }
+SWIGINTERN std::vector< rte::TcpReceivedData >::iterator std_vector_Sl_rte_TcpReceivedData_Sg__erase__SWIG_1(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::iterator first,std::vector< rte::TcpReceivedData >::iterator last){ return self->erase(first, last); }
+SWIGINTERN std::vector< rte::TcpReceivedData >::iterator std_vector_Sl_rte_TcpReceivedData_Sg__insert__SWIG_0(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::iterator pos,std::vector< rte::TcpReceivedData >::value_type const &x){ return self->insert(pos, x); }
+SWIGINTERN void std_vector_Sl_rte_TcpReceivedData_Sg__insert__SWIG_1(std::vector< rte::TcpReceivedData > *self,std::vector< rte::TcpReceivedData >::iterator pos,std::vector< rte::TcpReceivedData >::size_type n,std::vector< rte::TcpReceivedData >::value_type const &x){ self->insert(pos, n, x); }
+
+  namespace swig {
+    template <>  struct traits<rte::TcpSentData > {
+      typedef pointer_category category;
+      static const char* type_name() { return"rte::TcpSentData"; }
+    };
+  }
+
+
+      namespace swig {
+	template <>  struct traits<std::vector<rte::TcpSentData, std::allocator< rte::TcpSentData > > > {
+	  typedef pointer_category category;
+	  static const char* type_name() {
+	    return "std::vector<" "rte::TcpSentData" "," "std::allocator< rte::TcpSentData >" " >";
+	  }
+	};
+      }
+    
+SWIGINTERN swig::SwigPyIterator *std_vector_Sl_rte_TcpSentData_Sg__iterator(std::vector< rte::TcpSentData > *self,PyObject **PYTHON_SELF){
+      return swig::make_output_iterator(self->begin(), self->begin(), self->end(), *PYTHON_SELF);
+    }
+SWIGINTERN bool std_vector_Sl_rte_TcpSentData_Sg____nonzero__(std::vector< rte::TcpSentData > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN bool std_vector_Sl_rte_TcpSentData_Sg____bool__(std::vector< rte::TcpSentData > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN std::vector< rte::TcpSentData >::size_type std_vector_Sl_rte_TcpSentData_Sg____len__(std::vector< rte::TcpSentData > const *self){
+      return self->size();
+    }
+SWIGINTERN std::vector< rte::TcpSentData >::value_type std_vector_Sl_rte_TcpSentData_Sg__pop(std::vector< rte::TcpSentData > *self){
+      if (self->size() == 0)
+	throw std::out_of_range("pop from empty container");
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::value_type x = self->back();
+      self->pop_back();
+      return x;
+    }
+SWIGINTERN std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *std_vector_Sl_rte_TcpSentData_Sg____getslice__(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::difference_type i,std::vector< rte::TcpSentData >::difference_type j){
+      return swig::getslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____setslice____SWIG_0(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::difference_type i,std::vector< rte::TcpSentData >::difference_type j,std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &v=std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > >()){
+      swig::setslice(self, i, j, 1, v);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____delslice__(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::difference_type i,std::vector< rte::TcpSentData >::difference_type j){
+      swig::delslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____delitem____SWIG_0(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::difference_type i){
+      self->erase(swig::getpos(self,i));
+    }
+SWIGINTERN std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *std_vector_Sl_rte_TcpSentData_Sg____getitem____SWIG_0(std::vector< rte::TcpSentData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return NULL;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type id = i;
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type jd = j;
+      return swig::getslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_0(std::vector< rte::TcpSentData > *self,PySliceObject *slice,std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &v){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type id = i;
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type jd = j;
+      swig::setslice(self, id, jd, step, v);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_1(std::vector< rte::TcpSentData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type id = i;
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____delitem____SWIG_1(std::vector< rte::TcpSentData > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type id = i;
+      std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN std::vector< rte::TcpSentData >::value_type const &std_vector_Sl_rte_TcpSentData_Sg____getitem____SWIG_1(std::vector< rte::TcpSentData > const *self,std::vector< rte::TcpSentData >::difference_type i){
+      return *(swig::cgetpos(self, i));
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_2(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::difference_type i,std::vector< rte::TcpSentData >::value_type const &x){
+      *(swig::getpos(self,i)) = x;
+    }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg__append(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::value_type const &x){
+      self->push_back(x);
+    }
+SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentData_Sg__erase__SWIG_0(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator pos){ return self->erase(pos); }
+SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentData_Sg__erase__SWIG_1(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator first,std::vector< rte::TcpSentData >::iterator last){ return self->erase(first, last); }
+SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_0(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator pos,std::vector< rte::TcpSentData >::value_type const &x){ return self->insert(pos, x); }
+SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_1(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator pos,std::vector< rte::TcpSentData >::size_type n,std::vector< rte::TcpSentData >::value_type const &x){ self->insert(pos, n, x); }
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -6183,6 +6515,30 @@ SWIGINTERN PyObject *SwigPyIterator_swigregister(PyObject *SWIGUNUSEDPARM(self),
   SWIG_TypeNewClientData(SWIGTYPE_p_swig__SwigPyIterator, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
+
+SWIGINTERN PyObject *_wrap_makeArray(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::string arg1 ;
+  PyObject * obj0 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:makeArray",&obj0)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "makeArray" "', argument " "1"" of type '" "std::string""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (uint8_t *)rte::makeArray(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
 
 SWIGINTERN PyObject *TriBool_False_swigconstant(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *module;
@@ -10459,7 +10815,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Thread_start__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Thread *arg1 = (rte::Thread *) 0 ;
-  std::function< unsigned int (void *) > arg2 ;
+  std::function< int (void *) > arg2 ;
   void *arg3 = (void *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10477,14 +10833,14 @@ SWIGINTERN PyObject *_wrap_Thread_start__SWIG_0(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< rte::Thread * >(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t,  0  | 0);
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_int_fvoid_pF_t,  0  | 0);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< int (void *) >""'"); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< int (void *) >""'");
     } else {
-      std::function< unsigned int (void *) > * temp = reinterpret_cast< std::function< unsigned int (void *) > * >(argp2);
+      std::function< int (void *) > * temp = reinterpret_cast< std::function< int (void *) > * >(argp2);
       arg2 = *temp;
       if (SWIG_IsNewObj(res2)) delete temp;
     }
@@ -10504,7 +10860,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Thread_start__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Thread *arg1 = (rte::Thread *) 0 ;
-  std::function< unsigned int (void *) > arg2 ;
+  std::function< int (void *) > arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 ;
@@ -10519,14 +10875,14 @@ SWIGINTERN PyObject *_wrap_Thread_start__SWIG_1(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< rte::Thread * >(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t,  0  | 0);
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__functionT_int_fvoid_pF_t,  0  | 0);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< int (void *) >""'"); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< unsigned int (void *) >""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Thread_start" "', argument " "2"" of type '" "std::function< int (void *) >""'");
     } else {
-      std::function< unsigned int (void *) > * temp = reinterpret_cast< std::function< unsigned int (void *) > * >(argp2);
+      std::function< int (void *) > * temp = reinterpret_cast< std::function< int (void *) > * >(argp2);
       arg2 = *temp;
       if (SWIG_IsNewObj(res2)) delete temp;
     }
@@ -10555,7 +10911,7 @@ SWIGINTERN PyObject *_wrap_Thread_start(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Thread, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t, 0);
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_int_fvoid_pF_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
         return _wrap_Thread_start__SWIG_1(self, args);
@@ -10568,7 +10924,7 @@ SWIGINTERN PyObject *_wrap_Thread_start(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Thread, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_unsigned_int_fvoid_pF_t, 0);
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__functionT_int_fvoid_pF_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
         void *ptr = 0;
@@ -10584,8 +10940,8 @@ SWIGINTERN PyObject *_wrap_Thread_start(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Thread_start'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    rte::Thread::start(std::function< unsigned int (void *) >,void *)\n"
-    "    rte::Thread::start(std::function< unsigned int (void *) >)\n");
+    "    rte::Thread::start(std::function< int (void *) >,void *)\n"
+    "    rte::Thread::start(std::function< int (void *) >)\n");
   return 0;
 }
 
@@ -11296,28 +11652,29 @@ SWIGINTERN PyObject *ConditionVariable_swigregister(PyObject *SWIGUNUSEDPARM(sel
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onSendData_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_clientId_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
-  rte::TcpClientConfig::OnSendData arg2 = (rte::TcpClientConfig::OnSendData) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpClientConfig_onSendData_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedData_clientId_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onSendData_set" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_clientId_set" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_p_q_const__unsigned_char_int__void);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpClientConfig_onSendData_set" "', argument " "2"" of type '" "rte::TcpClientConfig::OnSendData""'"); 
-    }
-  }
-  if (arg1) (arg1)->onSendData = arg2;
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedData_clientId_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->clientId = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11325,50 +11682,51 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onSendData_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_clientId_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  rte::TcpClientConfig::OnSendData result;
+  int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpClientConfig_onSendData_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_clientId_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onSendData_get" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_clientId_get" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  result = (rte::TcpClientConfig::OnSendData) ((arg1)->onSendData);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_p_q_const__unsigned_char_int__void);
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  result = (int) ((arg1)->clientId);
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onReceiveData_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_buffer_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
-  rte::TcpClientConfig::OnReceiveData arg2 = (rte::TcpClientConfig::OnReceiveData) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpClientConfig_onReceiveData_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedData_buffer_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onReceiveData_set" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_buffer_set" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_p_q_const__unsigned_char_int__void);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpClientConfig_onReceiveData_set" "', argument " "2"" of type '" "rte::TcpClientConfig::OnReceiveData""'"); 
-    }
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpReceivedData_buffer_set" "', argument " "2"" of type '" "uint8_t *""'"); 
   }
-  if (arg1) (arg1)->onReceiveData = arg2;
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  if (arg1) (arg1)->buffer = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11376,50 +11734,51 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onReceiveData_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_buffer_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  rte::TcpClientConfig::OnReceiveData result;
+  uint8_t *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpClientConfig_onReceiveData_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_buffer_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onReceiveData_get" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_buffer_get" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  result = (rte::TcpClientConfig::OnReceiveData) ((arg1)->onReceiveData);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_p_q_const__unsigned_char_int__void);
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  result = (uint8_t *) ((arg1)->buffer);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onConnectionError_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_bufferSize_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
-  rte::TcpClientConfig::OnConnectionError arg2 = (rte::TcpClientConfig::OnConnectionError) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpClientConfig_onConnectionError_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedData_bufferSize_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onConnectionError_set" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_bufferSize_set" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_p_q_const__unsigned_char_int__bool);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpClientConfig_onConnectionError_set" "', argument " "2"" of type '" "rte::TcpClientConfig::OnConnectionError""'"); 
-    }
-  }
-  if (arg1) (arg1)->onConnectionError = arg2;
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedData_bufferSize_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->bufferSize = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11427,54 +11786,54 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TcpClientConfig_onConnectionError_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_bufferSize_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  rte::TcpClientConfig::OnConnectionError result;
+  int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpClientConfig_onConnectionError_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, 0 |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_bufferSize_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClientConfig_onConnectionError_get" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_bufferSize_get" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
-  result = (rte::TcpClientConfig::OnConnectionError) ((arg1)->onConnectionError);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_p_q_const__unsigned_char_int__bool);
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  result = (int) ((arg1)->bufferSize);
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_new_TcpClientConfig(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_new_TcpReceivedData(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *result = 0 ;
+  rte::TcpReceivedData *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)":new_TcpClientConfig")) SWIG_fail;
-  result = (rte::TcpClientConfig *)new rte::TcpClientConfig();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpClientConfig, SWIG_POINTER_NEW |  0 );
+  if (!PyArg_ParseTuple(args,(char *)":new_TcpReceivedData")) SWIG_fail;
+  result = (rte::TcpReceivedData *)new rte::TcpReceivedData();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpReceivedData, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_delete_TcpClientConfig(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_delete_TcpReceivedData(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::TcpClientConfig *arg1 = (rte::TcpClientConfig *) 0 ;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpClientConfig",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClientConfig, SWIG_POINTER_DISOWN |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpReceivedData",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, SWIG_POINTER_DISOWN |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpClientConfig" "', argument " "1"" of type '" "rte::TcpClientConfig *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpReceivedData" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
   }
-  arg1 = reinterpret_cast< rte::TcpClientConfig * >(argp1);
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
   delete arg1;
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -11483,10 +11842,389 @@ fail:
 }
 
 
-SWIGINTERN PyObject *TcpClientConfig_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TcpReceivedData_clone(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::TcpReceivedData result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_clone",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_clone" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  result = (arg1)->clone();
+  resultobj = SWIG_NewPointerObj((new rte::TcpReceivedData(static_cast< const rte::TcpReceivedData& >(result))), SWIGTYPE_p_rte__TcpReceivedData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedData_move(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::TcpReceivedData result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_move",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_move" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  result = (arg1)->move();
+  resultobj = SWIG_NewPointerObj((new rte::TcpReceivedData(static_cast< const rte::TcpReceivedData& >(result))), SWIGTYPE_p_rte__TcpReceivedData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedData_destroy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedData_destroy",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedData_destroy" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  (arg1)->destroy();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TcpReceivedData_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpClientConfig, SWIG_NewClientData(obj));
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpReceivedData, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_TcpSentData_clientId_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentData_clientId_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_clientId_set" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentData_clientId_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->clientId = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_clientId_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_clientId_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_clientId_get" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (int) ((arg1)->clientId);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_buffer_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentData_buffer_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_buffer_set" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpSentData_buffer_set" "', argument " "2"" of type '" "uint8_t *""'"); 
+  }
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  if (arg1) (arg1)->buffer = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_buffer_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_buffer_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_buffer_get" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (uint8_t *) ((arg1)->buffer);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_bufferSize_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentData_bufferSize_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_bufferSize_set" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentData_bufferSize_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->bufferSize = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_bufferSize_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_bufferSize_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_bufferSize_get" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (int) ((arg1)->bufferSize);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_sentSize_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentData_sentSize_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_sentSize_set" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentData_sentSize_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->sentSize = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_sentSize_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_sentSize_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_sentSize_get" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (int) ((arg1)->sentSize);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentData(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_TcpSentData")) SWIG_fail;
+  result = (rte::TcpSentData *)new rte::TcpSentData();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpSentData, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TcpSentData(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpSentData",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpSentData" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_clone(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::TcpSentData result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_clone",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_clone" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (arg1)->clone();
+  resultobj = SWIG_NewPointerObj((new rte::TcpSentData(static_cast< const rte::TcpSentData& >(result))), SWIGTYPE_p_rte__TcpSentData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_move(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::TcpSentData result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_move",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_move" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (arg1)->move();
+  resultobj = SWIG_NewPointerObj((new rte::TcpSentData(static_cast< const rte::TcpSentData& >(result))), SWIGTYPE_p_rte__TcpSentData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentData_destroy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_destroy",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_destroy" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  (arg1)->destroy();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TcpSentData_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpSentData, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -11518,40 +12256,6 @@ SWIGINTERN PyObject *_wrap_delete_TcpClient(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg1 = reinterpret_cast< rte::TcpClient * >(argp1);
   delete arg1;
   resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpClient_configure(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpClient *arg1 = (rte::TcpClient *) 0 ;
-  rte::TcpClientConfig *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpClient_configure",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClient, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClient_configure" "', argument " "1"" of type '" "rte::TcpClient *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpClient * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpClientConfig,  0  | 0);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpClient_configure" "', argument " "2"" of type '" "rte::TcpClientConfig const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpClient_configure" "', argument " "2"" of type '" "rte::TcpClientConfig const &""'"); 
-  }
-  arg2 = reinterpret_cast< rte::TcpClientConfig * >(argp2);
-  result = (bool)(arg1)->configure((rte::TcpClientConfig const &)*arg2);
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -11665,255 +12369,76 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_TcpClient_popReceivedQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpClient *arg1 = (rte::TcpClient *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpClient_popReceivedQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClient, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClient_popReceivedQueue" "', argument " "1"" of type '" "rte::TcpClient *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpClient * >(argp1);
+  result = (arg1)->popReceivedQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >(static_cast< const std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >& >(result))), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpClient_popSentQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpClient *arg1 = (rte::TcpClient *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpClient_popSentQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClient, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClient_popSentQueue" "', argument " "1"" of type '" "rte::TcpClient *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpClient * >(argp1);
+  result = (arg1)->popSentQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > >(static_cast< const std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > >& >(result))), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpClient_isConnectionAlive(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpClient *arg1 = (rte::TcpClient *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpClient_isConnectionAlive",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpClient, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpClient_isConnectionAlive" "', argument " "1"" of type '" "rte::TcpClient *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpClient * >(argp1);
+  result = (bool)(arg1)->isConnectionAlive();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *TcpClient_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpClient, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onAcceptClient_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  rte::TcpServerConfig::OnAcceptClient arg2 = (rte::TcpServerConfig::OnAcceptClient) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServerConfig_onAcceptClient_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onAcceptClient_set" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_int__void);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpServerConfig_onAcceptClient_set" "', argument " "2"" of type '" "rte::TcpServerConfig::OnAcceptClient""'"); 
-    }
-  }
-  if (arg1) (arg1)->onAcceptClient = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onAcceptClient_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  rte::TcpServerConfig::OnAcceptClient result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpServerConfig_onAcceptClient_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onAcceptClient_get" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  result = (rte::TcpServerConfig::OnAcceptClient) ((arg1)->onAcceptClient);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_int__void);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onSendData_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  rte::TcpServerConfig::OnSendData arg2 = (rte::TcpServerConfig::OnSendData) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServerConfig_onSendData_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onSendData_set" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int_int__void);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpServerConfig_onSendData_set" "', argument " "2"" of type '" "rte::TcpServerConfig::OnSendData""'"); 
-    }
-  }
-  if (arg1) (arg1)->onSendData = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onSendData_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  rte::TcpServerConfig::OnSendData result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpServerConfig_onSendData_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onSendData_get" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  result = (rte::TcpServerConfig::OnSendData) ((arg1)->onSendData);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int_int__void);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onReceiveData_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  rte::TcpServerConfig::OnReceiveData arg2 = (rte::TcpServerConfig::OnReceiveData) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServerConfig_onReceiveData_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onReceiveData_set" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__void);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpServerConfig_onReceiveData_set" "', argument " "2"" of type '" "rte::TcpServerConfig::OnReceiveData""'"); 
-    }
-  }
-  if (arg1) (arg1)->onReceiveData = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onReceiveData_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  rte::TcpServerConfig::OnReceiveData result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpServerConfig_onReceiveData_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onReceiveData_get" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  result = (rte::TcpServerConfig::OnReceiveData) ((arg1)->onReceiveData);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__void);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onConnectionError_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  rte::TcpServerConfig::OnConnectionError arg2 = (rte::TcpServerConfig::OnConnectionError) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServerConfig_onConnectionError_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onConnectionError_set" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  {
-    int res = SWIG_ConvertFunctionPtr(obj1, (void**)(&arg2), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__bool);
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "TcpServerConfig_onConnectionError_set" "', argument " "2"" of type '" "rte::TcpServerConfig::OnConnectionError""'"); 
-    }
-  }
-  if (arg1) (arg1)->onConnectionError = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServerConfig_onConnectionError_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  rte::TcpServerConfig::OnConnectionError result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TcpServerConfig_onConnectionError_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServerConfig_onConnectionError_get" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  result = (rte::TcpServerConfig::OnConnectionError) ((arg1)->onConnectionError);
-  resultobj = SWIG_NewFunctionPtrObj((void *)(result), SWIGTYPE_p_f_int_p_q_const__unsigned_char_int__bool);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_TcpServerConfig(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_TcpServerConfig")) SWIG_fail;
-  result = (rte::TcpServerConfig *)new rte::TcpServerConfig();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpServerConfig, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_TcpServerConfig(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServerConfig *arg1 = (rte::TcpServerConfig *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpServerConfig",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServerConfig, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpServerConfig" "', argument " "1"" of type '" "rte::TcpServerConfig *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServerConfig * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *TcpServerConfig_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpServerConfig, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -11945,40 +12470,6 @@ SWIGINTERN PyObject *_wrap_delete_TcpServer(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
   delete arg1;
   resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TcpServer_configure(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
-  rte::TcpServerConfig *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServer_configure",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_configure" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpServerConfig,  0  | 0);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpServer_configure" "', argument " "2"" of type '" "rte::TcpServerConfig const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpServer_configure" "', argument " "2"" of type '" "rte::TcpServerConfig const &""'"); 
-  }
-  arg2 = reinterpret_cast< rte::TcpServerConfig * >(argp2);
-  result = (bool)(arg1)->configure((rte::TcpServerConfig const &)*arg2);
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -12118,6 +12609,138 @@ SWIGINTERN PyObject *_wrap_TcpServer_broadcastAsync(PyObject *SWIGUNUSEDPARM(sel
   arg3 = static_cast< int >(val3);
   (arg1)->broadcastAsync((uint8_t const *)arg2,arg3);
   resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_getClientCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_getClientCount",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_getClientCount" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (int)(arg1)->getClientCount();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_getClientList(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int,std::allocator< int > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_getClientList",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_getClientList" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (arg1)->getClientList();
+  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_popAcceptedQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int,std::allocator< int > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_popAcceptedQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_popAcceptedQueue" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (arg1)->popAcceptedQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_popReceivedQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_popReceivedQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_popReceivedQueue" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (arg1)->popReceivedQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >(static_cast< const std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >& >(result))), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_popSentQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_popSentQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_popSentQueue" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (arg1)->popSentQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > >(static_cast< const std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > >& >(result))), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_popClosedQueue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int,std::allocator< int > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_popClosedQueue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_popClosedQueue" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (arg1)->popClosedQueue();
+  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -12322,6 +12945,2302 @@ SWIGINTERN PyObject *buffer_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObjec
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_buffer, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_SafeArrayUInt8__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_SafeArrayUInt8")) SWIG_fail;
+  result = (rte::mem::SafeArray< uint8_t > *)new rte::mem::SafeArray< uint8_t >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_SafeArrayUInt8__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::mem::SafeArray< uint8_t > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_SafeArrayUInt8",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_SafeArrayUInt8" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = static_cast< int >(val1);
+  result = (rte::mem::SafeArray< uint8_t > *)new rte::mem::SafeArray< uint8_t >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_SafeArrayUInt8__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< unsigned char > *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::mem::SafeArray< uint8_t > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_SafeArrayUInt8",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_SafeArrayUInt8" "', argument " "1"" of type '" "rte::mem::SafeArray< unsigned char > &&""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_SafeArrayUInt8" "', argument " "1"" of type '" "rte::mem::SafeArray< unsigned char > &&""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< unsigned char > * >(argp1);
+  result = (rte::mem::SafeArray< uint8_t > *)new rte::mem::SafeArray< uint8_t >((rte::mem::SafeArray< unsigned char > &&)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_SafeArrayUInt8(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_SafeArrayUInt8__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_SafeArrayUInt8__SWIG_2(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_int(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_SafeArrayUInt8__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_SafeArrayUInt8'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::mem::SafeArray< uint8_t >::SafeArray()\n"
+    "    rte::mem::SafeArray< uint8_t >::SafeArray(int)\n"
+    "    rte::mem::SafeArray< uint8_t >::SafeArray(rte::mem::SafeArray< unsigned char > &&)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_SafeArrayUInt8(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_SafeArrayUInt8",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SafeArrayUInt8" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_moveFrom(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  rte::mem::SafeArray< unsigned char > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SafeArrayUInt8_moveFrom",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_moveFrom" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SafeArrayUInt8_moveFrom" "', argument " "2"" of type '" "rte::mem::SafeArray< unsigned char > &&""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SafeArrayUInt8_moveFrom" "', argument " "2"" of type '" "rte::mem::SafeArray< unsigned char > &&""'"); 
+  }
+  arg2 = reinterpret_cast< rte::mem::SafeArray< unsigned char > * >(argp2);
+  (arg1)->moveFrom((rte::mem::SafeArray< unsigned char > &&)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned char *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SafeArrayUInt8_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_get" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  result = (unsigned char *)(arg1)->get();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SafeArrayUInt8_size",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_size" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  result = (int)(arg1)->size();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  rte::mem::SafeArray< unsigned char > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SafeArrayUInt8_swap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_swap" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SafeArrayUInt8_swap" "', argument " "2"" of type '" "rte::mem::SafeArray< unsigned char > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SafeArrayUInt8_swap" "', argument " "2"" of type '" "rte::mem::SafeArray< unsigned char > &""'"); 
+  }
+  arg2 = reinterpret_cast< rte::mem::SafeArray< unsigned char > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_resize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SafeArrayUInt8_resize",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_resize" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SafeArrayUInt8_resize" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_append__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  unsigned char *arg2 = (unsigned char *) 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SafeArrayUInt8_append",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_append" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SafeArrayUInt8_append" "', argument " "2"" of type '" "unsigned char *""'"); 
+  }
+  arg2 = reinterpret_cast< unsigned char * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SafeArrayUInt8_append" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  (arg1)->append(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_append__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::mem::SafeArray< uint8_t > *arg1 = (rte::mem::SafeArray< uint8_t > *) 0 ;
+  rte::mem::SafeArray< uint8_t > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SafeArrayUInt8_append",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SafeArrayUInt8_append" "', argument " "1"" of type '" "rte::mem::SafeArray< uint8_t > *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SafeArrayUInt8_append" "', argument " "2"" of type '" "rte::mem::SafeArray< uint8_t > &&""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SafeArrayUInt8_append" "', argument " "2"" of type '" "rte::mem::SafeArray< uint8_t > &&""'"); 
+  }
+  arg2 = reinterpret_cast< rte::mem::SafeArray< uint8_t > * >(argp2);
+  (arg1)->append((rte::mem::SafeArray< uint8_t > &&)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SafeArrayUInt8_append(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_SafeArrayUInt8_append__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_unsigned_char, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_SafeArrayUInt8_append__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SafeArrayUInt8_append'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::mem::SafeArray< uint8_t >::append(unsigned char *,int)\n"
+    "    rte::mem::SafeArray< uint8_t >::append(rte::mem::SafeArray< uint8_t > &&)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *SafeArrayUInt8_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_IntVector_iterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  PyObject **arg2 = (PyObject **) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  swig::SwigPyIterator *result = 0 ;
+  
+  arg2 = &obj0;
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_iterator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_iterator" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (swig::SwigPyIterator *)std_vector_Sl_int_Sg__iterator(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___nonzero__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector___nonzero__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___nonzero__" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (bool)std_vector_Sl_int_Sg____nonzero__((std::vector< int > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___bool__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector___bool__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___bool__" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (bool)std_vector_Sl_int_Sg____bool__((std::vector< int > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector___len__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___len__" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = std_vector_Sl_int_Sg____len__((std::vector< int > const *)arg1);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_pop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::value_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_pop",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_pop" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  try {
+    result = (std::vector< int >::value_type)std_vector_Sl_int_Sg__pop(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___getslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  std::vector< int >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< int,std::allocator< int > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector___getslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___getslice__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___getslice__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector___getslice__" "', argument " "3"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< int >::difference_type >(val3);
+  try {
+    result = (std::vector< int,std::allocator< int > > *)std_vector_Sl_int_Sg____getslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setslice____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  std::vector< int >::difference_type arg3 ;
+  std::vector< int,std::allocator< int > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:IntVector___setslice__",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___setslice__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___setslice__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector___setslice__" "', argument " "3"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< int >::difference_type >(val3);
+  {
+    std::vector<int,std::allocator< int > > *ptr = (std::vector<int,std::allocator< int > > *)0;
+    res4 = swig::asptr(obj3, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "IntVector___setslice__" "', argument " "4"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IntVector___setslice__" "', argument " "4"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  try {
+    std_vector_Sl_int_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< int,std::allocator< int > > const &)*arg4);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setslice____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  std::vector< int >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector___setslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___setslice__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___setslice__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector___setslice__" "', argument " "3"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< int >::difference_type >(val3);
+  try {
+    std_vector_Sl_int_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setslice__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_IntVector___setslice____SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = swig::asptr(argv[3], (std::vector<int,std::allocator< int > >**)(0));
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_IntVector___setslice____SWIG_0(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector___setslice__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::__setslice__(std::vector< int >::difference_type,std::vector< int >::difference_type,std::vector< int,std::allocator< int > > const &)\n"
+    "    std::vector< int >::__setslice__(std::vector< int >::difference_type,std::vector< int >::difference_type)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___delslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  std::vector< int >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector___delslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___delslice__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___delslice__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector___delslice__" "', argument " "3"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< int >::difference_type >(val3);
+  try {
+    std_vector_Sl_int_Sg____delslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___delitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___delitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___delitem__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  try {
+    std_vector_Sl_int_Sg____delitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___getitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< int,std::allocator< int > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___getitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector___getitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    result = (std::vector< int,std::allocator< int > > *)std_vector_Sl_int_Sg____getitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  std::vector< int,std::allocator< int > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___setitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  {
+    std::vector<int,std::allocator< int > > *ptr = (std::vector<int,std::allocator< int > > *)0;
+    res3 = swig::asptr(obj2, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "IntVector___setitem__" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IntVector___setitem__" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  try {
+    std_vector_Sl_int_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< int,std::allocator< int > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector___setitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___setitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_int_Sg____setitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___delitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___delitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector___delitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_int_Sg____delitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___delitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_IntVector___delitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_IntVector___delitem____SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector___delitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::__delitem__(std::vector< int >::difference_type)\n"
+    "    std::vector< int >::__delitem__(PySliceObject *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___getitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< int >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___getitem__" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___getitem__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  try {
+    result = (std::vector< int >::value_type *) &std_vector_Sl_int_Sg____getitem____SWIG_1((std::vector< int > const *)arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_From_int(static_cast< int >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___getitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_IntVector___getitem____SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_IntVector___getitem____SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector___getitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::__getitem__(PySliceObject *)\n"
+    "    std::vector< int >::__getitem__(std::vector< int >::difference_type) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setitem____SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::difference_type arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  std::vector< int >::value_type temp3 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector___setitem__" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector___setitem__" "', argument " "2"" of type '" "std::vector< int >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector___setitem__" "', argument " "3"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp3 = static_cast< std::vector< int >::value_type >(val3);
+  arg3 = &temp3;
+  try {
+    std_vector_Sl_int_Sg____setitem____SWIG_2(arg1,arg2,(int const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector___setitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_IntVector___setitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        int res = swig::asptr(argv[2], (std::vector<int,std::allocator< int > >**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_IntVector___setitem____SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_IntVector___setitem____SWIG_2(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector___setitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::__setitem__(PySliceObject *,std::vector< int,std::allocator< int > > const &)\n"
+    "    std::vector< int >::__setitem__(PySliceObject *)\n"
+    "    std::vector< int >::__setitem__(std::vector< int >::difference_type,std::vector< int >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_append(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::vector< int >::value_type temp2 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_append",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_append" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_append" "', argument " "2"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp2 = static_cast< std::vector< int >::value_type >(val2);
+  arg2 = &temp2;
+  std_vector_Sl_int_Sg__append(arg1,(int const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_IntVector__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_IntVector")) SWIG_fail;
+  result = (std::vector< int > *)new std::vector< int >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_IntVector__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  std::vector< int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_IntVector",&obj0)) SWIG_fail;
+  {
+    std::vector<int,std::allocator< int > > *ptr = (std::vector<int,std::allocator< int > > *)0;
+    res1 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_IntVector" "', argument " "1"" of type '" "std::vector< int > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_IntVector" "', argument " "1"" of type '" "std::vector< int > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (std::vector< int > *)new std::vector< int >((std::vector< int > const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_empty(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_empty",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_empty" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (bool)((std::vector< int > const *)arg1)->empty();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_size",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_size" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = ((std::vector< int > const *)arg1)->size();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_clear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_clear",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_clear" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  (arg1)->clear();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_swap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_swap" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IntVector_swap" "', argument " "2"" of type '" "std::vector< int > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IntVector_swap" "', argument " "2"" of type '" "std::vector< int > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< int > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_get_allocator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::allocator< int > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_get_allocator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_get_allocator" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = ((std::vector< int > const *)arg1)->get_allocator();
+  resultobj = SWIG_NewPointerObj((new std::vector< int >::allocator_type(static_cast< const std::vector< int >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_int_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_begin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_begin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_begin" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (arg1)->begin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_end(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_end",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_end" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (arg1)->end();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_rbegin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_rbegin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_rbegin" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (arg1)->rbegin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_rend(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_rend",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_rend" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (arg1)->rend();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_IntVector__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int >::size_type arg1 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_IntVector",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_IntVector" "', argument " "1"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< int >::size_type >(val1);
+  result = (std::vector< int > *)new std::vector< int >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_pop_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_pop_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_pop_back" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  (arg1)->pop_back();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_resize",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_resize" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_resize" "', argument " "2"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::size_type >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::iterator arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< int >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_erase",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_erase" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< int >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_int_Sg__erase__SWIG_0(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::iterator arg2 ;
+  std::vector< int >::iterator arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  swig::SwigPyIterator *iter3 = 0 ;
+  int res3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< int >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector_erase",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_erase" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< int >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, SWIG_as_voidptrptr(&iter3), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res3) || !iter3) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "3"" of type '" "std::vector< int >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< int >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter3);
+    if (iter_t) {
+      arg3 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_erase" "', argument " "3"" of type '" "std::vector< int >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_int_Sg__erase__SWIG_1(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_erase(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter) != 0));
+      if (_v) {
+        return _wrap_IntVector_erase__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter) != 0));
+      if (_v) {
+        swig::SwigPyIterator *iter = 0;
+        int res = SWIG_ConvertPtr(argv[2], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+        _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter) != 0));
+        if (_v) {
+          return _wrap_IntVector_erase__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector_erase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::erase(std::vector< int >::iterator)\n"
+    "    std::vector< int >::erase(std::vector< int >::iterator,std::vector< int >::iterator)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_IntVector__SWIG_3(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int >::size_type arg1 ;
+  std::vector< int >::value_type *arg2 = 0 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  std::vector< int >::value_type temp2 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_IntVector",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_IntVector" "', argument " "1"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< int >::size_type >(val1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_IntVector" "', argument " "2"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp2 = static_cast< std::vector< int >::value_type >(val2);
+  arg2 = &temp2;
+  result = (std::vector< int > *)new std::vector< int >(arg1,(std::vector< int >::value_type const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_IntVector(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_IntVector__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_IntVector__SWIG_2(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_IntVector__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_new_IntVector__SWIG_3(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_IntVector'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::vector()\n"
+    "    std::vector< int >::vector(std::vector< int > const &)\n"
+    "    std::vector< int >::vector(std::vector< int >::size_type)\n"
+    "    std::vector< int >::vector(std::vector< int >::size_type,std::vector< int >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_push_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::vector< int >::value_type temp2 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_push_back",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_push_back" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_push_back" "', argument " "2"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp2 = static_cast< std::vector< int >::value_type >(val2);
+  arg2 = &temp2;
+  (arg1)->push_back((std::vector< int >::value_type const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_front(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_front",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_front" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (std::vector< int >::value_type *) &((std::vector< int > const *)arg1)->front();
+  resultobj = SWIG_From_int(static_cast< int >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_back" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = (std::vector< int >::value_type *) &((std::vector< int > const *)arg1)->back();
+  resultobj = SWIG_From_int(static_cast< int >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_assign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  std::vector< int >::value_type temp3 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector_assign",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_assign" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_assign" "', argument " "2"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::size_type >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector_assign" "', argument " "3"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp3 = static_cast< std::vector< int >::value_type >(val3);
+  arg3 = &temp3;
+  (arg1)->assign(arg2,(std::vector< int >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  std::vector< int >::value_type temp3 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector_resize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_resize" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_resize" "', argument " "2"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::size_type >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector_resize" "', argument " "3"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp3 = static_cast< std::vector< int >::value_type >(val3);
+  arg3 = &temp3;
+  (arg1)->resize(arg2,(std::vector< int >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_resize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_IntVector_resize__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_IntVector_resize__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector_resize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::resize(std::vector< int >::size_type)\n"
+    "    std::vector< int >::resize(std::vector< int >::size_type,std::vector< int >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::iterator arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  std::vector< int >::value_type temp3 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< int >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:IntVector_insert",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_insert" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_insert" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< int >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_insert" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector_insert" "', argument " "3"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp3 = static_cast< std::vector< int >::value_type >(val3);
+  arg3 = &temp3;
+  result = std_vector_Sl_int_Sg__insert__SWIG_0(arg1,arg2,(int const &)*arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< int >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::iterator arg2 ;
+  std::vector< int >::size_type arg3 ;
+  std::vector< int >::value_type *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  size_t val3 ;
+  int ecode3 = 0 ;
+  std::vector< int >::value_type temp4 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:IntVector_insert",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_insert" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_insert" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< int >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "IntVector_insert" "', argument " "2"" of type '" "std::vector< int >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_size_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "IntVector_insert" "', argument " "3"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg3 = static_cast< std::vector< int >::size_type >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "IntVector_insert" "', argument " "4"" of type '" "std::vector< int >::value_type""'");
+  } 
+  temp4 = static_cast< std::vector< int >::value_type >(val4);
+  arg4 = &temp4;
+  std_vector_Sl_int_Sg__insert__SWIG_1(arg1,arg2,arg3,(int const &)*arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_insert(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_IntVector_insert__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<int,std::allocator< int > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< int >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_size_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          {
+            int res = SWIG_AsVal_int(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            return _wrap_IntVector_insert__SWIG_1(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'IntVector_insert'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< int >::insert(std::vector< int >::iterator,std::vector< int >::value_type const &)\n"
+    "    std::vector< int >::insert(std::vector< int >::iterator,std::vector< int >::size_type,std::vector< int >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_reserve(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:IntVector_reserve",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_reserve" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IntVector_reserve" "', argument " "2"" of type '" "std::vector< int >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< int >::size_type >(val2);
+  (arg1)->reserve(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_IntVector_capacity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:IntVector_capacity",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IntVector_capacity" "', argument " "1"" of type '" "std::vector< int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  result = ((std::vector< int > const *)arg1)->capacity();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_IntVector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_IntVector",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_IntVector" "', argument " "1"" of type '" "std::vector< int > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< int > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *IntVector_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -18010,6 +20929,3800 @@ SWIGINTERN PyObject *NodeParameterPtrVector_swigregister(PyObject *SWIGUNUSEDPAR
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_iterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  PyObject **arg2 = (PyObject **) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  swig::SwigPyIterator *result = 0 ;
+  
+  arg2 = &obj0;
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_iterator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_iterator" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (swig::SwigPyIterator *)std_vector_Sl_rte_TcpReceivedData_Sg__iterator(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___nonzero__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector___nonzero__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___nonzero__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (bool)std_vector_Sl_rte_TcpReceivedData_Sg____nonzero__((std::vector< rte::TcpReceivedData > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___bool__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector___bool__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___bool__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (bool)std_vector_Sl_rte_TcpReceivedData_Sg____bool__((std::vector< rte::TcpReceivedData > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector___len__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___len__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = std_vector_Sl_rte_TcpReceivedData_Sg____len__((std::vector< rte::TcpReceivedData > const *)arg1);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_pop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::value_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_pop",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_pop" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  try {
+    result = std_vector_Sl_rte_TcpReceivedData_Sg__pop(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpReceivedData >::value_type(static_cast< const std::vector< rte::TcpReceivedData >::value_type& >(result))), SWIGTYPE_p_rte__TcpReceivedData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___getslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector___getslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___getslice__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___getslice__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpReceivedDataVector___getslice__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val3);
+  try {
+    result = (std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *)std_vector_Sl_rte_TcpReceivedData_Sg____getslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setslice____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg3 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:TcpReceivedDataVector___setslice__",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val3);
+  {
+    std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *ptr = (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *)0;
+    res4 = swig::asptr(obj3, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "4"" of type '" "std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector___setslice__" "', argument " "4"" of type '" "std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &)*arg4);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setslice____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector___setslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpReceivedDataVector___setslice__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val3);
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setslice__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_TcpReceivedDataVector___setslice____SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = swig::asptr(argv[3], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TcpReceivedDataVector___setslice____SWIG_0(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector___setslice__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::__setslice__(std::vector< rte::TcpReceivedData >::difference_type,std::vector< rte::TcpReceivedData >::difference_type,std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &)\n"
+    "    std::vector< rte::TcpReceivedData >::__setslice__(std::vector< rte::TcpReceivedData >::difference_type,std::vector< rte::TcpReceivedData >::difference_type)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___delslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector___delslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___delslice__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___delslice__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpReceivedDataVector___delslice__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val3);
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____delslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___delitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___delitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___delitem__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____delitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___getitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___getitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector___getitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    result = (std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *)std_vector_Sl_rte_TcpReceivedData_Sg____getitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  {
+    std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *ptr = (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *)0;
+    res3 = swig::asptr(obj2, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector___setitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___delitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___delitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector___delitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____delitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___delitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector___delitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector___delitem____SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector___delitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::__delitem__(std::vector< rte::TcpReceivedData >::difference_type)\n"
+    "    std::vector< rte::TcpReceivedData >::__delitem__(PySliceObject *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___getitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpReceivedData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___getitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___getitem__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  try {
+    result = (std::vector< rte::TcpReceivedData >::value_type *) &std_vector_Sl_rte_TcpReceivedData_Sg____getitem____SWIG_1((std::vector< rte::TcpReceivedData > const *)arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___getitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector___getitem____SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector___getitem____SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector___getitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::__getitem__(PySliceObject *)\n"
+    "    std::vector< rte::TcpReceivedData >::__getitem__(std::vector< rte::TcpReceivedData >::difference_type) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setitem____SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::difference_type arg2 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::difference_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpReceivedDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp3);
+  try {
+    std_vector_Sl_rte_TcpReceivedData_Sg____setitem____SWIG_2(arg1,arg2,(rte::TcpReceivedData const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector___setitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector___setitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        int res = swig::asptr(argv[2], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpReceivedDataVector___setitem____SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpReceivedData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpReceivedDataVector___setitem____SWIG_2(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector___setitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::__setitem__(PySliceObject *,std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > const &)\n"
+    "    std::vector< rte::TcpReceivedData >::__setitem__(PySliceObject *)\n"
+    "    std::vector< rte::TcpReceivedData >::__setitem__(std::vector< rte::TcpReceivedData >::difference_type,std::vector< rte::TcpReceivedData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_append(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_append",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_append" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpReceivedDataVector_append" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_append" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp2);
+  std_vector_Sl_rte_TcpReceivedData_Sg__append(arg1,(rte::TcpReceivedData const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpReceivedDataVector__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_TcpReceivedDataVector")) SWIG_fail;
+  result = (std::vector< rte::TcpReceivedData > *)new std::vector< rte::TcpReceivedData >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpReceivedDataVector__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_TcpReceivedDataVector",&obj0)) SWIG_fail;
+  {
+    std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *ptr = (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *)0;
+    res1 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TcpReceivedDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TcpReceivedDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (std::vector< rte::TcpReceivedData > *)new std::vector< rte::TcpReceivedData >((std::vector< rte::TcpReceivedData > const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_empty(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_empty",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_empty" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (bool)((std::vector< rte::TcpReceivedData > const *)arg1)->empty();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_size",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_size" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = ((std::vector< rte::TcpReceivedData > const *)arg1)->size();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_clear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_clear",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_clear" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  (arg1)->clear();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_swap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_swap" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpReceivedDataVector_swap" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_swap" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_get_allocator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::allocator< rte::TcpReceivedData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_get_allocator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_get_allocator" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = ((std::vector< rte::TcpReceivedData > const *)arg1)->get_allocator();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpReceivedData >::allocator_type(static_cast< const std::vector< rte::TcpReceivedData >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_begin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_begin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_begin" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (arg1)->begin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_end(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_end",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_end" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (arg1)->end();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_rbegin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_rbegin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_rbegin" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (arg1)->rbegin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_rend(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_rend",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_rend" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (arg1)->rend();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpReceivedDataVector__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData >::size_type arg1 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_TcpReceivedDataVector",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TcpReceivedDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val1);
+  result = (std::vector< rte::TcpReceivedData > *)new std::vector< rte::TcpReceivedData >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_pop_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_pop_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_pop_back" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  (arg1)->pop_back();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_resize",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_resize" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector_resize" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::iterator arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpReceivedData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_erase",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_erase" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_rte_TcpReceivedData_Sg__erase__SWIG_0(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::iterator arg2 ;
+  std::vector< rte::TcpReceivedData >::iterator arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  swig::SwigPyIterator *iter3 = 0 ;
+  int res3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpReceivedData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector_erase",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_erase" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, SWIG_as_voidptrptr(&iter3), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res3) || !iter3) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter3);
+    if (iter_t) {
+      arg3 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_erase" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_rte_TcpReceivedData_Sg__erase__SWIG_1(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_erase(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter) != 0));
+      if (_v) {
+        return _wrap_TcpReceivedDataVector_erase__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter) != 0));
+      if (_v) {
+        swig::SwigPyIterator *iter = 0;
+        int res = SWIG_ConvertPtr(argv[2], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+        _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter) != 0));
+        if (_v) {
+          return _wrap_TcpReceivedDataVector_erase__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector_erase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::erase(std::vector< rte::TcpReceivedData >::iterator)\n"
+    "    std::vector< rte::TcpReceivedData >::erase(std::vector< rte::TcpReceivedData >::iterator,std::vector< rte::TcpReceivedData >::iterator)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpReceivedDataVector__SWIG_3(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData >::size_type arg1 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg2 = 0 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpReceivedData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_TcpReceivedDataVector",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TcpReceivedDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_TcpReceivedDataVector" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TcpReceivedDataVector" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp2);
+  result = (std::vector< rte::TcpReceivedData > *)new std::vector< rte::TcpReceivedData >(arg1,(std::vector< rte::TcpReceivedData >::value_type const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpReceivedDataVector(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_TcpReceivedDataVector__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_TcpReceivedDataVector__SWIG_2(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_TcpReceivedDataVector__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_rte__TcpReceivedData, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_TcpReceivedDataVector__SWIG_3(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_TcpReceivedDataVector'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::vector()\n"
+    "    std::vector< rte::TcpReceivedData >::vector(std::vector< rte::TcpReceivedData > const &)\n"
+    "    std::vector< rte::TcpReceivedData >::vector(std::vector< rte::TcpReceivedData >::size_type)\n"
+    "    std::vector< rte::TcpReceivedData >::vector(std::vector< rte::TcpReceivedData >::size_type,std::vector< rte::TcpReceivedData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_push_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_push_back",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_push_back" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpReceivedDataVector_push_back" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_push_back" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp2);
+  (arg1)->push_back((std::vector< rte::TcpReceivedData >::value_type const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_front(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_front",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_front" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (std::vector< rte::TcpReceivedData >::value_type *) &((std::vector< rte::TcpReceivedData > const *)arg1)->front();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_back" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = (std::vector< rte::TcpReceivedData >::value_type *) &((std::vector< rte::TcpReceivedData > const *)arg1)->back();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_assign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::size_type arg2 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector_assign",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_assign" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector_assign" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpReceivedDataVector_assign" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_assign" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp3);
+  (arg1)->assign(arg2,(std::vector< rte::TcpReceivedData >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::size_type arg2 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector_resize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_resize" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector_resize" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpReceivedDataVector_resize" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_resize" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp3);
+  (arg1)->resize(arg2,(std::vector< rte::TcpReceivedData >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_resize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpReceivedDataVector_resize__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpReceivedData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpReceivedDataVector_resize__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector_resize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::resize(std::vector< rte::TcpReceivedData >::size_type)\n"
+    "    std::vector< rte::TcpReceivedData >::resize(std::vector< rte::TcpReceivedData >::size_type,std::vector< rte::TcpReceivedData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::iterator arg2 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpReceivedData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpReceivedDataVector_insert",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_insert" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpReceivedDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp3);
+  result = std_vector_Sl_rte_TcpReceivedData_Sg__insert__SWIG_0(arg1,arg2,(rte::TcpReceivedData const &)*arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpReceivedData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::iterator arg2 ;
+  std::vector< rte::TcpReceivedData >::size_type arg3 ;
+  std::vector< rte::TcpReceivedData >::value_type *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  size_t val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:TcpReceivedDataVector_insert",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_insert" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpReceivedDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_size_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpReceivedDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_rte__TcpReceivedData,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TcpReceivedDataVector_insert" "', argument " "4"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpReceivedDataVector_insert" "', argument " "4"" of type '" "std::vector< rte::TcpReceivedData >::value_type const &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< rte::TcpReceivedData >::value_type * >(argp4);
+  std_vector_Sl_rte_TcpReceivedData_Sg__insert__SWIG_1(arg1,arg2,arg3,(rte::TcpReceivedData const &)*arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_insert(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter) != 0));
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpReceivedData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpReceivedDataVector_insert__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpReceivedData >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_size_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_rte__TcpReceivedData, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TcpReceivedDataVector_insert__SWIG_1(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpReceivedDataVector_insert'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpReceivedData >::insert(std::vector< rte::TcpReceivedData >::iterator,std::vector< rte::TcpReceivedData >::value_type const &)\n"
+    "    std::vector< rte::TcpReceivedData >::insert(std::vector< rte::TcpReceivedData >::iterator,std::vector< rte::TcpReceivedData >::size_type,std::vector< rte::TcpReceivedData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_reserve(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  std::vector< rte::TcpReceivedData >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpReceivedDataVector_reserve",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_reserve" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpReceivedDataVector_reserve" "', argument " "2"" of type '" "std::vector< rte::TcpReceivedData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpReceivedData >::size_type >(val2);
+  (arg1)->reserve(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpReceivedDataVector_capacity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpReceivedData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpReceivedDataVector_capacity",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpReceivedDataVector_capacity" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  result = ((std::vector< rte::TcpReceivedData > const *)arg1)->capacity();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TcpReceivedDataVector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpReceivedData > *arg1 = (std::vector< rte::TcpReceivedData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpReceivedDataVector",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpReceivedDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpReceivedData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpReceivedData > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TcpReceivedDataVector_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_iterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  PyObject **arg2 = (PyObject **) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  swig::SwigPyIterator *result = 0 ;
+  
+  arg2 = &obj0;
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_iterator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_iterator" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (swig::SwigPyIterator *)std_vector_Sl_rte_TcpSentData_Sg__iterator(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___nonzero__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector___nonzero__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___nonzero__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (bool)std_vector_Sl_rte_TcpSentData_Sg____nonzero__((std::vector< rte::TcpSentData > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___bool__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector___bool__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___bool__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (bool)std_vector_Sl_rte_TcpSentData_Sg____bool__((std::vector< rte::TcpSentData > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector___len__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___len__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = std_vector_Sl_rte_TcpSentData_Sg____len__((std::vector< rte::TcpSentData > const *)arg1);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_pop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::value_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_pop",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_pop" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  try {
+    result = std_vector_Sl_rte_TcpSentData_Sg__pop(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpSentData >::value_type(static_cast< const std::vector< rte::TcpSentData >::value_type& >(result))), SWIGTYPE_p_rte__TcpSentData, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___getslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  std::vector< rte::TcpSentData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector___getslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___getslice__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___getslice__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpSentDataVector___getslice__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val3);
+  try {
+    result = (std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *)std_vector_Sl_rte_TcpSentData_Sg____getslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setslice____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  std::vector< rte::TcpSentData >::difference_type arg3 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:TcpSentDataVector___setslice__",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___setslice__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___setslice__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpSentDataVector___setslice__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val3);
+  {
+    std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *ptr = (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *)0;
+    res4 = swig::asptr(obj3, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TcpSentDataVector___setslice__" "', argument " "4"" of type '" "std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector___setslice__" "', argument " "4"" of type '" "std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____setslice____SWIG_0(arg1,arg2,arg3,(std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &)*arg4);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setslice____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  std::vector< rte::TcpSentData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector___setslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___setslice__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___setslice__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpSentDataVector___setslice__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val3);
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____setslice____SWIG_0(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setslice__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_TcpSentDataVector___setslice____SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = swig::asptr(argv[3], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TcpSentDataVector___setslice____SWIG_0(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector___setslice__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::__setslice__(std::vector< rte::TcpSentData >::difference_type,std::vector< rte::TcpSentData >::difference_type,std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &)\n"
+    "    std::vector< rte::TcpSentData >::__setslice__(std::vector< rte::TcpSentData >::difference_type,std::vector< rte::TcpSentData >::difference_type)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___delslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  std::vector< rte::TcpSentData >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector___delslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___delslice__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___delslice__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpSentDataVector___delslice__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val3);
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____delslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___delitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___delitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___delitem__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____delitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___getitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___getitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector___getitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    result = (std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *)std_vector_Sl_rte_TcpSentData_Sg____getitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  {
+    std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *ptr = (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *)0;
+    res3 = swig::asptr(obj2, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpSentDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector___setitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___delitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___delitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  {
+    if (!PySlice_Check(obj1)) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector___delitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____delitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___delitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector___delitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector___delitem____SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector___delitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::__delitem__(std::vector< rte::TcpSentData >::difference_type)\n"
+    "    std::vector< rte::TcpSentData >::__delitem__(PySliceObject *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___getitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpSentData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___getitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___getitem__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  try {
+    result = (std::vector< rte::TcpSentData >::value_type *) &std_vector_Sl_rte_TcpSentData_Sg____getitem____SWIG_1((std::vector< rte::TcpSentData > const *)arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___getitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector___getitem____SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector___getitem____SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector___getitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::__getitem__(PySliceObject *)\n"
+    "    std::vector< rte::TcpSentData >::__getitem__(std::vector< rte::TcpSentData >::difference_type) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setitem____SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::difference_type arg2 ;
+  std::vector< rte::TcpSentData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector___setitem__" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector___setitem__" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::difference_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpSentDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector___setitem__" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp3);
+  try {
+    std_vector_Sl_rte_TcpSentData_Sg____setitem____SWIG_2(arg1,arg2,(rte::TcpSentData const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector___setitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector___setitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        int res = swig::asptr(argv[2], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpSentDataVector___setitem____SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpSentData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpSentDataVector___setitem____SWIG_2(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector___setitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::__setitem__(PySliceObject *,std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > const &)\n"
+    "    std::vector< rte::TcpSentData >::__setitem__(PySliceObject *)\n"
+    "    std::vector< rte::TcpSentData >::__setitem__(std::vector< rte::TcpSentData >::difference_type,std::vector< rte::TcpSentData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_append(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_append",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_append" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpSentDataVector_append" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_append" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp2);
+  std_vector_Sl_rte_TcpSentData_Sg__append(arg1,(rte::TcpSentData const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentDataVector__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_TcpSentDataVector")) SWIG_fail;
+  result = (std::vector< rte::TcpSentData > *)new std::vector< rte::TcpSentData >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentDataVector__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_TcpSentDataVector",&obj0)) SWIG_fail;
+  {
+    std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *ptr = (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > > *)0;
+    res1 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TcpSentDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TcpSentDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (std::vector< rte::TcpSentData > *)new std::vector< rte::TcpSentData >((std::vector< rte::TcpSentData > const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_empty(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_empty",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_empty" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (bool)((std::vector< rte::TcpSentData > const *)arg1)->empty();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_size",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_size" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = ((std::vector< rte::TcpSentData > const *)arg1)->size();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_clear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_clear",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_clear" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  (arg1)->clear();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_swap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_swap" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpSentDataVector_swap" "', argument " "2"" of type '" "std::vector< rte::TcpSentData > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_swap" "', argument " "2"" of type '" "std::vector< rte::TcpSentData > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_get_allocator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::allocator< rte::TcpSentData > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_get_allocator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_get_allocator" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = ((std::vector< rte::TcpSentData > const *)arg1)->get_allocator();
+  resultobj = SWIG_NewPointerObj((new std::vector< rte::TcpSentData >::allocator_type(static_cast< const std::vector< rte::TcpSentData >::allocator_type& >(result))), SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_begin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_begin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_begin" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (arg1)->begin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_end(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_end",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_end" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (arg1)->end();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_rbegin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_rbegin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_rbegin" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (arg1)->rbegin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_rend(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_rend",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_rend" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (arg1)->rend();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentDataVector__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData >::size_type arg1 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_TcpSentDataVector",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TcpSentDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< rte::TcpSentData >::size_type >(val1);
+  result = (std::vector< rte::TcpSentData > *)new std::vector< rte::TcpSentData >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_pop_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_pop_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_pop_back" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  (arg1)->pop_back();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_resize",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_resize" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector_resize" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::size_type >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::iterator arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpSentData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_erase",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_erase" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_rte_TcpSentData_Sg__erase__SWIG_0(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::iterator arg2 ;
+  std::vector< rte::TcpSentData >::iterator arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  swig::SwigPyIterator *iter3 = 0 ;
+  int res3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpSentData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector_erase",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_erase" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, SWIG_as_voidptrptr(&iter3), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res3) || !iter3) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter3);
+    if (iter_t) {
+      arg3 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_erase" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_rte_TcpSentData_Sg__erase__SWIG_1(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_erase(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter) != 0));
+      if (_v) {
+        return _wrap_TcpSentDataVector_erase__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter) != 0));
+      if (_v) {
+        swig::SwigPyIterator *iter = 0;
+        int res = SWIG_ConvertPtr(argv[2], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+        _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter) != 0));
+        if (_v) {
+          return _wrap_TcpSentDataVector_erase__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector_erase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::erase(std::vector< rte::TcpSentData >::iterator)\n"
+    "    std::vector< rte::TcpSentData >::erase(std::vector< rte::TcpSentData >::iterator,std::vector< rte::TcpSentData >::iterator)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentDataVector__SWIG_3(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData >::size_type arg1 ;
+  std::vector< rte::TcpSentData >::value_type *arg2 = 0 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< rte::TcpSentData > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_TcpSentDataVector",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TcpSentDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< rte::TcpSentData >::size_type >(val1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_TcpSentDataVector" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TcpSentDataVector" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp2);
+  result = (std::vector< rte::TcpSentData > *)new std::vector< rte::TcpSentData >(arg1,(std::vector< rte::TcpSentData >::value_type const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TcpSentDataVector(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_TcpSentDataVector__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_TcpSentDataVector__SWIG_2(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_TcpSentDataVector__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_rte__TcpSentData, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_TcpSentDataVector__SWIG_3(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_TcpSentDataVector'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::vector()\n"
+    "    std::vector< rte::TcpSentData >::vector(std::vector< rte::TcpSentData > const &)\n"
+    "    std::vector< rte::TcpSentData >::vector(std::vector< rte::TcpSentData >::size_type)\n"
+    "    std::vector< rte::TcpSentData >::vector(std::vector< rte::TcpSentData >::size_type,std::vector< rte::TcpSentData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_push_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_push_back",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_push_back" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TcpSentDataVector_push_back" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_push_back" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp2);
+  (arg1)->push_back((std::vector< rte::TcpSentData >::value_type const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_front(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_front",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_front" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (std::vector< rte::TcpSentData >::value_type *) &((std::vector< rte::TcpSentData > const *)arg1)->front();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_back" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = (std::vector< rte::TcpSentData >::value_type *) &((std::vector< rte::TcpSentData > const *)arg1)->back();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_assign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::size_type arg2 ;
+  std::vector< rte::TcpSentData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector_assign",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_assign" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector_assign" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpSentDataVector_assign" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_assign" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp3);
+  (arg1)->assign(arg2,(std::vector< rte::TcpSentData >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::size_type arg2 ;
+  std::vector< rte::TcpSentData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector_resize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_resize" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector_resize" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpSentDataVector_resize" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_resize" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp3);
+  (arg1)->resize(arg2,(std::vector< rte::TcpSentData >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_resize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TcpSentDataVector_resize__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpSentData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpSentDataVector_resize__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector_resize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::resize(std::vector< rte::TcpSentData >::size_type)\n"
+    "    std::vector< rte::TcpSentData >::resize(std::vector< rte::TcpSentData >::size_type,std::vector< rte::TcpSentData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::iterator arg2 ;
+  std::vector< rte::TcpSentData >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< rte::TcpSentData >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:TcpSentDataVector_insert",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_insert" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TcpSentDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp3);
+  result = std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_0(arg1,arg2,(rte::TcpSentData const &)*arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< rte::TcpSentData >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::iterator arg2 ;
+  std::vector< rte::TcpSentData >::size_type arg3 ;
+  std::vector< rte::TcpSentData >::value_type *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  size_t val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:TcpSentDataVector_insert",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_insert" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TcpSentDataVector_insert" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_size_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TcpSentDataVector_insert" "', argument " "3"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg3 = static_cast< std::vector< rte::TcpSentData >::size_type >(val3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_rte__TcpSentData,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TcpSentDataVector_insert" "', argument " "4"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TcpSentDataVector_insert" "', argument " "4"" of type '" "std::vector< rte::TcpSentData >::value_type const &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< rte::TcpSentData >::value_type * >(argp4);
+  std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_1(arg1,arg2,arg3,(rte::TcpSentData const &)*arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_insert(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 4) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter) != 0));
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_rte__TcpSentData, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TcpSentDataVector_insert__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<rte::TcpSentData,std::allocator< rte::TcpSentData > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< rte::TcpSentData >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_size_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_rte__TcpSentData, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TcpSentDataVector_insert__SWIG_1(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'TcpSentDataVector_insert'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< rte::TcpSentData >::insert(std::vector< rte::TcpSentData >::iterator,std::vector< rte::TcpSentData >::value_type const &)\n"
+    "    std::vector< rte::TcpSentData >::insert(std::vector< rte::TcpSentData >::iterator,std::vector< rte::TcpSentData >::size_type,std::vector< rte::TcpSentData >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_reserve(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  std::vector< rte::TcpSentData >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpSentDataVector_reserve",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_reserve" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpSentDataVector_reserve" "', argument " "2"" of type '" "std::vector< rte::TcpSentData >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< rte::TcpSentData >::size_type >(val2);
+  (arg1)->reserve(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpSentDataVector_capacity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< rte::TcpSentData >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentDataVector_capacity",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentDataVector_capacity" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  result = ((std::vector< rte::TcpSentData > const *)arg1)->capacity();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TcpSentDataVector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< rte::TcpSentData > *arg1 = (std::vector< rte::TcpSentData > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TcpSentDataVector",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TcpSentDataVector" "', argument " "1"" of type '" "std::vector< rte::TcpSentData > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< rte::TcpSentData > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TcpSentDataVector_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_VARARGS, NULL},
@@ -18030,6 +24743,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SwigPyIterator___add__", _wrap_SwigPyIterator___add__, METH_VARARGS, NULL},
 	 { (char *)"SwigPyIterator___sub__", _wrap_SwigPyIterator___sub__, METH_VARARGS, NULL},
 	 { (char *)"SwigPyIterator_swigregister", SwigPyIterator_swigregister, METH_VARARGS, NULL},
+	 { (char *)"makeArray", _wrap_makeArray, METH_VARARGS, NULL},
 	 { (char *)"TriBool_False_swigconstant", TriBool_False_swigconstant, METH_VARARGS, NULL},
 	 { (char *)"TriBool_True_swigconstant", TriBool_True_swigconstant, METH_VARARGS, NULL},
 	 { (char *)"TriBool_Unknown_swigconstant", TriBool_Unknown_swigconstant, METH_VARARGS, NULL},
@@ -18212,40 +24926,53 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"ConditionVariable_notifyOne", _wrap_ConditionVariable_notifyOne, METH_VARARGS, NULL},
 	 { (char *)"ConditionVariable_wait", _wrap_ConditionVariable_wait, METH_VARARGS, NULL},
 	 { (char *)"ConditionVariable_swigregister", ConditionVariable_swigregister, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onSendData_set", _wrap_TcpClientConfig_onSendData_set, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onSendData_get", _wrap_TcpClientConfig_onSendData_get, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onReceiveData_set", _wrap_TcpClientConfig_onReceiveData_set, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onReceiveData_get", _wrap_TcpClientConfig_onReceiveData_get, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onConnectionError_set", _wrap_TcpClientConfig_onConnectionError_set, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_onConnectionError_get", _wrap_TcpClientConfig_onConnectionError_get, METH_VARARGS, NULL},
-	 { (char *)"new_TcpClientConfig", _wrap_new_TcpClientConfig, METH_VARARGS, NULL},
-	 { (char *)"delete_TcpClientConfig", _wrap_delete_TcpClientConfig, METH_VARARGS, NULL},
-	 { (char *)"TcpClientConfig_swigregister", TcpClientConfig_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_clientId_set", _wrap_TcpReceivedData_clientId_set, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_clientId_get", _wrap_TcpReceivedData_clientId_get, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_buffer_set", _wrap_TcpReceivedData_buffer_set, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_buffer_get", _wrap_TcpReceivedData_buffer_get, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_bufferSize_set", _wrap_TcpReceivedData_bufferSize_set, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_bufferSize_get", _wrap_TcpReceivedData_bufferSize_get, METH_VARARGS, NULL},
+	 { (char *)"new_TcpReceivedData", _wrap_new_TcpReceivedData, METH_VARARGS, NULL},
+	 { (char *)"delete_TcpReceivedData", _wrap_delete_TcpReceivedData, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_clone", _wrap_TcpReceivedData_clone, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_move", _wrap_TcpReceivedData_move, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_destroy", _wrap_TcpReceivedData_destroy, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedData_swigregister", TcpReceivedData_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_clientId_set", _wrap_TcpSentData_clientId_set, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_clientId_get", _wrap_TcpSentData_clientId_get, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_buffer_set", _wrap_TcpSentData_buffer_set, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_buffer_get", _wrap_TcpSentData_buffer_get, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_bufferSize_set", _wrap_TcpSentData_bufferSize_set, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_bufferSize_get", _wrap_TcpSentData_bufferSize_get, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_sentSize_set", _wrap_TcpSentData_sentSize_set, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_sentSize_get", _wrap_TcpSentData_sentSize_get, METH_VARARGS, NULL},
+	 { (char *)"new_TcpSentData", _wrap_new_TcpSentData, METH_VARARGS, NULL},
+	 { (char *)"delete_TcpSentData", _wrap_delete_TcpSentData, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_clone", _wrap_TcpSentData_clone, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_move", _wrap_TcpSentData_move, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_destroy", _wrap_TcpSentData_destroy, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_swigregister", TcpSentData_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_TcpClient", _wrap_new_TcpClient, METH_VARARGS, NULL},
 	 { (char *)"delete_TcpClient", _wrap_delete_TcpClient, METH_VARARGS, NULL},
-	 { (char *)"TcpClient_configure", _wrap_TcpClient_configure, METH_VARARGS, NULL},
 	 { (char *)"TcpClient_connect", _wrap_TcpClient_connect, METH_VARARGS, NULL},
 	 { (char *)"TcpClient_close", _wrap_TcpClient_close, METH_VARARGS, NULL},
 	 { (char *)"TcpClient_sendAsync", _wrap_TcpClient_sendAsync, METH_VARARGS, NULL},
+	 { (char *)"TcpClient_popReceivedQueue", _wrap_TcpClient_popReceivedQueue, METH_VARARGS, NULL},
+	 { (char *)"TcpClient_popSentQueue", _wrap_TcpClient_popSentQueue, METH_VARARGS, NULL},
+	 { (char *)"TcpClient_isConnectionAlive", _wrap_TcpClient_isConnectionAlive, METH_VARARGS, NULL},
 	 { (char *)"TcpClient_swigregister", TcpClient_swigregister, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onAcceptClient_set", _wrap_TcpServerConfig_onAcceptClient_set, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onAcceptClient_get", _wrap_TcpServerConfig_onAcceptClient_get, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onSendData_set", _wrap_TcpServerConfig_onSendData_set, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onSendData_get", _wrap_TcpServerConfig_onSendData_get, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onReceiveData_set", _wrap_TcpServerConfig_onReceiveData_set, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onReceiveData_get", _wrap_TcpServerConfig_onReceiveData_get, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onConnectionError_set", _wrap_TcpServerConfig_onConnectionError_set, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_onConnectionError_get", _wrap_TcpServerConfig_onConnectionError_get, METH_VARARGS, NULL},
-	 { (char *)"new_TcpServerConfig", _wrap_new_TcpServerConfig, METH_VARARGS, NULL},
-	 { (char *)"delete_TcpServerConfig", _wrap_delete_TcpServerConfig, METH_VARARGS, NULL},
-	 { (char *)"TcpServerConfig_swigregister", TcpServerConfig_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_TcpServer", _wrap_new_TcpServer, METH_VARARGS, NULL},
 	 { (char *)"delete_TcpServer", _wrap_delete_TcpServer, METH_VARARGS, NULL},
-	 { (char *)"TcpServer_configure", _wrap_TcpServer_configure, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_open", _wrap_TcpServer_open, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_close", _wrap_TcpServer_close, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_sendAsync", _wrap_TcpServer_sendAsync, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_broadcastAsync", _wrap_TcpServer_broadcastAsync, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_getClientCount", _wrap_TcpServer_getClientCount, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_getClientList", _wrap_TcpServer_getClientList, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_popAcceptedQueue", _wrap_TcpServer_popAcceptedQueue, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_popReceivedQueue", _wrap_TcpServer_popReceivedQueue, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_popSentQueue", _wrap_TcpServer_popSentQueue, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_popClosedQueue", _wrap_TcpServer_popClosedQueue, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_closeConnection", _wrap_TcpServer_closeConnection, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_swigregister", TcpServer_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_buffer", _wrap_new_buffer, METH_VARARGS, NULL},
@@ -18255,6 +24982,49 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"buffer_cast", _wrap_buffer_cast, METH_VARARGS, NULL},
 	 { (char *)"buffer_frompointer", _wrap_buffer_frompointer, METH_VARARGS, NULL},
 	 { (char *)"buffer_swigregister", buffer_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_SafeArrayUInt8", _wrap_new_SafeArrayUInt8, METH_VARARGS, NULL},
+	 { (char *)"delete_SafeArrayUInt8", _wrap_delete_SafeArrayUInt8, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_moveFrom", _wrap_SafeArrayUInt8_moveFrom, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_get", _wrap_SafeArrayUInt8_get, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_size", _wrap_SafeArrayUInt8_size, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_swap", _wrap_SafeArrayUInt8_swap, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_resize", _wrap_SafeArrayUInt8_resize, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_append", _wrap_SafeArrayUInt8_append, METH_VARARGS, NULL},
+	 { (char *)"SafeArrayUInt8_swigregister", SafeArrayUInt8_swigregister, METH_VARARGS, NULL},
+	 { (char *)"IntVector_iterator", _wrap_IntVector_iterator, METH_VARARGS, NULL},
+	 { (char *)"IntVector___nonzero__", _wrap_IntVector___nonzero__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___bool__", _wrap_IntVector___bool__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___len__", _wrap_IntVector___len__, METH_VARARGS, NULL},
+	 { (char *)"IntVector_pop", _wrap_IntVector_pop, METH_VARARGS, NULL},
+	 { (char *)"IntVector___getslice__", _wrap_IntVector___getslice__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___setslice__", _wrap_IntVector___setslice__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___delslice__", _wrap_IntVector___delslice__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___delitem__", _wrap_IntVector___delitem__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___getitem__", _wrap_IntVector___getitem__, METH_VARARGS, NULL},
+	 { (char *)"IntVector___setitem__", _wrap_IntVector___setitem__, METH_VARARGS, NULL},
+	 { (char *)"IntVector_append", _wrap_IntVector_append, METH_VARARGS, NULL},
+	 { (char *)"IntVector_empty", _wrap_IntVector_empty, METH_VARARGS, NULL},
+	 { (char *)"IntVector_size", _wrap_IntVector_size, METH_VARARGS, NULL},
+	 { (char *)"IntVector_clear", _wrap_IntVector_clear, METH_VARARGS, NULL},
+	 { (char *)"IntVector_swap", _wrap_IntVector_swap, METH_VARARGS, NULL},
+	 { (char *)"IntVector_get_allocator", _wrap_IntVector_get_allocator, METH_VARARGS, NULL},
+	 { (char *)"IntVector_begin", _wrap_IntVector_begin, METH_VARARGS, NULL},
+	 { (char *)"IntVector_end", _wrap_IntVector_end, METH_VARARGS, NULL},
+	 { (char *)"IntVector_rbegin", _wrap_IntVector_rbegin, METH_VARARGS, NULL},
+	 { (char *)"IntVector_rend", _wrap_IntVector_rend, METH_VARARGS, NULL},
+	 { (char *)"IntVector_pop_back", _wrap_IntVector_pop_back, METH_VARARGS, NULL},
+	 { (char *)"IntVector_erase", _wrap_IntVector_erase, METH_VARARGS, NULL},
+	 { (char *)"new_IntVector", _wrap_new_IntVector, METH_VARARGS, NULL},
+	 { (char *)"IntVector_push_back", _wrap_IntVector_push_back, METH_VARARGS, NULL},
+	 { (char *)"IntVector_front", _wrap_IntVector_front, METH_VARARGS, NULL},
+	 { (char *)"IntVector_back", _wrap_IntVector_back, METH_VARARGS, NULL},
+	 { (char *)"IntVector_assign", _wrap_IntVector_assign, METH_VARARGS, NULL},
+	 { (char *)"IntVector_resize", _wrap_IntVector_resize, METH_VARARGS, NULL},
+	 { (char *)"IntVector_insert", _wrap_IntVector_insert, METH_VARARGS, NULL},
+	 { (char *)"IntVector_reserve", _wrap_IntVector_reserve, METH_VARARGS, NULL},
+	 { (char *)"IntVector_capacity", _wrap_IntVector_capacity, METH_VARARGS, NULL},
+	 { (char *)"delete_IntVector", _wrap_delete_IntVector, METH_VARARGS, NULL},
+	 { (char *)"IntVector_swigregister", IntVector_swigregister, METH_VARARGS, NULL},
 	 { (char *)"StringVecotor_iterator", _wrap_StringVecotor_iterator, METH_VARARGS, NULL},
 	 { (char *)"StringVecotor___nonzero__", _wrap_StringVecotor___nonzero__, METH_VARARGS, NULL},
 	 { (char *)"StringVecotor___bool__", _wrap_StringVecotor___bool__, METH_VARARGS, NULL},
@@ -18357,6 +25127,74 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"NodeParameterPtrVector_capacity", _wrap_NodeParameterPtrVector_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_NodeParameterPtrVector", _wrap_delete_NodeParameterPtrVector, METH_VARARGS, NULL},
 	 { (char *)"NodeParameterPtrVector_swigregister", NodeParameterPtrVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_iterator", _wrap_TcpReceivedDataVector_iterator, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___nonzero__", _wrap_TcpReceivedDataVector___nonzero__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___bool__", _wrap_TcpReceivedDataVector___bool__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___len__", _wrap_TcpReceivedDataVector___len__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_pop", _wrap_TcpReceivedDataVector_pop, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___getslice__", _wrap_TcpReceivedDataVector___getslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___setslice__", _wrap_TcpReceivedDataVector___setslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___delslice__", _wrap_TcpReceivedDataVector___delslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___delitem__", _wrap_TcpReceivedDataVector___delitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___getitem__", _wrap_TcpReceivedDataVector___getitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector___setitem__", _wrap_TcpReceivedDataVector___setitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_append", _wrap_TcpReceivedDataVector_append, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_empty", _wrap_TcpReceivedDataVector_empty, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_size", _wrap_TcpReceivedDataVector_size, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_clear", _wrap_TcpReceivedDataVector_clear, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_swap", _wrap_TcpReceivedDataVector_swap, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_get_allocator", _wrap_TcpReceivedDataVector_get_allocator, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_begin", _wrap_TcpReceivedDataVector_begin, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_end", _wrap_TcpReceivedDataVector_end, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_rbegin", _wrap_TcpReceivedDataVector_rbegin, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_rend", _wrap_TcpReceivedDataVector_rend, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_pop_back", _wrap_TcpReceivedDataVector_pop_back, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_erase", _wrap_TcpReceivedDataVector_erase, METH_VARARGS, NULL},
+	 { (char *)"new_TcpReceivedDataVector", _wrap_new_TcpReceivedDataVector, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_push_back", _wrap_TcpReceivedDataVector_push_back, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_front", _wrap_TcpReceivedDataVector_front, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_back", _wrap_TcpReceivedDataVector_back, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_assign", _wrap_TcpReceivedDataVector_assign, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_resize", _wrap_TcpReceivedDataVector_resize, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_insert", _wrap_TcpReceivedDataVector_insert, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_reserve", _wrap_TcpReceivedDataVector_reserve, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_capacity", _wrap_TcpReceivedDataVector_capacity, METH_VARARGS, NULL},
+	 { (char *)"delete_TcpReceivedDataVector", _wrap_delete_TcpReceivedDataVector, METH_VARARGS, NULL},
+	 { (char *)"TcpReceivedDataVector_swigregister", TcpReceivedDataVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_iterator", _wrap_TcpSentDataVector_iterator, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___nonzero__", _wrap_TcpSentDataVector___nonzero__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___bool__", _wrap_TcpSentDataVector___bool__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___len__", _wrap_TcpSentDataVector___len__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_pop", _wrap_TcpSentDataVector_pop, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___getslice__", _wrap_TcpSentDataVector___getslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___setslice__", _wrap_TcpSentDataVector___setslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___delslice__", _wrap_TcpSentDataVector___delslice__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___delitem__", _wrap_TcpSentDataVector___delitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___getitem__", _wrap_TcpSentDataVector___getitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector___setitem__", _wrap_TcpSentDataVector___setitem__, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_append", _wrap_TcpSentDataVector_append, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_empty", _wrap_TcpSentDataVector_empty, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_size", _wrap_TcpSentDataVector_size, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_clear", _wrap_TcpSentDataVector_clear, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_swap", _wrap_TcpSentDataVector_swap, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_get_allocator", _wrap_TcpSentDataVector_get_allocator, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_begin", _wrap_TcpSentDataVector_begin, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_end", _wrap_TcpSentDataVector_end, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_rbegin", _wrap_TcpSentDataVector_rbegin, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_rend", _wrap_TcpSentDataVector_rend, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_pop_back", _wrap_TcpSentDataVector_pop_back, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_erase", _wrap_TcpSentDataVector_erase, METH_VARARGS, NULL},
+	 { (char *)"new_TcpSentDataVector", _wrap_new_TcpSentDataVector, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_push_back", _wrap_TcpSentDataVector_push_back, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_front", _wrap_TcpSentDataVector_front, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_back", _wrap_TcpSentDataVector_back, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_assign", _wrap_TcpSentDataVector_assign, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_resize", _wrap_TcpSentDataVector_resize, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_insert", _wrap_TcpSentDataVector_insert, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_reserve", _wrap_TcpSentDataVector_reserve, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_capacity", _wrap_TcpSentDataVector_capacity, METH_VARARGS, NULL},
+	 { (char *)"delete_TcpSentDataVector", _wrap_delete_TcpSentDataVector, METH_VARARGS, NULL},
+	 { (char *)"TcpSentDataVector_swigregister", TcpSentDataVector_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -18441,12 +25279,6 @@ static swig_type_info _swigt__p_buffer = {"_p_buffer", "buffer *", 0, 0, (void*)
 static swig_type_info _swigt__p_char = {"_p_char", "CHAR *|TCHAR *|char *|CCHAR *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_const_reference = {"_p_const_reference", "const_reference *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_int__void = {"_p_f_int__void", "void (*)(int)|rte::TcpServerConfig::OnAcceptClient", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_int_p_q_const__unsigned_char_int__bool = {"_p_f_int_p_q_const__unsigned_char_int__bool", "rte::TcpServerConfig::OnConnectionError|bool (*)(int,unsigned char const *,int)", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_int_p_q_const__unsigned_char_int__void = {"_p_f_int_p_q_const__unsigned_char_int__void", "rte::TcpServerConfig::OnReceiveData|void (*)(int,unsigned char const *,int)", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_int_p_q_const__unsigned_char_int_int__void = {"_p_f_int_p_q_const__unsigned_char_int_int__void", "void (*)(int,unsigned char const *,int,int)|rte::TcpServerConfig::OnSendData", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_p_q_const__unsigned_char_int__bool = {"_p_f_p_q_const__unsigned_char_int__bool", "rte::TcpClientConfig::OnConnectionError|bool (*)(unsigned char const *,int)", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_p_q_const__unsigned_char_int__void = {"_p_f_p_q_const__unsigned_char_int__void", "rte::TcpClientConfig::OnReceiveData|void (*)(unsigned char const *,int)|rte::TcpClientConfig::OnSendData", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_float = {"_p_float", "FLOAT *|float *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "BOOL *|INT32 *|intptr_t *|int *|INT *|int_least32_t *|int_fast32_t *|int32_t *|INT_PTR *|LONG32 *|int_fast16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long = {"_p_long", "SHANDLE_PTR *|LONG_PTR *|LONG *|HRESULT *|long *|SSIZE_T *", 0, 0, (void*)0, 0};
@@ -18471,27 +25303,34 @@ static swig_type_info _swigt__p_rte__ParamUpdateCommand = {"_p_rte__ParamUpdateC
 static swig_type_info _swigt__p_rte__PingCommand = {"_p_rte__PingCommand", "rte::PingCommand *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Socket = {"_p_rte__Socket", "rte::Socket *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__TcpClient = {"_p_rte__TcpClient", "rte::TcpClient *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_rte__TcpClientConfig = {"_p_rte__TcpClientConfig", "rte::TcpClientConfig *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__TcpReceivedData = {"_p_rte__TcpReceivedData", "std::vector< rte::TcpReceivedData >::value_type *|rte::TcpReceivedData *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__TcpSentData = {"_p_rte__TcpSentData", "std::vector< rte::TcpSentData >::value_type *|rte::TcpSentData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__TcpServer = {"_p_rte__TcpServer", "rte::TcpServer *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_rte__TcpServerConfig = {"_p_rte__TcpServerConfig", "rte::TcpServerConfig *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Thread = {"_p_rte__Thread", "rte::Thread *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__UniqueLock = {"_p_rte__UniqueLock", "rte::UniqueLock *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Vector3 = {"_p_rte__Vector3", "rte::Vector3 *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__mem__SafeArrayT_unsigned_char_t = {"_p_rte__mem__SafeArrayT_unsigned_char_t", "rte::mem::SafeArray< unsigned char > *|rte::mem::SafeArray< uint8_t > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__noncopyable = {"_p_rte__noncopyable", "rte::noncopyable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__nonmovable = {"_p_rte__nonmovable", "rte::nonmovable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_short = {"_p_short", "HALF_PTR *|short *|SHORT *|int_least16_t *|int16_t *|INT16 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_signed___int64 = {"_p_signed___int64", "INT64 *|signed __int64 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "signed char *|INT8 *|int_least8_t *|int_fast8_t *|int8_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__allocatorT_int_t = {"_p_std__allocatorT_int_t", "std::vector< int >::allocator_type *|std::allocator< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_rte__NodeParameter_p_t = {"_p_std__allocatorT_rte__NodeParameter_p_t", "std::vector< rte::NodeParameter * >::allocator_type *|std::allocator< rte::NodeParameter * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_rte__Node_p_t = {"_p_std__allocatorT_rte__Node_p_t", "std::vector< rte::Node * >::allocator_type *|std::allocator< rte::Node * > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__allocatorT_rte__TcpReceivedData_t = {"_p_std__allocatorT_rte__TcpReceivedData_t", "std::vector< rte::TcpReceivedData >::allocator_type *|std::allocator< rte::TcpReceivedData > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__allocatorT_rte__TcpSentData_t = {"_p_std__allocatorT_rte__TcpSentData_t", "std::vector< rte::TcpSentData >::allocator_type *|std::allocator< rte::TcpSentData > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_std__string_t = {"_p_std__allocatorT_std__string_t", "std::vector< std::string >::allocator_type *|std::allocator< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__functionT_bool_fvoidF_t = {"_p_std__functionT_bool_fvoidF_t", "std::function< bool (void) > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__functionT_unsigned_int_fvoid_pF_t = {"_p_std__functionT_unsigned_int_fvoid_pF_t", "std::function< unsigned int (void *) > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__functionT_int_fvoid_pF_t = {"_p_std__functionT_int_fvoid_pF_t", "std::function< int (void *) > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_int_std__allocatorT_int_t_t = {"_p_std__vectorT_int_std__allocatorT_int_t_t", "std::vector< int,std::allocator< int > > *|std::vector< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t = {"_p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t", "std::vector< rte::NodeParameter * > *|std::vector< rte::NodeParameter *,std::allocator< rte::NodeParameter * > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t = {"_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t", "std::vector< rte::Node *,std::allocator< rte::Node * > > *|std::vector< rte::Node * > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t = {"_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t", "std::vector< rte::TcpReceivedData > *|std::vector< rte::TcpReceivedData,std::allocator< rte::TcpReceivedData > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t = {"_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t", "std::vector< rte::TcpSentData > *|std::vector< rte::TcpSentData,std::allocator< rte::TcpSentData > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned___int64 = {"_p_unsigned___int64", "UINT64 *|DWORD64 *|unsigned __int64 *|DWORDLONG *|ULONGLONG *|ULONG64 *", 0, 0, (void*)0, 0};
@@ -18509,12 +25348,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_char,
   &_swigt__p_const_reference,
   &_swigt__p_difference_type,
-  &_swigt__p_f_int__void,
-  &_swigt__p_f_int_p_q_const__unsigned_char_int__bool,
-  &_swigt__p_f_int_p_q_const__unsigned_char_int__void,
-  &_swigt__p_f_int_p_q_const__unsigned_char_int_int__void,
-  &_swigt__p_f_p_q_const__unsigned_char_int__bool,
-  &_swigt__p_f_p_q_const__unsigned_char_int__void,
   &_swigt__p_float,
   &_swigt__p_int,
   &_swigt__p_long,
@@ -18539,27 +25372,34 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_rte__PingCommand,
   &_swigt__p_rte__Socket,
   &_swigt__p_rte__TcpClient,
-  &_swigt__p_rte__TcpClientConfig,
+  &_swigt__p_rte__TcpReceivedData,
+  &_swigt__p_rte__TcpSentData,
   &_swigt__p_rte__TcpServer,
-  &_swigt__p_rte__TcpServerConfig,
   &_swigt__p_rte__Thread,
   &_swigt__p_rte__UniqueLock,
   &_swigt__p_rte__Vector3,
+  &_swigt__p_rte__mem__SafeArrayT_unsigned_char_t,
   &_swigt__p_rte__noncopyable,
   &_swigt__p_rte__nonmovable,
   &_swigt__p_short,
   &_swigt__p_signed___int64,
   &_swigt__p_signed_char,
   &_swigt__p_size_type,
+  &_swigt__p_std__allocatorT_int_t,
   &_swigt__p_std__allocatorT_rte__NodeParameter_p_t,
   &_swigt__p_std__allocatorT_rte__Node_p_t,
+  &_swigt__p_std__allocatorT_rte__TcpReceivedData_t,
+  &_swigt__p_std__allocatorT_rte__TcpSentData_t,
   &_swigt__p_std__allocatorT_std__string_t,
   &_swigt__p_std__functionT_bool_fvoidF_t,
-  &_swigt__p_std__functionT_unsigned_int_fvoid_pF_t,
+  &_swigt__p_std__functionT_int_fvoid_pF_t,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__string,
+  &_swigt__p_std__vectorT_int_std__allocatorT_int_t_t,
   &_swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t,
   &_swigt__p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t,
+  &_swigt__p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t,
+  &_swigt__p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t,
   &_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   &_swigt__p_swig__SwigPyIterator,
   &_swigt__p_unsigned___int64,
@@ -18577,12 +25417,6 @@ static swig_cast_info _swigc__p_buffer[] = {  {&_swigt__p_buffer, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_const_reference[] = {  {&_swigt__p_const_reference, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_int__void[] = {  {&_swigt__p_f_int__void, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_int_p_q_const__unsigned_char_int__bool[] = {  {&_swigt__p_f_int_p_q_const__unsigned_char_int__bool, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_int_p_q_const__unsigned_char_int__void[] = {  {&_swigt__p_f_int_p_q_const__unsigned_char_int__void, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_int_p_q_const__unsigned_char_int_int__void[] = {  {&_swigt__p_f_int_p_q_const__unsigned_char_int_int__void, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_p_q_const__unsigned_char_int__bool[] = {  {&_swigt__p_f_p_q_const__unsigned_char_int__bool, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_p_q_const__unsigned_char_int__void[] = {  {&_swigt__p_f_p_q_const__unsigned_char_int__void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long[] = {  {&_swigt__p_long, 0, 0, 0},{0, 0, 0, 0}};
@@ -18607,27 +25441,34 @@ static swig_cast_info _swigc__p_rte__ParamUpdateCommand[] = {  {&_swigt__p_rte__
 static swig_cast_info _swigc__p_rte__PingCommand[] = {  {&_swigt__p_rte__PingCommand, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Socket[] = {  {&_swigt__p_rte__Socket, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpClient[] = {  {&_swigt__p_rte__TcpClient, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__TcpClientConfig[] = {  {&_swigt__p_rte__TcpClientConfig, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__TcpReceivedData[] = {  {&_swigt__p_rte__TcpReceivedData, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__TcpSentData[] = {  {&_swigt__p_rte__TcpSentData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpServer[] = {  {&_swigt__p_rte__TcpServer, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__TcpServerConfig[] = {  {&_swigt__p_rte__TcpServerConfig, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Thread[] = {  {&_swigt__p_rte__Thread, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__UniqueLock[] = {  {&_swigt__p_rte__UniqueLock, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Vector3[] = {  {&_swigt__p_rte__Vector3, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__mem__SafeArrayT_unsigned_char_t[] = {  {&_swigt__p_rte__mem__SafeArrayT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__noncopyable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__noncopyable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__noncopyable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__nonmovable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeBase, _p_rte__NodeBaseTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__NodeParameter, 0, 0, 0},  {&_swigt__p_rte__Node, 0, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__nonmovable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Context, _p_rte__ContextTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__nonmovable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed___int64[] = {  {&_swigt__p_signed___int64, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__allocatorT_int_t[] = {  {&_swigt__p_std__allocatorT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_rte__NodeParameter_p_t[] = {  {&_swigt__p_std__allocatorT_rte__NodeParameter_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_rte__Node_p_t[] = {  {&_swigt__p_std__allocatorT_rte__Node_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__allocatorT_rte__TcpReceivedData_t[] = {  {&_swigt__p_std__allocatorT_rte__TcpReceivedData_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__allocatorT_rte__TcpSentData_t[] = {  {&_swigt__p_std__allocatorT_rte__TcpSentData_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_std__string_t[] = {  {&_swigt__p_std__allocatorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__functionT_bool_fvoidF_t[] = {  {&_swigt__p_std__functionT_bool_fvoidF_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__functionT_unsigned_int_fvoid_pF_t[] = {  {&_swigt__p_std__functionT_unsigned_int_fvoid_pF_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__functionT_int_fvoid_pF_t[] = {  {&_swigt__p_std__functionT_int_fvoid_pF_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_int_std__allocatorT_int_t_t[] = {  {&_swigt__p_std__vectorT_int_std__allocatorT_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t[] = {  {&_swigt__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t[] = {  {&_swigt__p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t[] = {  {&_swigt__p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t[] = {  {&_swigt__p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t[] = {  {&_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned___int64[] = {  {&_swigt__p_unsigned___int64, 0, 0, 0},{0, 0, 0, 0}};
@@ -18645,12 +25486,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_char,
   _swigc__p_const_reference,
   _swigc__p_difference_type,
-  _swigc__p_f_int__void,
-  _swigc__p_f_int_p_q_const__unsigned_char_int__bool,
-  _swigc__p_f_int_p_q_const__unsigned_char_int__void,
-  _swigc__p_f_int_p_q_const__unsigned_char_int_int__void,
-  _swigc__p_f_p_q_const__unsigned_char_int__bool,
-  _swigc__p_f_p_q_const__unsigned_char_int__void,
   _swigc__p_float,
   _swigc__p_int,
   _swigc__p_long,
@@ -18675,27 +25510,34 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_rte__PingCommand,
   _swigc__p_rte__Socket,
   _swigc__p_rte__TcpClient,
-  _swigc__p_rte__TcpClientConfig,
+  _swigc__p_rte__TcpReceivedData,
+  _swigc__p_rte__TcpSentData,
   _swigc__p_rte__TcpServer,
-  _swigc__p_rte__TcpServerConfig,
   _swigc__p_rte__Thread,
   _swigc__p_rte__UniqueLock,
   _swigc__p_rte__Vector3,
+  _swigc__p_rte__mem__SafeArrayT_unsigned_char_t,
   _swigc__p_rte__noncopyable,
   _swigc__p_rte__nonmovable,
   _swigc__p_short,
   _swigc__p_signed___int64,
   _swigc__p_signed_char,
   _swigc__p_size_type,
+  _swigc__p_std__allocatorT_int_t,
   _swigc__p_std__allocatorT_rte__NodeParameter_p_t,
   _swigc__p_std__allocatorT_rte__Node_p_t,
+  _swigc__p_std__allocatorT_rte__TcpReceivedData_t,
+  _swigc__p_std__allocatorT_rte__TcpSentData_t,
   _swigc__p_std__allocatorT_std__string_t,
   _swigc__p_std__functionT_bool_fvoidF_t,
-  _swigc__p_std__functionT_unsigned_int_fvoid_pF_t,
+  _swigc__p_std__functionT_int_fvoid_pF_t,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__string,
+  _swigc__p_std__vectorT_int_std__allocatorT_int_t_t,
   _swigc__p_std__vectorT_rte__NodeParameter_p_std__allocatorT_rte__NodeParameter_p_t_t,
   _swigc__p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t,
+  _swigc__p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t,
+  _swigc__p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t,
   _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   _swigc__p_swig__SwigPyIterator,
   _swigc__p_unsigned___int64,

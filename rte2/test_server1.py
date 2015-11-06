@@ -10,10 +10,13 @@ def main():
         sock.listen(1)
         while True:
             conn, addr = sock.accept()
+            print "accept, ", conn, addr
             with closing(conn):
                 data = conn.recv(1024)
-                print data
-                conn.send(data)
+                print "recv", data
+                print "send", conn.send(data)
+            
+            time.sleep(0.1)
 
 if __name__ == "__main__":
     main()

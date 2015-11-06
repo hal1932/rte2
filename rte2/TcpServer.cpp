@@ -91,7 +91,7 @@ namespace rte {
 		data.clientId = id;
 		data.buffer = const_cast<uint8_t*>(buffer);
 		data.bufferSize = bufferSize;
-		mSentList.emplaceBack(std::move(data));
+		mSendRequestList.emplaceBack(std::move(data));
 	}
 
 	void TcpServer::broadcastAsync(const uint8_t* buffer, int bufferSize)
@@ -174,11 +174,9 @@ namespace rte {
 		mem::safeDelete(&pClientSocket);
 	}
 
-	unsigned int TcpServer::acceptThread_(void*)
+	int TcpServer::acceptThread_(void*)
 	{
 		logInfo("enter");
-
-		unsigned int result = 0;
 
 		auto pClient = new Socket();
 		while (true)
@@ -215,14 +213,12 @@ namespace rte {
 		}
 
 		mem::safeDelete(&pClient);
-		return result;
+		return 0;
 	}
 
-	unsigned int TcpServer::receiveThread_(void* arg)
+	int TcpServer::receiveThread_(void* arg)
 	{
 		logInfo("");
-
-		unsigned int result = 0;
 
 		auto pClientSocket = static_cast<Socket*>(arg);
 		auto clientId = socketToId(pClientSocket);
@@ -252,7 +248,6 @@ namespace rte {
 				result.clientId = clientId;
 				result.buffer = receivedData.get();
 				result.bufferSize = receivedData.size();
-
 				mReceivedList.emplaceBack(std::move(result));
 			}
 			else if (receivedData.size() == 0)
@@ -269,20 +264,17 @@ namespace rte {
 				result.clientId = clientId;
 				result.buffer = nullptr;
 				result.bufferSize = -1;
-
 				mReceivedList.emplaceBack(std::move(result));
 			}
 
 			Sleep(cThreadPollingInterval);
 		}
 
-		return result;
+		return 0;
 	}
 
-	unsigned int TcpServer::sendThread_(void*)
+	int TcpServer::sendThread_(void*)
 	{
-		unsigned int result = 0;
-
 		while (true)
 		{
 			// 停止リクエストをチェック
@@ -291,11 +283,11 @@ namespace rte {
 				break;
 			}
 
-			if (mSentList.size() > 0)
+			if (mSendRequestList.size() > 0)
 			{
 				// キューが空になるまで送信
 				std::vector<TcpSentData> dataList;
-				mSentList.swap(&dataList);
+				mSendRequestList.swap(&dataList);
 
 				for (auto data : dataList)
 				{
@@ -308,15 +300,25 @@ namespace rte {
 						sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
 					}
 
+					if(sendBytes == data.bufferSize)
 					{
-						auto clientId = socketToId(pClientSocket);
-
+						// 送信データをキューに詰める
 						TcpSentData result;
-						result.clientId = clientId;
+						result.clientId = socketToId(pClientSocket);
 						result.buffer = const_cast<uint8_t*>(data.buffer);
 						result.bufferSize = data.bufferSize;
 						result.sentSize = sendBytes;
+						mSentList.emplaceBack(std::move(result));
+					}
+					else
+					{
+						// エラー
+						logError("sending to client failed");
 
+						// 不正データをキューに詰める
+						TcpSentData result;
+						result.buffer = nullptr;
+						result.bufferSize = -1;
 						mSentList.emplaceBack(std::move(result));
 					}
 				}
@@ -325,7 +327,7 @@ namespace rte {
 			Sleep(cThreadPollingInterval);
 		}
 
-		return result;
+		return 0;
 	}
 
 }// namespace rte

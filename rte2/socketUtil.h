@@ -12,12 +12,16 @@ namespace rte {
 
 			mem::Array<uint8_t> received(cBufferSize);
 			auto recvBytes = pSocket->recv(received.get(), received.size());
+			if (recvBytes < 0)
+			{
+				received.invalidate();
+				return std::move(received);
+			}
+
 			received.resize(recvBytes);
 
 			if (recvBytes > 0)
 			{
-				received.resize(recvBytes);
-
 				mem::Array<uint8_t> tmp(cBufferSize);
 				while (pSocket->getAvailabieSize() > 0)
 				{

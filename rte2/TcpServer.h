@@ -44,17 +44,19 @@ namespace rte {
 		};
 		std::map<Socket*, ClientInfo> mClientDic;
 
-		rte::InterlockedVector<int> mAcceptedList;
-		rte::InterlockedVector<TcpReceivedData> mReceivedList;
-		rte::InterlockedVector<int> mClosedList;
-		rte::InterlockedVector<int> mCloseRequestList;
-		rte::InterlockedVector<TcpSentData> mSentList;
+		InterlockedVector<TcpSentData> mSendRequestList;
+
+		InterlockedVector<int> mAcceptedList;
+		InterlockedVector<TcpReceivedData> mReceivedList;
+		InterlockedVector<int> mClosedList;
+		InterlockedVector<int> mCloseRequestList;
+		InterlockedVector<TcpSentData> mSentList;
 
 		volatile bool mIsConnectionClosed;
 
-		unsigned int acceptThread_(void*);
-		unsigned int receiveThread_(void* arg);
-		unsigned int sendThread_(void*);
+		int acceptThread_(void*);
+		int receiveThread_(void* arg);
+		int sendThread_(void*);
 	};
 
 }// namespace rte

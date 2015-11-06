@@ -11,24 +11,39 @@ def main():
     
     client = rt.TcpClient()
     print "connect", client.connect("127.0.0.1", 0x1234)
-    print "sendAsync", client.sendAsync(b"1234", 4)
+    print "sendAsync", client.sendAsync(rt.makeArray("1234"), 4)
+
+    closed = False
 
     while True:
-        received = client.getReceivedQueue()
-        for data in received:
-            if data.bufferSize > 0:
-                print data.buffer, data.bufferSize
+        send = client.popSentQueue()
+        for data in send:
+            if data.bufferSize == data.sentSize:
+                print "send"
             else:
-                print "error"
-        
-        if not client.isConnectionAlive():
-            print "closed"
+                print "send error"
+                closed = True
+
+        received = client.popReceivedQueue()
+        for data in received:
+            closed = True
+            if data.bufferSize > 0:
+                print "received", data.buffer, data.bufferSize
+            else:
+                print "receive error"
+
+        if closed:
             break
         
         time.sleep(0.1)
 
+    print "end"
+
     client.close()
+    print "close"
+
     rt.Socket.shutdown()
+    print "shutdown"
 
 if __name__ == "__main__":
     main()

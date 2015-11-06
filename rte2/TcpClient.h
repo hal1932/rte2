@@ -1,28 +1,13 @@
 #pragma once
-#include "common.h"
+#include "tcpCommon.h"
+
 #include "Thread.h"
 #include <vector>
+#include <functional>
 
 namespace rte {
 
 	class Socket;
-
-	struct TcpClientConfig
-	{
-		typedef void(*OnSendData)(const uint8_t* buffer, int bufferSize);
-		typedef void(*OnReceiveData)(const uint8_t* buffer, int bufferSize);
-		typedef bool(*OnConnectionError)(const uint8_t* buffer, int bufferSize);
-
-		OnSendData onSendData;
-		OnReceiveData onReceiveData;
-		OnConnectionError onConnectionError;
-
-		TcpClientConfig()
-			: onSendData(nullptr),
-			  onReceiveData(nullptr),
-			  onConnectionError(nullptr)
-		{ }
-	};
 
 	class TcpClient RTE_FINAL : private noncopyable, private nonmovable
 	{
@@ -30,34 +15,32 @@ namespace rte {
 		TcpClient();
 		~TcpClient();
 
-		bool configure(const TcpClientConfig& config);
-
 		bool connect(const std::string& host, int port);
 		void close();
 
 		void sendAsync(const uint8_t* buffer, int bufferSize);
 
-	private:
-		TcpClientConfig mConfig;
+		std::vector<TcpReceivedData> popReceivedQueue();
+		std::vector<TcpSentData> popSentQueue();
 
+		bool isConnectionAlive() { return !mIsConnectionClosed; }
+
+	private:
 		Socket* mpSocket;
 		CriticalSection mSocketLock;
 
 		Thread mReceiveThread;
 		Thread mSendThread;
 
+		InterlockedVector<TcpSentData> mSendRequestList;
+
+		InterlockedVector<TcpReceivedData> mReceivedList;
+		InterlockedVector<TcpSentData> mSentList;
+
 		bool mIsConnectionClosed;
 
-		struct SendData
-		{
-			const uint8_t* buffer;
-			int bufferSize;
-		};
-		std::vector<SendData> mSendDataList;
-		CriticalSection mSendDataLock;
-
-		unsigned int receiveThread_(void*);
-		unsigned int sendThread_(void*);
+		int receiveThread_(void*);
+		int sendThread_(void*);
 	};
 
 }// namespace rte

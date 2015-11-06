@@ -16,6 +16,16 @@
 #include <iostream>
 #include <memory>
 
+void dump(uint8_t* buffer, int size)
+{
+	for (auto i = 0; i < size; ++i)
+	{
+		printf("%X ", buffer[i]);
+	}
+	puts("");
+
+}
+
 #if false
 int _main(int, char**)
 {
@@ -144,12 +154,15 @@ int _main(int argc, char* argv[])
 		{
 			if (data.bufferSize > 0)
 			{
-				std::cout << "receive: " << data.clientId << ", " << data.buffer << ", " << data.bufferSize << std::endl;
+				printf("receive: %d, ", data.clientId);
+				dump(data.buffer, data.bufferSize);
+
 				server.sendAsync(data.clientId, data.buffer, data.bufferSize);// echo back
 			}
 			else
 			{
-				std::cout << "receive error: " << data.clientId << std::endl;
+				printf("receive error: %d", data.clientId);
+
 				server.closeConnection(data.clientId);
 				data.destroy();
 			}
@@ -160,11 +173,14 @@ int _main(int argc, char* argv[])
 		{
 			if (data.bufferSize == data.sentSize)
 			{
-				std::cout << "sent: " << data.clientId << ", " << data.buffer << ". " << data.bufferSize << std::endl;
+				printf("sent: %d, ", data.clientId);
+				dump(data.buffer, data.bufferSize);
 			}
 			else
 			{
-				std::cout << "sent error: " << data.clientId << ", " << data.buffer << ". " << data.bufferSize << std::endl;
+				printf("sent error: %d, ", data.clientId);
+				dump(data.buffer, data.bufferSize);
+
 				server.closeConnection(data.clientId);
 			}
 			data.destroy();
@@ -189,31 +205,57 @@ int _main(int argc, char* argv[])
 {
 	rte::Socket::setup();
 
-	rte::TcpClientConfig config;
-	config.OnSendData = [](const uint8_t* buffer, int bufferSize)
-	{
-		std::cout << "send: " << std::string((char*)buffer, bufferSize) << std::endl;
-	};
-	config.OnReceiveData = [](const uint8_t* buffer, int bufferSize)
-	{
-		std::cout << "receive: " << std::string((char*)buffer, bufferSize) << std::endl;
-	};
-	config.OnConnectionError = [](const uint8_t* buffer, int bufferSize)
-	{
-		std::cout << "error: " << std::string((char*)buffer, bufferSize) << std::endl;
-		return false;
-	};
-
-	rte::mem::SafeArray<uint8_t> data(4);
-	memcpy(data.get(), "1234", 4);
+	rte::mem::Array<uint8_t> item(4);
+	memcpy(item.get(), "1234", 4);
 
 	rte::TcpClient client;
-	std::cout << "configure: " << client.configure(&config) << std::endl;
 	std::cout << "connect: " << client.connect("127.0.0.1", 0x1234) << std::endl;
-	client.sendAsync(data.get(), data.size());
+	client.sendAsync(item.get(), item.size());
+
+	bool closed = false;
 
 	while (true)
 	{
+		auto sent = client.popSentQueue();
+		for (auto data : sent)
+		{
+			if (data.bufferSize == data.sentSize)
+			{
+				printf("sent: ");
+				dump(data.buffer, data.bufferSize);
+			}
+			else
+			{
+				printf("sent error: ");
+				dump(data.buffer, data.bufferSize);
+				closed = true;
+			}
+			data.destroy();
+		}
+
+		auto received = client.popReceivedQueue();
+		for (auto data : received)
+		{
+			closed = true;
+
+			if (data.bufferSize > 0)
+			{
+				printf("receive: ");
+				dump(data.buffer, data.bufferSize);
+			}
+			else
+			{
+				printf("receive error");
+				break;
+			}
+			data.destroy();
+		}
+
+		if (closed)
+		{
+			break;
+		}
+
 		Sleep(1);
 	}
 

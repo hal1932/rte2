@@ -20,11 +20,9 @@ namespace rte {
 		assert(mpSocket == nullptr);
 	}
 
-	bool TcpClient::configure(const TcpClientConfig& config)
+	bool TcpClient::connect(const std::string& host, int port)
 	{
 		assert(mpSocket == nullptr);
-
-		mConfig = config;
 
 		mpSocket = new Socket();
 		if (!mpSocket->configure(Socket::ProtocolType::Tcp))
@@ -33,17 +31,11 @@ namespace rte {
 			return false;
 		}
 
-		return true;
-	}
-
-	bool TcpClient::connect(const std::string& host, int port)
-	{
-		assert(mpSocket != nullptr);
-
 		if (!mpSocket->connect(host, port))
 		{
 			return false;
 		}
+		mpSocket->setBlocking(true);
 
 		mIsConnectionClosed = false;
 		mReceiveThread.start(std::bind(&TcpClient::receiveThread_, this, std::placeholders::_1));
@@ -69,17 +61,28 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
-		UniqueLock lock(mSendDataLock);
-		SendData data;
-		data.buffer = buffer;
+		TcpSentData data;
+		data.buffer = const_cast<uint8_t*>(buffer);
 		data.bufferSize = bufferSize;
-		mSendDataList.emplace_back(data);
+		mSendRequestList.emplaceBack(std::move(data));
 	}
 
-	unsigned int TcpClient::receiveThread_(void*)
+	std::vector<TcpReceivedData> TcpClient::popReceivedQueue()
 	{
-		unsigned int result = 0;
+		std::vector<TcpReceivedData> result;
+		mReceivedList.swap(&result);
+		return std::move(result);
+	}
 
+	std::vector<TcpSentData> TcpClient::popSentQueue()
+	{
+		std::vector<TcpSentData> result;
+		mSentList.swap(&result);
+		return std::move(result);
+	}
+
+	int TcpClient::receiveThread_(void*)
+	{
 		while (true)
 		{
 			// 停止チェック
@@ -89,19 +92,20 @@ namespace rte {
 			}
 
 			// データ受信
-			mem::SafeArray<uint8_t> receivedData;
+			mem::Array<uint8_t> receivedData;
 			{
 				UniqueLock lock(mSocketLock);
-				receivedData.shallowCopyFrom(socketUtil::receive(mpSocket));
+				receivedData = std::move(socketUtil::receive(mpSocket));
 			}
 
 			if (receivedData.size() > 0)
 			{
-				// 受信コールバック
-				if (mConfig.onReceiveData != nullptr)
-				{
-					mConfig.onReceiveData(receivedData.get(), receivedData.size());
-				}
+				// 受信データをキューに詰める
+				TcpReceivedData result;
+				result.buffer = receivedData.get();
+				result.bufferSize = receivedData.size();
+
+				mReceivedList.emplaceBack(std::move(result));
 			}
 			else if (receivedData.size() == 0)
 			{
@@ -111,26 +115,23 @@ namespace rte {
 			{
 				// エラー
 				logError("receiving from server failed");
-				if (mConfig.onConnectionError != nullptr)
-				{
-					if (!mConfig.onConnectionError(nullptr, 0))
-					{
-						result = 1;
-						break;
-					}
-				}
+
+				// 不正データをキューに詰める
+				TcpReceivedData result;
+				result.buffer = nullptr;
+				result.bufferSize = -1;
+
+				mReceivedList.emplaceBack(std::move(result));
 			}
 
 			Sleep(cThreadPollingInterval);
 		}
 
-		return result;
+		return 0;
 	}
 
-	unsigned int TcpClient::sendThread_(void*)
+	int TcpClient::sendThread_(void*)
 	{
-		unsigned int result = 0;
-
 		while (true)
 		{
 			// 停止チェック
@@ -139,43 +140,39 @@ namespace rte {
 				break;
 			}
 
-			if (mSendDataList.size() > 0)
+			if (mSendRequestList.size() > 0)
 			{
 				// キューが空になるまで送信
-				std::vector<SendData> dataList;
-				{
-					UniqueLock lock(mSendDataLock);
-					mSendDataList.swap(dataList);
-				}
+				std::vector<TcpSentData> dataList;
+				mSendRequestList.swap(&dataList);
 
 				for (auto data : dataList)
 				{
-					int sendBytes;
+					int sentSize;
 					{
 						UniqueLock lock(mSocketLock);
-						sendBytes = mpSocket->send(data.buffer, data.bufferSize);
+						sentSize = mpSocket->send(data.buffer, data.bufferSize);
 					}
 
-					if (sendBytes == data.bufferSize)
+					if (sentSize == data.bufferSize)
 					{
-						// 送信コールバック
-						if (mConfig.onSendData != nullptr)
-						{
-							mConfig.onSendData(data.buffer, data.bufferSize);
-						}
+						// 送信データをキューに詰める
+						TcpSentData result;
+						result.buffer = data.buffer;
+						result.bufferSize = data.bufferSize;
+						result.sentSize = sentSize;
+						mSentList.emplaceBack(std::move(result));
 					}
 					else
 					{
 						// エラー
 						logError("sending to server failed");
-						if (mConfig.onConnectionError != nullptr)
-						{
-							if (!mConfig.onConnectionError(data.buffer, data.bufferSize))
-							{
-								result = 1;
-								break;
-							}
-						}
+
+						// 不正データをキューに詰める
+						TcpSentData result;
+						result.buffer = nullptr;
+						result.bufferSize = -1;
+						mSentList.emplaceBack(std::move(result));
 					}
 				}
 			}
@@ -183,7 +180,7 @@ namespace rte {
 			Sleep(cThreadPollingInterval);
 		}
 
-		return result;
+		return 0;
 	}
 
 }// namespace rte

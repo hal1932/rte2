@@ -33,6 +33,15 @@
 
 namespace rte {
 
+#ifdef _SWIG_PY
+	inline uint8_t* makeArray(std::string buffer)
+	{
+		auto result = new uint8_t[buffer.length()];
+		memcpy(result, buffer.c_str(), buffer.length());
+		return result;
+	}
+#endif
+
 	enum class TriBool : uint8_t
 	{
 		False = 0,
@@ -150,8 +159,11 @@ namespace rte {
 			void allocate(int size)
 			{
 				deallocate();
-				mPtr = new T[size];
-				mSize = size;
+				if (size > 0)
+				{
+					mPtr = new T[size];
+					mSize = size;
+				}
 			}
 
 			void deallocate()
@@ -160,9 +172,20 @@ namespace rte {
 				mSize = 0;
 			}
 
+			void invalidate()
+			{
+				deallocate();
+				mSize = -1;
+			}
+
 			void resize(int size)
 			{
-				assert(size > 0);
+				assert(size >= 0);
+				if (size == 0)
+				{
+					deallocate();
+					return;
+				}
 
 				auto ptr = new T[size];
 				if (mPtr != nullptr)

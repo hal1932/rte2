@@ -155,6 +155,10 @@ SwigPyIterator_swigregister = _rte2.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
 
+def makeArray(buffer):
+    return _rte2.makeArray(buffer)
+makeArray = _rte2.makeArray
+
 _rte2.TriBool_False_swigconstant(_rte2)
 TriBool_False = _rte2.TriBool_False
 
@@ -949,35 +953,87 @@ class ConditionVariable(_object):
 ConditionVariable_swigregister = _rte2.ConditionVariable_swigregister
 ConditionVariable_swigregister(ConditionVariable)
 
-class TcpClientConfig(_object):
+class TcpReceivedData(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpClientConfig, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpReceivedData, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, TcpClientConfig, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpReceivedData, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["onSendData"] = _rte2.TcpClientConfig_onSendData_set
-    __swig_getmethods__["onSendData"] = _rte2.TcpClientConfig_onSendData_get
+    __swig_setmethods__["clientId"] = _rte2.TcpReceivedData_clientId_set
+    __swig_getmethods__["clientId"] = _rte2.TcpReceivedData_clientId_get
     if _newclass:
-        onSendData = _swig_property(_rte2.TcpClientConfig_onSendData_get, _rte2.TcpClientConfig_onSendData_set)
-    __swig_setmethods__["onReceiveData"] = _rte2.TcpClientConfig_onReceiveData_set
-    __swig_getmethods__["onReceiveData"] = _rte2.TcpClientConfig_onReceiveData_get
+        clientId = _swig_property(_rte2.TcpReceivedData_clientId_get, _rte2.TcpReceivedData_clientId_set)
+    __swig_setmethods__["buffer"] = _rte2.TcpReceivedData_buffer_set
+    __swig_getmethods__["buffer"] = _rte2.TcpReceivedData_buffer_get
     if _newclass:
-        onReceiveData = _swig_property(_rte2.TcpClientConfig_onReceiveData_get, _rte2.TcpClientConfig_onReceiveData_set)
-    __swig_setmethods__["onConnectionError"] = _rte2.TcpClientConfig_onConnectionError_set
-    __swig_getmethods__["onConnectionError"] = _rte2.TcpClientConfig_onConnectionError_get
+        buffer = _swig_property(_rte2.TcpReceivedData_buffer_get, _rte2.TcpReceivedData_buffer_set)
+    __swig_setmethods__["bufferSize"] = _rte2.TcpReceivedData_bufferSize_set
+    __swig_getmethods__["bufferSize"] = _rte2.TcpReceivedData_bufferSize_get
     if _newclass:
-        onConnectionError = _swig_property(_rte2.TcpClientConfig_onConnectionError_get, _rte2.TcpClientConfig_onConnectionError_set)
+        bufferSize = _swig_property(_rte2.TcpReceivedData_bufferSize_get, _rte2.TcpReceivedData_bufferSize_set)
 
     def __init__(self):
-        this = _rte2.new_TcpClientConfig()
+        this = _rte2.new_TcpReceivedData()
         try:
             self.this.append(this)
         except:
             self.this = this
-    __swig_destroy__ = _rte2.delete_TcpClientConfig
+    __swig_destroy__ = _rte2.delete_TcpReceivedData
     __del__ = lambda self: None
-TcpClientConfig_swigregister = _rte2.TcpClientConfig_swigregister
-TcpClientConfig_swigregister(TcpClientConfig)
+
+    def clone(self):
+        return _rte2.TcpReceivedData_clone(self)
+
+    def move(self):
+        return _rte2.TcpReceivedData_move(self)
+
+    def destroy(self):
+        return _rte2.TcpReceivedData_destroy(self)
+TcpReceivedData_swigregister = _rte2.TcpReceivedData_swigregister
+TcpReceivedData_swigregister(TcpReceivedData)
+
+class TcpSentData(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpSentData, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpSentData, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["clientId"] = _rte2.TcpSentData_clientId_set
+    __swig_getmethods__["clientId"] = _rte2.TcpSentData_clientId_get
+    if _newclass:
+        clientId = _swig_property(_rte2.TcpSentData_clientId_get, _rte2.TcpSentData_clientId_set)
+    __swig_setmethods__["buffer"] = _rte2.TcpSentData_buffer_set
+    __swig_getmethods__["buffer"] = _rte2.TcpSentData_buffer_get
+    if _newclass:
+        buffer = _swig_property(_rte2.TcpSentData_buffer_get, _rte2.TcpSentData_buffer_set)
+    __swig_setmethods__["bufferSize"] = _rte2.TcpSentData_bufferSize_set
+    __swig_getmethods__["bufferSize"] = _rte2.TcpSentData_bufferSize_get
+    if _newclass:
+        bufferSize = _swig_property(_rte2.TcpSentData_bufferSize_get, _rte2.TcpSentData_bufferSize_set)
+    __swig_setmethods__["sentSize"] = _rte2.TcpSentData_sentSize_set
+    __swig_getmethods__["sentSize"] = _rte2.TcpSentData_sentSize_get
+    if _newclass:
+        sentSize = _swig_property(_rte2.TcpSentData_sentSize_get, _rte2.TcpSentData_sentSize_set)
+
+    def __init__(self):
+        this = _rte2.new_TcpSentData()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_TcpSentData
+    __del__ = lambda self: None
+
+    def clone(self):
+        return _rte2.TcpSentData_clone(self)
+
+    def move(self):
+        return _rte2.TcpSentData_move(self)
+
+    def destroy(self):
+        return _rte2.TcpSentData_destroy(self)
+TcpSentData_swigregister = _rte2.TcpSentData_swigregister
+TcpSentData_swigregister(TcpSentData)
 
 class TcpClient(_object):
     __swig_setmethods__ = {}
@@ -995,9 +1051,6 @@ class TcpClient(_object):
     __swig_destroy__ = _rte2.delete_TcpClient
     __del__ = lambda self: None
 
-    def configure(self, config):
-        return _rte2.TcpClient_configure(self, config)
-
     def connect(self, host, port):
         return _rte2.TcpClient_connect(self, host, port)
 
@@ -1006,42 +1059,17 @@ class TcpClient(_object):
 
     def sendAsync(self, buffer, bufferSize):
         return _rte2.TcpClient_sendAsync(self, buffer, bufferSize)
+
+    def popReceivedQueue(self):
+        return _rte2.TcpClient_popReceivedQueue(self)
+
+    def popSentQueue(self):
+        return _rte2.TcpClient_popSentQueue(self)
+
+    def isConnectionAlive(self):
+        return _rte2.TcpClient_isConnectionAlive(self)
 TcpClient_swigregister = _rte2.TcpClient_swigregister
 TcpClient_swigregister(TcpClient)
-
-class TcpServerConfig(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpServerConfig, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, TcpServerConfig, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["onAcceptClient"] = _rte2.TcpServerConfig_onAcceptClient_set
-    __swig_getmethods__["onAcceptClient"] = _rte2.TcpServerConfig_onAcceptClient_get
-    if _newclass:
-        onAcceptClient = _swig_property(_rte2.TcpServerConfig_onAcceptClient_get, _rte2.TcpServerConfig_onAcceptClient_set)
-    __swig_setmethods__["onSendData"] = _rte2.TcpServerConfig_onSendData_set
-    __swig_getmethods__["onSendData"] = _rte2.TcpServerConfig_onSendData_get
-    if _newclass:
-        onSendData = _swig_property(_rte2.TcpServerConfig_onSendData_get, _rte2.TcpServerConfig_onSendData_set)
-    __swig_setmethods__["onReceiveData"] = _rte2.TcpServerConfig_onReceiveData_set
-    __swig_getmethods__["onReceiveData"] = _rte2.TcpServerConfig_onReceiveData_get
-    if _newclass:
-        onReceiveData = _swig_property(_rte2.TcpServerConfig_onReceiveData_get, _rte2.TcpServerConfig_onReceiveData_set)
-    __swig_setmethods__["onConnectionError"] = _rte2.TcpServerConfig_onConnectionError_set
-    __swig_getmethods__["onConnectionError"] = _rte2.TcpServerConfig_onConnectionError_get
-    if _newclass:
-        onConnectionError = _swig_property(_rte2.TcpServerConfig_onConnectionError_get, _rte2.TcpServerConfig_onConnectionError_set)
-
-    def __init__(self):
-        this = _rte2.new_TcpServerConfig()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_TcpServerConfig
-    __del__ = lambda self: None
-TcpServerConfig_swigregister = _rte2.TcpServerConfig_swigregister
-TcpServerConfig_swigregister(TcpServerConfig)
 
 class TcpServer(_object):
     __swig_setmethods__ = {}
@@ -1059,9 +1087,6 @@ class TcpServer(_object):
     __swig_destroy__ = _rte2.delete_TcpServer
     __del__ = lambda self: None
 
-    def configure(self, config):
-        return _rte2.TcpServer_configure(self, config)
-
     def open(self, port):
         return _rte2.TcpServer_open(self, port)
 
@@ -1073,6 +1098,24 @@ class TcpServer(_object):
 
     def broadcastAsync(self, buffer, bufferSize):
         return _rte2.TcpServer_broadcastAsync(self, buffer, bufferSize)
+
+    def getClientCount(self):
+        return _rte2.TcpServer_getClientCount(self)
+
+    def getClientList(self):
+        return _rte2.TcpServer_getClientList(self)
+
+    def popAcceptedQueue(self):
+        return _rte2.TcpServer_popAcceptedQueue(self)
+
+    def popReceivedQueue(self):
+        return _rte2.TcpServer_popReceivedQueue(self)
+
+    def popSentQueue(self):
+        return _rte2.TcpServer_popSentQueue(self)
+
+    def popClosedQueue(self):
+        return _rte2.TcpServer_popClosedQueue(self)
 
     def closeConnection(self, id):
         return _rte2.TcpServer_closeConnection(self, id)
@@ -1112,6 +1155,155 @@ buffer_swigregister(buffer)
 def buffer_frompointer(t):
     return _rte2.buffer_frompointer(t)
 buffer_frompointer = _rte2.buffer_frompointer
+
+class SafeArrayUInt8(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SafeArrayUInt8, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, SafeArrayUInt8, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _rte2.new_SafeArrayUInt8(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_SafeArrayUInt8
+    __del__ = lambda self: None
+
+    def moveFrom(self, other):
+        return _rte2.SafeArrayUInt8_moveFrom(self, other)
+
+    def get(self):
+        return _rte2.SafeArrayUInt8_get(self)
+
+    def size(self):
+        return _rte2.SafeArrayUInt8_size(self)
+
+    def swap(self, other):
+        return _rte2.SafeArrayUInt8_swap(self, other)
+
+    def resize(self, size):
+        return _rte2.SafeArrayUInt8_resize(self, size)
+
+    def append(self, *args):
+        return _rte2.SafeArrayUInt8_append(self, *args)
+SafeArrayUInt8_swigregister = _rte2.SafeArrayUInt8_swigregister
+SafeArrayUInt8_swigregister(SafeArrayUInt8)
+
+class IntVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IntVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _rte2.IntVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _rte2.IntVector___nonzero__(self)
+
+    def __bool__(self):
+        return _rte2.IntVector___bool__(self)
+
+    def __len__(self):
+        return _rte2.IntVector___len__(self)
+
+    def pop(self):
+        return _rte2.IntVector_pop(self)
+
+    def __getslice__(self, i, j):
+        return _rte2.IntVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _rte2.IntVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _rte2.IntVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _rte2.IntVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _rte2.IntVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _rte2.IntVector___setitem__(self, *args)
+
+    def append(self, x):
+        return _rte2.IntVector_append(self, x)
+
+    def empty(self):
+        return _rte2.IntVector_empty(self)
+
+    def size(self):
+        return _rte2.IntVector_size(self)
+
+    def clear(self):
+        return _rte2.IntVector_clear(self)
+
+    def swap(self, v):
+        return _rte2.IntVector_swap(self, v)
+
+    def get_allocator(self):
+        return _rte2.IntVector_get_allocator(self)
+
+    def begin(self):
+        return _rte2.IntVector_begin(self)
+
+    def end(self):
+        return _rte2.IntVector_end(self)
+
+    def rbegin(self):
+        return _rte2.IntVector_rbegin(self)
+
+    def rend(self):
+        return _rte2.IntVector_rend(self)
+
+    def pop_back(self):
+        return _rte2.IntVector_pop_back(self)
+
+    def erase(self, *args):
+        return _rte2.IntVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _rte2.new_IntVector(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def push_back(self, x):
+        return _rte2.IntVector_push_back(self, x)
+
+    def front(self):
+        return _rte2.IntVector_front(self)
+
+    def back(self):
+        return _rte2.IntVector_back(self)
+
+    def assign(self, n, x):
+        return _rte2.IntVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _rte2.IntVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _rte2.IntVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _rte2.IntVector_reserve(self, n)
+
+    def capacity(self):
+        return _rte2.IntVector_capacity(self)
+    __swig_destroy__ = _rte2.delete_IntVector
+    __del__ = lambda self: None
+IntVector_swigregister = _rte2.IntVector_swigregister
+IntVector_swigregister(IntVector)
 
 class StringVecotor(_object):
     __swig_setmethods__ = {}
@@ -1451,6 +1643,232 @@ class NodeParameterPtrVector(_object):
     __del__ = lambda self: None
 NodeParameterPtrVector_swigregister = _rte2.NodeParameterPtrVector_swigregister
 NodeParameterPtrVector_swigregister(NodeParameterPtrVector)
+
+class TcpReceivedDataVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpReceivedDataVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpReceivedDataVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _rte2.TcpReceivedDataVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _rte2.TcpReceivedDataVector___nonzero__(self)
+
+    def __bool__(self):
+        return _rte2.TcpReceivedDataVector___bool__(self)
+
+    def __len__(self):
+        return _rte2.TcpReceivedDataVector___len__(self)
+
+    def pop(self):
+        return _rte2.TcpReceivedDataVector_pop(self)
+
+    def __getslice__(self, i, j):
+        return _rte2.TcpReceivedDataVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _rte2.TcpReceivedDataVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _rte2.TcpReceivedDataVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _rte2.TcpReceivedDataVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _rte2.TcpReceivedDataVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _rte2.TcpReceivedDataVector___setitem__(self, *args)
+
+    def append(self, x):
+        return _rte2.TcpReceivedDataVector_append(self, x)
+
+    def empty(self):
+        return _rte2.TcpReceivedDataVector_empty(self)
+
+    def size(self):
+        return _rte2.TcpReceivedDataVector_size(self)
+
+    def clear(self):
+        return _rte2.TcpReceivedDataVector_clear(self)
+
+    def swap(self, v):
+        return _rte2.TcpReceivedDataVector_swap(self, v)
+
+    def get_allocator(self):
+        return _rte2.TcpReceivedDataVector_get_allocator(self)
+
+    def begin(self):
+        return _rte2.TcpReceivedDataVector_begin(self)
+
+    def end(self):
+        return _rte2.TcpReceivedDataVector_end(self)
+
+    def rbegin(self):
+        return _rte2.TcpReceivedDataVector_rbegin(self)
+
+    def rend(self):
+        return _rte2.TcpReceivedDataVector_rend(self)
+
+    def pop_back(self):
+        return _rte2.TcpReceivedDataVector_pop_back(self)
+
+    def erase(self, *args):
+        return _rte2.TcpReceivedDataVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _rte2.new_TcpReceivedDataVector(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def push_back(self, x):
+        return _rte2.TcpReceivedDataVector_push_back(self, x)
+
+    def front(self):
+        return _rte2.TcpReceivedDataVector_front(self)
+
+    def back(self):
+        return _rte2.TcpReceivedDataVector_back(self)
+
+    def assign(self, n, x):
+        return _rte2.TcpReceivedDataVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _rte2.TcpReceivedDataVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _rte2.TcpReceivedDataVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _rte2.TcpReceivedDataVector_reserve(self, n)
+
+    def capacity(self):
+        return _rte2.TcpReceivedDataVector_capacity(self)
+    __swig_destroy__ = _rte2.delete_TcpReceivedDataVector
+    __del__ = lambda self: None
+TcpReceivedDataVector_swigregister = _rte2.TcpReceivedDataVector_swigregister
+TcpReceivedDataVector_swigregister(TcpReceivedDataVector)
+
+class TcpSentDataVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TcpSentDataVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TcpSentDataVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _rte2.TcpSentDataVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _rte2.TcpSentDataVector___nonzero__(self)
+
+    def __bool__(self):
+        return _rte2.TcpSentDataVector___bool__(self)
+
+    def __len__(self):
+        return _rte2.TcpSentDataVector___len__(self)
+
+    def pop(self):
+        return _rte2.TcpSentDataVector_pop(self)
+
+    def __getslice__(self, i, j):
+        return _rte2.TcpSentDataVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _rte2.TcpSentDataVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _rte2.TcpSentDataVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _rte2.TcpSentDataVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _rte2.TcpSentDataVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _rte2.TcpSentDataVector___setitem__(self, *args)
+
+    def append(self, x):
+        return _rte2.TcpSentDataVector_append(self, x)
+
+    def empty(self):
+        return _rte2.TcpSentDataVector_empty(self)
+
+    def size(self):
+        return _rte2.TcpSentDataVector_size(self)
+
+    def clear(self):
+        return _rte2.TcpSentDataVector_clear(self)
+
+    def swap(self, v):
+        return _rte2.TcpSentDataVector_swap(self, v)
+
+    def get_allocator(self):
+        return _rte2.TcpSentDataVector_get_allocator(self)
+
+    def begin(self):
+        return _rte2.TcpSentDataVector_begin(self)
+
+    def end(self):
+        return _rte2.TcpSentDataVector_end(self)
+
+    def rbegin(self):
+        return _rte2.TcpSentDataVector_rbegin(self)
+
+    def rend(self):
+        return _rte2.TcpSentDataVector_rend(self)
+
+    def pop_back(self):
+        return _rte2.TcpSentDataVector_pop_back(self)
+
+    def erase(self, *args):
+        return _rte2.TcpSentDataVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _rte2.new_TcpSentDataVector(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def push_back(self, x):
+        return _rte2.TcpSentDataVector_push_back(self, x)
+
+    def front(self):
+        return _rte2.TcpSentDataVector_front(self)
+
+    def back(self):
+        return _rte2.TcpSentDataVector_back(self)
+
+    def assign(self, n, x):
+        return _rte2.TcpSentDataVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _rte2.TcpSentDataVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _rte2.TcpSentDataVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _rte2.TcpSentDataVector_reserve(self, n)
+
+    def capacity(self):
+        return _rte2.TcpSentDataVector_capacity(self)
+    __swig_destroy__ = _rte2.delete_TcpSentDataVector
+    __del__ = lambda self: None
+TcpSentDataVector_swigregister = _rte2.TcpSentDataVector_swigregister
+TcpSentDataVector_swigregister(TcpSentDataVector)
 
 # This file is compatible with both classic and new-style classes.
 

@@ -14,7 +14,7 @@ namespace rte {
 		Thread();
 		~Thread();
 
-		void start(std::function<unsigned int(void*)> threadFunc, void* arg = nullptr);
+		void start(std::function<int(void*)> threadFunc, void* arg = nullptr);
 		unsigned int join();
 
 		int getId();
