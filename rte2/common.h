@@ -19,6 +19,15 @@
 #	define RTE_FINAL final
 #endif
 
+// http://www.swig.org/Doc3.0/CPlusPlus11.html#CPlusPlus11_rvalue_reference_and_move_semantics
+#ifdef _SWIG_PY
+#	define RTE_RVAL_DECL(type, x) type& x
+#	define RTE_MOVE(x) x
+#else
+#	define RTE_RVAL_DECL(type, x) type&& x
+#	define RTE_MOVE(x) std::move(x)
+#endif
+
 // swig‚ÍC++11‘Î‰‚ª”÷–­BB
 #if __cplusplus < 201103L
 // C++11
