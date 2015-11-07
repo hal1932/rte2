@@ -1,20 +1,13 @@
 #include "NodeContent.h"
 #include "Node.h"
-#include <cstdlib>
 
 namespace rte
 {
 
 	NodeContent::NodeContent(Node* pOwnerNode)
-		: mpOwnerNode(pOwnerNode)
+		: mpOwnerNode(pOwnerNode),
+		  mName(std::to_string(math::xor128()))
 	{
-		char tmp[8 + 1];
-		do
-		{
-			_itoa_s(math::xor128(), tmp, 16);
-		} while (mName == tmp);
-		mName = tmp;
-
 		updatePath();
 	}
 
