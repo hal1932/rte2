@@ -121,7 +121,7 @@ int _main(int, char**)
 	return 0;
 }
 #else
-#if true
+#if false
 int _main(int argc, char* argv[])
 {
 	rte::Socket::setup();
@@ -230,7 +230,7 @@ int _main(int argc, char* argv[])
 				dump(data.buffer, data.bufferSize);
 				closed = true;
 			}
-			data.destroy();
+			data.deallocate();
 		}
 
 		auto received = client.popReceivedQueue();
@@ -248,7 +248,7 @@ int _main(int argc, char* argv[])
 				printf("receive error");
 				break;
 			}
-			data.destroy();
+			data.deallocate();
 		}
 
 		if (closed)

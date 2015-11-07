@@ -37,8 +37,6 @@ def main():
         
         time.sleep(0.1)
 
-    print "end"
-
     client.close()
     print "close"
 

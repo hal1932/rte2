@@ -162,6 +162,7 @@ namespace rte {
 				if (size > 0)
 				{
 					mPtr = new T[size];
+					printf("alloc %p\n", mPtr);
 					mSize = size;
 				}
 			}
@@ -169,6 +170,7 @@ namespace rte {
 			void deallocate()
 			{
 				mem::safeDelete(&mPtr);
+				printf("deallocate %p\n", mPtr);
 				mSize = 0;
 			}
 
@@ -193,7 +195,7 @@ namespace rte {
 					memcpy(ptr, mPtr, size);
 				}
 				
-				mem::safeDelete(&mPtr);
+				deallocate();
 				mPtr = ptr;
 				mSize = size;
 			}
@@ -209,10 +211,11 @@ namespace rte {
 				memcpy(ptr, mPtr, mSize);
 				memcpy(ptr + mSize, other.mPtr, other.mSize);
 
+				mPtr = ptr;
+				printf("append %p\n", mPtr);
 				mSize += other.mSize;
 
-				mem::safeDelete(&other.mPtr);
-				other.mSize = 0;
+				other.deallocate();
 			}
 
 		private:

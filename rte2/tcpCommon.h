@@ -37,7 +37,7 @@ namespace rte
 			return std::move(result);
 		}
 
-		void destroy()
+		void deallocate()
 		{
 			clientId = 0;
 			mem::safeDelete(&buffer);
@@ -83,7 +83,7 @@ namespace rte
 			return std::move(result);
 		}
 
-		void destroy()
+		void deallocate()
 		{
 			clientId = 0;
 			mem::safeDelete(&buffer);
