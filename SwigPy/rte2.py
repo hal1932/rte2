@@ -279,6 +279,10 @@ formatError = _rte2.formatError
 def formatLastError():
     return _rte2.formatLastError()
 formatLastError = _rte2.formatLastError
+
+def xor128():
+    return _rte2.xor128()
+xor128 = _rte2.xor128
 class NodeContent(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, NodeContent, name, value)
@@ -294,6 +298,21 @@ class NodeContent(_object):
             self.this = this
     __swig_destroy__ = _rte2.delete_NodeContent
     __del__ = lambda self: None
+
+    def getName(self):
+        return _rte2.NodeContent_getName(self)
+
+    def getPath(self):
+        return _rte2.NodeContent_getPath(self)
+
+    def getLabel(self):
+        return _rte2.NodeContent_getLabel(self)
+
+    def setName(self, name):
+        return _rte2.NodeContent_setName(self, name)
+
+    def setLabel(self, label):
+        return _rte2.NodeContent_setLabel(self, label)
 NodeContent_swigregister = _rte2.NodeContent_swigregister
 NodeContent_swigregister(NodeContent)
 
@@ -310,11 +329,11 @@ class Node(_object):
             self.this.append(this)
         except:
             self.this = this
+    __swig_destroy__ = _rte2.delete_Node
+    __del__ = lambda self: None
 
     def __eq__(self, other):
         return _rte2.Node___eq__(self, other)
-    __swig_destroy__ = _rte2.delete_Node
-    __del__ = lambda self: None
 
     def getName(self, *args):
         return _rte2.Node_getName(self, *args)
@@ -330,6 +349,9 @@ class Node(_object):
 
     def getChildren(self):
         return _rte2.Node_getChildren(self)
+
+    def createContent(self):
+        return _rte2.Node_createContent(self)
 
     def getContent(self):
         return _rte2.Node_getContent(self)

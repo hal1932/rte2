@@ -19,6 +19,9 @@
 #	define RTE_FINAL final
 #endif
 
+// C++‚É‚Íinternal‚ª‚È‚¢‚Ì‚Å‚Æ‚è‚ ‚¦‚¸–Úˆó‚Æ‚µ‚Ä
+#define RTE_INTERNAL public
+
 // http://www.swig.org/Doc3.0/CPlusPlus11.html#CPlusPlus11_rvalue_reference_and_move_semantics
 #ifdef _SWIG_PY
 #	define RTE_RVAL_DECL(type, x) type& x
@@ -561,5 +564,24 @@ namespace rte {
 		}
 
 	}// namespace win32
+
+	 /*------------------------------------------------------------------*/
+	 // ”ŠwŠÖ˜A
+	namespace math
+	{
+		// https://ja.wikipedia.org/wiki/Xorshift
+		inline uint32_t xor128()
+		{
+			static uint32_t x = 123456789;
+			static uint32_t y = 362436069;
+			static uint32_t z = 521288629;
+			static uint32_t w = 88675123;
+			uint32_t t;
+
+			t = x ^ (x << 11);
+			x = y; y = z; z = w;
+			return w = (w ^ (w >> 19)) ^ (t ^ (t >> 8));
+		}
+	}
 
 }// namespace rte

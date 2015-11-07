@@ -1,25 +1,19 @@
 #pragma once
 #include "common.h"
-#include "NodeContent.h"
 #include <string>
 #include <vector>
 #include <algorithm>
 
 namespace rte
 {
-	class Node
+	class NodeContent;
+
+	class Node : private noncopyable, private nonmovable
 	{
 	public:
-		Node(Node* pParent)
-			: mpParent(pParent), mContent(this)
-		{ }
-
-		Node(const std::string& name, const std::string& label, Node* pParent)
-			: Node(pParent)
-		{
-			setName(name);
-			setLabel(label);
-		}
+		Node(Node* pParent);
+		Node(const std::string& name, const std::string& label, Node* pParent);
+		~Node();
 
 #ifdef _SWIG_PY
 		// C++ポインタ比較の代わりに定義しておく
@@ -35,7 +29,6 @@ namespace rte
 #endif
 
 		Node() = delete;
-		~Node() = default;
 
 		const std::string& getName() { return mName; }
 		const std::string& getLabel() { return mLabel; }
@@ -48,7 +41,8 @@ namespace rte
 		Node* getParent() { return mpParent; }
 		std::vector<Node*> getChildren() { return mChildPtrList; }
 
-		NodeContent* getContent() { return &mContent; }
+		void createContent();
+		NodeContent* getContent() { return mpContent; }
 
 		void setName(const std::string& name);
 		void setLabel(const std::string& label) { mLabel = label; }
@@ -72,7 +66,7 @@ namespace rte
 		std::string mLabel;
 		std::string mPath;
 
-		NodeContent mContent;
+		NodeContent* mpContent;
 
 		Node* mpParent;
 		std::vector<Node*> mChildPtrList;

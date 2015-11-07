@@ -11,7 +11,7 @@ import math
 
 class Test(unittest.TestCase):
     def setUp(self):
-        self.root = rt.Node("rootName", "rootLabel", None)
+        self.root = rt.Node("root", "rlabel", None)
 
     def tearDown(self):
         self.root = None
@@ -20,11 +20,11 @@ class Test(unittest.TestCase):
         node = rt.Node("name", "label", self.root)
         self.assertEqual(node.getName(), "name")
         self.assertEqual(node.getLabel(), "label")
-        self.assertEqual(node.getPath(), "rootName/name")
+        self.assertEqual(node.getPath(), "root/name")
 
         node.setName("name1")
         self.assertEqual(node.getName(), "name1")
-        self.assertEqual(node.getPath(), "rootName/name1")
+        self.assertEqual(node.getPath(), "root/name1")
 
         node.setLabel("label1")
         self.assertEqual(node.getLabel(), "label1")
@@ -32,7 +32,7 @@ class Test(unittest.TestCase):
         child = rt.Node("child", "childLabel", node)
         node.addChild(child)
         self.assertEqual(child.getParent(), node)
-        self.assertEqual(child.getPath(), "rootName/name1/child")
+        self.assertEqual(child.getPath(), "root/name1/child")
         self.assertEqual(node.getChildren().size(), 1)
         self.assertEqual(node.getChildren()[0], child)
         self.assertEqual(node.findChild("child"), child)
@@ -47,6 +47,21 @@ class Test(unittest.TestCase):
         node.addChild(removed)
         removed = node.removeChild(child)
         self.assertEqual(removed, child)
+
+    def test_nodeContent(self):
+        node = rt.Node("name", "label", self.root)
+        node.createContent()
+
+        c = node.getContent()
+        self.assertEqual(c.getPath(), "root/name/" + c.getName())
+
+        c.setName("cname")
+        self.assertEqual(c.getName(), "cname")
+        self.assertEqual(c.getPath(), "root/name/cname")
+
+        c.setLabel("clabel")
+        self.assertEqual(c.getLabel(), "clabel")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,7 +1,27 @@
 #include "Node.h"
+#include "NodeContent.h"
 
 namespace rte
 {
+
+	Node::Node(Node* pParent)
+		: mpParent(pParent), mpContent(nullptr)
+	{
+		updatePath();
+	}
+
+	Node::Node(const std::string& name, const std::string& label, Node* pParent)
+		: Node(pParent)
+	{
+		setName(name);
+		setLabel(label);
+		updatePath();
+	}
+
+	Node::~Node()
+	{
+		mem::safeDelete(&mpContent);
+	}
 
 	void Node::setName(const std::string& name)
 	{
@@ -11,6 +31,12 @@ namespace rte
 		{
 			pChild->updatePath();
 		}
+	}
+
+	void Node::createContent()
+	{
+		mem::safeDelete(&mpContent);
+		mpContent = new NodeContent(this);
 	}
 
 	Node* Node::findChild(const std::string& name)
