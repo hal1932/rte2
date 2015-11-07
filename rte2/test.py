@@ -31,6 +31,7 @@ class Test(unittest.TestCase):
 
         child = rt.Node("child", "childLabel", node)
         node.addChild(child)
+        self.assertEqual(child.getParent(), node)
         self.assertEqual(child.getPath(), "rootName/name1/child")
         self.assertEqual(node.getChildren().size(), 1)
         self.assertEqual(node.getChildren()[0], child)
