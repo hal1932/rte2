@@ -7554,6 +7554,44 @@ fail:
 SWIGINTERN PyObject *_wrap_new_Node__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   std::string *arg1 = 0 ;
+  rte::Node *arg2 = (rte::Node *) 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  rte::Node *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_Node",&obj0,&obj1)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_Node" "', argument " "2"" of type '" "rte::Node *""'"); 
+  }
+  arg2 = reinterpret_cast< rte::Node * >(argp2);
+  result = (rte::Node *)new rte::Node((std::string const &)*arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_Node__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::string *arg1 = 0 ;
   std::string *arg2 = 0 ;
   rte::Node *arg3 = (rte::Node *) 0 ;
   int res1 = SWIG_OLDOBJ ;
@@ -7624,6 +7662,19 @@ SWIGINTERN PyObject *_wrap_new_Node(PyObject *self, PyObject *args) {
       return _wrap_new_Node__SWIG_0(self, args);
     }
   }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_rte__Node, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_Node__SWIG_1(self, args);
+      }
+    }
+  }
   if (argc == 3) {
     int _v;
     int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
@@ -7636,7 +7687,7 @@ SWIGINTERN PyObject *_wrap_new_Node(PyObject *self, PyObject *args) {
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_rte__Node, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_new_Node__SWIG_1(self, args);
+          return _wrap_new_Node__SWIG_2(self, args);
         }
       }
     }
@@ -7646,6 +7697,7 @@ fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_Node'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    rte::Node::Node(rte::Node *)\n"
+    "    rte::Node::Node(std::string const &,rte::Node *)\n"
     "    rte::Node::Node(std::string const &,std::string const &,rte::Node *)\n");
   return 0;
 }

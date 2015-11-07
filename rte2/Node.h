@@ -12,6 +12,7 @@ namespace rte
 	{
 	public:
 		Node(Node* pParent);
+		Node(const std::string& name, Node* pParent);
 		Node(const std::string& name, const std::string& label, Node* pParent);
 		~Node();
 

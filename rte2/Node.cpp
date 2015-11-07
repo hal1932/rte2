@@ -5,14 +5,18 @@ namespace rte
 {
 
 	Node::Node(Node* pParent)
-		: mpParent(pParent), mpContent(nullptr)
-	{
-		updatePath();
-	}
+		: Node(std::to_string(math::xor128()), std::to_string(math::xor128()), pParent)
+	{ }
+
+	Node::Node(const std::string& name,Node* pParent)
+		: Node(name, std::to_string(math::xor128()), pParent)
+	{ }
 
 	Node::Node(const std::string& name, const std::string& label, Node* pParent)
-		: Node(pParent)
+		: mpParent(pParent), mpContent(nullptr)
 	{
+		assert(pParent == nullptr || pParent->findChild(name) == nullptr);
+
 		setName(name);
 		setLabel(label);
 		updatePath();
