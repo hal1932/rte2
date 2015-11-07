@@ -127,14 +127,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="CommandServer.cpp" />
-    <ClCompile Include="Context.cpp" />
     <ClCompile Include="Node.cpp" />
-    <ClCompile Include="NodeBase.cpp" />
-    <ClCompile Include="NodeDictionary.cpp" />
-    <ClCompile Include="NodeParameter.cpp" />
-    <ClCompile Include="NodeParameterValueSerializer.cpp" />
     <ClCompile Include="Socket.cpp" />
     <ClCompile Include="TcpClient.cpp" />
     <ClCompile Include="TcpServer.cpp" />
@@ -143,16 +136,10 @@
     <ClCompile Include="_swig_py_wrap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="CommandServer.h" />
     <ClInclude Include="common.h" />
-    <ClInclude Include="Context.h" />
     <ClInclude Include="memutil.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="NodeBase.h" />
-    <ClInclude Include="NodeDictionary.h" />
-    <ClInclude Include="NodeParameter.h" />
-    <ClInclude Include="NodeParameterValueSerializer.h" />
+    <ClInclude Include="NodeContent.h" />
     <ClInclude Include="Socket.h" />
     <ClInclude Include="TcpClient.h" />
     <ClInclude Include="socketUtil.h" />
