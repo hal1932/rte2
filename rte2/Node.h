@@ -8,7 +8,7 @@ namespace rte
 {
 	class NodeContent;
 
-	class Node : private noncopyable, private nonmovable
+	class Node : public Serializable, private noncopyable, private nonmovable
 	{
 	public:
 		Node(Node* pParent);
@@ -42,7 +42,7 @@ namespace rte
 		Node* getParent() { return mpParent; }
 		std::vector<Node*> getChildren() { return mChildPtrList; }
 
-		void createContent();
+		NodeContent* createContent();
 		NodeContent* getContent() { return mpContent; }
 
 		void setName(const std::string& name);
@@ -61,6 +61,10 @@ namespace rte
 
 		Node* removeChild(const std::string& name);
 		Node* removeChild(const Node* pNode);
+
+		int calcSize();
+		uint8_t* serialize(uint8_t* buffer);
+		uint8_t* deserialize(uint8_t* buffer);
 
 	private:
 		std::string mName;

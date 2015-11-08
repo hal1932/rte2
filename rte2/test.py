@@ -50,9 +50,9 @@ class Test(unittest.TestCase):
 
     def test_nodeContent(self):
         node = rt.Node("name", "label", self.root)
-        node.createContent()
 
-        c = node.getContent()
+        c = node.createContent()
+        self.assertEqual(c, node.getContent())
         self.assertEqual(c.getPath(), "root/name/" + c.getName())
 
         c.setName("cname")
@@ -62,6 +62,16 @@ class Test(unittest.TestCase):
         c.setLabel("clabel")
         self.assertEqual(c.getLabel(), "clabel")
 
+    def test_nodeContentData(self):
+        c = self.root.createContent()
+
+        i = c.createDataInt32()
+        self.assertEqual(i, c.getDataInt32())
+
+        i.Value = 1
+        self.assertEqual(c.getDataInt32(), i)
+        self.assertEqual(c.getDataInt32().Value, i.Value)
+        self.assertEqual(i.getType(), rt.NodeContentData.Type_Int32)
 
 if __name__ == "__main__":
     unittest.main()

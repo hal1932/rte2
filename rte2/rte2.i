@@ -9,6 +9,8 @@
 #include "tcpCommon.h"
 #include "TcpClient.h"
 #include "TcpServer.h"
+#include "NodeContent.h"
+#include "NodeContentData.h"
 %}
 
 %include "std_string.i"
@@ -24,6 +26,8 @@
 %include "tcpCommon.h"
 %include "TcpClient.h"
 %include "TcpServer.h"
+%include "NodeContent.h"
+%include "NodeContentData.h"
 
 %include "carrays.i"
 %array_class(uint8_t, buffer);
@@ -36,3 +40,5 @@
 %template (TcpReceivedDataVector) std::vector<rte::TcpReceivedData>;
 %template (TcpSentDataVector) std::vector<rte::TcpSentData>;
 
+%template (createDataInt32) rte::NodeContent::createData<rte::Int32Data>;
+%template (getDataInt32) rte::NodeContent::getData<rte::Int32Data>;

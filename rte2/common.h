@@ -76,6 +76,14 @@ namespace rte {
 		nonmovable(nonmovable&&) = delete;
 	};
 
+	class Serializable
+	{
+	public:
+		virtual int calcSize() = 0;
+		virtual uint8_t* serialize(uint8_t* buffer) = 0;
+		virtual uint8_t* deserialize(uint8_t* buffer) = 0;
+	};
+
 	namespace log {
 		inline void info_(const char* function, const std::string& msg)
 		{

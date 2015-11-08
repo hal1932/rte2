@@ -37,10 +37,11 @@ namespace rte
 		}
 	}
 
-	void Node::createContent()
+	NodeContent* Node::createContent()
 	{
 		mem::safeDelete(&mpContent);
 		mpContent = new NodeContent(this);
+		return mpContent;
 	}
 
 	Node* Node::findChild(const std::string& name)
@@ -83,6 +84,22 @@ namespace rte
 		}
 		return nullptr;
 	}
+
+	int Node::calcSize()
+	{
+		throw new std::exception("not implemented");
+	}
+
+	uint8_t* Node::serialize(uint8_t* buffer)
+	{
+		throw new std::exception("not implemented");
+	}
+
+	uint8_t* Node::deserialize(uint8_t* buffer)
+	{
+		throw new std::exception("not implemented");
+	}
+
 
 	void Node::updatePath()
 	{
