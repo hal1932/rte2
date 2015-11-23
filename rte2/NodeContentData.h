@@ -8,6 +8,7 @@ namespace rte
 	public:
 		enum class Type : uint8_t
 		{
+			Invalid,
 			Int32,
 		};
 
@@ -40,7 +41,7 @@ namespace rte
 	class Int32Data RTE_FINAL : public NodeContentData
 	{
 	public:
-		int Value;
+		int32_t Value;
 
 		Int32Data() : NodeContentData(NodeContentData::Type::Int32) { }
 

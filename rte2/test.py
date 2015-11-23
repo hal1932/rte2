@@ -7,17 +7,24 @@ import unittest
 import rte2 as rt
 
 import math
+import gc
 
 
 class Test(unittest.TestCase):
     def setUp(self):
-        self.root = rt.Node("root", "rlabel", None)
+        gc.enable()
+        #self.root = rt.Node.createRootNode("root", "lroot")
+        self.root = rt.createRootNode("root", "lroot")
 
     def tearDown(self):
-        self.root = None
+        #rt.Node.destroy(self.root)
+        rt.destroyRootNode(self.root)
+        gc.collect()
+        gc.set_debug(gc.DEBUG_LEAK)
+        sys.stderr.flush()
 
     def test_node(self):
-        node = rt.Node("name", "label", self.root)
+        node = self.root.addChild("name", "label")
         self.assertEqual(node.getName(), "name")
         self.assertEqual(node.getLabel(), "label")
         self.assertEqual(node.getPath(), "root/name")
@@ -29,8 +36,7 @@ class Test(unittest.TestCase):
         node.setLabel("label1")
         self.assertEqual(node.getLabel(), "label1")
 
-        child = rt.Node("child", "childLabel", node)
-        node.addChild(child)
+        child = node.addChild("child", "childLabel")
         self.assertEqual(child.getParent(), node)
         self.assertEqual(child.getPath(), "root/name1/child")
         self.assertEqual(node.getChildren().size(), 1)
@@ -38,18 +44,14 @@ class Test(unittest.TestCase):
         self.assertEqual(node.findChild("child"), child)
         self.assertEqual(node.findChild(child), child)
 
-        removed = node.removeChild(child)
-        self.assertEqual(removed, child)
+        result = node.removeChild(child)
+        self.assertEqual(result, True)
         self.assertEqual(node.getChildren().size(), 0)
         self.assertEqual(node.findChild("child"), None)
         self.assertEqual(node.findChild(child), None)
 
-        node.addChild(removed)
-        removed = node.removeChild(child)
-        self.assertEqual(removed, child)
-
     def test_nodeContent(self):
-        node = rt.Node("name", "label", self.root)
+        node = self.root.addChild("name", "label")
 
         c = node.createContent()
         self.assertEqual(c, node.getContent())
@@ -72,6 +74,44 @@ class Test(unittest.TestCase):
         self.assertEqual(c.getDataInt32(), i)
         self.assertEqual(c.getDataInt32().Value, i.Value)
         self.assertEqual(i.getType(), rt.NodeContentData.Type_Int32)
+        self.assertEqual(i.getType(), c.getDataType())
+
+    def test_serialize(self):
+        node = self.root.addChild("node", "lnode")
+
+        c = node.createContent()
+        c.setName("cn")
+        c.setLabel("cl")
+
+        d = c.createDataInt32()
+        d.Value = 1
+
+        size = self.root.calcSize()
+        buf = rt.buffer(size)
+        self.root.serialize(buf.cast())
+
+        root = rt.Node()
+        root.deserialize(buf.cast())
+        self.assertEqual(root.getName(), self.root.getName())
+        self.assertEqual(root.getPath(), self.root.getPath())
+        self.assertEqual(root.getLabel(), self.root.getLabel())
+        self.assertEqual(root.getChildren().size(), 1)
+
+        n = root.getChildren()[0]
+        self.assertEqual(n.getParent(), root)
+        self.assertEqual(n.getName(), node.getName())
+        self.assertEqual(n.getPath(), node.getPath())
+        self.assertEqual(n.getLabel(), node.getLabel())
+
+        c1 = n.getContent()
+        self.assertEqual(c1.getName(), c.getName())
+        self.assertEqual(c1.getPath(), c.getPath())
+        self.assertEqual(c1.getLabel(), c.getLabel())
+        self.assertEqual(c1.getDataType(), c.getDataType())
+
+        d1 = c1.getDataInt32()
+        self.assertEqual(d1.getType(), d.getType())
+        self.assertEqual(d1.Value, d.Value)
 
 if __name__ == "__main__":
     unittest.main()

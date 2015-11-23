@@ -2949,54 +2949,56 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_long_long swig_types[9]
 #define SWIGTYPE_p_p_PyObject swig_types[10]
 #define SWIGTYPE_p_p_char swig_types[11]
-#define SWIGTYPE_p_p_unsigned_long swig_types[12]
-#define SWIGTYPE_p_reference swig_types[13]
-#define SWIGTYPE_p_rte__ConditionVariable swig_types[14]
-#define SWIGTYPE_p_rte__CriticalSection swig_types[15]
-#define SWIGTYPE_p_rte__Int32Data swig_types[16]
-#define SWIGTYPE_p_rte__LockObject swig_types[17]
-#define SWIGTYPE_p_rte__Node swig_types[18]
-#define SWIGTYPE_p_rte__NodeContent swig_types[19]
-#define SWIGTYPE_p_rte__NodeContentData swig_types[20]
-#define SWIGTYPE_p_rte__Serializable swig_types[21]
-#define SWIGTYPE_p_rte__Socket swig_types[22]
-#define SWIGTYPE_p_rte__TcpClient swig_types[23]
-#define SWIGTYPE_p_rte__TcpReceivedData swig_types[24]
-#define SWIGTYPE_p_rte__TcpSentData swig_types[25]
-#define SWIGTYPE_p_rte__TcpServer swig_types[26]
-#define SWIGTYPE_p_rte__Thread swig_types[27]
-#define SWIGTYPE_p_rte__UniqueLock swig_types[28]
-#define SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t swig_types[29]
-#define SWIGTYPE_p_rte__noncopyable swig_types[30]
-#define SWIGTYPE_p_rte__nonmovable swig_types[31]
-#define SWIGTYPE_p_short swig_types[32]
-#define SWIGTYPE_p_signed___int64 swig_types[33]
-#define SWIGTYPE_p_signed_char swig_types[34]
-#define SWIGTYPE_p_size_type swig_types[35]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[36]
-#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[37]
-#define SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t swig_types[38]
-#define SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t swig_types[39]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[40]
-#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[41]
-#define SWIGTYPE_p_std__functionT_int_fvoid_pF_t swig_types[42]
-#define SWIGTYPE_p_std__invalid_argument swig_types[43]
-#define SWIGTYPE_p_std__string swig_types[44]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[45]
-#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[46]
-#define SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t swig_types[47]
-#define SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t swig_types[48]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[49]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[50]
-#define SWIGTYPE_p_unsigned___int64 swig_types[51]
-#define SWIGTYPE_p_unsigned_char swig_types[52]
-#define SWIGTYPE_p_unsigned_int swig_types[53]
-#define SWIGTYPE_p_unsigned_long swig_types[54]
-#define SWIGTYPE_p_unsigned_long_long swig_types[55]
-#define SWIGTYPE_p_unsigned_short swig_types[56]
-#define SWIGTYPE_p_value_type swig_types[57]
-static swig_type_info *swig_types[59];
-static swig_module_info swig_module = {swig_types, 58, 0, 0, 0, 0};
+#define SWIGTYPE_p_p_rte__Node swig_types[12]
+#define SWIGTYPE_p_p_unsigned_long swig_types[13]
+#define SWIGTYPE_p_reference swig_types[14]
+#define SWIGTYPE_p_rte__ConditionVariable swig_types[15]
+#define SWIGTYPE_p_rte__CriticalSection swig_types[16]
+#define SWIGTYPE_p_rte__HierarchicalSerializable swig_types[17]
+#define SWIGTYPE_p_rte__Int32Data swig_types[18]
+#define SWIGTYPE_p_rte__LockObject swig_types[19]
+#define SWIGTYPE_p_rte__Node swig_types[20]
+#define SWIGTYPE_p_rte__NodeContent swig_types[21]
+#define SWIGTYPE_p_rte__NodeContentData swig_types[22]
+#define SWIGTYPE_p_rte__Serializable swig_types[23]
+#define SWIGTYPE_p_rte__Socket swig_types[24]
+#define SWIGTYPE_p_rte__TcpClient swig_types[25]
+#define SWIGTYPE_p_rte__TcpReceivedData swig_types[26]
+#define SWIGTYPE_p_rte__TcpSentData swig_types[27]
+#define SWIGTYPE_p_rte__TcpServer swig_types[28]
+#define SWIGTYPE_p_rte__Thread swig_types[29]
+#define SWIGTYPE_p_rte__UniqueLock swig_types[30]
+#define SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t swig_types[31]
+#define SWIGTYPE_p_rte__noncopyable swig_types[32]
+#define SWIGTYPE_p_rte__nonmovable swig_types[33]
+#define SWIGTYPE_p_short swig_types[34]
+#define SWIGTYPE_p_signed___int64 swig_types[35]
+#define SWIGTYPE_p_signed_char swig_types[36]
+#define SWIGTYPE_p_size_type swig_types[37]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[38]
+#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[39]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t swig_types[40]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t swig_types[41]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[42]
+#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[43]
+#define SWIGTYPE_p_std__functionT_int_fvoid_pF_t swig_types[44]
+#define SWIGTYPE_p_std__invalid_argument swig_types[45]
+#define SWIGTYPE_p_std__string swig_types[46]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[47]
+#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[48]
+#define SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t swig_types[49]
+#define SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t swig_types[50]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[51]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[52]
+#define SWIGTYPE_p_unsigned___int64 swig_types[53]
+#define SWIGTYPE_p_unsigned_char swig_types[54]
+#define SWIGTYPE_p_unsigned_int swig_types[55]
+#define SWIGTYPE_p_unsigned_long swig_types[56]
+#define SWIGTYPE_p_unsigned_long_long swig_types[57]
+#define SWIGTYPE_p_unsigned_short swig_types[58]
+#define SWIGTYPE_p_value_type swig_types[59]
+static swig_type_info *swig_types[61];
+static swig_module_info swig_module = {swig_types, 60, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3616,9 +3618,6 @@ SWIGINTERNINLINE PyObject*
 }
 
 
-
-
-
 #include <limits.h>
 #if !defined(SWIG_NO_LLONG_MAX)
 # if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
@@ -3643,6 +3642,9 @@ SWIG_AsVal_int (PyObject * obj, int *val)
   }  
   return res;
 }
+
+
+
 
 
 SWIGINTERNINLINE PyObject *
@@ -5479,6 +5481,14 @@ SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentDa
 SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentData_Sg__erase__SWIG_1(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator first,std::vector< rte::TcpSentData >::iterator last){ return self->erase(first, last); }
 SWIGINTERN std::vector< rte::TcpSentData >::iterator std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_0(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator pos,std::vector< rte::TcpSentData >::value_type const &x){ return self->insert(pos, x); }
 SWIGINTERN void std_vector_Sl_rte_TcpSentData_Sg__insert__SWIG_1(std::vector< rte::TcpSentData > *self,std::vector< rte::TcpSentData >::iterator pos,std::vector< rte::TcpSentData >::size_type n,std::vector< rte::TcpSentData >::value_type const &x){ self->insert(pos, n, x); }
+
+	rte::Node* createRootNode(const std::string& name, const std::string& label) {
+		return rte::Node::createRootNode(name, label);
+	}
+	void destroyRootNode(rte::Node* pNode) {
+		rte::Node::destroy(&pNode);
+	}
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -6577,6 +6587,136 @@ SWIGINTERN PyObject *Serializable_swigregister(PyObject *SWIGUNUSEDPARM(self), P
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_HierarchicalSerializable_calcSize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::HierarchicalSerializable *arg1 = (rte::HierarchicalSerializable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:HierarchicalSerializable_calcSize",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__HierarchicalSerializable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HierarchicalSerializable_calcSize" "', argument " "1"" of type '" "rte::HierarchicalSerializable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::HierarchicalSerializable * >(argp1);
+  result = (int)(arg1)->calcSize();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HierarchicalSerializable_serialize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::HierarchicalSerializable *arg1 = (rte::HierarchicalSerializable *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:HierarchicalSerializable_serialize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__HierarchicalSerializable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HierarchicalSerializable_serialize" "', argument " "1"" of type '" "rte::HierarchicalSerializable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::HierarchicalSerializable * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "HierarchicalSerializable_serialize" "', argument " "2"" of type '" "uint8_t *""'"); 
+  }
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HierarchicalSerializable_serialize" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (uint8_t *)(arg1)->serialize(arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HierarchicalSerializable_deserialize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::HierarchicalSerializable *arg1 = (rte::HierarchicalSerializable *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:HierarchicalSerializable_deserialize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__HierarchicalSerializable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HierarchicalSerializable_deserialize" "', argument " "1"" of type '" "rte::HierarchicalSerializable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::HierarchicalSerializable * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "HierarchicalSerializable_deserialize" "', argument " "2"" of type '" "uint8_t *""'"); 
+  }
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HierarchicalSerializable_deserialize" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (uint8_t *)(arg1)->deserialize(arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_HierarchicalSerializable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::HierarchicalSerializable *arg1 = (rte::HierarchicalSerializable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_HierarchicalSerializable",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__HierarchicalSerializable, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_HierarchicalSerializable" "', argument " "1"" of type '" "rte::HierarchicalSerializable *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::HierarchicalSerializable * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *HierarchicalSerializable_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__HierarchicalSerializable, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN PyObject *_wrap_info_(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   char *arg1 = (char *) 0 ;
@@ -7588,6 +7728,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_NodeContent_getDataType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::NodeContentData::Type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContent_getDataType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContent, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContent_getDataType" "', argument " "1"" of type '" "rte::NodeContent *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContent * >(argp1);
+  result = (rte::NodeContentData::Type)(arg1)->getDataType();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_NodeContent_calcSize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
@@ -7672,6 +7834,27 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_NodeContent_updatePath(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContent_updatePath",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContent, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContent_updatePath" "', argument " "1"" of type '" "rte::NodeContent *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContent * >(argp1);
+  (arg1)->updatePath();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_new_NodeContent(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Node *arg1 = (rte::Node *) 0 ;
@@ -7745,89 +7928,25 @@ SWIGINTERN PyObject *NodeContent_swigregister(PyObject *SWIGUNUSEDPARM(self), Py
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_new_Node__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  rte::Node *arg1 = (rte::Node *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  rte::Node *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:new_Node",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Node" "', argument " "1"" of type '" "rte::Node *""'"); 
-  }
-  arg1 = reinterpret_cast< rte::Node * >(argp1);
-  result = (rte::Node *)new rte::Node(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_Node__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::string *arg1 = 0 ;
-  rte::Node *arg2 = (rte::Node *) 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  rte::Node *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:new_Node",&obj0,&obj1)) SWIG_fail;
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(obj0, &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
-    }
-    arg1 = ptr;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_rte__Node, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_Node" "', argument " "2"" of type '" "rte::Node *""'"); 
-  }
-  arg2 = reinterpret_cast< rte::Node * >(argp2);
-  result = (rte::Node *)new rte::Node((std::string const &)*arg1,arg2);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, SWIG_POINTER_NEW |  0 );
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return resultobj;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_Node__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Node_createRootNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   std::string *arg1 = 0 ;
   std::string *arg2 = 0 ;
-  rte::Node *arg3 = (rte::Node *) 0 ;
   int res1 = SWIG_OLDOBJ ;
   int res2 = SWIG_OLDOBJ ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
   rte::Node *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:new_Node",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:Node_createRootNode",&obj0,&obj1)) SWIG_fail;
   {
     std::string *ptr = (std::string *)0;
     res1 = SWIG_AsPtr_std_string(obj0, &ptr);
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_createRootNode" "', argument " "1"" of type '" "std::string const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Node" "', argument " "1"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Node_createRootNode" "', argument " "1"" of type '" "std::string const &""'"); 
     }
     arg1 = ptr;
   }
@@ -7835,20 +7954,15 @@ SWIGINTERN PyObject *_wrap_new_Node__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyOb
     std::string *ptr = (std::string *)0;
     res2 = SWIG_AsPtr_std_string(obj1, &ptr);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_Node" "', argument " "2"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_createRootNode" "', argument " "2"" of type '" "std::string const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Node" "', argument " "2"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Node_createRootNode" "', argument " "2"" of type '" "std::string const &""'"); 
     }
     arg2 = ptr;
   }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_rte__Node, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "new_Node" "', argument " "3"" of type '" "rte::Node *""'"); 
-  }
-  arg3 = reinterpret_cast< rte::Node * >(argp3);
-  result = (rte::Node *)new rte::Node((std::string const &)*arg1,(std::string const &)*arg2,arg3);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, SWIG_POINTER_NEW |  0 );
+  result = (rte::Node *)rte::Node::createRootNode((std::string const &)*arg1,(std::string const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -7859,80 +7973,20 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_new_Node(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[4];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_Node__SWIG_0(self, args);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_rte__Node, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_Node__SWIG_1(self, args);
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_rte__Node, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          return _wrap_new_Node__SWIG_2(self, args);
-        }
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_Node'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    rte::Node::Node(rte::Node *)\n"
-    "    rte::Node::Node(std::string const &,rte::Node *)\n"
-    "    rte::Node::Node(std::string const &,std::string const &,rte::Node *)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_Node(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Node_destroy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  rte::Node *arg1 = (rte::Node *) 0 ;
+  rte::Node **arg1 = (rte::Node **) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_Node",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, SWIG_POINTER_DISOWN |  0 );
+  if (!PyArg_ParseTuple(args,(char *)"O:Node_destroy",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_p_rte__Node, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Node" "', argument " "1"" of type '" "rte::Node *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_destroy" "', argument " "1"" of type '" "rte::Node **""'"); 
   }
-  arg1 = reinterpret_cast< rte::Node * >(argp1);
-  delete arg1;
+  arg1 = reinterpret_cast< rte::Node ** >(argp1);
+  rte::Node::destroy(arg1);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7968,6 +8022,19 @@ SWIGINTERN PyObject *_wrap_Node___eq__(PyObject *SWIGUNUSEDPARM(self), PyObject 
   arg2 = reinterpret_cast< rte::Node * >(argp2);
   result = (bool)(arg1)->operator ==((rte::Node const &)*arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_Node(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_Node")) SWIG_fail;
+  result = (rte::Node *)new rte::Node();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -8382,16 +8449,16 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Node_addChild(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Node_addChild__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Node *arg1 = (rte::Node *) 0 ;
-  rte::Node *arg2 = (rte::Node *) 0 ;
+  std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
+  rte::Node *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"OO:Node_addChild",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
@@ -8399,13 +8466,147 @@ SWIGINTERN PyObject *_wrap_Node_addChild(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_addChild" "', argument " "1"" of type '" "rte::Node *""'"); 
   }
   arg1 = reinterpret_cast< rte::Node * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_rte__Node, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_addChild" "', argument " "2"" of type '" "rte::Node *""'"); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_addChild" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Node_addChild" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    arg2 = ptr;
   }
-  arg2 = reinterpret_cast< rte::Node * >(argp2);
-  (arg1)->addChild(arg2);
-  resultobj = SWIG_Py_Void();
+  result = (rte::Node *)(arg1)->addChild((std::string const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_addChild__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  int res3 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  rte::Node *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Node_addChild",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_addChild" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_addChild" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Node_addChild" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(obj2, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Node_addChild" "', argument " "3"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Node_addChild" "', argument " "3"" of type '" "std::string const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  result = (rte::Node *)(arg1)->addChild((std::string const &)*arg2,(std::string const &)*arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_addChild(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Node_addChild__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_Node_addChild__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Node_addChild'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::Node::addChild(std::string const &)\n"
+    "    rte::Node::addChild(std::string const &,std::string const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_getChildCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Node_getChildCount",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_getChildCount" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  result = (int)(arg1)->getChildCount();
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
@@ -8537,7 +8738,7 @@ SWIGINTERN PyObject *_wrap_Node_removeChild__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
   int res2 = SWIG_OLDOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  rte::Node *result = 0 ;
+  bool result;
   
   if (!PyArg_ParseTuple(args,(char *)"OO:Node_removeChild",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
@@ -8556,8 +8757,8 @@ SWIGINTERN PyObject *_wrap_Node_removeChild__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
     }
     arg2 = ptr;
   }
-  result = (rte::Node *)(arg1)->removeChild((std::string const &)*arg2);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  result = (bool)(arg1)->removeChild((std::string const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
 fail:
@@ -8576,7 +8777,7 @@ SWIGINTERN PyObject *_wrap_Node_removeChild__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
   int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  rte::Node *result = 0 ;
+  bool result;
   
   if (!PyArg_ParseTuple(args,(char *)"OO:Node_removeChild",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
@@ -8589,8 +8790,8 @@ SWIGINTERN PyObject *_wrap_Node_removeChild__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_removeChild" "', argument " "2"" of type '" "rte::Node const *""'"); 
   }
   arg2 = reinterpret_cast< rte::Node * >(argp2);
-  result = (rte::Node *)(arg1)->removeChild((rte::Node const *)arg2);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  result = (bool)(arg1)->removeChild((rte::Node const *)arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -8666,7 +8867,47 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Node_serialize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Node_serialize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Node_serialize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_serialize" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_serialize" "', argument " "2"" of type '" "uint8_t *""'"); 
+  }
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Node_serialize" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (uint8_t *)(arg1)->serialize(arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_serialize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Node *arg1 = (rte::Node *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -8697,7 +8938,101 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Node_deserialize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Node_serialize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_unsigned_char, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Node_serialize__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_unsigned_char, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Node_serialize__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Node_serialize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::Node::serialize(uint8_t *,int)\n"
+    "    rte::Node::serialize(uint8_t *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_deserialize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  uint8_t *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Node_deserialize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_deserialize" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Node_deserialize" "', argument " "2"" of type '" "uint8_t *""'"); 
+  }
+  arg2 = reinterpret_cast< uint8_t * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Node_deserialize" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (uint8_t *)(arg1)->deserialize(arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_deserialize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Node *arg1 = (rte::Node *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -8722,6 +9057,81 @@ SWIGINTERN PyObject *_wrap_Node_deserialize(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg2 = reinterpret_cast< uint8_t * >(argp2);
   result = (uint8_t *)(arg1)->deserialize(arg2);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_deserialize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_unsigned_char, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Node_deserialize__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__Node, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_unsigned_char, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Node_deserialize__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Node_deserialize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::Node::deserialize(uint8_t *,int)\n"
+    "    rte::Node::deserialize(uint8_t *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Node_updatePath(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Node_updatePath",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Node_updatePath" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  (arg1)->updatePath();
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -11434,7 +11844,7 @@ SWIGINTERN PyObject *NodeContentData_swigregister(PyObject *SWIGUNUSEDPARM(self)
 SWIGINTERN PyObject *_wrap_Int32Data_Value_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::Int32Data *arg1 = (rte::Int32Data *) 0 ;
-  int arg2 ;
+  int32_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int val2 ;
@@ -11450,9 +11860,9 @@ SWIGINTERN PyObject *_wrap_Int32Data_Value_set(PyObject *SWIGUNUSEDPARM(self), P
   arg1 = reinterpret_cast< rte::Int32Data * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Int32Data_Value_set" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Int32Data_Value_set" "', argument " "2"" of type '" "int32_t""'");
   } 
-  arg2 = static_cast< int >(val2);
+  arg2 = static_cast< int32_t >(val2);
   if (arg1) (arg1)->Value = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -11467,7 +11877,7 @@ SWIGINTERN PyObject *_wrap_Int32Data_Value_get(PyObject *SWIGUNUSEDPARM(self), P
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  int result;
+  int32_t result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Int32Data_Value_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Int32Data, 0 |  0 );
@@ -11475,7 +11885,7 @@ SWIGINTERN PyObject *_wrap_Int32Data_Value_get(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Int32Data_Value_get" "', argument " "1"" of type '" "rte::Int32Data *""'"); 
   }
   arg1 = reinterpret_cast< rte::Int32Data * >(argp1);
-  result = (int) ((arg1)->Value);
+  result = (int32_t) ((arg1)->Value);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -21669,6 +22079,72 @@ SWIGINTERN PyObject *TcpSentDataVector_swigregister(PyObject *SWIGUNUSEDPARM(sel
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_createRootNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  rte::Node *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:createRootNode",&obj0,&obj1)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "createRootNode" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "createRootNode" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "createRootNode" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "createRootNode" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  result = (rte::Node *)createRootNode((std::string const &)*arg1,(std::string const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_destroyRootNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Node *arg1 = (rte::Node *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:destroyRootNode",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Node, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "destroyRootNode" "', argument " "1"" of type '" "rte::Node *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Node * >(argp1);
+  destroyRootNode(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_VARARGS, NULL},
@@ -21704,6 +22180,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Serializable_deserialize", _wrap_Serializable_deserialize, METH_VARARGS, NULL},
 	 { (char *)"delete_Serializable", _wrap_delete_Serializable, METH_VARARGS, NULL},
 	 { (char *)"Serializable_swigregister", Serializable_swigregister, METH_VARARGS, NULL},
+	 { (char *)"HierarchicalSerializable_calcSize", _wrap_HierarchicalSerializable_calcSize, METH_VARARGS, NULL},
+	 { (char *)"HierarchicalSerializable_serialize", _wrap_HierarchicalSerializable_serialize, METH_VARARGS, NULL},
+	 { (char *)"HierarchicalSerializable_deserialize", _wrap_HierarchicalSerializable_deserialize, METH_VARARGS, NULL},
+	 { (char *)"delete_HierarchicalSerializable", _wrap_delete_HierarchicalSerializable, METH_VARARGS, NULL},
+	 { (char *)"HierarchicalSerializable_swigregister", HierarchicalSerializable_swigregister, METH_VARARGS, NULL},
 	 { (char *)"info_", _wrap_info_, METH_VARARGS, NULL},
 	 { (char *)"warn_", _wrap_warn_, METH_VARARGS, NULL},
 	 { (char *)"error_", _wrap_error_, METH_VARARGS, NULL},
@@ -21731,16 +22212,19 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"NodeContent_getLabel", _wrap_NodeContent_getLabel, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_setName", _wrap_NodeContent_setName, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_setLabel", _wrap_NodeContent_setLabel, METH_VARARGS, NULL},
+	 { (char *)"NodeContent_getDataType", _wrap_NodeContent_getDataType, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_calcSize", _wrap_NodeContent_calcSize, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_serialize", _wrap_NodeContent_serialize, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_deserialize", _wrap_NodeContent_deserialize, METH_VARARGS, NULL},
+	 { (char *)"NodeContent_updatePath", _wrap_NodeContent_updatePath, METH_VARARGS, NULL},
 	 { (char *)"new_NodeContent", _wrap_new_NodeContent, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_createDataInt32", _wrap_NodeContent_createDataInt32, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_getDataInt32", _wrap_NodeContent_getDataInt32, METH_VARARGS, NULL},
 	 { (char *)"NodeContent_swigregister", NodeContent_swigregister, METH_VARARGS, NULL},
-	 { (char *)"new_Node", _wrap_new_Node, METH_VARARGS, NULL},
-	 { (char *)"delete_Node", _wrap_delete_Node, METH_VARARGS, NULL},
+	 { (char *)"Node_createRootNode", _wrap_Node_createRootNode, METH_VARARGS, NULL},
+	 { (char *)"Node_destroy", _wrap_Node_destroy, METH_VARARGS, NULL},
 	 { (char *)"Node___eq__", _wrap_Node___eq__, METH_VARARGS, NULL},
+	 { (char *)"new_Node", _wrap_new_Node, METH_VARARGS, NULL},
 	 { (char *)"Node_getName", _wrap_Node_getName, METH_VARARGS, NULL},
 	 { (char *)"Node_getLabel", _wrap_Node_getLabel, METH_VARARGS, NULL},
 	 { (char *)"Node_getPath", _wrap_Node_getPath, METH_VARARGS, NULL},
@@ -21751,11 +22235,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Node_setName", _wrap_Node_setName, METH_VARARGS, NULL},
 	 { (char *)"Node_setLabel", _wrap_Node_setLabel, METH_VARARGS, NULL},
 	 { (char *)"Node_addChild", _wrap_Node_addChild, METH_VARARGS, NULL},
+	 { (char *)"Node_getChildCount", _wrap_Node_getChildCount, METH_VARARGS, NULL},
 	 { (char *)"Node_findChild", _wrap_Node_findChild, METH_VARARGS, NULL},
 	 { (char *)"Node_removeChild", _wrap_Node_removeChild, METH_VARARGS, NULL},
 	 { (char *)"Node_calcSize", _wrap_Node_calcSize, METH_VARARGS, NULL},
 	 { (char *)"Node_serialize", _wrap_Node_serialize, METH_VARARGS, NULL},
 	 { (char *)"Node_deserialize", _wrap_Node_deserialize, METH_VARARGS, NULL},
+	 { (char *)"Node_updatePath", _wrap_Node_updatePath, METH_VARARGS, NULL},
 	 { (char *)"Node_swigregister", Node_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_Socket", _wrap_new_Socket, METH_VARARGS, NULL},
 	 { (char *)"delete_Socket", _wrap_delete_Socket, METH_VARARGS, NULL},
@@ -22056,38 +22542,22 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"TcpSentDataVector_capacity", _wrap_TcpSentDataVector_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_TcpSentDataVector", _wrap_delete_TcpSentDataVector, METH_VARARGS, NULL},
 	 { (char *)"TcpSentDataVector_swigregister", TcpSentDataVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"createRootNode", _wrap_createRootNode, METH_VARARGS, NULL},
+	 { (char *)"destroyRootNode", _wrap_destroyRootNode, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
-static void *_p_rte__NodeContentTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::NodeContent *) x));
+static void *_p_rte__Int32DataTo_p_rte__NodeContentData(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::NodeContentData *)  ((rte::Int32Data *) x));
 }
-static void *_p_rte__NodeTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::Node *) x));
+static void *_p_rte__UniqueLockTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::LockObject *)  ((rte::UniqueLock *) x));
 }
-static void *_p_rte__ThreadTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::Thread *) x));
-}
-static void *_p_rte__ConditionVariableTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::ConditionVariable *) x));
-}
-static void *_p_rte__TcpServerTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::TcpServer *) x));
-}
-static void *_p_rte__LockObjectTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::LockObject *) x));
-}
-static void *_p_rte__SocketTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::Socket *) x));
-}
-static void *_p_rte__TcpClientTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::TcpClient *) x));
-}
-static void *_p_rte__NodeContentDataTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::nonmovable *)  ((rte::NodeContentData *) x));
+static void *_p_rte__CriticalSectionTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::LockObject *)  ((rte::CriticalSection *) x));
 }
 static void *_p_rte__NodeContentTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::NodeContent *) x));
@@ -22116,26 +22586,44 @@ static void *_p_rte__TcpClientTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM
 static void *_p_rte__NodeContentDataTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::NodeContentData *) x));
 }
+static void *_p_rte__NodeContentTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::NodeContent *) x));
+}
+static void *_p_rte__NodeTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Node *) x));
+}
+static void *_p_rte__ThreadTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Thread *) x));
+}
+static void *_p_rte__ConditionVariableTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::ConditionVariable *) x));
+}
+static void *_p_rte__TcpServerTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::TcpServer *) x));
+}
+static void *_p_rte__LockObjectTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::LockObject *) x));
+}
+static void *_p_rte__SocketTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::Socket *) x));
+}
+static void *_p_rte__TcpClientTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::TcpClient *) x));
+}
+static void *_p_rte__NodeContentDataTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::NodeContentData *) x));
+}
+static void *_p_rte__NodeTo_p_rte__HierarchicalSerializable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::HierarchicalSerializable *)  ((rte::Node *) x));
+}
 static void *_p_rte__NodeContentTo_p_rte__Serializable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::Serializable *)  ((rte::NodeContent *) x));
-}
-static void *_p_rte__NodeTo_p_rte__Serializable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::Serializable *)  ((rte::Node *) x));
 }
 static void *_p_rte__Int32DataTo_p_rte__Serializable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::Serializable *) (rte::NodeContentData *) ((rte::Int32Data *) x));
 }
 static void *_p_rte__NodeContentDataTo_p_rte__Serializable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::Serializable *)  ((rte::NodeContentData *) x));
-}
-static void *_p_rte__UniqueLockTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::LockObject *)  ((rte::UniqueLock *) x));
-}
-static void *_p_rte__CriticalSectionTo_p_rte__LockObject(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::LockObject *)  ((rte::CriticalSection *) x));
-}
-static void *_p_rte__Int32DataTo_p_rte__NodeContentData(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((rte::NodeContentData *)  ((rte::Int32Data *) x));
 }
 static swig_type_info _swigt__p___int64 = {"_p___int64", "__int64 *|LONGLONG *|LONG64 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
@@ -22149,10 +22637,12 @@ static swig_type_info _swigt__p_long = {"_p_long", "SHANDLE_PTR *|LONG_PTR *|LON
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "int_least64_t *|int_fast64_t *|int64_t *|long long *|intmax_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_char = {"_p_p_char", "PTCH *|PCTSTR *|LPCTSTR *|LPTCH *|PUTSTR *|LPUTSTR *|PCUTSTR *|LPCUTSTR *|char **|PTSTR *|LPTSTR *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_p_rte__Node = {"_p_p_rte__Node", "rte::Node **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_unsigned_long = {"_p_p_unsigned_long", "unsigned long **|PLCID *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_reference = {"_p_reference", "reference *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__ConditionVariable = {"_p_rte__ConditionVariable", "rte::ConditionVariable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__CriticalSection = {"_p_rte__CriticalSection", "rte::CriticalSection *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__HierarchicalSerializable = {"_p_rte__HierarchicalSerializable", "rte::HierarchicalSerializable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Int32Data = {"_p_rte__Int32Data", "rte::Int32Data *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__LockObject = {"_p_rte__LockObject", "rte::LockObject *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Node = {"_p_rte__Node", "std::vector< rte::Node * >::value_type|rte::Node *", 0, 0, (void*)0, 0};
@@ -22209,10 +22699,12 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_long_long,
   &_swigt__p_p_PyObject,
   &_swigt__p_p_char,
+  &_swigt__p_p_rte__Node,
   &_swigt__p_p_unsigned_long,
   &_swigt__p_reference,
   &_swigt__p_rte__ConditionVariable,
   &_swigt__p_rte__CriticalSection,
+  &_swigt__p_rte__HierarchicalSerializable,
   &_swigt__p_rte__Int32Data,
   &_swigt__p_rte__LockObject,
   &_swigt__p_rte__Node,
@@ -22269,16 +22761,18 @@ static swig_cast_info _swigc__p_long[] = {  {&_swigt__p_long, 0, 0, 0},{0, 0, 0,
 static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_char[] = {  {&_swigt__p_p_char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_p_rte__Node[] = {  {&_swigt__p_p_rte__Node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_unsigned_long[] = {  {&_swigt__p_p_unsigned_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_reference[] = {  {&_swigt__p_reference, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__ConditionVariable[] = {  {&_swigt__p_rte__ConditionVariable, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__CriticalSection[] = {  {&_swigt__p_rte__CriticalSection, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__HierarchicalSerializable[] = {  {&_swigt__p_rte__HierarchicalSerializable, 0, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__HierarchicalSerializable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Int32Data[] = {  {&_swigt__p_rte__Int32Data, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__LockObject[] = {  {&_swigt__p_rte__UniqueLock, _p_rte__UniqueLockTo_p_rte__LockObject, 0, 0},  {&_swigt__p_rte__LockObject, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, _p_rte__CriticalSectionTo_p_rte__LockObject, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Node[] = {  {&_swigt__p_rte__Node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeContent[] = {  {&_swigt__p_rte__NodeContent, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeContentData[] = {  {&_swigt__p_rte__Int32Data, _p_rte__Int32DataTo_p_rte__NodeContentData, 0, 0},  {&_swigt__p_rte__NodeContentData, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__Serializable[] = {  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__Serializable, 0, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__Int32Data, _p_rte__Int32DataTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__Serializable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__Serializable[] = {  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__Serializable, 0, 0, 0},  {&_swigt__p_rte__Int32Data, _p_rte__Int32DataTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__Serializable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Socket[] = {  {&_swigt__p_rte__Socket, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpClient[] = {  {&_swigt__p_rte__TcpClient, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpReceivedData[] = {  {&_swigt__p_rte__TcpReceivedData, 0, 0, 0},{0, 0, 0, 0}};
@@ -22329,10 +22823,12 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_long_long,
   _swigc__p_p_PyObject,
   _swigc__p_p_char,
+  _swigc__p_p_rte__Node,
   _swigc__p_p_unsigned_long,
   _swigc__p_reference,
   _swigc__p_rte__ConditionVariable,
   _swigc__p_rte__CriticalSection,
+  _swigc__p_rte__HierarchicalSerializable,
   _swigc__p_rte__Int32Data,
   _swigc__p_rte__LockObject,
   _swigc__p_rte__Node,
@@ -23060,6 +23556,7 @@ SWIG_init(void) {
   
   SWIG_Python_SetConstant(d, "Socket_ProtocolType_Invalid",SWIG_From_int(static_cast< int >(rte::Socket::ProtocolType::Invalid)));
   SWIG_Python_SetConstant(d, "Socket_ProtocolType_Tcp",SWIG_From_int(static_cast< int >(rte::Socket::ProtocolType::Tcp)));
+  SWIG_Python_SetConstant(d, "NodeContentData_Type_Invalid",SWIG_From_int(static_cast< int >(rte::NodeContentData::Type::Invalid)));
   SWIG_Python_SetConstant(d, "NodeContentData_Type_Int32",SWIG_From_int(static_cast< int >(rte::NodeContentData::Type::Int32)));
 #if PY_VERSION_HEX >= 0x03000000
   return m;

@@ -42,9 +42,15 @@ namespace rte
 			return static_cast<TNodeContentData*>(mpData);
 		}
 
+		NodeContentData::Type getDataType()
+		{
+			return (mpData != nullptr) ? mpData->getType() : NodeContentData::Type::Invalid;
+		}
+
 		int calcSize();
 		uint8_t* serialize(uint8_t* buffer);
 		uint8_t* deserialize(uint8_t* buffer);
+		void updatePath();
 
 	RTE_INTERNAL:
 		explicit NodeContent(Node* pOwnerNode);
@@ -58,8 +64,6 @@ namespace rte
 		std::string mLabel;
 
 		NodeContentData* mpData;
-
-		void updatePath();
 	};
 
 }// namespace rte

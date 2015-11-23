@@ -8,14 +8,13 @@ namespace rte
 {
 	class NodeContent;
 
-	class Node : public Serializable, private noncopyable, private nonmovable
+	class Node : public HierarchicalSerializable, private noncopyable, private nonmovable
 	{
 	public:
-		Node(Node* pParent);
-		Node(const std::string& name, Node* pParent);
-		Node(const std::string& name, const std::string& label, Node* pParent);
-		~Node();
+		static Node* createRootNode(const std::string& name, const std::string& label);
+		static void destroy(Node** ppNode);
 
+	public:
 #ifdef _SWIG_PY
 		// C++ポインタ比較の代わりに定義しておく
 		// SWIGではSwigObject*同士で等値判定をするので、同じ場所を指すポインタ的に同じでもSWIG越しだと違ってみえる
@@ -29,7 +28,7 @@ namespace rte
 		bool operator==(const Node&) = delete;
 #endif
 
-		Node() = delete;
+		Node() { } // デシリアライズするときの受け皿用
 
 		const std::string& getName() { return mName; }
 		const std::string& getLabel() { return mLabel; }
@@ -48,23 +47,31 @@ namespace rte
 		void setName(const std::string& name);
 		void setLabel(const std::string& label) { mLabel = label; }
 
-		void addChild(Node* pChild)
+		//void addChild(Node* pChild)
+		//{
+		//	assert(pChild != nullptr);
+		//	assert(findChild(pChild) == nullptr);
+		//	assert(findChild(pChild->getName()) == nullptr);
+		//	mChildPtrList.push_back(pChild);
+		//}
+		Node* addChild(const std::string& name)
 		{
-			assert(pChild != nullptr);
-			assert(findChild(pChild) == nullptr);
-			assert(findChild(pChild->getName()) == nullptr);
-			mChildPtrList.push_back(pChild);
+			return addChild(name, "");
 		}
+		Node* addChild(const std::string& name, const std::string& label);
+
+		int getChildCount() { return mChildCount; }
 
 		Node* findChild(const std::string& name);
 		Node* findChild(Node* pChild);
 
-		Node* removeChild(const std::string& name);
-		Node* removeChild(const Node* pNode);
+		bool removeChild(const std::string& name);
+		bool removeChild(const Node* pChild);
 
 		int calcSize();
-		uint8_t* serialize(uint8_t* buffer);
-		uint8_t* deserialize(uint8_t* buffer);
+		uint8_t* serialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
+		uint8_t* deserialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
+		void updatePath();
 
 	private:
 		std::string mName;
@@ -75,8 +82,11 @@ namespace rte
 
 		Node* mpParent;
 		std::vector<Node*> mChildPtrList;
+		int32_t mChildCount;
 
-		void updatePath();
+		Node(Node* pParent);
+		~Node() = default;
+		Node* Node::createChild();
 	};
 
 }//namespace rte

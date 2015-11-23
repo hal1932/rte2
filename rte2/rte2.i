@@ -42,3 +42,12 @@
 
 %template (createDataInt32) rte::NodeContent::createData<rte::Int32Data>;
 %template (getDataInt32) rte::NodeContent::getData<rte::Int32Data>;
+
+%inline {
+	rte::Node* createRootNode(const std::string& name, const std::string& label) {
+		return rte::Node::createRootNode(name, label);
+	}
+	void destroyRootNode(rte::Node* pNode) {
+		rte::Node::destroy(&pNode);
+	}
+}

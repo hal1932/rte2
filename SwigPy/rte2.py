@@ -226,6 +226,29 @@ class Serializable(_object):
 Serializable_swigregister = _rte2.Serializable_swigregister
 Serializable_swigregister(Serializable)
 
+class HierarchicalSerializable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HierarchicalSerializable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HierarchicalSerializable, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def calcSize(self):
+        return _rte2.HierarchicalSerializable_calcSize(self)
+
+    def serialize(self, buffer, depth):
+        return _rte2.HierarchicalSerializable_serialize(self, buffer, depth)
+
+    def deserialize(self, buffer, depth):
+        return _rte2.HierarchicalSerializable_deserialize(self, buffer, depth)
+    __swig_destroy__ = _rte2.delete_HierarchicalSerializable
+    __del__ = lambda self: None
+HierarchicalSerializable_swigregister = _rte2.HierarchicalSerializable_swigregister
+HierarchicalSerializable_swigregister(HierarchicalSerializable)
+
 
 def info_(function, msg):
     return _rte2.info_(function, msg)
@@ -337,6 +360,9 @@ class NodeContent(Serializable):
     def setLabel(self, label):
         return _rte2.NodeContent_setLabel(self, label)
 
+    def getDataType(self):
+        return _rte2.NodeContent_getDataType(self)
+
     def calcSize(self):
         return _rte2.NodeContent_calcSize(self)
 
@@ -345,6 +371,9 @@ class NodeContent(Serializable):
 
     def deserialize(self, buffer):
         return _rte2.NodeContent_deserialize(self, buffer)
+
+    def updatePath(self):
+        return _rte2.NodeContent_updatePath(self)
 
     def __init__(self, pOwnerNode):
         this = _rte2.new_NodeContent(pOwnerNode)
@@ -361,28 +390,32 @@ class NodeContent(Serializable):
 NodeContent_swigregister = _rte2.NodeContent_swigregister
 NodeContent_swigregister(NodeContent)
 
-class Node(Serializable):
+class Node(HierarchicalSerializable):
     __swig_setmethods__ = {}
-    for _s in [Serializable]:
+    for _s in [HierarchicalSerializable]:
         __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Node, name, value)
     __swig_getmethods__ = {}
-    for _s in [Serializable]:
+    for _s in [HierarchicalSerializable]:
         __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
     __getattr__ = lambda self, name: _swig_getattr(self, Node, name)
     __repr__ = _swig_repr
+    __swig_getmethods__["createRootNode"] = lambda x: _rte2.Node_createRootNode
+    if _newclass:
+        createRootNode = staticmethod(_rte2.Node_createRootNode)
+    __swig_getmethods__["destroy"] = lambda x: _rte2.Node_destroy
+    if _newclass:
+        destroy = staticmethod(_rte2.Node_destroy)
 
-    def __init__(self, *args):
-        this = _rte2.new_Node(*args)
+    def __eq__(self, other):
+        return _rte2.Node___eq__(self, other)
+
+    def __init__(self):
+        this = _rte2.new_Node()
         try:
             self.this.append(this)
         except:
             self.this = this
-    __swig_destroy__ = _rte2.delete_Node
-    __del__ = lambda self: None
-
-    def __eq__(self, other):
-        return _rte2.Node___eq__(self, other)
 
     def getName(self, *args):
         return _rte2.Node_getName(self, *args)
@@ -411,8 +444,11 @@ class Node(Serializable):
     def setLabel(self, label):
         return _rte2.Node_setLabel(self, label)
 
-    def addChild(self, pChild):
-        return _rte2.Node_addChild(self, pChild)
+    def addChild(self, *args):
+        return _rte2.Node_addChild(self, *args)
+
+    def getChildCount(self):
+        return _rte2.Node_getChildCount(self)
 
     def findChild(self, *args):
         return _rte2.Node_findChild(self, *args)
@@ -423,13 +459,24 @@ class Node(Serializable):
     def calcSize(self):
         return _rte2.Node_calcSize(self)
 
-    def serialize(self, buffer):
-        return _rte2.Node_serialize(self, buffer)
+    def serialize(self, *args):
+        return _rte2.Node_serialize(self, *args)
 
-    def deserialize(self, buffer):
-        return _rte2.Node_deserialize(self, buffer)
+    def deserialize(self, *args):
+        return _rte2.Node_deserialize(self, *args)
+
+    def updatePath(self):
+        return _rte2.Node_updatePath(self)
 Node_swigregister = _rte2.Node_swigregister
 Node_swigregister(Node)
+
+def Node_createRootNode(name, label):
+    return _rte2.Node_createRootNode(name, label)
+Node_createRootNode = _rte2.Node_createRootNode
+
+def Node_destroy(ppNode):
+    return _rte2.Node_destroy(ppNode)
+Node_destroy = _rte2.Node_destroy
 
 class Socket(_object):
     __swig_setmethods__ = {}
@@ -831,6 +878,7 @@ class NodeContentData(Serializable):
     def __init__(self, *args, **kwargs):
         raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
+    Type_Invalid = _rte2.NodeContentData_Type_Invalid
     Type_Int32 = _rte2.NodeContentData_Type_Int32
     __swig_destroy__ = _rte2.delete_NodeContentData
     __del__ = lambda self: None
@@ -1522,6 +1570,14 @@ class TcpSentDataVector(_object):
 TcpSentDataVector_swigregister = _rte2.TcpSentDataVector_swigregister
 TcpSentDataVector_swigregister(TcpSentDataVector)
 
+
+def createRootNode(name, label):
+    return _rte2.createRootNode(name, label)
+createRootNode = _rte2.createRootNode
+
+def destroyRootNode(pNode):
+    return _rte2.destroyRootNode(pNode)
+destroyRootNode = _rte2.destroyRootNode
 # This file is compatible with both classic and new-style classes.
 
 

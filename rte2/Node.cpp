@@ -1,40 +1,41 @@
 #include "Node.h"
 #include "NodeContent.h"
+#include "memutil.h"
 
 namespace rte
 {
-
-	Node::Node(Node* pParent)
-		: Node(std::to_string(math::xor128()), std::to_string(math::xor128()), pParent)
-	{ }
-
-	Node::Node(const std::string& name,Node* pParent)
-		: Node(name, std::to_string(math::xor128()), pParent)
-	{ }
-
-	Node::Node(const std::string& name, const std::string& label, Node* pParent)
-		: mpParent(pParent), mpContent(nullptr)
+	Node* Node::createRootNode(const std::string& name, const std::string& label)
 	{
-		assert(pParent == nullptr || pParent->findChild(name) == nullptr);
-
-		setName(name);
-		setLabel(label);
-		updatePath();
+		auto pRoot = new Node(nullptr);
+		pRoot->setName(name);
+		pRoot->setLabel(label);
+		return pRoot;
 	}
 
-	Node::~Node()
+	void Node::destroy(Node** ppNode)
 	{
-		mem::safeDelete(&mpContent);
+		auto pNode = *ppNode;
+		if (pNode == nullptr)
+		{
+			return;
+		}
+
+		mem::safeDelete(&pNode->mpContent);
+
+		for (auto pChild : pNode->mChildPtrList)
+		{
+			destroy(&pChild);
+		}
+		pNode->mChildPtrList.clear();
+
+		delete pNode;
+		pNode = nullptr;
 	}
 
 	void Node::setName(const std::string& name)
 	{
 		mName = name;
 		updatePath();
-		for (auto pChild : mChildPtrList)
-		{
-			pChild->updatePath();
-		}
 	}
 
 	NodeContent* Node::createContent()
@@ -42,6 +43,22 @@ namespace rte
 		mem::safeDelete(&mpContent);
 		mpContent = new NodeContent(this);
 		return mpContent;
+	}
+
+	Node* Node::addChild(const std::string& name, const std::string& label)
+	{
+		assert(findChild(name) == nullptr);
+
+		auto pChild = createChild();
+		pChild->setName(name);
+		pChild->setLabel(label);
+
+		mChildPtrList.push_back(pChild);
+		++mChildCount;
+
+		assert(mChildCount == static_cast<int32_t>(mChildPtrList.size()));
+
+		return pChild;
 	}
 
 	Node* Node::findChild(const std::string& name)
@@ -58,48 +75,153 @@ namespace rte
 		return (found != mChildPtrList.end()) ? *found : nullptr;
 	}
 
-	Node* Node::removeChild(const std::string& name)
+	bool Node::removeChild(const std::string& name)
 	{
 		for (auto iter = mChildPtrList.begin(); iter != mChildPtrList.end(); ++iter)
 		{
 			if ((*iter)->getName() == name)
 			{
-				return *mChildPtrList.erase(iter);
+				mChildPtrList.erase(iter);
+				Node::destroy(&(*iter));
+				return true;
 			}
 		}
-		return nullptr;
+		return false;
 	}
 
-	Node* Node::removeChild(const Node* pNode)
+	bool Node::removeChild(const Node* pChild)
 	{
-		if (pNode != nullptr)
+		if (pChild != nullptr)
 		{
 			for (auto iter = mChildPtrList.begin(); iter != mChildPtrList.end(); ++iter)
 			{
-				if ((*iter) == pNode)
+				if ((*iter) == pChild)
 				{
-					return *mChildPtrList.erase(iter);
+					mChildPtrList.erase(iter);
+					Node::destroy(&(*iter));
+					return true;
 				}
 			}
 		}
-		return nullptr;
+		return false;
 	}
 
 	int Node::calcSize()
 	{
-		throw new std::exception("not implemented");
+		int size = 0;
+
+		// 名前、ラベル
+		size += calcSizeString(mName);
+		size += calcSizeString(mLabel);
+
+		// Content
+		if (mpContent != nullptr)
+		{
+			size += mpContent->calcSize();
+		}
+
+		// 子供
+		for (auto pChild : mChildPtrList)
+		{
+			size += pChild->calcSize();
+		}
+
+		return size;
 	}
 
-	uint8_t* Node::serialize(uint8_t* buffer)
+	uint8_t* Node::serialize(uint8_t* buffer, int depth)
 	{
-		throw new std::exception("not implemented");
+		auto ptr = buffer;
+
+		// 名前、ラベル
+		ptr = writeString(mName, ptr);
+		ptr = writeString(mLabel, ptr);
+
+		// Content
+		{
+			if (mpContent != nullptr)
+			{
+				auto contentSize = static_cast<int32_t>(mpContent->calcSize());
+				ptr = writeInt32(contentSize, ptr);
+				ptr = mpContent->serialize(ptr);
+			}
+			else
+			{
+				ptr = writeInt32(0, ptr);
+			}
+		}
+
+		// 子供
+		{
+			ptr = writeInt32(mChildCount, ptr);
+
+			if (depth > 0)
+			{
+				for (auto i = 0; i < mChildCount; ++i)
+				{
+					ptr = mChildPtrList[i]->serialize(ptr, depth - 1);
+				}
+			}
+		}
+
+		return ptr;
 	}
 
-	uint8_t* Node::deserialize(uint8_t* buffer)
+	uint8_t* Node::deserialize(uint8_t* buffer, int depth)
 	{
-		throw new std::exception("not implemented");
+		auto ptr = buffer;
+
+		// 名前、ラベル
+		ptr = readString(&mName, ptr);
+		ptr = readString(&mLabel, ptr);
+		updatePath();
+
+		// Content
+		{
+			int32_t contentSize;
+			ptr = readInt32(&contentSize, ptr);
+			if (contentSize > 0)
+			{
+				ptr = createContent()->deserialize(ptr);
+			}
+			else
+			{
+				mem::safeDelete(&mpContent);
+			}
+		}
+
+		// 子供
+		{
+			for (auto pChild : mChildPtrList)
+			{
+				destroy(&pChild);
+			}
+			mChildPtrList.clear();
+
+			ptr = readInt32(&mChildCount, ptr);
+
+			if (depth > 0)
+			{
+				for (auto i = 0; i < mChildCount; ++i)
+				{
+					auto pChild = createChild();
+					ptr = pChild->deserialize(ptr, depth - 1);
+					mChildPtrList.push_back(pChild);
+				}
+			}
+		}
+
+		return ptr;
 	}
 
+	Node::Node(Node* pParent)
+		: mpParent(pParent)
+	{ }
+
+	Node* Node::createChild()
+	{
+		return new Node(this);
+	}
 
 	void Node::updatePath()
 	{
@@ -110,6 +232,16 @@ namespace rte
 		else
 		{
 			mPath = mName;
+		}
+
+		if (mpContent != nullptr)
+		{
+			mpContent->updatePath();
+		}
+
+		for (auto pChild : mChildPtrList)
+		{
+			pChild->updatePath();
 		}
 	}
 
