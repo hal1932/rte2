@@ -1,9 +1,6 @@
 #ifndef _SWIG_PY
 
 #include "Node.h"
-#include "NodeParameter.h"
-#include "Context.h"
-#include "Command.h"
 #include "Socket.h"
 #include "TcpServer.h"
 #include "TcpClient.h"

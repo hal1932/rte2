@@ -6,7 +6,7 @@
 #include <memory>
 
 namespace rte
-	{
+{
 
 	enum class CommandType : uint16_t
 	{
@@ -26,8 +26,10 @@ namespace rte
 	{
 	public:
 		Command() = delete;
+		Command(Command&& other) { moveFrom(std::move(other)); }
 		virtual ~Command() = default;
 		virtual CommandType getType() { return mType; }
+
 		virtual uint8_t* serialize(uint8_t* buffer, Context* pContext) = 0;
 		virtual uint8_t* deserialize(uint8_t* buffer, Context* pContext) = 0;
 
@@ -35,6 +37,7 @@ namespace rte
 		explicit Command(CommandType type)
 			: mType(type)
 		{ }
+		virtual void moveFrom(Command&& other) = 0;
 		CommandType mType;
 	};
 

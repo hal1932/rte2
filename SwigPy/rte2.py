@@ -203,6 +203,52 @@ class nonmovable(_object):
 nonmovable_swigregister = _rte2.nonmovable_swigregister
 nonmovable_swigregister(nonmovable)
 
+class Serializable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Serializable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Serializable, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def calcSize(self):
+        return _rte2.Serializable_calcSize(self)
+
+    def serialize(self, buffer):
+        return _rte2.Serializable_serialize(self, buffer)
+
+    def deserialize(self, buffer):
+        return _rte2.Serializable_deserialize(self, buffer)
+    __swig_destroy__ = _rte2.delete_Serializable
+    __del__ = lambda self: None
+Serializable_swigregister = _rte2.Serializable_swigregister
+Serializable_swigregister(Serializable)
+
+class HierarchicalSerializable(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HierarchicalSerializable, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HierarchicalSerializable, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def calcSize(self):
+        return _rte2.HierarchicalSerializable_calcSize(self)
+
+    def serialize(self, buffer, depth):
+        return _rte2.HierarchicalSerializable_serialize(self, buffer, depth)
+
+    def deserialize(self, buffer, depth):
+        return _rte2.HierarchicalSerializable_deserialize(self, buffer, depth)
+    __swig_destroy__ = _rte2.delete_HierarchicalSerializable
+    __del__ = lambda self: None
+HierarchicalSerializable_swigregister = _rte2.HierarchicalSerializable_swigregister
+HierarchicalSerializable_swigregister(HierarchicalSerializable)
+
 
 def info_(function, msg):
     return _rte2.info_(function, msg)
@@ -279,461 +325,158 @@ formatError = _rte2.formatError
 def formatLastError():
     return _rte2.formatLastError()
 formatLastError = _rte2.formatLastError
-class NodeBase(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeBase, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeBase, name)
-    __repr__ = _swig_repr
 
-    def __init__(self, name, pParent):
-        this = _rte2.new_NodeBase(name, pParent)
+def xor128():
+    return _rte2.xor128()
+xor128 = _rte2.xor128
+class NodeContent(Serializable):
+    __swig_setmethods__ = {}
+    for _s in [Serializable]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeContent, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Serializable]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, NodeContent, name)
+    __repr__ = _swig_repr
+    __swig_destroy__ = _rte2.delete_NodeContent
+    __del__ = lambda self: None
+
+    def __eq__(self, other):
+        return _rte2.NodeContent___eq__(self, other)
+
+    def getName(self):
+        return _rte2.NodeContent_getName(self)
+
+    def getPath(self):
+        return _rte2.NodeContent_getPath(self)
+
+    def getLabel(self):
+        return _rte2.NodeContent_getLabel(self)
+
+    def setName(self, name):
+        return _rte2.NodeContent_setName(self, name)
+
+    def setLabel(self, label):
+        return _rte2.NodeContent_setLabel(self, label)
+
+    def getDataType(self):
+        return _rte2.NodeContent_getDataType(self)
+
+    def calcSize(self):
+        return _rte2.NodeContent_calcSize(self)
+
+    def serialize(self, buffer):
+        return _rte2.NodeContent_serialize(self, buffer)
+
+    def deserialize(self, buffer):
+        return _rte2.NodeContent_deserialize(self, buffer)
+
+    def updatePath(self):
+        return _rte2.NodeContent_updatePath(self)
+
+    def __init__(self, pOwnerNode):
+        this = _rte2.new_NodeContent(pOwnerNode)
         try:
             self.this.append(this)
         except:
             self.this = this
-    __swig_destroy__ = _rte2.delete_NodeBase
-    __del__ = lambda self: None
 
-    def getName(self, *args):
-        return _rte2.NodeBase_getName(self, *args)
+    def createDataInt32(self):
+        return _rte2.NodeContent_createDataInt32(self)
 
-    def getPath(self, *args):
-        return _rte2.NodeBase_getPath(self, *args)
+    def getDataInt32(self):
+        return _rte2.NodeContent_getDataInt32(self)
+NodeContent_swigregister = _rte2.NodeContent_swigregister
+NodeContent_swigregister(NodeContent)
 
-    def getParent(self, *args):
-        return _rte2.NodeBase_getParent(self, *args)
-
-    def setParent(self, pParent):
-        return _rte2.NodeBase_setParent(self, pParent)
-NodeBase_swigregister = _rte2.NodeBase_swigregister
-NodeBase_swigregister(NodeBase)
-
-class Node(NodeBase):
+class Node(HierarchicalSerializable):
     __swig_setmethods__ = {}
-    for _s in [NodeBase]:
+    for _s in [HierarchicalSerializable]:
         __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Node, name, value)
     __swig_getmethods__ = {}
-    for _s in [NodeBase]:
+    for _s in [HierarchicalSerializable]:
         __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
     __getattr__ = lambda self, name: _swig_getattr(self, Node, name)
     __repr__ = _swig_repr
+    __swig_getmethods__["createRootNode"] = lambda x: _rte2.Node_createRootNode
+    if _newclass:
+        createRootNode = staticmethod(_rte2.Node_createRootNode)
+    __swig_getmethods__["destroy"] = lambda x: _rte2.Node_destroy
+    if _newclass:
+        destroy = staticmethod(_rte2.Node_destroy)
 
-    def __init__(self, *args):
-        this = _rte2.new_Node(*args)
+    def __eq__(self, other):
+        return _rte2.Node___eq__(self, other)
+
+    def __init__(self):
+        this = _rte2.new_Node()
         try:
             self.this.append(this)
         except:
             self.this = this
-    __swig_destroy__ = _rte2.delete_Node
-    __del__ = lambda self: None
+
+    def getName(self, *args):
+        return _rte2.Node_getName(self, *args)
+
+    def getLabel(self, *args):
+        return _rte2.Node_getLabel(self, *args)
+
+    def getPath(self, *args):
+        return _rte2.Node_getPath(self, *args)
+
+    def getParent(self):
+        return _rte2.Node_getParent(self)
 
     def getChildren(self):
         return _rte2.Node_getChildren(self)
 
-    def getParameterList(self):
-        return _rte2.Node_getParameterList(self)
+    def createContent(self):
+        return _rte2.Node_createContent(self)
 
-    def addParemeter(self, pParam):
-        return _rte2.Node_addParemeter(self, pParam)
+    def getContent(self):
+        return _rte2.Node_getContent(self)
 
-    def serialize(self, buffer, pContext):
-        return _rte2.Node_serialize(self, buffer, pContext)
+    def setName(self, name):
+        return _rte2.Node_setName(self, name)
 
-    def deserialize(self, buffer, pContext):
-        return _rte2.Node_deserialize(self, buffer, pContext)
+    def setLabel(self, label):
+        return _rte2.Node_setLabel(self, label)
+
+    def addChild(self, *args):
+        return _rte2.Node_addChild(self, *args)
+
+    def getChildCount(self):
+        return _rte2.Node_getChildCount(self)
+
+    def findChild(self, *args):
+        return _rte2.Node_findChild(self, *args)
+
+    def removeChild(self, *args):
+        return _rte2.Node_removeChild(self, *args)
+
+    def calcSize(self):
+        return _rte2.Node_calcSize(self)
+
+    def serialize(self, *args):
+        return _rte2.Node_serialize(self, *args)
+
+    def deserialize(self, *args):
+        return _rte2.Node_deserialize(self, *args)
+
+    def updatePath(self):
+        return _rte2.Node_updatePath(self)
 Node_swigregister = _rte2.Node_swigregister
 Node_swigregister(Node)
 
-
-_rte2.ParameterType_Invalid_swigconstant(_rte2)
-ParameterType_Invalid = _rte2.ParameterType_Invalid
-
-_rte2.ParameterType_Int32_swigconstant(_rte2)
-ParameterType_Int32 = _rte2.ParameterType_Int32
-
-_rte2.ParameterType_Float32_swigconstant(_rte2)
-ParameterType_Float32 = _rte2.ParameterType_Float32
-
-_rte2.ParameterType_Vector3_swigconstant(_rte2)
-ParameterType_Vector3 = _rte2.ParameterType_Vector3
-
-_rte2.ParameterType_String_swigconstant(_rte2)
-ParameterType_String = _rte2.ParameterType_String
-
-_rte2.ParameterType_File_swigconstant(_rte2)
-ParameterType_File = _rte2.ParameterType_File
-class Vector3(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Vector3, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Vector3, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["x"] = _rte2.Vector3_x_set
-    __swig_getmethods__["x"] = _rte2.Vector3_x_get
-    if _newclass:
-        x = _swig_property(_rte2.Vector3_x_get, _rte2.Vector3_x_set)
-    __swig_setmethods__["y"] = _rte2.Vector3_y_set
-    __swig_getmethods__["y"] = _rte2.Vector3_y_get
-    if _newclass:
-        y = _swig_property(_rte2.Vector3_y_get, _rte2.Vector3_y_set)
-    __swig_setmethods__["z"] = _rte2.Vector3_z_set
-    __swig_getmethods__["z"] = _rte2.Vector3_z_get
-    if _newclass:
-        z = _swig_property(_rte2.Vector3_z_get, _rte2.Vector3_z_set)
-
-    def __init__(self):
-        this = _rte2.new_Vector3()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_Vector3
-    __del__ = lambda self: None
-Vector3_swigregister = _rte2.Vector3_swigregister
-Vector3_swigregister(Vector3)
-
-class File(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, File, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, File, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["path"] = _rte2.File_path_set
-    __swig_getmethods__["path"] = _rte2.File_path_get
-    if _newclass:
-        path = _swig_property(_rte2.File_path_get, _rte2.File_path_set)
-    __swig_setmethods__["length"] = _rte2.File_length_set
-    __swig_getmethods__["length"] = _rte2.File_length_get
-    if _newclass:
-        length = _swig_property(_rte2.File_length_get, _rte2.File_length_set)
-
-    def __init__(self):
-        this = _rte2.new_File()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_File
-    __del__ = lambda self: None
-File_swigregister = _rte2.File_swigregister
-File_swigregister(File)
-
-class NodeParameter(NodeBase):
-    __swig_setmethods__ = {}
-    for _s in [NodeBase]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeParameter, name, value)
-    __swig_getmethods__ = {}
-    for _s in [NodeBase]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeParameter, name)
-    __repr__ = _swig_repr
-    __swig_getmethods__["setFileParameterRoot"] = lambda x: _rte2.NodeParameter_setFileParameterRoot
-    if _newclass:
-        setFileParameterRoot = staticmethod(_rte2.NodeParameter_setFileParameterRoot)
-    __swig_getmethods__["getFileParameterRoot"] = lambda x: _rte2.NodeParameter_getFileParameterRoot
-    if _newclass:
-        getFileParameterRoot = staticmethod(_rte2.NodeParameter_getFileParameterRoot)
-
-    def __init__(self, *args):
-        this = _rte2.new_NodeParameter(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_NodeParameter
-    __del__ = lambda self: None
-
-    def getType(self):
-        return _rte2.NodeParameter_getType(self)
-
-    def serialize(self, buffer, pContext):
-        return _rte2.NodeParameter_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.NodeParameter_deserialize(self, buffer, pContext)
-
-    def setValue(self, pNewValue, newValueSize):
-        return _rte2.NodeParameter_setValue(self, pNewValue, newValueSize)
-
-    def getValue(self, pOut, valueSize):
-        return _rte2.NodeParameter_getValue(self, pOut, valueSize)
-
-    def setValueInt32(self, newValue):
-        return _rte2.NodeParameter_setValueInt32(self, newValue)
-
-    def getValueInt32(self):
-        return _rte2.NodeParameter_getValueInt32(self)
-
-    def setValueFloat32(self, newValue):
-        return _rte2.NodeParameter_setValueFloat32(self, newValue)
-
-    def getValueFloat32(self):
-        return _rte2.NodeParameter_getValueFloat32(self)
-
-    def setValueVector3(self, newValue):
-        return _rte2.NodeParameter_setValueVector3(self, newValue)
-
-    def getValueVector3(self):
-        return _rte2.NodeParameter_getValueVector3(self)
-
-    def setValueString(self, newValue):
-        return _rte2.NodeParameter_setValueString(self, newValue)
-
-    def getValueString(self):
-        return _rte2.NodeParameter_getValueString(self)
-
-    def setValueFile(self, newValue):
-        return _rte2.NodeParameter_setValueFile(self, newValue)
-
-    def getValueFile(self):
-        return _rte2.NodeParameter_getValueFile(self)
-NodeParameter_swigregister = _rte2.NodeParameter_swigregister
-NodeParameter_swigregister(NodeParameter)
-
-def NodeParameter_setFileParameterRoot(rootPath):
-    return _rte2.NodeParameter_setFileParameterRoot(rootPath)
-NodeParameter_setFileParameterRoot = _rte2.NodeParameter_setFileParameterRoot
-
-def NodeParameter_getFileParameterRoot():
-    return _rte2.NodeParameter_getFileParameterRoot()
-NodeParameter_getFileParameterRoot = _rte2.NodeParameter_getFileParameterRoot
-
-class NodeParameterValueSerializer(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeParameterValueSerializer, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeParameterValueSerializer, name)
-    __repr__ = _swig_repr
-    __swig_getmethods__["serialize"] = lambda x: _rte2.NodeParameterValueSerializer_serialize
-    if _newclass:
-        serialize = staticmethod(_rte2.NodeParameterValueSerializer_serialize)
-    __swig_getmethods__["deserialize"] = lambda x: _rte2.NodeParameterValueSerializer_deserialize
-    if _newclass:
-        deserialize = staticmethod(_rte2.NodeParameterValueSerializer_deserialize)
-
-    def __init__(self):
-        this = _rte2.new_NodeParameterValueSerializer()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_NodeParameterValueSerializer
-    __del__ = lambda self: None
-NodeParameterValueSerializer_swigregister = _rte2.NodeParameterValueSerializer_swigregister
-NodeParameterValueSerializer_swigregister(NodeParameterValueSerializer)
-
-def NodeParameterValueSerializer_serialize(ptr, pParam):
-    return _rte2.NodeParameterValueSerializer_serialize(ptr, pParam)
-NodeParameterValueSerializer_serialize = _rte2.NodeParameterValueSerializer_serialize
-
-def NodeParameterValueSerializer_deserialize(ptr, pParam):
-    return _rte2.NodeParameterValueSerializer_deserialize(ptr, pParam)
-NodeParameterValueSerializer_deserialize = _rte2.NodeParameterValueSerializer_deserialize
-
-
-_rte2.CommandType_Invalid_swigconstant(_rte2)
-CommandType_Invalid = _rte2.CommandType_Invalid
-
-_rte2.CommandType_Ping_swigconstant(_rte2)
-CommandType_Ping = _rte2.CommandType_Ping
-
-_rte2.CommandType_NodeNameList_swigconstant(_rte2)
-CommandType_NodeNameList = _rte2.CommandType_NodeNameList
-
-_rte2.CommandType_Node_swigconstant(_rte2)
-CommandType_Node = _rte2.CommandType_Node
-
-_rte2.CommandType_ParamUpdate_swigconstant(_rte2)
-CommandType_ParamUpdate = _rte2.CommandType_ParamUpdate
-class Command(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Command, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Command, name)
-
-    def __init__(self, *args, **kwargs):
-        raise AttributeError("No constructor defined - class is abstract")
-    __repr__ = _swig_repr
-    __swig_destroy__ = _rte2.delete_Command
-    __del__ = lambda self: None
-
-    def getType(self):
-        return _rte2.Command_getType(self)
-
-    def serialize(self, buffer, pContext):
-        return _rte2.Command_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.Command_deserialize(self, buffer, pContext)
-Command_swigregister = _rte2.Command_swigregister
-Command_swigregister(Command)
-
-class PingCommand(Command):
-    __swig_setmethods__ = {}
-    for _s in [Command]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PingCommand, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Command]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, PingCommand, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rte2.new_PingCommand()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def serialize(self, buffer, pContext):
-        return _rte2.PingCommand_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.PingCommand_deserialize(self, buffer, pContext)
-    __swig_destroy__ = _rte2.delete_PingCommand
-    __del__ = lambda self: None
-PingCommand_swigregister = _rte2.PingCommand_swigregister
-PingCommand_swigregister(PingCommand)
-
-class NodeNameListCommand(Command):
-    __swig_setmethods__ = {}
-    for _s in [Command]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeNameListCommand, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Command]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeNameListCommand, name)
-    __repr__ = _swig_repr
-    __swig_getmethods__["createNodeTree"] = lambda x: _rte2.NodeNameListCommand_createNodeTree
-    if _newclass:
-        createNodeTree = staticmethod(_rte2.NodeNameListCommand_createNodeTree)
-
-    def __init__(self):
-        this = _rte2.new_NodeNameListCommand()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def serialize(self, buffer, pContext):
-        return _rte2.NodeNameListCommand_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.NodeNameListCommand_deserialize(self, buffer, pContext)
-
-    def add(self, pNode):
-        return _rte2.NodeNameListCommand_add(self, pNode)
-
-    def getNodePathList(self):
-        return _rte2.NodeNameListCommand_getNodePathList(self)
-    __swig_destroy__ = _rte2.delete_NodeNameListCommand
-    __del__ = lambda self: None
-NodeNameListCommand_swigregister = _rte2.NodeNameListCommand_swigregister
-NodeNameListCommand_swigregister(NodeNameListCommand)
-
-def NodeNameListCommand_createNodeTree(pathList):
-    return _rte2.NodeNameListCommand_createNodeTree(pathList)
-NodeNameListCommand_createNodeTree = _rte2.NodeNameListCommand_createNodeTree
-
-class NodeCommand(Command):
-    __swig_setmethods__ = {}
-    for _s in [Command]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeCommand, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Command]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeCommand, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rte2.new_NodeCommand()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_NodeCommand
-    __del__ = lambda self: None
-
-    def serialize(self, buffer, pContext):
-        return _rte2.NodeCommand_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.NodeCommand_deserialize(self, buffer, pContext)
-
-    def get(self):
-        return _rte2.NodeCommand_get(self)
-
-    def set(self, pNode):
-        return _rte2.NodeCommand_set(self, pNode)
-NodeCommand_swigregister = _rte2.NodeCommand_swigregister
-NodeCommand_swigregister(NodeCommand)
-
-class ParamUpdateCommand(Command):
-    __swig_setmethods__ = {}
-    for _s in [Command]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, ParamUpdateCommand, name, value)
-    __swig_getmethods__ = {}
-    for _s in [Command]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, ParamUpdateCommand, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rte2.new_ParamUpdateCommand()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_ParamUpdateCommand
-    __del__ = lambda self: None
-
-    def serialize(self, buffer, pContext):
-        return _rte2.ParamUpdateCommand_serialize(self, buffer, pContext)
-
-    def deserialize(self, buffer, pContext):
-        return _rte2.ParamUpdateCommand_deserialize(self, buffer, pContext)
-
-    def add(self, pNodeParam):
-        return _rte2.ParamUpdateCommand_add(self, pNodeParam)
-
-    def getParameterList(self):
-        return _rte2.ParamUpdateCommand_getParameterList(self)
-ParamUpdateCommand_swigregister = _rte2.ParamUpdateCommand_swigregister
-ParamUpdateCommand_swigregister(ParamUpdateCommand)
-
-class Context(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Context, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Context, name)
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        this = _rte2.new_Context()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_Context
-    __del__ = lambda self: None
-
-    def addNode(self, name, pParent):
-        return _rte2.Context_addNode(self, name, pParent)
-
-    def findNode(self, path):
-        return _rte2.Context_findNode(self, path)
-
-    def removeNode(self, pNode):
-        return _rte2.Context_removeNode(self, pNode)
-Context_swigregister = _rte2.Context_swigregister
-Context_swigregister(Context)
+def Node_createRootNode(name, label):
+    return _rte2.Node_createRootNode(name, label)
+Node_createRootNode = _rte2.Node_createRootNode
+
+def Node_destroy(ppNode):
+    return _rte2.Node_destroy(ppNode)
+Node_destroy = _rte2.Node_destroy
 
 class Socket(_object):
     __swig_setmethods__ = {}
@@ -987,8 +730,8 @@ class TcpReceivedData(_object):
     def move(self):
         return _rte2.TcpReceivedData_move(self)
 
-    def destroy(self):
-        return _rte2.TcpReceivedData_destroy(self)
+    def deallocate(self):
+        return _rte2.TcpReceivedData_deallocate(self)
 TcpReceivedData_swigregister = _rte2.TcpReceivedData_swigregister
 TcpReceivedData_swigregister(TcpReceivedData)
 
@@ -1030,8 +773,8 @@ class TcpSentData(_object):
     def move(self):
         return _rte2.TcpSentData_move(self)
 
-    def destroy(self):
-        return _rte2.TcpSentData_destroy(self)
+    def deallocate(self):
+        return _rte2.TcpSentData_deallocate(self)
 TcpSentData_swigregister = _rte2.TcpSentData_swigregister
 TcpSentData_swigregister(TcpSentData)
 
@@ -1121,6 +864,76 @@ class TcpServer(_object):
         return _rte2.TcpServer_closeConnection(self, id)
 TcpServer_swigregister = _rte2.TcpServer_swigregister
 TcpServer_swigregister(TcpServer)
+
+class NodeContentData(Serializable):
+    __swig_setmethods__ = {}
+    for _s in [Serializable]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeContentData, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Serializable]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, NodeContentData, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    Type_Invalid = _rte2.NodeContentData_Type_Invalid
+    Type_Int32 = _rte2.NodeContentData_Type_Int32
+    __swig_destroy__ = _rte2.delete_NodeContentData
+    __del__ = lambda self: None
+
+    def __eq__(self, other):
+        return _rte2.NodeContentData___eq__(self, other)
+
+    def calcSize(self):
+        return _rte2.NodeContentData_calcSize(self)
+
+    def serialize(self, buffer):
+        return _rte2.NodeContentData_serialize(self, buffer)
+
+    def deserialize(self, buffer):
+        return _rte2.NodeContentData_deserialize(self, buffer)
+
+    def getType(self):
+        return _rte2.NodeContentData_getType(self)
+NodeContentData_swigregister = _rte2.NodeContentData_swigregister
+NodeContentData_swigregister(NodeContentData)
+
+class Int32Data(NodeContentData):
+    __swig_setmethods__ = {}
+    for _s in [NodeContentData]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Int32Data, name, value)
+    __swig_getmethods__ = {}
+    for _s in [NodeContentData]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, Int32Data, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["Value"] = _rte2.Int32Data_Value_set
+    __swig_getmethods__["Value"] = _rte2.Int32Data_Value_get
+    if _newclass:
+        Value = _swig_property(_rte2.Int32Data_Value_get, _rte2.Int32Data_Value_set)
+
+    def __init__(self):
+        this = _rte2.new_Int32Data()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def calcSize(self):
+        return _rte2.Int32Data_calcSize(self)
+
+    def serialize(self, buffer):
+        return _rte2.Int32Data_serialize(self, buffer)
+
+    def deserialize(self, buffer):
+        return _rte2.Int32Data_deserialize(self, buffer)
+    __swig_destroy__ = _rte2.delete_Int32Data
+    __del__ = lambda self: None
+Int32Data_swigregister = _rte2.Int32Data_swigregister
+Int32Data_swigregister(Int32Data)
 
 class buffer(_object):
     __swig_setmethods__ = {}
@@ -1531,119 +1344,6 @@ class NodePtrVector(_object):
 NodePtrVector_swigregister = _rte2.NodePtrVector_swigregister
 NodePtrVector_swigregister(NodePtrVector)
 
-class NodeParameterPtrVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeParameterPtrVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, NodeParameterPtrVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _rte2.NodeParameterPtrVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _rte2.NodeParameterPtrVector___nonzero__(self)
-
-    def __bool__(self):
-        return _rte2.NodeParameterPtrVector___bool__(self)
-
-    def __len__(self):
-        return _rte2.NodeParameterPtrVector___len__(self)
-
-    def pop(self):
-        return _rte2.NodeParameterPtrVector_pop(self)
-
-    def __getslice__(self, i, j):
-        return _rte2.NodeParameterPtrVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _rte2.NodeParameterPtrVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _rte2.NodeParameterPtrVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _rte2.NodeParameterPtrVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _rte2.NodeParameterPtrVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _rte2.NodeParameterPtrVector___setitem__(self, *args)
-
-    def append(self, x):
-        return _rte2.NodeParameterPtrVector_append(self, x)
-
-    def empty(self):
-        return _rte2.NodeParameterPtrVector_empty(self)
-
-    def size(self):
-        return _rte2.NodeParameterPtrVector_size(self)
-
-    def clear(self):
-        return _rte2.NodeParameterPtrVector_clear(self)
-
-    def swap(self, v):
-        return _rte2.NodeParameterPtrVector_swap(self, v)
-
-    def get_allocator(self):
-        return _rte2.NodeParameterPtrVector_get_allocator(self)
-
-    def begin(self):
-        return _rte2.NodeParameterPtrVector_begin(self)
-
-    def end(self):
-        return _rte2.NodeParameterPtrVector_end(self)
-
-    def rbegin(self):
-        return _rte2.NodeParameterPtrVector_rbegin(self)
-
-    def rend(self):
-        return _rte2.NodeParameterPtrVector_rend(self)
-
-    def pop_back(self):
-        return _rte2.NodeParameterPtrVector_pop_back(self)
-
-    def erase(self, *args):
-        return _rte2.NodeParameterPtrVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _rte2.new_NodeParameterPtrVector(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def push_back(self, x):
-        return _rte2.NodeParameterPtrVector_push_back(self, x)
-
-    def front(self):
-        return _rte2.NodeParameterPtrVector_front(self)
-
-    def back(self):
-        return _rte2.NodeParameterPtrVector_back(self)
-
-    def assign(self, n, x):
-        return _rte2.NodeParameterPtrVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _rte2.NodeParameterPtrVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _rte2.NodeParameterPtrVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _rte2.NodeParameterPtrVector_reserve(self, n)
-
-    def capacity(self):
-        return _rte2.NodeParameterPtrVector_capacity(self)
-    __swig_destroy__ = _rte2.delete_NodeParameterPtrVector
-    __del__ = lambda self: None
-NodeParameterPtrVector_swigregister = _rte2.NodeParameterPtrVector_swigregister
-NodeParameterPtrVector_swigregister(NodeParameterPtrVector)
-
 class TcpReceivedDataVector(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, TcpReceivedDataVector, name, value)
@@ -1870,6 +1570,14 @@ class TcpSentDataVector(_object):
 TcpSentDataVector_swigregister = _rte2.TcpSentDataVector_swigregister
 TcpSentDataVector_swigregister(TcpSentDataVector)
 
+
+def createRootNode(name, label):
+    return _rte2.createRootNode(name, label)
+createRootNode = _rte2.createRootNode
+
+def destroyRootNode(pNode):
+    return _rte2.destroyRootNode(pNode)
+destroyRootNode = _rte2.destroyRootNode
 # This file is compatible with both classic and new-style classes.
 
 

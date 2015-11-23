@@ -2,17 +2,15 @@
 
 %{
 #include "common.h"
-#include "NodeBase.h"
+#include "NodeContent.h"
 #include "Node.h"
-#include "NodeParameter.h"
-#include "NodeParameterValueSerializer.h"
-#include "Command.h"
-#include "Context.h"
 #include "Socket.h"
 #include "Thread.h"
 #include "tcpCommon.h"
 #include "TcpClient.h"
 #include "TcpServer.h"
+#include "NodeContent.h"
+#include "NodeContentData.h"
 %}
 
 %include "std_string.i"
@@ -21,17 +19,15 @@
 %include "windows.i"
 
 %include "common.h"
-%include "NodeBase.h"
+%include "NodeContent.h"
 %include "Node.h"
-%include "NodeParameter.h"
-%include "NodeParameterValueSerializer.h"
-%include "Command.h"
-%include "Context.h"
 %include "Socket.h"
 %include "Thread.h"
 %include "tcpCommon.h"
 %include "TcpClient.h"
 %include "TcpServer.h"
+%include "NodeContent.h"
+%include "NodeContentData.h"
 
 %include "carrays.i"
 %array_class(uint8_t, buffer);
@@ -41,17 +37,17 @@
 %template (IntVector)std::vector<int>;
 %template (StringVecotor) std::vector<std::string>;
 %template (NodePtrVector) std::vector<rte::Node*>;
-%template (NodeParameterPtrVector) std::vector<rte::NodeParameter*>;
 %template (TcpReceivedDataVector) std::vector<rte::TcpReceivedData>;
 %template (TcpSentDataVector) std::vector<rte::TcpSentData>;
 
-%template (setValueInt32) rte::NodeParameter::setValue<int32_t>;
-%template (getValueInt32) rte::NodeParameter::getValue<int32_t>;
-%template (setValueFloat32) rte::NodeParameter::setValue<float>;
-%template (getValueFloat32) rte::NodeParameter::getValue<float>;
-%template (setValueVector3) rte::NodeParameter::setValue<rte::Vector3>;
-%template (getValueVector3) rte::NodeParameter::getValue<rte::Vector3>;
-%template (setValueString) rte::NodeParameter::setValue<std::string>;
-%template (getValueString) rte::NodeParameter::getValue<std::string>;
-%template (setValueFile) rte::NodeParameter::setValue<rte::File>;
-%template (getValueFile) rte::NodeParameter::getValue<rte::File>;
+%template (createDataInt32) rte::NodeContent::createData<rte::Int32Data>;
+%template (getDataInt32) rte::NodeContent::getData<rte::Int32Data>;
+
+%inline {
+	rte::Node* createRootNode(const std::string& name, const std::string& label) {
+		return rte::Node::createRootNode(name, label);
+	}
+	void destroyRootNode(rte::Node* pNode) {
+		rte::Node::destroy(&pNode);
+	}
+}

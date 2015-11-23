@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -6,8 +7,10 @@
 #include <cstdint>
 #include <cassert>
 
+#define NOMINMAX
 #include <WinSock2.h> // Windows.h より先に include しないとバグる
 #include <Windows.h>
+#undef NOMINMAX
 
 #include <io.h>
 #include <sys/stat.h>
@@ -17,6 +20,22 @@
 #	define RTE_FINAL
 #else
 #	define RTE_FINAL final
+#endif
+
+#ifdef _SWIG_PY
+#	pragma warning(once: 4456) // *_wrap.cxx が変数名を使いまわしてる
+#endif
+
+// C++にはinternalがないのでとりあえず目印として
+#define RTE_INTERNAL public
+
+// http://www.swig.org/Doc3.0/CPlusPlus11.html#CPlusPlus11_rvalue_reference_and_move_semantics
+#ifdef _SWIG_PY
+#	define RTE_RVAL_DECL(type, x) type& x
+#	define RTE_MOVE(x) x
+#else
+#	define RTE_RVAL_DECL(type, x) type&& x
+#	define RTE_MOVE(x) std::move(x)
 #endif
 
 // swigはC++11対応が微妙。。
@@ -30,6 +49,7 @@
 #define logInfo(msg) rte::log::info_(__FUNCTION__, msg)
 #define logWarn(msg) rte::log::warn_(__FUNCTION__, msg)
 #define logError(msg) rte::log::error_(__FUNCTION__, msg)
+#define logAssert(expr, msg, expected, got) rte::log::assert_((expr), msg, expected, got, __FUNCTION__, __FILE__, __LINE__)
 
 namespace rte {
 
@@ -64,6 +84,22 @@ namespace rte {
 		nonmovable(nonmovable&&) = delete;
 	};
 
+	class Serializable
+	{
+	public:
+		virtual int calcSize() = 0;
+		virtual uint8_t* serialize(uint8_t* buffer) = 0;
+		virtual uint8_t* deserialize(uint8_t* buffer) = 0;
+	};
+
+	class HierarchicalSerializable
+	{
+	public:
+		virtual int calcSize() = 0;
+		virtual uint8_t* serialize(uint8_t* buffer, int depth) = 0;
+		virtual uint8_t* deserialize(uint8_t* buffer, int depth) = 0;
+	};
+
 	namespace log {
 		inline void info_(const char* function, const std::string& msg)
 		{
@@ -78,6 +114,36 @@ namespace rte {
 		inline void error_(const char* function, const std::string& msg)
 		{
 			std::cerr << "[ERROR][" << function << "] " << msg << std::endl;
+		}
+
+		template<class T>
+		inline void assert_(bool expr, const std::string& msg, T expected, T got, const char* function, const char* file, int line)
+		{
+			if (!expr)
+			{
+				char message[512];
+				sprintf_s(
+					message,
+					"[ASSERTION FAILED] %s %d, %s\n\t%s :: expected: %s, got: %s",
+					file, line, function, msg.c_str() std::to_string(expected), std::to_string(got));
+				MessageBoxA(nullptr, message, "", 0);
+				exit(1);
+			}
+		}
+
+		template<>
+		inline void assert_(bool expr, const std::string& msg, char expected, char got, const char* function, const char* file, int line)
+		{
+			if (!expr)
+			{
+				char message[512];
+				sprintf_s(
+					message,
+					"[ASSERTION FAILED] %s %d, %s\n\t%s :: expected: %c, got: %c",
+					file, line, function, msg.c_str(), expected, got);
+				MessageBoxA(nullptr, message, "", 0);
+				exit(1);
+			}
 		}
 
 		inline std::string getLastErrorString(int err)
@@ -552,5 +618,24 @@ namespace rte {
 		}
 
 	}// namespace win32
+
+	 /*------------------------------------------------------------------*/
+	 // 数学関連
+	namespace math
+	{
+		// https://ja.wikipedia.org/wiki/Xorshift
+		inline uint32_t xor128()
+		{
+			static uint32_t x = 123456789;
+			static uint32_t y = 362436069;
+			static uint32_t z = 521288629;
+			static uint32_t w = 88675123;
+			uint32_t t;
+
+			t = x ^ (x << 11);
+			x = y; y = z; z = w;
+			return w = (w ^ (w >> 19)) ^ (t ^ (t >> 8));
+		}
+	}
 
 }// namespace rte
