@@ -345,14 +345,14 @@ class NodeContent(Serializable):
     def __eq__(self, other):
         return _rte2.NodeContent___eq__(self, other)
 
-    def getName(self):
-        return _rte2.NodeContent_getName(self)
+    def getName(self, *args):
+        return _rte2.NodeContent_getName(self, *args)
 
-    def getPath(self):
-        return _rte2.NodeContent_getPath(self)
+    def getPath(self, *args):
+        return _rte2.NodeContent_getPath(self, *args)
 
-    def getLabel(self):
-        return _rte2.NodeContent_getLabel(self)
+    def getLabel(self, *args):
+        return _rte2.NodeContent_getLabel(self, *args)
 
     def setName(self, name):
         return _rte2.NodeContent_setName(self, name)
@@ -895,8 +895,8 @@ class NodeContentData(Serializable):
     def deserialize(self, buffer):
         return _rte2.NodeContentData_deserialize(self, buffer)
 
-    def getType(self):
-        return _rte2.NodeContentData_getType(self)
+    def getType(self, *args):
+        return _rte2.NodeContentData_getType(self, *args)
 NodeContentData_swigregister = _rte2.NodeContentData_swigregister
 NodeContentData_swigregister(NodeContentData)
 

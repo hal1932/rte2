@@ -7588,7 +7588,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_NodeContent_getName(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_NodeContent_getName__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
   void *argp1 = 0 ;
@@ -7610,7 +7610,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_NodeContent_getPath(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_NodeContent_getPath__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
   void *argp1 = 0 ;
@@ -7632,7 +7632,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_NodeContent_getLabel(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_NodeContent_getLabel__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
   void *argp1 = 0 ;
@@ -7651,6 +7651,186 @@ SWIGINTERN PyObject *_wrap_NodeContent_getLabel(PyObject *SWIGUNUSEDPARM(self), 
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getName__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContent_getName",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContent, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContent_getName" "', argument " "1"" of type '" "rte::NodeContent const *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContent * >(argp1);
+  result = (std::string *) &((rte::NodeContent const *)arg1)->getName();
+  resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getName(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getName__SWIG_0(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getName__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'NodeContent_getName'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::NodeContent::getName()\n"
+    "    rte::NodeContent::getName() const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getPath__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContent_getPath",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContent, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContent_getPath" "', argument " "1"" of type '" "rte::NodeContent const *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContent * >(argp1);
+  result = (std::string *) &((rte::NodeContent const *)arg1)->getPath();
+  resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getPath(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getPath__SWIG_0(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getPath__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'NodeContent_getPath'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::NodeContent::getPath()\n"
+    "    rte::NodeContent::getPath() const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getLabel__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContent *arg1 = (rte::NodeContent *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContent_getLabel",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContent, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContent_getLabel" "', argument " "1"" of type '" "rte::NodeContent const *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContent * >(argp1);
+  result = (std::string *) &((rte::NodeContent const *)arg1)->getLabel();
+  resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContent_getLabel(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getLabel__SWIG_0(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContent, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContent_getLabel__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'NodeContent_getLabel'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::NodeContent::getLabel()\n"
+    "    rte::NodeContent::getLabel() const\n");
+  return 0;
 }
 
 
@@ -11812,7 +11992,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_NodeContentData_getType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_NodeContentData_getType__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   rte::NodeContentData *arg1 = (rte::NodeContentData *) 0 ;
   void *argp1 = 0 ;
@@ -11831,6 +12011,66 @@ SWIGINTERN PyObject *_wrap_NodeContentData_getType(PyObject *SWIGUNUSEDPARM(self
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContentData_getType__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeContentData *arg1 = (rte::NodeContentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::NodeContentData::Type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeContentData_getType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeContentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeContentData_getType" "', argument " "1"" of type '" "rte::NodeContentData const *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeContentData * >(argp1);
+  result = (rte::NodeContentData::Type)((rte::NodeContentData const *)arg1)->getType();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeContentData_getType(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContentData, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContentData_getType__SWIG_0(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_rte__NodeContentData, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_NodeContentData_getType__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'NodeContentData_getType'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    rte::NodeContentData::getType()\n"
+    "    rte::NodeContentData::getType() const\n");
+  return 0;
 }
 
 

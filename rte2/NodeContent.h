@@ -25,6 +25,10 @@ namespace rte
 		const std::string& getPath() { return mPath; }
 		const std::string& getLabel() { return mLabel; }
 
+		const std::string& getName() const { return mName; }
+		const std::string& getPath() const { return mPath; }
+		const std::string& getLabel() const { return mLabel; }
+
 		void setName(const std::string& name);
 		void setLabel(const std::string& label) { mLabel = label; }
 

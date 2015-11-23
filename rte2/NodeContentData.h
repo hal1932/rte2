@@ -28,6 +28,7 @@ namespace rte
 		virtual uint8_t* deserialize(uint8_t* buffer) = 0;
 
 		Type getType() { return mType; }
+		Type getType() const { return mType; }
 
 	protected:
 		NodeContentData(Type type)
