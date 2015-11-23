@@ -113,5 +113,17 @@ class Test(unittest.TestCase):
         self.assertEqual(d1.getType(), d.getType())
         self.assertEqual(d1.Value, d.Value)
 
+    def test_serializeAsRoot(self):
+        node = self.root.addChild("node", "lnode")
+
+        size = node.calcSize()
+        buf = rt.buffer(size)
+        node.serialize(buf.cast())
+
+        n = rt.Node()
+        n.deserialize(buf.cast())
+        self.assertEqual(n.getParent(), None)
+        self.assertEqual(n.getPath(), "node")
+
 if __name__ == "__main__":
     unittest.main()
