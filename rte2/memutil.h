@@ -15,6 +15,8 @@ inline uint8_t* writeValue(const void* value, size_t valueSize, uint8_t* buffer,
 	memcpy(ptr, value, valueSize);
 	ptr += valueSize;
 
+	assert(ptr == buffer + 1 + valueSize);
+
 	return ptr;
 }
 
@@ -27,6 +29,8 @@ inline uint8_t* readValue(void* pOut, size_t valueSize, uint8_t* buffer, char pr
 
 	memcpy(pOut, ptr, valueSize);
 	ptr += valueSize;
+
+	assert(ptr == buffer + 1 + valueSize);
 
 	return ptr;
 }
@@ -57,7 +61,7 @@ inline uint8_t* readInt32(int32_t* pOut, uint8_t* buffer)
 */
 inline int calcSizeString(const std::string& str)
 {
-	return 1 + sizeof(int32_t) + str.length();
+	return 1 + sizeof(uint32_t) + str.length();
 }
 
 inline uint8_t* writeString(const std::string& str, uint8_t* buffer)
@@ -70,6 +74,8 @@ inline uint8_t* writeString(const std::string& str, uint8_t* buffer)
 		memcpy(ptr, str.c_str(), length);
 		ptr += str.length();
 	}
+
+	assert(ptr == buffer + calcSizeString(str));
 
 	return ptr;
 }
@@ -91,6 +97,8 @@ inline uint8_t* readString(std::string* pOut, uint8_t* buffer)
 	{
 		pOut->clear();
 	}
+
+	assert(ptr == buffer + calcSizeString(*pOut));
 
 	return ptr;
 }

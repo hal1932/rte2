@@ -33,8 +33,10 @@ namespace rte
 		size += calcSizeString(mLabel);
 
 		// ContentData
+		size += calcSizeInt32(int32_t());// content data size
 		if (mpData != nullptr)
 		{
+			size += calcSizeInt32(int32_t());// content data type
 			size += mpData->calcSize();
 		}
 
@@ -64,6 +66,8 @@ namespace rte
 		{
 			ptr = writeInt32(0, ptr);
 		}
+
+		assert(ptr == buffer + calcSize());
 
 		return ptr;
 	}
@@ -95,6 +99,8 @@ namespace rte
 				assert(!"invalid data type");
 			}
 		}
+
+		assert(ptr == buffer + calcSize());
 
 		return ptr;
 	}

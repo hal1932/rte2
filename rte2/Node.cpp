@@ -38,10 +38,20 @@ namespace rte
 		updatePath();
 	}
 
-	NodeContent* Node::createContent()
+	NodeContent* Node::createContent(const std::string& name, const std::string& label)
 	{
 		mem::safeDelete(&mpContent);
 		mpContent = new NodeContent(this);
+
+		if (name.length() > 0)
+		{
+			mpContent->setName(name);
+		}
+		if(label.length() > 0)
+		{
+			mpContent->setLabel(label);
+		}
+
 		return mpContent;
 	}
 
@@ -106,7 +116,7 @@ namespace rte
 		return false;
 	}
 
-	int Node::calcSize()
+	int Node::calcSize(int depth)
 	{
 		int size = 0;
 
@@ -115,15 +125,20 @@ namespace rte
 		size += calcSizeString(mLabel);
 
 		// Content
+		size += calcSizeInt32(int32_t());// content size
 		if (mpContent != nullptr)
 		{
 			size += mpContent->calcSize();
 		}
 
 		// Žq‹Ÿ
-		for (auto pChild : mChildPtrList)
+		size += calcSizeInt32(int32_t());// children size
+		if (depth > 0)
 		{
-			size += pChild->calcSize();
+			for (auto pChild : mChildPtrList)
+			{
+				size += pChild->calcSize(depth - 1);
+			}
 		}
 
 		return size;
@@ -153,16 +168,22 @@ namespace rte
 
 		// Žq‹Ÿ
 		{
-			ptr = writeInt32(mChildCount, ptr);
-
 			if (depth > 0)
 			{
+				ptr = writeInt32(mChildCount, ptr);
+
 				for (auto i = 0; i < mChildCount; ++i)
 				{
 					ptr = mChildPtrList[i]->serialize(ptr, depth - 1);
 				}
 			}
+			else
+			{
+				ptr = writeInt32(0, ptr);
+			}
 		}
+
+		assert(ptr == buffer + calcSize());
 
 		return ptr;
 	}
@@ -210,6 +231,8 @@ namespace rte
 				}
 			}
 		}
+
+		assert(ptr == buffer + calcSize());
 
 		return ptr;
 	}

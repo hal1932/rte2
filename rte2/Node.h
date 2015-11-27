@@ -29,6 +29,7 @@ namespace rte
 #endif
 
 		Node() { } // デシリアライズするときの受け皿用
+		~Node() = default; // デシリアライズするときの受け皿用
 
 		const std::string& getName() { return mName; }
 		const std::string& getLabel() { return mLabel; }
@@ -41,7 +42,7 @@ namespace rte
 		Node* getParent() { return mpParent; }
 		std::vector<Node*> getChildren() { return mChildPtrList; }
 
-		NodeContent* createContent();
+		NodeContent* createContent(const std::string& name = "", const std::string& label = "");
 		NodeContent* getContent() { return mpContent; }
 
 		void setName(const std::string& name);
@@ -68,7 +69,7 @@ namespace rte
 		bool removeChild(const std::string& name);
 		bool removeChild(const Node* pChild);
 
-		int calcSize();
+		int calcSize(int depth = std::numeric_limits<int>::max());
 		uint8_t* serialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
 		uint8_t* deserialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
 		void updatePath();
@@ -85,7 +86,6 @@ namespace rte
 		int32_t mChildCount;
 
 		Node(Node* pParent);
-		~Node() = default;
 		Node* Node::createChild();
 	};
 
