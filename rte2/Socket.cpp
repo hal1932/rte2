@@ -1,21 +1,8 @@
 #include "Socket.h"
+#include "socketUtil.h"
 #include <WS2tcpip.h>
 
 namespace {
-	void handleWsaError_(const char* msg = nullptr, int err = 0xFFFFFFFF)
-	{
-		if (err == 0xFFFFFFFF)
-		{
-			err = WSAGetLastError();
-		}
-		if (err == NO_ERROR)
-		{
-			return;
-		}
-		std::string s(msg);
-		if (s.length() > 0) s += ": ";
-		logError(s + rte::log::getLastErrorString(err));
-	}
 }
 
 namespace rte {
@@ -35,7 +22,7 @@ namespace rte {
 		auto result = WSAStartup(MAKEWORD(2, 0), &sWsaData);
 		if (result == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return false;
 		}
 		return true;
@@ -67,7 +54,7 @@ namespace rte {
 
 		if (mSocket == INVALID_SOCKET)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return false;
 		}
 		return true;
@@ -80,7 +67,7 @@ namespace rte {
 		auto sendBytes = ::send(mSocket, reinterpret_cast<const char*>(buffer), bufferSize, 0);
 		if (sendBytes == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 		}
 		return sendBytes;
 	}
@@ -97,7 +84,7 @@ namespace rte {
 			{
 				return 0;
 			}
-			handleWsaError_(__FUNCTION__, err);
+			socketUtil::handleWsaError(__FUNCTION__, err);
 		}
 		return recvBytes;
 	}
@@ -126,7 +113,7 @@ namespace rte {
 		auto result = ioctlsocket(mSocket, FIONREAD, reinterpret_cast<u_long*>(&size));
 		if (result == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return -1;
 		}
 		return size;
@@ -143,7 +130,7 @@ namespace rte {
 		auto result = ::bind(mSocket, reinterpret_cast<const sockaddr*>(&mSockAddr), sizeof(mSockAddr));
 		if (result == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return false;
 		}
 		return true;
@@ -156,7 +143,7 @@ namespace rte {
 		auto result = ::listen(mSocket, backlog);
 		if (result == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return false;
 		}
 		return true;
@@ -176,7 +163,7 @@ namespace rte {
 			{
 				return TriBool::Unknown;
 			}
-			handleWsaError_(__FUNCTION__, err);
+			socketUtil::handleWsaError(__FUNCTION__, err);
 			return TriBool::False;
 		}
 
@@ -203,7 +190,7 @@ namespace rte {
 		auto result = ::connect(mSocket, reinterpret_cast<const sockaddr*>(&mSockAddr), sizeof(mSockAddr));
 		if (result == SOCKET_ERROR)
 		{
-			handleWsaError_(__FUNCTION__);
+			socketUtil::handleWsaError(__FUNCTION__);
 			return false;
 		}
 		return true;

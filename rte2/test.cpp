@@ -1,9 +1,12 @@
 #ifndef _SWIG_PY
 
+#include "common.h"
+#include "core.h"
 #include "Node.h"
 #include "Socket.h"
 #include "TcpServer.h"
 #include "TcpClient.h"
+#include "NodeContent.h"
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
@@ -198,6 +201,7 @@ int _main(int argc, char* argv[])
 	return 0;
 }
 #else
+#if false
 int _main(int argc, char* argv[])
 {
 	rte::Socket::setup();
@@ -260,6 +264,61 @@ int _main(int argc, char* argv[])
 	rte::Socket::shutdown();
 	return 0;
 }
+#else
+int _main(int, char**)
+{
+	rte::core::setup();
+
+	auto pRootNode = rte::Node::createRootNode("root", "root_label");
+
+	auto pChild1 = pRootNode->addChild("child1", "child1_label");
+	auto pContent1 = pChild1->createContent("content1", "content1_label");
+	auto pData1 = pContent1->createData<rte::Int32Data>();
+	pData1->Value = 1234;
+
+	rte::mem::SafeArray<uint8_t> buffer(pRootNode->calcSize());
+	pRootNode->serialize(buffer.get());
+
+	rte::TcpClient client;
+	client.connect("127.0.0.1", 0x1234);
+	client.sendAsync(buffer.get(), buffer.size());
+
+	// send
+	while (true)
+	{
+		if (client.popSentQueue().size() > 0)
+		{
+			break;
+		}
+		Sleep(10);
+	}
+
+	// receive, deserialize
+	while (true)
+	{
+		auto received = client.popReceivedQueue();
+		if (received.size() > 0)
+		{
+			assert(received.size() == 1);
+			auto data = received[0];
+
+			auto pn = new rte::Node();
+			pn->deserialize(data.buffer);
+
+			rte::Node::destroy(&pn);
+			data.deallocate();
+			break;
+		}
+		Sleep(10);
+	}
+
+	rte::Node::destroy(&pRootNode);
+
+	client.close();
+	rte::core::shutdown();
+	return 0;
+}
+#endif
 #endif
 #endif
 

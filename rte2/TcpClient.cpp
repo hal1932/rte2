@@ -83,6 +83,8 @@ namespace rte {
 
 	int TcpClient::receiveThread_(void*)
 	{
+		mem::Array<uint8_t> tmpReceivedData;
+
 		while (true)
 		{
 			// 停止チェック
@@ -92,22 +94,22 @@ namespace rte {
 			}
 
 			// データ受信
-			mem::Array<uint8_t> receivedData;
+			auto isReceived = false;
 			{
 				UniqueLock lock(mSocketLock);
-				receivedData = std::move(socketUtil::receive(mpSocket));
+				isReceived = socketUtil::receive(&tmpReceivedData, mpSocket);
 			}
 
-			if (receivedData.size() > 0)
+			if (isReceived)
 			{
 				// 受信データをキューに詰める
 				TcpReceivedData result;
-				result.buffer = receivedData.get();
-				result.bufferSize = receivedData.size();
+				result.buffer = tmpReceivedData.get();
+				result.bufferSize = tmpReceivedData.size();
 
 				mReceivedList.emplaceBack(std::move(result));
 			}
-			else if (receivedData.size() == 0)
+			else if (tmpReceivedData.size() == 0)
 			{
 				// 何もしない
 			}

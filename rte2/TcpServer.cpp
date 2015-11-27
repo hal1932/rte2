@@ -218,13 +218,13 @@ namespace rte {
 
 	int TcpServer::receiveThread_(void* arg)
 	{
-		logInfo("");
+		logInfo("enter");
 
 		auto pClientSocket = static_cast<Socket*>(arg);
 		auto clientId = socketToId(pClientSocket);
 		CriticalSection& clientLock = *mClientDic[pClientSocket].pLock;
 
-		const int bufferSize = 1024;
+		mem::Array<uint8_t> tmpReceivedData;
 
 		while (true)
 		{
@@ -235,29 +235,30 @@ namespace rte {
 			}
 
 			// データ受信
-			mem::Array<uint8_t> receivedData;
+			auto isReceived = false;
 			{
 				UniqueLock lock(clientLock);
-				receivedData = std::move(socketUtil::receive(pClientSocket));
+				isReceived = socketUtil::receive(&tmpReceivedData, pClientSocket);
 			}
 
-			if (receivedData.size() > 0)
+
+			if (isReceived)
 			{
 				// 受信データをキューに詰める
 				TcpReceivedData result;
 				result.clientId = clientId;
-				result.buffer = receivedData.get();
-				result.bufferSize = receivedData.size();
+				result.buffer = tmpReceivedData.get();
+				result.bufferSize = tmpReceivedData.size();
 				mReceivedList.emplaceBack(std::move(result));
 			}
-			else if (receivedData.size() == 0)
+			else if (tmpReceivedData.size() == 0)
 			{
 				// 何もしない
 			}
 			else
 			{
 				// エラー
-				logError("receiving from client failed");
+				socketUtil::handleWsaError(__FUNCTION__);
 
 				// 不正データをキューに詰める
 				TcpReceivedData result;

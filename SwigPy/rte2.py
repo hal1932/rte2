@@ -236,8 +236,8 @@ class HierarchicalSerializable(_object):
         raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
 
-    def calcSize(self):
-        return _rte2.HierarchicalSerializable_calcSize(self)
+    def calcSize(self, depth):
+        return _rte2.HierarchicalSerializable_calcSize(self, depth)
 
     def serialize(self, buffer, depth):
         return _rte2.HierarchicalSerializable_serialize(self, buffer, depth)
@@ -456,8 +456,8 @@ class Node(HierarchicalSerializable):
     def removeChild(self, *args):
         return _rte2.Node_removeChild(self, *args)
 
-    def calcSize(self):
-        return _rte2.Node_calcSize(self)
+    def calcSize(self, *args):
+        return _rte2.Node_calcSize(self, *args)
 
     def serialize(self, *args):
         return _rte2.Node_serialize(self, *args)
@@ -934,6 +934,38 @@ class Int32Data(NodeContentData):
     __del__ = lambda self: None
 Int32Data_swigregister = _rte2.Int32Data_swigregister
 Int32Data_swigregister(Int32Data)
+
+class core(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, core, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, core, name)
+    __repr__ = _swig_repr
+    __swig_getmethods__["setup"] = lambda x: _rte2.core_setup
+    if _newclass:
+        setup = staticmethod(_rte2.core_setup)
+    __swig_getmethods__["shutdown"] = lambda x: _rte2.core_shutdown
+    if _newclass:
+        shutdown = staticmethod(_rte2.core_shutdown)
+
+    def __init__(self):
+        this = _rte2.new_core()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_core
+    __del__ = lambda self: None
+core_swigregister = _rte2.core_swigregister
+core_swigregister(core)
+
+def core_setup():
+    return _rte2.core_setup()
+core_setup = _rte2.core_setup
+
+def core_shutdown():
+    return _rte2.core_shutdown()
+core_shutdown = _rte2.core_shutdown
 
 class buffer(_object):
     __swig_setmethods__ = {}

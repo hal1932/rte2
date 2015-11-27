@@ -6,20 +6,24 @@ namespace rte {
 	namespace socketUtil {
 
 		/// 受信キューが空になるまで受信
-		inline mem::Array<uint8_t> receive(Socket* pSocket)
+		inline bool receive(mem::Array<uint8_t>* pReceivedData, Socket* pSocket)
 		{
-			const int cBufferSize = 1024;
-
-			mem::Array<uint8_t> received(cBufferSize);
-			printf("receive %p\n", received.get());
-			auto recvBytes = pSocket->recv(received.get(), received.size());
-			if (recvBytes < 0)
+			if (pSocket->getAvailabieSize() == 0)
 			{
-				received.invalidate();
-				return std::move(received);
+				return false;
 			}
 
-			received.resize(recvBytes);
+			const int cBufferSize = 1024;
+			pReceivedData->resize(cBufferSize);
+
+			auto recvBytes = pSocket->recv(pReceivedData->get(), pReceivedData->size());
+			if (recvBytes <= 0)
+			{
+				pReceivedData->invalidate();
+				return false;
+			}
+
+			pReceivedData->resize(recvBytes);
 
 			while (pSocket->getAvailabieSize() > 0)
 			{
@@ -28,11 +32,26 @@ namespace rte {
 				if (recvBytes > 0)
 				{
 					tmp.resize(recvBytes);
-					received.append(std::move(tmp));
+					pReceivedData->append(std::move(tmp));
 				}
 			}
 
-			return std::move(received);
+			return true;
+		}
+
+		inline void handleWsaError(const char* msg = nullptr, int err = 0xFFFFFFFF)
+		{
+			if (err == 0xFFFFFFFF)
+			{
+				err = WSAGetLastError();
+			}
+			if (err == NO_ERROR)
+			{
+				return;
+			}
+			std::string s(msg);
+			if (s.length() > 0) s += ": ";
+			logError(s + rte::log::getLastErrorString(err));
 		}
 
 	}// namespace socketUtil
