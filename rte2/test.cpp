@@ -296,17 +296,29 @@ int _main(int, char**)
 	// receive, deserialize
 	while (true)
 	{
+		if (!client.isConnectionAlive())
+		{
+			std::cout << "connection is closed by server" << std::endl;
+			break;
+		}
+
 		auto received = client.popReceivedQueue();
 		if (received.size() > 0)
 		{
 			assert(received.size() == 1);
 			auto data = received[0];
 
-			auto pn = new rte::Node();
-			pn->deserialize(data.buffer);
-
-			rte::Node::destroy(&pn);
+			auto ptr = data.buffer;
+			while (ptr != data.buffer + data.bufferSize)
+			{
+				auto pn = new rte::Node();
+				ptr = pn->deserialize(ptr);
+				rte::Node::destroy(&pn);
+			}
 			data.deallocate();
+
+			std::cout << "success!" << std::endl;
+
 			break;
 		}
 		Sleep(10);

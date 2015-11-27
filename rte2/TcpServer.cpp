@@ -164,14 +164,14 @@ namespace rte {
 		auto clientId = socketToId(pClientSocket);
 		mCloseRequestList.pushBack(clientId);
 
-		mClosedList.erase(clientId);
-
 		pReceiveThread->join();
 		mem::safeDelete(&pReceiveThread);
 		mem::safeDelete(&clientInfo.second.pLock);
 
 		pClientSocket->close();
 		mem::safeDelete(&pClientSocket);
+
+		mClosedList.pushBack(clientId);
 	}
 
 	int TcpServer::acceptThread_(void*)
@@ -235,14 +235,24 @@ namespace rte {
 			}
 
 			// データ受信
-			auto isReceived = false;
+			auto receivedSize = 0;
 			{
 				UniqueLock lock(clientLock);
-				isReceived = socketUtil::receive(&tmpReceivedData, pClientSocket);
+				receivedSize = socketUtil::receive(&tmpReceivedData, pClientSocket);
+
+				if (receivedSize > 0)
+				{
+					// 受信通知を送信
+					if (!socketUtil::sendReceivedConfirmation(pClientSocket))
+					{
+						logError("sending receive-confirmation failed");
+						receivedSize = -1;
+					}
+				}
 			}
 
 
-			if (isReceived)
+			if (receivedSize > 0)
 			{
 				// 受信データをキューに詰める
 				TcpReceivedData result;
@@ -251,21 +261,17 @@ namespace rte {
 				result.bufferSize = tmpReceivedData.size();
 				mReceivedList.emplaceBack(std::move(result));
 			}
-			else if (tmpReceivedData.size() == 0)
+			else if (receivedSize == 0)
 			{
 				// 何もしない
 			}
 			else
 			{
+RECEIVE_ERROR:
 				// エラー
 				socketUtil::handleWsaError(__FUNCTION__);
-
-				// 不正データをキューに詰める
-				TcpReceivedData result;
-				result.clientId = clientId;
-				result.buffer = nullptr;
-				result.bufferSize = -1;
-				mReceivedList.emplaceBack(std::move(result));
+				closeConnection(clientId);
+				break;
 			}
 
 			Sleep(cThreadPollingInterval);
@@ -290,37 +296,50 @@ namespace rte {
 				std::vector<TcpSentData> dataList;
 				mSendRequestList.swap(&dataList);
 
+				std::vector<int> sendFailedSockets;
+
 				for (auto data : dataList)
 				{
+					auto failed = std::find(sendFailedSockets.begin(), sendFailedSockets.end(), data.clientId);
+					if (failed != sendFailedSockets.end())
+					{
+						continue;
+					}
+
 					auto pClientSocket = idToSocket(data.clientId);
 					CriticalSection& clientLock = *mClientDic[pClientSocket].pLock;
 
-					int sendBytes;
+					int sentSize;
 					{
 						UniqueLock lock(clientLock);
-						sendBytes = pClientSocket->send(data.buffer, data.bufferSize);
+						sentSize = pClientSocket->send(data.buffer, data.bufferSize);
+
+						if (sentSize == data.bufferSize)
+						{
+							// 受信通知のチェック
+							if (!socketUtil::receiveReceivedConfirmation(pClientSocket))
+							{
+								logError("receiving receive-confirmation failed");
+								sentSize = 0;
+							}
+						}
 					}
 
-					if(sendBytes == data.bufferSize)
+					if (sentSize == data.bufferSize)
 					{
-						// 送信データをキューに詰める
 						TcpSentData result;
 						result.clientId = socketToId(pClientSocket);
 						result.buffer = const_cast<uint8_t*>(data.buffer);
 						result.bufferSize = data.bufferSize;
-						result.sentSize = sendBytes;
+						result.sentSize = sentSize;
 						mSentList.emplaceBack(std::move(result));
 					}
 					else
 					{
 						// エラー
 						logError("sending to client failed");
-
-						// 不正データをキューに詰める
-						TcpSentData result;
-						result.buffer = nullptr;
-						result.bufferSize = -1;
-						mSentList.emplaceBack(std::move(result));
+						closeConnection(data.clientId);
+						sendFailedSockets.push_back(data.clientId);
 					}
 				}
 			}

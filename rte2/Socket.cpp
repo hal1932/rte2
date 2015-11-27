@@ -86,6 +86,13 @@ namespace rte {
 			}
 			socketUtil::handleWsaError(__FUNCTION__, err);
 		}
+
+		if (recvBytes == 0)
+		{
+			// connection has gracefully closed
+			return -1;
+		}
+
 		return recvBytes;
 	}
 

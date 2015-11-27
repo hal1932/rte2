@@ -6,11 +6,11 @@ namespace rte {
 	namespace socketUtil {
 
 		/// 受信キューが空になるまで受信
-		inline bool receive(mem::Array<uint8_t>* pReceivedData, Socket* pSocket)
+		inline int receive(mem::Array<uint8_t>* pReceivedData, Socket* pSocket)
 		{
 			if (pSocket->getAvailabieSize() == 0)
 			{
-				return false;
+				return 0;
 			}
 
 			const int cBufferSize = 1024;
@@ -20,7 +20,7 @@ namespace rte {
 			if (recvBytes <= 0)
 			{
 				pReceivedData->invalidate();
-				return false;
+				return -1;
 			}
 
 			pReceivedData->resize(recvBytes);
@@ -36,7 +36,26 @@ namespace rte {
 				}
 			}
 
-			return true;
+			return pReceivedData->size();
+		}
+
+		inline bool sendReceivedConfirmation(Socket* pSocket)
+		{
+			uint8_t confirm[1];
+			auto confirmBytes = pSocket->send(confirm, 1);
+			return (confirmBytes == 1);
+		}
+
+		inline bool receiveReceivedConfirmation(Socket* pSocket)
+		{
+			uint8_t confirm[1];
+			int confirmBytes = 0;
+			while (confirmBytes == 0)
+			{
+				confirmBytes = pSocket->recv(confirm, 1);
+				Sleep(5);
+			}
+			return (confirmBytes == 1);
 		}
 
 		inline void handleWsaError(const char* msg = nullptr, int err = 0xFFFFFFFF)

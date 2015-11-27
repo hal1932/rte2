@@ -26,7 +26,7 @@ def main():
 
         sents = server.popSentQueue()
         for s in sents:
-            print "sent to ", s.clientId
+            print "sent to ", s.clientId, s.sentSize
 
         closed = server.popClosedQueue()
         for c in closed:

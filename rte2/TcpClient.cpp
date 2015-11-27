@@ -94,13 +94,23 @@ namespace rte {
 			}
 
 			// データ受信
-			auto isReceived = false;
+			auto receivedSize = 0;
 			{
 				UniqueLock lock(mSocketLock);
-				isReceived = socketUtil::receive(&tmpReceivedData, mpSocket);
+				receivedSize = socketUtil::receive(&tmpReceivedData, mpSocket);
+
+				if (receivedSize > 0)
+				{
+					// 受信通知を送信
+					if (!socketUtil::sendReceivedConfirmation(mpSocket))
+					{
+						logError("sending receive-confirmation failed");
+						receivedSize = -1;
+					}
+				}
 			}
 
-			if (isReceived)
+			if (receivedSize > 0)
 			{
 				// 受信データをキューに詰める
 				TcpReceivedData result;
@@ -109,21 +119,17 @@ namespace rte {
 
 				mReceivedList.emplaceBack(std::move(result));
 			}
-			else if (tmpReceivedData.size() == 0)
+			else if (receivedSize == 0)
 			{
 				// 何もしない
 			}
 			else
 			{
+RECEIVE_ERROR:
 				// エラー
 				logError("receiving from server failed");
-
-				// 不正データをキューに詰める
-				TcpReceivedData result;
-				result.buffer = nullptr;
-				result.bufferSize = -1;
-
-				mReceivedList.emplaceBack(std::move(result));
+				close();
+				break;
 			}
 
 			Sleep(cThreadPollingInterval);
@@ -154,13 +160,22 @@ namespace rte {
 					{
 						UniqueLock lock(mSocketLock);
 						sentSize = mpSocket->send(data.buffer, data.bufferSize);
+
+						if (sentSize == data.bufferSize)
+						{
+							// 受信通知のチェック
+							if (!socketUtil::receiveReceivedConfirmation(mpSocket))
+							{
+								logError("receiving receive-confirmation failed");
+								sentSize = 0;
+							}
+						}
 					}
 
 					if (sentSize == data.bufferSize)
 					{
-						// 送信データをキューに詰める
 						TcpSentData result;
-						result.buffer = data.buffer;
+						result.buffer = const_cast<uint8_t*>(data.buffer);
 						result.bufferSize = data.bufferSize;
 						result.sentSize = sentSize;
 						mSentList.emplaceBack(std::move(result));
@@ -168,13 +183,9 @@ namespace rte {
 					else
 					{
 						// エラー
-						logError("sending to server failed");
-
-						// 不正データをキューに詰める
-						TcpSentData result;
-						result.buffer = nullptr;
-						result.bufferSize = -1;
-						mSentList.emplaceBack(std::move(result));
+						logError("sending to client failed");
+						close();
+						break;
 					}
 				}
 			}

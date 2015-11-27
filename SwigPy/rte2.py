@@ -416,6 +416,8 @@ class Node(HierarchicalSerializable):
             self.this.append(this)
         except:
             self.this = this
+    __swig_destroy__ = _rte2.delete_Node
+    __del__ = lambda self: None
 
     def getName(self, *args):
         return _rte2.Node_getName(self, *args)
@@ -432,8 +434,8 @@ class Node(HierarchicalSerializable):
     def getChildren(self):
         return _rte2.Node_getChildren(self)
 
-    def createContent(self):
-        return _rte2.Node_createContent(self)
+    def createContent(self, *args):
+        return _rte2.Node_createContent(self, *args)
 
     def getContent(self):
         return _rte2.Node_getContent(self)
