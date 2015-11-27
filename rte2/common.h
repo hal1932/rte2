@@ -95,7 +95,7 @@ namespace rte {
 	class HierarchicalSerializable
 	{
 	public:
-		virtual int calcSize() = 0;
+		virtual int calcSize(int depth) = 0;
 		virtual uint8_t* serialize(uint8_t* buffer, int depth) = 0;
 		virtual uint8_t* deserialize(uint8_t* buffer, int depth) = 0;
 	};
@@ -190,11 +190,11 @@ namespace rte {
 		{
 		public:
 			Array()
-				: mPtr(nullptr), mSize(0)
+				: mPtr(nullptr), mSize(0), mActualSize(0)
 			{ }
 
 			explicit Array(int size)
-				: mPtr(nullptr), mSize(0)
+				: Array()
 			{
 				allocate(size);
 			}
@@ -208,15 +208,17 @@ namespace rte {
 			{
 				mPtr = other.mPtr;
 				mSize = other.mSize;
+				mActualSize = other.mActualSize;
 
 				other.mPtr = nullptr;
 				other.mSize = 0;
+				other.mActualSize = 0;
 
 				return *this;
 			}
 
-			Array(Array&) = delete;
-			Array& operator=(Array&) = delete;
+			Array(Array&) = default;
+			Array& operator=(Array&) = default;
 			~Array() = default;
 
 			T* get() { return mPtr; }
@@ -228,42 +230,60 @@ namespace rte {
 				if (size > 0)
 				{
 					mPtr = new T[size];
-					printf("alloc %p\n", mPtr);
+					printf("allocate 0x%p, %d\n", mPtr, size);
 					mSize = size;
+					mActualSize = size;
 				}
 			}
 
 			void deallocate()
 			{
-				mem::safeDelete(&mPtr);
-				printf("deallocate %p\n", mPtr);
-				mSize = 0;
+				if (mActualSize > 0)
+				{
+					printf("deallocate 0x%p, %d\n", mPtr, mSize);
+					mem::safeDelete(&mPtr);
+					mSize = 0;
+					mActualSize = 0;
+				}
 			}
 
 			void invalidate()
 			{
 				deallocate();
 				mSize = -1;
+				mActualSize = 0;
 			}
 
-			void resize(int size)
+			bool resize(int size, bool forceReallocate = true)
 			{
 				assert(size >= 0);
+				if (size == mSize)
+				{
+					return true;
+				}
+
 				if (size == 0)
 				{
 					deallocate();
-					return;
+					return true;
 				}
 
-				auto ptr = new T[size];
-				if (mPtr != nullptr)
+				if (forceReallocate)
 				{
-					memcpy(ptr, mPtr, size);
+					return reallocate_(size);
 				}
-				
-				deallocate();
-				mPtr = ptr;
-				mSize = size;
+				else
+				{
+					if (size < mActualSize)
+					{
+						printf("resize: 0x%p, %d -> %d", mPtr, mSize, size);
+						mSize = size;
+						return true;
+					}
+					return reallocate_(size);
+				}
+
+				assert(false);
 			}
 
 			void append(Array&& other)
@@ -273,13 +293,23 @@ namespace rte {
 					return;
 				}
 
-				auto ptr = new T[mSize + other.mSize];
-				memcpy(ptr, mPtr, mSize);
-				memcpy(ptr + mSize, other.mPtr, other.mSize);
+				auto newSize = mSize + other.mSize;
+				if (mActualSize < newSize)
+				{
+					auto ptr = new T[newSize];
+					memcpy(ptr, mPtr, mSize);
+					memcpy(ptr + mSize, other.mPtr, other.mSize);
 
-				mPtr = ptr;
-				printf("append %p\n", mPtr);
-				mSize += other.mSize;
+					mPtr = ptr;
+
+					mSize = newSize;
+					mActualSize = newSize;
+				}
+				else
+				{
+					memcpy(mPtr + mSize, other.mPtr, other.mSize);
+					mSize = newSize;
+				}
 
 				other.deallocate();
 			}
@@ -287,6 +317,25 @@ namespace rte {
 		private:
 			T* mPtr;
 			int mSize;
+			int mActualSize;
+
+			bool reallocate_(int size)
+			{
+				auto ptr = new T[size];
+				printf("reallocating resize: 0x%p -> 0x%p, %d -> %d\n", mPtr, ptr, mSize, size);
+
+				if (mPtr != nullptr)
+				{
+					memcpy(ptr, mPtr, size);
+					deallocate();
+				}
+
+				mPtr = ptr;
+				mSize = size;
+				mActualSize = size;
+
+				return true;
+			}
 		};
 
 		template<class T>
