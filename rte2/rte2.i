@@ -11,6 +11,7 @@
 #include "TcpServer.h"
 #include "NodeContent.h"
 #include "NodeContentData.h"
+#include "core.h"
 %}
 
 %include "std_string.i"
@@ -28,6 +29,7 @@
 %include "TcpServer.h"
 %include "NodeContent.h"
 %include "NodeContentData.h"
+%include "core.h"
 
 %include "carrays.i"
 %array_class(uint8_t, buffer);
