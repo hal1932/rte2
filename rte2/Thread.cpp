@@ -62,6 +62,11 @@ namespace rte {
 		return (mHandle == nullptr) ? 0 : reinterpret_cast<int>(mHandle);
 	}
 
+	bool Thread::isStarted()
+	{
+		return (mHandle != nullptr);
+	}
+
 	/*------------------------------------------------------------------*/
 
 	CriticalSection::CriticalSection()

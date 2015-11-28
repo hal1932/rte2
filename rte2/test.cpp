@@ -265,6 +265,7 @@ int _main(int argc, char* argv[])
 	return 0;
 }
 #else
+#if false
 int _main(int, char**)
 {
 	rte::core::setup();
@@ -330,6 +331,55 @@ int _main(int, char**)
 	rte::core::shutdown();
 	return 0;
 }
+#else
+int _main(int, char**)
+{
+	rte::core::setup();
+
+	rte::TcpServer server;
+	server.open(0x1234);
+	server.setKeepAliveInterval(1);
+
+	while (true)
+	{
+		auto clients = server.popAcceptedQueue();
+		for (auto c : clients)
+		{
+			printf("accept: %d\n", c);
+		}
+
+		auto received = server.popReceivedQueue();
+		for (auto r : received)
+		{
+			if (r.bufferSize > 0)
+			{
+				printf("received from %d\n", r.clientId);
+				// echo back
+				server.sendAsync(r.clientId, r.buffer, r.bufferSize);
+			}
+		}
+
+		auto sents = server.popSentQueue();
+		for (auto s : sents)
+		{
+			printf("sent to %d, %d\n", s.clientId, s.sentSize);
+		}
+
+		auto closed = server.popClosedQueue();
+		for (auto c : closed)
+		{
+			printf("closed %d\n", c);
+		}
+
+		Sleep(10);
+	}
+
+	server.close();
+	rte::core::shutdown();
+
+	return 0;
+}
+#endif
 #endif
 #endif
 #endif

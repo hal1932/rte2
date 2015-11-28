@@ -18,6 +18,8 @@ namespace rte {
 		bool open(int port);
 		void close();
 
+		void setKeepAliveInterval(int seconds) { mKeepAliveIntervalSeconds = seconds; }
+
 		void sendAsync(int id, const uint8_t* buffer, int bufferSize);
 		void broadcastAsync(const uint8_t* buffer, int bufferSize);
 
@@ -34,8 +36,11 @@ namespace rte {
 	private:
 		Socket* mpSocket;
 
+		int mKeepAliveIntervalSeconds;
+
 		Thread mAcceptThread;
 		Thread mSendThread;
+		Thread mKeepAliveThread;
 
 		struct ClientInfo
 		{
@@ -57,6 +62,9 @@ namespace rte {
 		int acceptThread_(void*);
 		int receiveThread_(void* arg);
 		int sendThread_(void*);
+		int keepAliveThread_(void*);
+
+		bool pushCloseRequest_(ClientInfo* pOut, int clientId);
 	};
 
 }// namespace rte

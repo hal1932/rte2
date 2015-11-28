@@ -10318,6 +10318,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Thread_isStarted(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Thread_isStarted",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_isStarted" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  result = (bool)(arg1)->isStarted();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *Thread_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
@@ -11849,6 +11871,36 @@ SWIGINTERN PyObject *_wrap_TcpServer_close(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
   (arg1)->close();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_setKeepAliveInterval(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TcpServer_setKeepAliveInterval",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_setKeepAliveInterval" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TcpServer_setKeepAliveInterval" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setKeepAliveInterval(arg2);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -22832,6 +22884,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Thread_start", _wrap_Thread_start, METH_VARARGS, NULL},
 	 { (char *)"Thread_join", _wrap_Thread_join, METH_VARARGS, NULL},
 	 { (char *)"Thread_getId", _wrap_Thread_getId, METH_VARARGS, NULL},
+	 { (char *)"Thread_isStarted", _wrap_Thread_isStarted, METH_VARARGS, NULL},
 	 { (char *)"Thread_swigregister", Thread_swigregister, METH_VARARGS, NULL},
 	 { (char *)"LockObject_lock", _wrap_LockObject_lock, METH_VARARGS, NULL},
 	 { (char *)"LockObject_tryLock", _wrap_LockObject_tryLock, METH_VARARGS, NULL},
@@ -22897,6 +22950,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"delete_TcpServer", _wrap_delete_TcpServer, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_open", _wrap_TcpServer_open, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_close", _wrap_TcpServer_close, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_setKeepAliveInterval", _wrap_TcpServer_setKeepAliveInterval, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_sendAsync", _wrap_TcpServer_sendAsync, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_broadcastAsync", _wrap_TcpServer_broadcastAsync, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_getClientCount", _wrap_TcpServer_getClientCount, METH_VARARGS, NULL},

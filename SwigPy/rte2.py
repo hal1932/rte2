@@ -577,6 +577,9 @@ class Thread(_object):
 
     def getId(self):
         return _rte2.Thread_getId(self)
+
+    def isStarted(self):
+        return _rte2.Thread_isStarted(self)
 Thread_swigregister = _rte2.Thread_swigregister
 Thread_swigregister(Thread)
 
@@ -837,6 +840,9 @@ class TcpServer(_object):
 
     def close(self):
         return _rte2.TcpServer_close(self)
+
+    def setKeepAliveInterval(self, seconds):
+        return _rte2.TcpServer_setKeepAliveInterval(self, seconds)
 
     def sendAsync(self, id, buffer, bufferSize):
         return _rte2.TcpServer_sendAsync(self, id, buffer, bufferSize)

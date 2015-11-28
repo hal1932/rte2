@@ -21,7 +21,7 @@ namespace {
 namespace rte {
 
 	TcpServer::TcpServer()
-		: mpSocket(nullptr)
+		: mpSocket(nullptr), mKeepAliveIntervalSeconds(60)
 	{ }
 
 	TcpServer::~TcpServer()
@@ -64,10 +64,11 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
-		// 全部まとめて止める
 		mIsConnectionClosed = true;
 
 		mAcceptThread.join();
+		mSendThread.join();
+		mKeepAliveThread.join();
 
 		for (std::pair<Socket*, ClientInfo> item : mClientDic)
 		{
@@ -148,30 +149,23 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
-		auto ptr = idToSocket(id);
-		auto found = mClientDic.find(ptr);
-		if (found == mClientDic.end())
+		ClientInfo info;
+		if (!pushCloseRequest_(&info, id))
 		{
 			return;
 		}
-		auto clientInfo = *found;
-		mClientDic.erase(found);
 
-		auto pClientSocket = clientInfo.first;
-		auto pReceiveThread = clientInfo.second.pReceiveThread;
-
-		// 指定クライアントのスレッドに停止リクエストを発行
-		auto clientId = socketToId(pClientSocket);
-		mCloseRequestList.pushBack(clientId);
+		auto pClientSocket = idToSocket(id);
+		auto pReceiveThread = info.pReceiveThread;
 
 		pReceiveThread->join();
 		mem::safeDelete(&pReceiveThread);
-		mem::safeDelete(&clientInfo.second.pLock);
+		mem::safeDelete(&info.pLock);
 
 		pClientSocket->close();
 		mem::safeDelete(&pClientSocket);
 
-		mClosedList.pushBack(clientId);
+		mClosedList.pushBack(id);
 	}
 
 	int TcpServer::acceptThread_(void*)
@@ -206,6 +200,12 @@ namespace rte {
 				info.pLock = new CriticalSection();
 				mClientDic[pClient] = info;
 
+				// 生存確認スレッド起動
+				if (!mKeepAliveThread.isStarted())
+				{
+					mKeepAliveThread.start(std::bind(&TcpServer::keepAliveThread_, this, std::placeholders::_1), nullptr);
+				}
+
 				pClient = new Socket();
 			}
 
@@ -213,6 +213,9 @@ namespace rte {
 		}
 
 		mem::safeDelete(&pClient);
+
+		logInfo("leave");
+
 		return 0;
 	}
 
@@ -228,6 +231,8 @@ namespace rte {
 
 		while (true)
 		{
+			logInfo(std::to_string(mCloseRequestList.size()));
+
 			// 停止リクエストをチェック
 			if (mCloseRequestList.erase(clientId) || mIsConnectionClosed)
 			{
@@ -237,7 +242,9 @@ namespace rte {
 			// データ受信
 			auto receivedSize = 0;
 			{
+				logInfo("a");
 				UniqueLock lock(clientLock);
+				logInfo("b");
 				receivedSize = socketUtil::receive(&tmpReceivedData, pClientSocket);
 
 				if (receivedSize > 0)
@@ -267,7 +274,6 @@ namespace rte {
 			}
 			else
 			{
-RECEIVE_ERROR:
 				// エラー
 				socketUtil::handleWsaError(__FUNCTION__);
 				closeConnection(clientId);
@@ -277,11 +283,15 @@ RECEIVE_ERROR:
 			Sleep(cThreadPollingInterval);
 		}
 
+		logInfo("leave");
+
 		return 0;
 	}
 
 	int TcpServer::sendThread_(void*)
 	{
+		logInfo("enter");
+
 		while (true)
 		{
 			// 停止リクエストをチェック
@@ -347,7 +357,77 @@ RECEIVE_ERROR:
 			Sleep(cThreadPollingInterval);
 		}
 
+		logInfo("leave");
+
 		return 0;
+	}
+
+	int TcpServer::keepAliveThread_(void*)
+	{
+		logInfo("enter");
+
+		while (true)
+		{
+			// 停止リクエストをチェック
+			if (mIsConnectionClosed)
+			{
+				break;
+			}
+
+			// keep-alive
+			for (auto client : mClientDic)
+			{
+				auto pClientSocket = client.first;
+				auto clientId = socketToId(pClientSocket);
+				auto& clientLock = *client.second.pLock;
+
+				logInfo("keep-alive: " + std::to_string(clientId));
+				
+				auto keepAlive = true;
+				{
+					UniqueLock lock(clientLock);
+					keepAlive = socketUtil::sendKeepAlive(pClientSocket);
+				}
+
+				if (!keepAlive)
+				{
+					logInfo("connection does not keep alive: " + std::to_string(clientId));
+					pushCloseRequest_(nullptr, clientId);
+				}
+				else
+				{
+					logInfo("check keep-alive: " + std::to_string(clientId));
+				}
+			}
+
+			Sleep(mKeepAliveIntervalSeconds * 1000);
+		}
+
+		logInfo("leave");
+
+		return 0;
+	}
+
+	bool TcpServer::pushCloseRequest_(TcpServer::ClientInfo* pOut, int clientId)
+	{
+		auto ptr = idToSocket(clientId);
+
+		auto found = mClientDic.find(ptr);
+		if (found == mClientDic.end())
+		{
+			return false;
+		}
+
+		auto clientInfo = *found;
+		mClientDic.erase(found);
+
+		if (pOut != nullptr)
+		{
+			*pOut = found->second;
+		}
+		mCloseRequestList.pushBack(clientId);
+
+		return true;
 	}
 
 }// namespace rte

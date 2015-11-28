@@ -101,11 +101,20 @@ namespace rte {
 
 				if (receivedSize > 0)
 				{
-					// 受信通知を送信
-					if (!socketUtil::sendReceivedConfirmation(mpSocket))
+					if (socketUtil::isKeepAlive(tmpReceivedData))
 					{
-						logError("sending receive-confirmation failed");
-						receivedSize = -1;
+						socketUtil::replyKeepAlive(mpSocket);
+						logInfo("reply keep-alive");
+						receivedSize = 0;
+					}
+					else
+					{
+						// 受信通知を送信
+						if (!socketUtil::sendReceivedConfirmation(mpSocket))
+						{
+							logError("sending receive-confirmation failed");
+							receivedSize = -1;
+						}
 					}
 				}
 			}
@@ -125,7 +134,6 @@ namespace rte {
 			}
 			else
 			{
-RECEIVE_ERROR:
 				// エラー
 				logError("receiving from server failed");
 				close();

@@ -41,7 +41,7 @@ namespace rte {
 
 		inline bool sendReceivedConfirmation(Socket* pSocket)
 		{
-			uint8_t confirm[1];
+			uint8_t confirm[] = { '@' };
 			auto confirmBytes = pSocket->send(confirm, 1);
 			return (confirmBytes == 1);
 		}
@@ -50,12 +50,56 @@ namespace rte {
 		{
 			uint8_t confirm[1];
 			int confirmBytes = 0;
-			while (confirmBytes == 0)
+			while (true)
 			{
 				confirmBytes = pSocket->recv(confirm, 1);
-				Sleep(5);
+				if (confirmBytes == 0)
+				{
+					Sleep(5);
+				}
+				else
+				{
+					break;
+				}
 			}
-			return (confirmBytes == 1);
+			return (confirmBytes == 1 && confirm[0] == '@');
+		}
+
+		inline bool sendKeepAlive(Socket* pSocket)
+		{
+			uint8_t keepAlive[] = { '$' };
+			auto sentBytes = pSocket->send(keepAlive, 1);
+			if (sentBytes != 1)
+			{
+				return false;
+			}
+
+			int recvBytes = 0;
+			while (true)
+			{
+				recvBytes = pSocket->recv(keepAlive, 1);
+				if (recvBytes == 0)
+				{
+					logInfo("hoge");
+					Sleep(5);
+				}
+				else
+				{
+					break;
+				}
+			}
+			return (recvBytes == 1 && keepAlive[0] == '$');
+		}
+
+		inline bool isKeepAlive(const mem::Array<uint8_t>& data)
+		{
+			return (data.get()[0] == '$' && data.size() == 1);
+		}
+
+		inline void replyKeepAlive(Socket* pSocket)
+		{
+			uint8_t keepAlive[] = { '$' };
+			pSocket->send(keepAlive, 1);
 		}
 
 		inline void handleWsaError(const char* msg = nullptr, int err = 0xFFFFFFFF)

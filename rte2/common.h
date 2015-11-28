@@ -222,7 +222,10 @@ namespace rte {
 			~Array() = default;
 
 			T* get() { return mPtr; }
+			const T* get() const { return mPtr; }
+
 			int size() { return mSize; }
+			int size() const { return mSize; }
 
 			void allocate(int size)
 			{
