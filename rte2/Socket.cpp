@@ -89,7 +89,7 @@ namespace rte {
 
 		if (recvBytes == 0)
 		{
-			// connection has gracefully closed
+			logInfo("connection is closed");
 			return -1;
 		}
 

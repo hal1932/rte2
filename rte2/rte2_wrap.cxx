@@ -2960,46 +2960,47 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_rte__Node swig_types[20]
 #define SWIGTYPE_p_rte__NodeContent swig_types[21]
 #define SWIGTYPE_p_rte__NodeContentData swig_types[22]
-#define SWIGTYPE_p_rte__Serializable swig_types[23]
-#define SWIGTYPE_p_rte__Socket swig_types[24]
-#define SWIGTYPE_p_rte__TcpClient swig_types[25]
-#define SWIGTYPE_p_rte__TcpReceivedData swig_types[26]
-#define SWIGTYPE_p_rte__TcpSentData swig_types[27]
-#define SWIGTYPE_p_rte__TcpServer swig_types[28]
-#define SWIGTYPE_p_rte__Thread swig_types[29]
-#define SWIGTYPE_p_rte__UniqueLock swig_types[30]
-#define SWIGTYPE_p_rte__core swig_types[31]
-#define SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t swig_types[32]
-#define SWIGTYPE_p_rte__noncopyable swig_types[33]
-#define SWIGTYPE_p_rte__nonmovable swig_types[34]
-#define SWIGTYPE_p_short swig_types[35]
-#define SWIGTYPE_p_signed___int64 swig_types[36]
-#define SWIGTYPE_p_signed_char swig_types[37]
-#define SWIGTYPE_p_size_type swig_types[38]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[39]
-#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[40]
-#define SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t swig_types[41]
-#define SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t swig_types[42]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[43]
-#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[44]
-#define SWIGTYPE_p_std__functionT_int_fvoid_pF_t swig_types[45]
-#define SWIGTYPE_p_std__invalid_argument swig_types[46]
-#define SWIGTYPE_p_std__string swig_types[47]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[48]
-#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[49]
-#define SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t swig_types[50]
-#define SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t swig_types[51]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[52]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[53]
-#define SWIGTYPE_p_unsigned___int64 swig_types[54]
-#define SWIGTYPE_p_unsigned_char swig_types[55]
-#define SWIGTYPE_p_unsigned_int swig_types[56]
-#define SWIGTYPE_p_unsigned_long swig_types[57]
-#define SWIGTYPE_p_unsigned_long_long swig_types[58]
-#define SWIGTYPE_p_unsigned_short swig_types[59]
-#define SWIGTYPE_p_value_type swig_types[60]
-static swig_type_info *swig_types[62];
-static swig_module_info swig_module = {swig_types, 61, 0, 0, 0, 0};
+#define SWIGTYPE_p_rte__NodeDeserializationContext swig_types[23]
+#define SWIGTYPE_p_rte__Serializable swig_types[24]
+#define SWIGTYPE_p_rte__Socket swig_types[25]
+#define SWIGTYPE_p_rte__TcpClient swig_types[26]
+#define SWIGTYPE_p_rte__TcpReceivedData swig_types[27]
+#define SWIGTYPE_p_rte__TcpSentData swig_types[28]
+#define SWIGTYPE_p_rte__TcpServer swig_types[29]
+#define SWIGTYPE_p_rte__Thread swig_types[30]
+#define SWIGTYPE_p_rte__UniqueLock swig_types[31]
+#define SWIGTYPE_p_rte__core swig_types[32]
+#define SWIGTYPE_p_rte__mem__SafeArrayT_unsigned_char_t swig_types[33]
+#define SWIGTYPE_p_rte__noncopyable swig_types[34]
+#define SWIGTYPE_p_rte__nonmovable swig_types[35]
+#define SWIGTYPE_p_short swig_types[36]
+#define SWIGTYPE_p_signed___int64 swig_types[37]
+#define SWIGTYPE_p_signed_char swig_types[38]
+#define SWIGTYPE_p_size_type swig_types[39]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[40]
+#define SWIGTYPE_p_std__allocatorT_rte__Node_p_t swig_types[41]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpReceivedData_t swig_types[42]
+#define SWIGTYPE_p_std__allocatorT_rte__TcpSentData_t swig_types[43]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[44]
+#define SWIGTYPE_p_std__functionT_bool_fvoidF_t swig_types[45]
+#define SWIGTYPE_p_std__functionT_int_fvoid_pF_t swig_types[46]
+#define SWIGTYPE_p_std__invalid_argument swig_types[47]
+#define SWIGTYPE_p_std__string swig_types[48]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[49]
+#define SWIGTYPE_p_std__vectorT_rte__Node_p_std__allocatorT_rte__Node_p_t_t swig_types[50]
+#define SWIGTYPE_p_std__vectorT_rte__TcpReceivedData_std__allocatorT_rte__TcpReceivedData_t_t swig_types[51]
+#define SWIGTYPE_p_std__vectorT_rte__TcpSentData_std__allocatorT_rte__TcpSentData_t_t swig_types[52]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[53]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[54]
+#define SWIGTYPE_p_unsigned___int64 swig_types[55]
+#define SWIGTYPE_p_unsigned_char swig_types[56]
+#define SWIGTYPE_p_unsigned_int swig_types[57]
+#define SWIGTYPE_p_unsigned_long swig_types[58]
+#define SWIGTYPE_p_unsigned_long_long swig_types[59]
+#define SWIGTYPE_p_unsigned_short swig_types[60]
+#define SWIGTYPE_p_value_type swig_types[61]
+static swig_type_info *swig_types[63];
+static swig_module_info swig_module = {swig_types, 62, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3114,6 +3115,7 @@ namespace swig {
 #include "TcpServer.h"
 #include "NodeContent.h"
 #include "NodeContentData.h"
+#include "NodeSerializationContext.h"
 #include "core.h"
 
 
@@ -10340,6 +10342,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Thread_isRunning(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Thread *arg1 = (rte::Thread *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Thread_isRunning",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Thread, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Thread_isRunning" "', argument " "1"" of type '" "rte::Thread *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Thread * >(argp1);
+  result = (bool)(arg1)->isRunning();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *Thread_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
@@ -11571,12 +11595,96 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_TcpSentData_toString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpSentData *arg1 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpSentData_toString",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpSentData_toString" "', argument " "1"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpSentData * >(argp1);
+  result = (arg1)->toString();
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *TcpSentData_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_rte__TcpSentData, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
+
+SWIGINTERN PyObject *_wrap_sendDataToSocket(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::Socket *arg1 = (rte::Socket *) 0 ;
+  rte::TcpSentData *arg2 = (rte::TcpSentData *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:sendDataToSocket",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__Socket, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sendDataToSocket" "', argument " "1"" of type '" "rte::Socket *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::Socket * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_rte__TcpSentData, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sendDataToSocket" "', argument " "2"" of type '" "rte::TcpSentData *""'"); 
+  }
+  arg2 = reinterpret_cast< rte::TcpSentData * >(argp2);
+  result = (bool)rte::sendDataToSocket(arg1,arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_receiveDataFromSocket(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpReceivedData *arg1 = (rte::TcpReceivedData *) 0 ;
+  rte::Socket *arg2 = (rte::Socket *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:receiveDataFromSocket",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpReceivedData, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "receiveDataFromSocket" "', argument " "1"" of type '" "rte::TcpReceivedData *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpReceivedData * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_rte__Socket, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "receiveDataFromSocket" "', argument " "2"" of type '" "rte::Socket *""'"); 
+  }
+  arg2 = reinterpret_cast< rte::Socket * >(argp2);
+  result = (bool)rte::receiveDataFromSocket(arg1,arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
 
 SWIGINTERN PyObject *_wrap_new_TcpClient(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
@@ -11872,6 +11980,28 @@ SWIGINTERN PyObject *_wrap_TcpServer_close(PyObject *SWIGUNUSEDPARM(self), PyObj
   arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
   (arg1)->close();
   resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TcpServer_cleanupInvalidConnection(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::TcpServer *arg1 = (rte::TcpServer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TcpServer_cleanupInvalidConnection",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__TcpServer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TcpServer_cleanupInvalidConnection" "', argument " "1"" of type '" "rte::TcpServer *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::TcpServer * >(argp1);
+  result = (bool)(arg1)->cleanupInvalidConnection();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -12566,6 +12696,109 @@ SWIGINTERN PyObject *Int32Data_swigregister(PyObject *SWIGUNUSEDPARM(self), PyOb
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_rte__Int32Data, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_NodeDeserializationContext(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  uint8_t *arg1 = (uint8_t *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  rte::NodeDeserializationContext *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_NodeDeserializationContext",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_unsigned_char, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_NodeDeserializationContext" "', argument " "1"" of type '" "uint8_t *""'"); 
+  }
+  arg1 = reinterpret_cast< uint8_t * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_NodeDeserializationContext" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  result = (rte::NodeDeserializationContext *)new rte::NodeDeserializationContext(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__NodeDeserializationContext, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_NodeDeserializationContext(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeDeserializationContext *arg1 = (rte::NodeDeserializationContext *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_NodeDeserializationContext",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeDeserializationContext, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_NodeDeserializationContext" "', argument " "1"" of type '" "rte::NodeDeserializationContext *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeDeserializationContext * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeDeserializationContext_hasNext(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeDeserializationContext *arg1 = (rte::NodeDeserializationContext *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeDeserializationContext_hasNext",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeDeserializationContext, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeDeserializationContext_hasNext" "', argument " "1"" of type '" "rte::NodeDeserializationContext *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeDeserializationContext * >(argp1);
+  result = (bool)(arg1)->hasNext();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NodeDeserializationContext_getNext(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  rte::NodeDeserializationContext *arg1 = (rte::NodeDeserializationContext *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  rte::Node *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NodeDeserializationContext_getNext",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_rte__NodeDeserializationContext, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NodeDeserializationContext_getNext" "', argument " "1"" of type '" "rte::NodeDeserializationContext *""'"); 
+  }
+  arg1 = reinterpret_cast< rte::NodeDeserializationContext * >(argp1);
+  result = (rte::Node *)(arg1)->getNext();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_rte__Node, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *NodeDeserializationContext_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_rte__NodeDeserializationContext, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -22885,6 +23118,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Thread_join", _wrap_Thread_join, METH_VARARGS, NULL},
 	 { (char *)"Thread_getId", _wrap_Thread_getId, METH_VARARGS, NULL},
 	 { (char *)"Thread_isStarted", _wrap_Thread_isStarted, METH_VARARGS, NULL},
+	 { (char *)"Thread_isRunning", _wrap_Thread_isRunning, METH_VARARGS, NULL},
 	 { (char *)"Thread_swigregister", Thread_swigregister, METH_VARARGS, NULL},
 	 { (char *)"LockObject_lock", _wrap_LockObject_lock, METH_VARARGS, NULL},
 	 { (char *)"LockObject_tryLock", _wrap_LockObject_tryLock, METH_VARARGS, NULL},
@@ -22936,7 +23170,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"TcpSentData_clone", _wrap_TcpSentData_clone, METH_VARARGS, NULL},
 	 { (char *)"TcpSentData_move", _wrap_TcpSentData_move, METH_VARARGS, NULL},
 	 { (char *)"TcpSentData_deallocate", _wrap_TcpSentData_deallocate, METH_VARARGS, NULL},
+	 { (char *)"TcpSentData_toString", _wrap_TcpSentData_toString, METH_VARARGS, NULL},
 	 { (char *)"TcpSentData_swigregister", TcpSentData_swigregister, METH_VARARGS, NULL},
+	 { (char *)"sendDataToSocket", _wrap_sendDataToSocket, METH_VARARGS, NULL},
+	 { (char *)"receiveDataFromSocket", _wrap_receiveDataFromSocket, METH_VARARGS, NULL},
 	 { (char *)"new_TcpClient", _wrap_new_TcpClient, METH_VARARGS, NULL},
 	 { (char *)"delete_TcpClient", _wrap_delete_TcpClient, METH_VARARGS, NULL},
 	 { (char *)"TcpClient_connect", _wrap_TcpClient_connect, METH_VARARGS, NULL},
@@ -22950,6 +23187,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"delete_TcpServer", _wrap_delete_TcpServer, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_open", _wrap_TcpServer_open, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_close", _wrap_TcpServer_close, METH_VARARGS, NULL},
+	 { (char *)"TcpServer_cleanupInvalidConnection", _wrap_TcpServer_cleanupInvalidConnection, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_setKeepAliveInterval", _wrap_TcpServer_setKeepAliveInterval, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_sendAsync", _wrap_TcpServer_sendAsync, METH_VARARGS, NULL},
 	 { (char *)"TcpServer_broadcastAsync", _wrap_TcpServer_broadcastAsync, METH_VARARGS, NULL},
@@ -22976,6 +23214,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Int32Data_deserialize", _wrap_Int32Data_deserialize, METH_VARARGS, NULL},
 	 { (char *)"delete_Int32Data", _wrap_delete_Int32Data, METH_VARARGS, NULL},
 	 { (char *)"Int32Data_swigregister", Int32Data_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_NodeDeserializationContext", _wrap_new_NodeDeserializationContext, METH_VARARGS, NULL},
+	 { (char *)"delete_NodeDeserializationContext", _wrap_delete_NodeDeserializationContext, METH_VARARGS, NULL},
+	 { (char *)"NodeDeserializationContext_hasNext", _wrap_NodeDeserializationContext_hasNext, METH_VARARGS, NULL},
+	 { (char *)"NodeDeserializationContext_getNext", _wrap_NodeDeserializationContext_getNext, METH_VARARGS, NULL},
+	 { (char *)"NodeDeserializationContext_swigregister", NodeDeserializationContext_swigregister, METH_VARARGS, NULL},
 	 { (char *)"core_setup", _wrap_core_setup, METH_VARARGS, NULL},
 	 { (char *)"core_shutdown", _wrap_core_shutdown, METH_VARARGS, NULL},
 	 { (char *)"new_core", _wrap_new_core, METH_VARARGS, NULL},
@@ -23202,6 +23445,9 @@ static void *_p_rte__TcpServerTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM
 static void *_p_rte__LockObjectTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::LockObject *) x));
 }
+static void *_p_rte__NodeDeserializationContextTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::noncopyable *)  ((rte::NodeDeserializationContext *) x));
+}
 static void *_p_rte__SocketTo_p_rte__noncopyable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::noncopyable *)  ((rte::Socket *) x));
 }
@@ -23228,6 +23474,9 @@ static void *_p_rte__TcpServerTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(
 }
 static void *_p_rte__LockObjectTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::nonmovable *)  ((rte::LockObject *) x));
+}
+static void *_p_rte__NodeDeserializationContextTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((rte::nonmovable *)  ((rte::NodeDeserializationContext *) x));
 }
 static void *_p_rte__SocketTo_p_rte__nonmovable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((rte::nonmovable *)  ((rte::Socket *) x));
@@ -23273,6 +23522,7 @@ static swig_type_info _swigt__p_rte__LockObject = {"_p_rte__LockObject", "rte::L
 static swig_type_info _swigt__p_rte__Node = {"_p_rte__Node", "std::vector< rte::Node * >::value_type|rte::Node *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__NodeContent = {"_p_rte__NodeContent", "rte::NodeContent *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__NodeContentData = {"_p_rte__NodeContentData", "rte::NodeContentData *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_rte__NodeDeserializationContext = {"_p_rte__NodeDeserializationContext", "rte::NodeDeserializationContext *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Serializable = {"_p_rte__Serializable", "rte::Serializable *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__Socket = {"_p_rte__Socket", "rte::Socket *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_rte__TcpClient = {"_p_rte__TcpClient", "rte::TcpClient *", 0, 0, (void*)0, 0};
@@ -23336,6 +23586,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_rte__Node,
   &_swigt__p_rte__NodeContent,
   &_swigt__p_rte__NodeContentData,
+  &_swigt__p_rte__NodeDeserializationContext,
   &_swigt__p_rte__Serializable,
   &_swigt__p_rte__Socket,
   &_swigt__p_rte__TcpClient,
@@ -23399,6 +23650,7 @@ static swig_cast_info _swigc__p_rte__LockObject[] = {  {&_swigt__p_rte__UniqueLo
 static swig_cast_info _swigc__p_rte__Node[] = {  {&_swigt__p_rte__Node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeContent[] = {  {&_swigt__p_rte__NodeContent, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__NodeContentData[] = {  {&_swigt__p_rte__Int32Data, _p_rte__Int32DataTo_p_rte__NodeContentData, 0, 0},  {&_swigt__p_rte__NodeContentData, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__NodeDeserializationContext[] = {  {&_swigt__p_rte__NodeDeserializationContext, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Serializable[] = {  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__Serializable, 0, 0, 0},  {&_swigt__p_rte__Int32Data, _p_rte__Int32DataTo_p_rte__Serializable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__Serializable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__Socket[] = {  {&_swigt__p_rte__Socket, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__TcpClient[] = {  {&_swigt__p_rte__TcpClient, 0, 0, 0},{0, 0, 0, 0}};
@@ -23409,8 +23661,8 @@ static swig_cast_info _swigc__p_rte__Thread[] = {  {&_swigt__p_rte__Thread, 0, 0
 static swig_cast_info _swigc__p_rte__UniqueLock[] = {  {&_swigt__p_rte__UniqueLock, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__core[] = {  {&_swigt__p_rte__core, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_rte__mem__SafeArrayT_unsigned_char_t[] = {  {&_swigt__p_rte__mem__SafeArrayT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__noncopyable[] = {  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__noncopyable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Int32Data, 0, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__noncopyable, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_rte__nonmovable[] = {  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__nonmovable, 0, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__Int32Data, 0, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__nonmovable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__noncopyable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeDeserializationContext, _p_rte__NodeDeserializationContextTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__noncopyable, 0, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__noncopyable, 0, 0},  {&_swigt__p_rte__Int32Data, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_rte__nonmovable[] = {  {&_swigt__p_rte__Socket, _p_rte__SocketTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeDeserializationContext, _p_rte__NodeDeserializationContextTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpClient, _p_rte__TcpClientTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__TcpServer, _p_rte__TcpServerTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__CriticalSection, 0, 0, 0},  {&_swigt__p_rte__NodeContent, _p_rte__NodeContentTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__nonmovable, 0, 0, 0},  {&_swigt__p_rte__UniqueLock, 0, 0, 0},  {&_swigt__p_rte__ConditionVariable, _p_rte__ConditionVariableTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Thread, _p_rte__ThreadTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__NodeContentData, _p_rte__NodeContentDataTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__LockObject, _p_rte__LockObjectTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Node, _p_rte__NodeTo_p_rte__nonmovable, 0, 0},  {&_swigt__p_rte__Int32Data, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed___int64[] = {  {&_swigt__p_signed___int64, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -23462,6 +23714,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_rte__Node,
   _swigc__p_rte__NodeContent,
   _swigc__p_rte__NodeContentData,
+  _swigc__p_rte__NodeDeserializationContext,
   _swigc__p_rte__Serializable,
   _swigc__p_rte__Socket,
   _swigc__p_rte__TcpClient,

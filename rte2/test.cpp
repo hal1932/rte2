@@ -7,6 +7,7 @@
 #include "TcpServer.h"
 #include "TcpClient.h"
 #include "NodeContent.h"
+#include "NodeSerializationContext.h"
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
@@ -265,7 +266,7 @@ int _main(int argc, char* argv[])
 	return 0;
 }
 #else
-#if false
+#if true
 int _main(int, char**)
 {
 	rte::core::setup();
@@ -309,11 +310,11 @@ int _main(int, char**)
 			assert(received.size() == 1);
 			auto data = received[0];
 
-			auto ptr = data.buffer;
-			while (ptr != data.buffer + data.bufferSize)
+			rte::NodeDeserializationContext context(data.buffer, data.bufferSize);
+			while (context.hasNext())
 			{
-				auto pn = new rte::Node();
-				ptr = pn->deserialize(ptr);
+				auto pn = context.getNext();
+				std::cout << pn->getName() << std::endl;
 				rte::Node::destroy(&pn);
 			}
 			data.deallocate();
@@ -342,6 +343,16 @@ int _main(int, char**)
 
 	while (true)
 	{
+		if (server.cleanupInvalidConnection())
+		{
+			auto clientCount = server.getClientCount();
+			printf("client count: %d\n", clientCount);
+			if (clientCount == 0)
+			{
+				break;
+			}
+		}
+
 		auto clients = server.popAcceptedQueue();
 		for (auto c : clients)
 		{
@@ -363,6 +374,7 @@ int _main(int, char**)
 		for (auto s : sents)
 		{
 			printf("sent to %d, %d\n", s.clientId, s.sentSize);
+			rte::mem::safeDelete(&s.buffer);
 		}
 
 		auto closed = server.popClosedQueue();

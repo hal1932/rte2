@@ -131,8 +131,11 @@
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="NodeContent.cpp" />
     <ClCompile Include="NodeContentData.cpp" />
+    <ClCompile Include="NodeSerializationContext.cpp" />
     <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="socketUtil.cpp" />
     <ClCompile Include="TcpClient.cpp" />
+    <ClCompile Include="tcpCommon.cpp" />
     <ClCompile Include="TcpServer.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Thread.cpp" />
@@ -145,6 +148,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="NodeContent.h" />
     <ClInclude Include="NodeContentData.h" />
+    <ClInclude Include="NodeSerializationContext.h" />
     <ClInclude Include="Socket.h" />
     <ClInclude Include="TcpClient.h" />
     <ClInclude Include="socketUtil.h" />

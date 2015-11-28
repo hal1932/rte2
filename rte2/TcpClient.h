@@ -23,24 +23,23 @@ namespace rte {
 		std::vector<TcpReceivedData> popReceivedQueue();
 		std::vector<TcpSentData> popSentQueue();
 
-		bool isConnectionAlive() { return !mIsConnectionClosed; }
+		bool isConnectionAlive() { return !mIsConnectionClosed && mConnectionThread.isRunning(); }
 
 	private:
 		Socket* mpSocket;
 		CriticalSection mSocketLock;
 
-		Thread mReceiveThread;
-		Thread mSendThread;
+		Thread mConnectionThread;
+		bool mIsConnectionClosed;
 
 		InterlockedVector<TcpSentData> mSendRequestList;
 
 		InterlockedVector<TcpReceivedData> mReceivedList;
 		InterlockedVector<TcpSentData> mSentList;
 
-		bool mIsConnectionClosed;
-
-		int receiveThread_(void*);
-		int sendThread_(void*);
+		int connectionThread_(void*);
+		bool sendData_();
+		bool receiveData_();
 	};
 
 }// namespace rte

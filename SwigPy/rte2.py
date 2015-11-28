@@ -580,6 +580,9 @@ class Thread(_object):
 
     def isStarted(self):
         return _rte2.Thread_isStarted(self)
+
+    def isRunning(self):
+        return _rte2.Thread_isRunning(self)
 Thread_swigregister = _rte2.Thread_swigregister
 Thread_swigregister(Thread)
 
@@ -780,9 +783,20 @@ class TcpSentData(_object):
 
     def deallocate(self):
         return _rte2.TcpSentData_deallocate(self)
+
+    def toString(self):
+        return _rte2.TcpSentData_toString(self)
 TcpSentData_swigregister = _rte2.TcpSentData_swigregister
 TcpSentData_swigregister(TcpSentData)
 
+
+def sendDataToSocket(pSocket, pData):
+    return _rte2.sendDataToSocket(pSocket, pData)
+sendDataToSocket = _rte2.sendDataToSocket
+
+def receiveDataFromSocket(pOut, pSocket):
+    return _rte2.receiveDataFromSocket(pOut, pSocket)
+receiveDataFromSocket = _rte2.receiveDataFromSocket
 class TcpClient(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, TcpClient, name, value)
@@ -841,6 +855,9 @@ class TcpServer(_object):
     def close(self):
         return _rte2.TcpServer_close(self)
 
+    def cleanupInvalidConnection(self):
+        return _rte2.TcpServer_cleanupInvalidConnection(self)
+
     def setKeepAliveInterval(self, seconds):
         return _rte2.TcpServer_setKeepAliveInterval(self, seconds)
 
@@ -868,8 +885,8 @@ class TcpServer(_object):
     def popClosedQueue(self):
         return _rte2.TcpServer_popClosedQueue(self)
 
-    def closeConnection(self, id):
-        return _rte2.TcpServer_closeConnection(self, id)
+    def closeConnection(self, clientId):
+        return _rte2.TcpServer_closeConnection(self, clientId)
 TcpServer_swigregister = _rte2.TcpServer_swigregister
 TcpServer_swigregister(TcpServer)
 
@@ -942,6 +959,30 @@ class Int32Data(NodeContentData):
     __del__ = lambda self: None
 Int32Data_swigregister = _rte2.Int32Data_swigregister
 Int32Data_swigregister(Int32Data)
+
+class NodeDeserializationContext(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeDeserializationContext, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, NodeDeserializationContext, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, buffer, bufferSize):
+        this = _rte2.new_NodeDeserializationContext(buffer, bufferSize)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_NodeDeserializationContext
+    __del__ = lambda self: None
+
+    def hasNext(self):
+        return _rte2.NodeDeserializationContext_hasNext(self)
+
+    def getNext(self):
+        return _rte2.NodeDeserializationContext_getNext(self)
+NodeDeserializationContext_swigregister = _rte2.NodeDeserializationContext_swigregister
+NodeDeserializationContext_swigregister(NodeDeserializationContext)
 
 class core(_object):
     __swig_setmethods__ = {}

@@ -19,6 +19,7 @@ namespace rte {
 
 		int getId();
 		bool isStarted();
+		bool isRunning();
 
 	private:
 		HANDLE mHandle;
@@ -123,6 +124,12 @@ namespace rte {
 		{
 			UniqueLock lock(mLock);
 			mVec.emplace_back(std::move(obj));
+		}
+
+		void clear()
+		{
+			UniqueLock lock(mLock);
+			mVec.clear();
 		}
 
 		void swap(std::vector<T>* pOther)

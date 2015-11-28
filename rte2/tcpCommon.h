@@ -90,5 +90,20 @@ namespace rte
 			bufferSize = 0;
 			sentSize = 0;
 		}
+
+		std::string toString()
+		{
+			return
+				std::to_string(clientId) + ", " +
+				std::to_string(reinterpret_cast<uintptr_t>(buffer)) + ", " + 
+				std::to_string(bufferSize) + ", " +
+				std::to_string(sentSize);
+		}
 	};
+
+	class Socket;
+
+	bool sendDataToSocket(Socket* pSocket, TcpSentData* pData);
+	bool receiveDataFromSocket(TcpReceivedData* pOut, Socket* pSocket);
+
 }// namespace rte

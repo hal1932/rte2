@@ -27,7 +27,7 @@ namespace rte {
 	TcpServer::~TcpServer()
 	{
 		assert(mIsConnectionClosed);
-		assert(mClientDic.size() == 0);
+		assert(mConnectionDic.size() == 0);
 		assert(mpSocket == nullptr);
 	}
 
@@ -55,7 +55,6 @@ namespace rte {
 
 		mIsConnectionClosed = false;
 		mAcceptThread.start(std::bind(&TcpServer::acceptThread_, this, std::placeholders::_1));
-		mSendThread.start(std::bind(&TcpServer::sendThread_, this, std::placeholders::_1));
 
 		return true;
 	}
@@ -67,21 +66,36 @@ namespace rte {
 		mIsConnectionClosed = true;
 
 		mAcceptThread.join();
-		mSendThread.join();
-		mKeepAliveThread.join();
 
-		for (std::pair<Socket*, ClientInfo> item : mClientDic)
+		// closeConnection()の中でmConnectionDicを変更するのでコピーしておく
+		auto tmp = mConnectionDic;
+		for (auto conn : tmp)
 		{
-			item.second.pReceiveThread->join();
-			mem::safeDelete(&item.second.pReceiveThread);
-			mem::safeDelete(&item.second.pLock);
-
-			mem::safeDelete(&item.first);
+			auto pClient = conn.first;
+			auto clientId = socketToId(pClient);
+			closeConnection(clientId);
 		}
-		mClientDic.clear();
 
 		mpSocket->close();
 		mem::safeDelete(&mpSocket);
+	}
+
+	bool TcpServer::cleanupInvalidConnection()
+	{
+		auto cleaned = (mCleanupRequestList.size() > 0);
+
+		mCleanupRequestList.lock();
+		{
+			for (auto pClient : mCleanupRequestList)
+			{
+				auto clientId = socketToId(pClient);
+				closeConnection(clientId);
+			}
+			mCleanupRequestList.clear();
+		}
+		mCleanupRequestList.unlock();
+
+		return cleaned;
 	}
 
 	void TcpServer::sendAsync(int id, const uint8_t* buffer, int bufferSize)
@@ -99,9 +113,9 @@ namespace rte {
 	{
 		assert(mpSocket != nullptr);
 
-		for (auto client : mClientDic)
+		for (auto conn : mConnectionDic)
 		{
-			auto id = socketToId(client.first);
+			auto id = socketToId(conn.first);
 			sendAsync(id, buffer, bufferSize);
 		}
 	}
@@ -109,9 +123,10 @@ namespace rte {
 	std::vector<int> TcpServer::getClientList()
 	{
 		std::vector<int> result;
-		for (auto client : mClientDic)
+		for (auto conn : mConnectionDic)
 		{
-			result.push_back(socketToId(client.first));
+			auto id = socketToId(conn.first);
+			result.push_back(id);
 		}
 		return result;
 	}
@@ -145,27 +160,27 @@ namespace rte {
 		return std::move(result);
 	}
 
-	void TcpServer::closeConnection(int id)
+	void TcpServer::closeConnection(int clientId)
 	{
 		assert(mpSocket != nullptr);
+		logInfo("close: " + std::to_string(clientId));
 
-		ClientInfo info;
-		if (!pushCloseRequest_(&info, id))
+		auto pClient = idToSocket(clientId);
+		auto found = mConnectionDic.find(pClient);
+		if (found == mConnectionDic.end())
 		{
 			return;
 		}
 
-		auto pClientSocket = idToSocket(id);
-		auto pReceiveThread = info.pReceiveThread;
+		auto pConn = found->second;
+		pConn->join();
+		mem::safeDelete(&pConn);
 
-		pReceiveThread->join();
-		mem::safeDelete(&pReceiveThread);
-		mem::safeDelete(&info.pLock);
+		pClient->close();
+		mem::safeDelete(&pClient);
 
-		pClientSocket->close();
-		mem::safeDelete(&pClientSocket);
-
-		mClosedList.pushBack(id);
+		mConnectionDic.erase(found);
+		mClosedList.pushBack(clientId);
 	}
 
 	int TcpServer::acceptThread_(void*)
@@ -185,26 +200,15 @@ namespace rte {
 			{
 				logInfo("accept");
 
-				// クライアント記録
-				{
-					auto clientId = socketToId(pClient);
-					mAcceptedList.pushBack(clientId);
-				}
+				auto clientId = socketToId(pClient);
+				mAcceptedList.pushBack(clientId);
 
-				// データ受信スレッド起動
-				auto pReceiveThread = new Thread();
-				pReceiveThread->start(std::bind(&TcpServer::receiveThread_, this, std::placeholders::_1), pClient);
+				// 送受信スレッド起動
+				auto pConn = new Thread();
+				pConn->start(std::bind(&TcpServer::connectionThread_, this, std::placeholders::_1), pClient);
 
-				ClientInfo info;
-				info.pReceiveThread = pReceiveThread;
-				info.pLock = new CriticalSection();
-				mClientDic[pClient] = info;
-
-				// 生存確認スレッド起動
-				if (!mKeepAliveThread.isStarted())
-				{
-					mKeepAliveThread.start(std::bind(&TcpServer::keepAliveThread_, this, std::placeholders::_1), nullptr);
-				}
+				assert(mConnectionDic.find(pClient) == mConnectionDic.end());
+				mConnectionDic[pClient] = pConn;
 
 				pClient = new Socket();
 			}
@@ -219,6 +223,113 @@ namespace rte {
 		return 0;
 	}
 
+	int TcpServer::connectionThread_(void* arg)
+	{
+		logInfo("enter");
+
+		auto pClient = static_cast<Socket*>(arg);
+		auto lastCheckKeepAlive = std::chrono::system_clock::now();
+
+		while (true)
+		{
+			// 停止チェック
+			if (mIsConnectionClosed)
+			{
+				return 0;
+			}
+
+			// 受信
+			if (!receiveData_(pClient))
+			{
+				break;
+			}
+
+			// 送信
+			if (!sendData_(pClient))
+			{
+				break;
+			}
+
+			// keep-alive
+			if (!checkKeepAlive_(pClient, &lastCheckKeepAlive))
+			{
+				break;
+			}
+
+			Sleep(cThreadPollingInterval);
+		}
+
+		mCleanupRequestList.pushBack(pClient);
+
+		logInfo("leave");
+		return -1;
+	}
+
+	bool TcpServer::sendData_(Socket* pClient)
+	{
+		if (mSendRequestList.size() == 0)
+		{
+			return true;
+		}
+
+		std::vector<TcpSentData> dataList;
+		mSendRequestList.swap(&dataList);
+
+		auto success = true;
+
+		for (auto data : dataList)
+		{
+			if (sendDataToSocket(pClient, &data))
+			{
+				mSentList.emplaceBack(std::move(data));
+				success &= true;
+			}
+			else
+			{
+				// 送信失敗
+				logInfo("failed to send data: " + data.toString());
+				success = false;
+			}
+		}
+
+		return success;
+	}
+
+	bool TcpServer::receiveData_(Socket* pClient)
+	{
+		TcpReceivedData result;
+		if (receiveDataFromSocket(&result, pClient))
+		{
+			result.clientId = socketToId(pClient);
+			mReceivedList.emplaceBack(std::move(result));
+			return true;
+		}
+		return false;
+	}
+
+	bool TcpServer::checkKeepAlive_(Socket* pClient, std::chrono::system_clock::time_point* pLastCheckKeepAlive)
+	{
+		auto now = std::chrono::system_clock::now();
+		if (now - *pLastCheckKeepAlive < std::chrono::seconds(mKeepAliveIntervalSeconds))
+		{
+			return true;
+		}
+
+		auto clientId = socketToId(pClient);
+
+		if (socketUtil::sendKeepAlive(pClient))
+		{
+			*pLastCheckKeepAlive = std::chrono::system_clock::now();
+			logInfo("check keep-alive: " + std::to_string(clientId));
+			return true;
+		}
+
+		logInfo("client does not keep alive: " + std::to_string(clientId));
+
+		return false;
+	}
+
+#if false
 	int TcpServer::receiveThread_(void* arg)
 	{
 		logInfo("enter");
@@ -429,5 +540,6 @@ namespace rte {
 
 		return true;
 	}
+#endif
 
 }// namespace rte

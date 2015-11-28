@@ -5,6 +5,7 @@ sys.path.append(os.path.join(os.getcwd(), "..", "SwigPy"))
 
 import rte2 as rt
 import time
+import gc
 
 def main():
     rt.core.setup()
@@ -28,34 +29,36 @@ def main():
     while True:
         if len(client.popSentQueue()) > 0:
             break
-        time.sleep(10)
+        time.sleep(0.1)
 
     # receive, deserialize
     while True:
         if not client.isConnectionAlive():
+            print "connection is closed by server"
             break
 
         received = client.popReceivedQueue()
         if len(received) > 0:
+            print "received"
             data = received[0]
 
-            ptr = data.buffer
-            while ptr.cast() != data.buffer.cast() + data.bufferSize:
-                n = rt.Node()
-                ptr = n.deserialize(ptr)
+            context = rt.NodeDeserializationContext(data.buffer, data.bufferSize)
+            while context.hasNext():
+                n = context.getNext()
                 print n.getName()
-                rt.Node.destroy(n)
+            
             data.deallocate()
 
             print "success!"
             break
 
-        time.sleep(10)
-
-    rt.Node.destroy(rootNode)
+        time.sleep(0.1)
     
     client.close()
     rt.core.shutdown()
 
 if __name__ == "__main__":
+    gc.enable()
     main()
+    gc.collect()
+    gc.set_debug(gc.DEBUG_LEAK)

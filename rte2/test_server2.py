@@ -14,6 +14,10 @@ def main():
     server.setKeepAliveInterval(1)
 
     while True:
+        if server.cleanupInvalidConnection():
+            if server.getClientCount() == 0:
+                break
+        
         clients = server.popAcceptedQueue()
         for c in clients:
             print "accept ", c
