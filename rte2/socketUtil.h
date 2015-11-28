@@ -6,57 +6,14 @@ namespace rte {
 	namespace socketUtil {
 
 		/// 受信キューが空になるまで受信
-		inline int receive(mem::Array<uint8_t>* pReceivedData, Socket* pSocket)
-		{
-			if (pSocket->getAvailabieSize() == 0)
-			{
-				return 0;
-			}
+		int receive(mem::Array<uint8_t>* pReceivedData, Socket* pSocket);
 
-			const int cBufferSize = 1024;
-			pReceivedData->resize(cBufferSize);
+		bool sendReceivedConfirmation(Socket* pSocket);
+		bool receiveReceivedConfirmation(Socket* pSocket);
 
-			auto recvBytes = pSocket->recv(pReceivedData->get(), pReceivedData->size());
-			if (recvBytes <= 0)
-			{
-				pReceivedData->invalidate();
-				return -1;
-			}
-
-			pReceivedData->resize(recvBytes);
-
-			while (pSocket->getAvailabieSize() > 0)
-			{
-				mem::Array<uint8_t> tmp(cBufferSize);
-				recvBytes = pSocket->recv(tmp.get(), tmp.size());
-				if (recvBytes > 0)
-				{
-					tmp.resize(recvBytes);
-					pReceivedData->append(std::move(tmp));
-				}
-			}
-
-			return pReceivedData->size();
-		}
-
-		inline bool sendReceivedConfirmation(Socket* pSocket)
-		{
-			uint8_t confirm[1];
-			auto confirmBytes = pSocket->send(confirm, 1);
-			return (confirmBytes == 1);
-		}
-
-		inline bool receiveReceivedConfirmation(Socket* pSocket)
-		{
-			uint8_t confirm[1];
-			int confirmBytes = 0;
-			while (confirmBytes == 0)
-			{
-				confirmBytes = pSocket->recv(confirm, 1);
-				Sleep(5);
-			}
-			return (confirmBytes == 1);
-		}
+		bool sendKeepAlive(Socket* pSocket);
+		bool isKeepAlive(const mem::Array<uint8_t>& data);
+		bool replyKeepAlive(Socket* pSocket);
 
 		inline void handleWsaError(const char* msg = nullptr, int err = 0xFFFFFFFF)
 		{

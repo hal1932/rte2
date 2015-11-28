@@ -18,6 +18,8 @@ namespace rte {
 		unsigned int join();
 
 		int getId();
+		bool isStarted();
+		bool isRunning();
 
 	private:
 		HANDLE mHandle;
@@ -56,7 +58,7 @@ namespace rte {
 		{
 			if (!deferLock)
 			{
-				lockObj.lock();
+				mLockObj.lock();
 			}
 		}
 		~UniqueLock()
@@ -100,6 +102,12 @@ namespace rte {
 
 		std::vector<T>& get() { return mVec; }
 
+		typename std::vector<T>::iterator begin() { return mVec.begin(); }
+		typename std::vector<T>::iterator end() { return mVec.end(); }
+
+		void lock() { mLock.lock(); }
+		void unlock() { mLock.unlock(); }
+
 		int size()
 		{
 			UniqueLock lock(mLock);
@@ -116,6 +124,12 @@ namespace rte {
 		{
 			UniqueLock lock(mLock);
 			mVec.emplace_back(std::move(obj));
+		}
+
+		void clear()
+		{
+			UniqueLock lock(mLock);
+			mVec.clear();
 		}
 
 		void swap(std::vector<T>* pOther)

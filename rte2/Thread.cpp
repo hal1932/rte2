@@ -62,6 +62,23 @@ namespace rte {
 		return (mHandle == nullptr) ? 0 : reinterpret_cast<int>(mHandle);
 	}
 
+	bool Thread::isStarted()
+	{
+		return (mHandle != nullptr);
+	}
+
+	bool Thread::isRunning()
+	{
+		if (mHandle == nullptr)
+		{
+			return false;
+		}
+
+		DWORD exitCode;
+		GetExitCodeThread(mHandle, &exitCode);
+		return (exitCode == STILL_ACTIVE);
+	}
+
 	/*------------------------------------------------------------------*/
 
 	CriticalSection::CriticalSection()

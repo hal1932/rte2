@@ -38,8 +38,7 @@ namespace rte {
 		mpSocket->setBlocking(true);
 
 		mIsConnectionClosed = false;
-		mReceiveThread.start(std::bind(&TcpClient::receiveThread_, this, std::placeholders::_1));
-		mSendThread.start(std::bind(&TcpClient::sendThread_, this, std::placeholders::_1));
+		mConnectionThread.start(std::bind(&TcpClient::connectionThread_, this, std::placeholders::_1));
 
 		return true;
 	}
@@ -49,9 +48,7 @@ namespace rte {
 		assert(mpSocket != nullptr);
 
 		mIsConnectionClosed = true;
-
-		mReceiveThread.join();
-		mSendThread.join();
+		mConnectionThread.join();
 
 		mpSocket->close();
 		mem::safeDelete(&mpSocket);
@@ -69,6 +66,7 @@ namespace rte {
 
 	std::vector<TcpReceivedData> TcpClient::popReceivedQueue()
 	{
+		printf("aaa %d\n", mReceivedList.size());
 		std::vector<TcpReceivedData> result;
 		mReceivedList.swap(&result);
 		return std::move(result);
@@ -81,6 +79,80 @@ namespace rte {
 		return std::move(result);
 	}
 
+	int TcpClient::connectionThread_(void*)
+	{
+		while (true)
+		{
+			// 停止チェック
+			if (mIsConnectionClosed)
+			{
+				return 0;
+			}
+
+			// 受信
+			if (!sendData_())
+			{
+				break;
+			}
+
+			// 送信
+			if (!receiveData_())
+			{
+				break;
+			}
+
+			Sleep(cThreadPollingInterval);
+		}
+
+		return -1;
+	}
+
+	bool TcpClient::sendData_()
+	{
+		if (mSendRequestList.size() == 0)
+		{
+			return true;
+		}
+
+		std::vector<TcpSentData> dataList;
+		mSendRequestList.swap(&dataList);
+
+		auto success = true;
+
+		for (auto data : dataList)
+		{
+			if (sendDataToSocket(mpSocket, &data))
+			{
+				mSentList.emplaceBack(std::move(data));
+				success &= true;
+			}
+			else
+			{
+				// 送信失敗
+				logInfo("failed to send data: " + data.toString());
+				success = false;
+			}
+		}
+
+		return success;
+	}
+
+	bool TcpClient::receiveData_()
+	{
+		TcpReceivedData result;
+		if (receiveDataFromSocket(&result, mpSocket))
+		{
+			if (result.bufferSize > 0)
+			{
+				printf("received: %d\n", result.bufferSize);
+				mReceivedList.emplaceBack(std::move(result));
+			}
+			return true;
+		}
+		return false;
+	}
+
+#if false
 	int TcpClient::receiveThread_(void*)
 	{
 		mem::Array<uint8_t> tmpReceivedData;
@@ -101,11 +173,20 @@ namespace rte {
 
 				if (receivedSize > 0)
 				{
-					// 受信通知を送信
-					if (!socketUtil::sendReceivedConfirmation(mpSocket))
+					if (socketUtil::isKeepAlive(tmpReceivedData))
 					{
-						logError("sending receive-confirmation failed");
-						receivedSize = -1;
+						socketUtil::replyKeepAlive(mpSocket);
+						logInfo("reply keep-alive");
+						receivedSize = 0;
+					}
+					else
+					{
+						// 受信通知を送信
+						if (!socketUtil::sendReceivedConfirmation(mpSocket))
+						{
+							logError("sending receive-confirmation failed");
+							receivedSize = -1;
+						}
 					}
 				}
 			}
@@ -125,7 +206,6 @@ namespace rte {
 			}
 			else
 			{
-RECEIVE_ERROR:
 				// エラー
 				logError("receiving from server failed");
 				close();
@@ -195,5 +275,6 @@ RECEIVE_ERROR:
 
 		return 0;
 	}
+#endif
 
 }// namespace rte

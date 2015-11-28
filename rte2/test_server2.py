@@ -11,8 +11,13 @@ def main():
     
     server = rt.TcpServer()
     server.open(0x1234)
+    server.setKeepAliveInterval(1)
 
     while True:
+        if server.cleanupInvalidConnection():
+            if server.getClientCount() == 0:
+                break
+        
         clients = server.popAcceptedQueue()
         for c in clients:
             print "accept ", c
@@ -34,6 +39,7 @@ def main():
 
         time.sleep(0.1)
 
+    server.close()
     rt.core.shutdown()
 
 if __name__ == "__main__":

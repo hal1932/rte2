@@ -11,6 +11,7 @@
 #include "TcpServer.h"
 #include "NodeContent.h"
 #include "NodeContentData.h"
+#include "NodeSerializationContext.h"
 #include "core.h"
 %}
 
@@ -29,6 +30,7 @@
 %include "TcpServer.h"
 %include "NodeContent.h"
 %include "NodeContentData.h"
+%include "NodeSerializationContext.h"
 %include "core.h"
 
 %include "carrays.i"

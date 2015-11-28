@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <functional>
+#include <chrono>
 
 namespace rte {
 
@@ -18,10 +19,14 @@ namespace rte {
 		bool open(int port);
 		void close();
 
+		bool cleanupInvalidConnection();
+
+		void setKeepAliveInterval(int seconds) { mKeepAliveIntervalSeconds = seconds; }
+
 		void sendAsync(int id, const uint8_t* buffer, int bufferSize);
 		void broadcastAsync(const uint8_t* buffer, int bufferSize);
 
-		int getClientCount() { return mClientDic.size(); }
+		int getClientCount() { return mConnectionDic.size(); }
 		std::vector<int> getClientList();
 
 		std::vector<int> popAcceptedQueue();
@@ -29,20 +34,16 @@ namespace rte {
 		std::vector<TcpSentData> popSentQueue();
 		std::vector<int> popClosedQueue();
 
-		void closeConnection(int id);
+		void closeConnection(int clientId);
 
 	private:
 		Socket* mpSocket;
 
-		Thread mAcceptThread;
-		Thread mSendThread;
+		int mKeepAliveIntervalSeconds;
 
-		struct ClientInfo
-		{
-			Thread* pReceiveThread;
-			CriticalSection* pLock;
-		};
-		std::map<Socket*, ClientInfo> mClientDic;
+		Thread mAcceptThread;
+		std::map<Socket*, Thread*> mConnectionDic;
+		InterlockedVector<Socket*> mCleanupRequestList;
 
 		InterlockedVector<TcpSentData> mSendRequestList;
 
@@ -55,8 +56,10 @@ namespace rte {
 		volatile bool mIsConnectionClosed;
 
 		int acceptThread_(void*);
-		int receiveThread_(void* arg);
-		int sendThread_(void*);
+		int connectionThread_(void*);
+		bool sendData_(Socket* pClient);
+		bool receiveData_(Socket* pClient);
+		bool checkKeepAlive_(Socket* pClient, std::chrono::system_clock::time_point* pLastCheckKeepAlive);
 	};
 
 }// namespace rte
