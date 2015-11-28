@@ -1,4 +1,4 @@
-# encoding: utf-8
+# encoding: shift-jis
 import sys
 import os
 sys.path.append(os.path.join(os.getcwd(), "..", "SwigPy"))
@@ -10,10 +10,10 @@ import gc
 def main():
     rt.core.setup()
 
-    rootNode = rt.Node.createRootNode("root", "root_label")
+    rootNode = rt.Node.createRootNode("root", "root_ƒ‰ƒxƒ‹")
 
     child1 = rootNode.addChild("child1", "child1_label")
-    content1 = child1.createContent("content1", "content1_label")
+    content1 = child1.createContent("content1", "content1_ƒ‰ƒxƒ‹")
     data1 = content1.createDataInt32()
     data1.Value = 1234
 
@@ -45,7 +45,7 @@ def main():
             context = rt.NodeDeserializationContext(data.buffer, data.bufferSize)
             while context.hasNext():
                 n = context.getNext()
-                print n.getName()
+                print n.getName(), n.getLabel()
 
             print "success!"
             break

@@ -233,7 +233,7 @@ namespace rte {
 				if (size > 0)
 				{
 					mPtr = new T[size];
-					printf("allocate 0x%p, %d\n", mPtr, size);
+					//printf("allocate 0x%p, %d\n", mPtr, size);
 					mSize = size;
 					mActualSize = size;
 				}
@@ -243,7 +243,7 @@ namespace rte {
 			{
 				if (mActualSize > 0)
 				{
-					printf("deallocate 0x%p, %d\n", mPtr, mSize);
+					//printf("deallocate 0x%p, %d\n", mPtr, mSize);
 					mem::safeDelete(&mPtr);
 					mSize = 0;
 					mActualSize = 0;
@@ -279,7 +279,7 @@ namespace rte {
 				{
 					if (size < mActualSize)
 					{
-						printf("resize: 0x%p, %d -> %d", mPtr, mSize, size);
+						//printf("resize: 0x%p, %d -> %d", mPtr, mSize, size);
 						mSize = size;
 						return true;
 					}
@@ -325,7 +325,7 @@ namespace rte {
 			bool reallocate_(int size)
 			{
 				auto ptr = new T[size];
-				printf("reallocating resize: 0x%p -> 0x%p, %d -> %d\n", mPtr, ptr, mSize, size);
+				//printf("reallocating resize: 0x%p -> 0x%p, %d -> %d\n", mPtr, ptr, mSize, size);
 
 				if (mPtr != nullptr)
 				{

@@ -66,7 +66,6 @@ namespace rte {
 
 	std::vector<TcpReceivedData> TcpClient::popReceivedQueue()
 	{
-		printf("aaa %d\n", mReceivedList.size());
 		std::vector<TcpReceivedData> result;
 		mReceivedList.swap(&result);
 		return std::move(result);
@@ -144,7 +143,7 @@ namespace rte {
 		{
 			if (result.bufferSize > 0)
 			{
-				printf("received: %d\n", result.bufferSize);
+				//printf("received: %d\n", result.bufferSize);
 				mReceivedList.emplaceBack(std::move(result));
 			}
 			return true;
