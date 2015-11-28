@@ -46,8 +46,6 @@ def main():
             while context.hasNext():
                 n = context.getNext()
                 print n.getName()
-            
-            data.deallocate()
 
             print "success!"
             break

@@ -266,7 +266,7 @@ int _main(int argc, char* argv[])
 	return 0;
 }
 #else
-#if true
+#if false
 int _main(int, char**)
 {
 	rte::core::setup();
