@@ -11,7 +11,6 @@ namespace rte
 	class NodeContent : public Serializable, private noncopyable, private nonmovable
 	{
 	public:
-		NodeContent() = delete;
 		~NodeContent();
 
 #ifdef _SWIG_PY
@@ -58,6 +57,7 @@ namespace rte
 
 	RTE_INTERNAL:
 		explicit NodeContent(Node* pOwnerNode);
+		NodeContent() { } // デシリアライズするときの受け皿用
 
 	private:
 		Node* mpOwnerNode;

@@ -120,6 +120,9 @@ namespace rte
 	{
 		int size = 0;
 
+		// 識別子
+		size += 1;
+
 		// 名前、ラベル
 		size += calcSizeString(mName);
 		size += calcSizeString(mLabel);
@@ -147,6 +150,10 @@ namespace rte
 	uint8_t* Node::serialize(uint8_t* buffer, int depth)
 	{
 		auto ptr = buffer;
+
+		// 識別子
+		*ptr = 'n';
+		++ptr;
 
 		// 名前、ラベル
 		ptr = writeString(mName, ptr);
@@ -191,6 +198,13 @@ namespace rte
 	uint8_t* Node::deserialize(uint8_t* buffer, int depth)
 	{
 		auto ptr = buffer;
+
+		// 識別子チェック
+		if (*ptr != 'n')
+		{
+			return ptr;
+		}
+		++ptr;
 
 		// 名前、ラベル
 		ptr = readString(&mName, ptr);

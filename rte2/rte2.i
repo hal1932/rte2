@@ -36,8 +36,6 @@
 %include "carrays.i"
 %array_class(uint8_t, buffer);
 
-%template (SafeArrayUInt8) rte::mem::SafeArray<uint8_t>;
-
 %template (IntVector)std::vector<int>;
 %template (StringVecotor) std::vector<std::string>;
 %template (NodePtrVector) std::vector<rte::Node*>;

@@ -28,9 +28,6 @@ namespace rte
 		bool operator==(const Node&) = delete;
 #endif
 
-		Node() { } // デシリアライズするときの受け皿用
-		~Node() = default; // デシリアライズするときの受け皿用
-
 		const std::string& getName() { return mName; }
 		const std::string& getLabel() { return mLabel; }
 		const std::string& getPath() { return mPath; }
@@ -73,6 +70,11 @@ namespace rte
 		uint8_t* serialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
 		uint8_t* deserialize(uint8_t* buffer, int depth = std::numeric_limits<int>::max());
 		void updatePath();
+
+		~Node() = default; // デシリアライズするときの受け皿用
+
+	RTE_INTERNAL:
+		Node() { } // デシリアライズするときの受け皿用
 
 	private:
 		std::string mName;
