@@ -266,7 +266,7 @@ int _main(int argc, char* argv[])
 	return 0;
 }
 #else
-#if false
+#if true
 int _main(int, char**)
 {
 	rte::core::setup();
@@ -278,8 +278,9 @@ int _main(int, char**)
 	auto pData1 = pContent1->createData<rte::Int32Data>();
 	pData1->Value = 1234;
 
-	rte::mem::SafeArray<uint8_t> buffer(pRootNode->calcSize());
-	pRootNode->serialize(buffer.get());
+	rte::NodeSerializationContext serializer;
+	serializer.addNode(pRootNode);
+	auto& buffer = serializer.serialize();
 
 	rte::TcpClient client;
 	client.connect("127.0.0.1", 0x1234);
@@ -308,16 +309,22 @@ int _main(int, char**)
 		if (received.size() > 0)
 		{
 			assert(received.size() == 1);
-			auto data = received[0];
 
-			rte::NodeDeserializationContext context(data.buffer, data.bufferSize);
-			while (context.hasNext())
+			auto data = received[0];
+			data.setAutoDelete(true);
+
+			rte::NodeDeserializationContext deserializer(data.buffer, data.bufferSize);
+			deserializer.deserialize();
+			for (auto pn : deserializer.getNodeList())
 			{
-				auto pn = context.getNext();
-				std::cout << pn->getName() << std::endl;
+				std::cout << pn->getPath() << std::endl;
 				rte::Node::destroy(&pn);
 			}
-			data.deallocate();
+			for (auto pc : deserializer.getContentPtrList())
+			{
+				std::cout << pc->getPath() << std::endl;
+				rte::mem::safeDelete(&pc);
+			}
 
 			std::cout << "success!" << std::endl;
 

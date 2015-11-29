@@ -375,8 +375,8 @@ class NodeContent(Serializable):
     def updatePath(self):
         return _rte2.NodeContent_updatePath(self)
 
-    def __init__(self, pOwnerNode):
-        this = _rte2.new_NodeContent(pOwnerNode)
+    def __init__(self, *args):
+        this = _rte2.new_NodeContent(*args)
         try:
             self.this.append(this)
         except:
@@ -409,15 +409,6 @@ class Node(HierarchicalSerializable):
 
     def __eq__(self, other):
         return _rte2.Node___eq__(self, other)
-
-    def __init__(self):
-        this = _rte2.new_Node()
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_Node
-    __del__ = lambda self: None
 
     def getName(self, *args):
         return _rte2.Node_getName(self, *args)
@@ -469,6 +460,15 @@ class Node(HierarchicalSerializable):
 
     def updatePath(self):
         return _rte2.Node_updatePath(self)
+    __swig_destroy__ = _rte2.delete_Node
+    __del__ = lambda self: None
+
+    def __init__(self):
+        this = _rte2.new_Node()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
 Node_swigregister = _rte2.Node_swigregister
 Node_swigregister(Node)
 
@@ -960,6 +960,33 @@ class Int32Data(NodeContentData):
 Int32Data_swigregister = _rte2.Int32Data_swigregister
 Int32Data_swigregister(Int32Data)
 
+class NodeSerializationContext(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NodeSerializationContext, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, NodeSerializationContext, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _rte2.new_NodeSerializationContext()
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+    __swig_destroy__ = _rte2.delete_NodeSerializationContext
+    __del__ = lambda self: None
+
+    def addNode(self, pNode):
+        return _rte2.NodeSerializationContext_addNode(self, pNode)
+
+    def addContent(self, pContent):
+        return _rte2.NodeSerializationContext_addContent(self, pContent)
+
+    def serialize(self):
+        return _rte2.NodeSerializationContext_serialize(self)
+NodeSerializationContext_swigregister = _rte2.NodeSerializationContext_swigregister
+NodeSerializationContext_swigregister(NodeSerializationContext)
+
 class NodeDeserializationContext(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, NodeDeserializationContext, name, value)
@@ -976,11 +1003,14 @@ class NodeDeserializationContext(_object):
     __swig_destroy__ = _rte2.delete_NodeDeserializationContext
     __del__ = lambda self: None
 
-    def hasNext(self):
-        return _rte2.NodeDeserializationContext_hasNext(self)
+    def deserialize(self):
+        return _rte2.NodeDeserializationContext_deserialize(self)
 
-    def getNext(self):
-        return _rte2.NodeDeserializationContext_getNext(self)
+    def getNodeList(self):
+        return _rte2.NodeDeserializationContext_getNodeList(self)
+
+    def getContentPtrList(self):
+        return _rte2.NodeDeserializationContext_getContentPtrList(self)
 NodeDeserializationContext_swigregister = _rte2.NodeDeserializationContext_swigregister
 NodeDeserializationContext_swigregister(NodeDeserializationContext)
 
@@ -1049,42 +1079,6 @@ buffer_swigregister(buffer)
 def buffer_frompointer(t):
     return _rte2.buffer_frompointer(t)
 buffer_frompointer = _rte2.buffer_frompointer
-
-class SafeArrayUInt8(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, SafeArrayUInt8, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, SafeArrayUInt8, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, *args):
-        this = _rte2.new_SafeArrayUInt8(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-    __swig_destroy__ = _rte2.delete_SafeArrayUInt8
-    __del__ = lambda self: None
-
-    def moveFrom(self, other):
-        return _rte2.SafeArrayUInt8_moveFrom(self, other)
-
-    def get(self):
-        return _rte2.SafeArrayUInt8_get(self)
-
-    def size(self):
-        return _rte2.SafeArrayUInt8_size(self)
-
-    def swap(self, other):
-        return _rte2.SafeArrayUInt8_swap(self, other)
-
-    def resize(self, size):
-        return _rte2.SafeArrayUInt8_resize(self, size)
-
-    def append(self, *args):
-        return _rte2.SafeArrayUInt8_append(self, *args)
-SafeArrayUInt8_swigregister = _rte2.SafeArrayUInt8_swigregister
-SafeArrayUInt8_swigregister(SafeArrayUInt8)
 
 class IntVector(_object):
     __swig_setmethods__ = {}

@@ -189,12 +189,12 @@ namespace rte {
 		class Array
 		{
 		public:
-			Array()
-				: mPtr(nullptr), mSize(0), mActualSize(0)
+			Array(bool autoDelete = false)
+				: mPtr(nullptr), mSize(0), mActualSize(0), mAutoDelete(autoDelete)
 			{ }
 
-			explicit Array(int size)
-				: Array()
+			explicit Array(int size, bool autoDelete = false)
+				: Array(autoDelete)
 			{
 				allocate(size);
 			}
@@ -217,9 +217,16 @@ namespace rte {
 				return *this;
 			}
 
-			Array(Array&) = default;
-			Array& operator=(Array&) = default;
-			~Array() = default;
+			Array::~Array()
+			{
+				if (mAutoDelete)
+				{
+					deallocate();
+				}
+			}
+
+			Array(const Array&) = delete;
+			Array& operator=(const Array&) = delete;
 
 			T* get() { return mPtr; }
 			const T* get() const { return mPtr; }
@@ -233,6 +240,7 @@ namespace rte {
 				if (size > 0)
 				{
 					mPtr = new T[size];
+					memset(mPtr, 0x00, size);
 					//printf("allocate 0x%p, %d\n", mPtr, size);
 					mSize = size;
 					mActualSize = size;
@@ -321,10 +329,12 @@ namespace rte {
 			T* mPtr;
 			int mSize;
 			int mActualSize;
+			bool mAutoDelete;
 
 			bool reallocate_(int size)
 			{
 				auto ptr = new T[size];
+				memset(ptr, 0x00, size);
 				//printf("reallocating resize: 0x%p -> 0x%p, %d -> %d\n", mPtr, ptr, mSize, size);
 
 				if (mPtr != nullptr)
@@ -339,118 +349,6 @@ namespace rte {
 
 				return true;
 			}
-		};
-
-		template<class T>
-		class SafeArray
-		{
-		public:
-			SafeArray()
-				: mPtr(nullptr), mSize(0), mOwnPtr(false)
-			{ }
-
-			explicit SafeArray(int size)
-				: mPtr(nullptr), mSize(size)
-			{
-				if (size > 0)
-				{
-					mPtr = new T[size];
-					mOwnPtr = true;
-				}
-			}
-
-			SafeArray(SafeArray<T>&& other)
-			{
-				mPtr = other.mPtr;
-				mSize = other.mSize;
-				mOwnPtr = true;
-				other.mPtr = nullptr;
-				other.mSize = 0;
-			}
-
-			~SafeArray()
-			{
-				if (mOwnPtr)
-				{
-					mem::safeDeleteArray(&mPtr);
-				}
-				mSize = 0;
-			}
-
-			// http://stackoverflow.com/questions/8102244/swig-c-to-python-warning362-operator-ignored
-			//SafeArray<T>& operator=(const SafeArray<T>& other)
-			//{
-			//	mem::safeDelete(&mPtr);
-			//	mPtr = other.mPtr;
-			//	mSize = other.mSize;
-			//	return *this;
-			//}
-			SafeArray(const SafeArray<T>&) = delete;
-			SafeArray<T>& operator=(const SafeArray<T>&) = delete;
-
-			void moveFrom(SafeArray<T>&& other)
-			{
-				mPtr = other.mPtr;
-				mSize = other.mSize;
-
-				other.mPtr = nullptr;
-				other.mSize = 0;
-			}
-
-			T* get() { return mPtr; }
-			int size() { return mSize; }
-
-			void swap(SafeArray<T>& other)
-			{
-				std::swap(mPtr, other.mPtr);
-				std::swap(mSize, other.mSize);
-				std::swap(mOwnPtr, other.mOwnPtr);
-			}
-
-			void resize(int size)
-			{
-				if (size == mSize)
-				{
-					return;
-				}
-
-				if (size < 0)
-				{
-					mem::safeDeleteArray(&mPtr);
-					mSize = size;
-					return;
-				}
-
-				auto ptr = new T[size];
-				memcpy(ptr, mPtr, size);
-
-				mem::safeDeleteArray(&mPtr);
-				mPtr = ptr;
-				mSize = size;
-				mOwnPtr = true;
-			}
-
-			void append(T* ptr, int size)
-			{
-				auto combined = new T[mSize + size];
-				memcpy(combined, mPtr, mSize);
-				memcpy(combined + mSize, ptr, size);
-
-				mem::safeDeleteArray(&mPtr);
-				mPtr = combined;
-				mSize += size;
-			}
-
-			void append(SafeArray&& other)
-			{
-				append(other.get(), other.size());
-				other.~SafeArray();
-			}
-
-		private:
-			T* mPtr;
-			int mSize;
-			bool mOwnPtr;
 		};
 	}
 

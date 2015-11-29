@@ -11,7 +11,19 @@ namespace rte
 		int bufferSize;
 
 		TcpReceivedData() = default;
-		~TcpReceivedData() = default;
+
+		~TcpReceivedData()
+		{
+			if (mAutoDelete)
+			{
+				deallocate();
+			}
+		}
+
+		void setAutoDelete(bool enabled)
+		{
+			mAutoDelete = enabled;
+		}
 
 		TcpReceivedData clone()
 		{
@@ -43,6 +55,9 @@ namespace rte
 			mem::safeDelete(&buffer);
 			bufferSize = 0;
 		}
+
+	private:
+		bool mAutoDelete;
 	};
 
 	class TcpSentData
@@ -54,7 +69,19 @@ namespace rte
 		int sentSize;
 
 		TcpSentData() = default;
-		~TcpSentData() = default;
+
+		~TcpSentData()
+		{
+			if (mAutoDelete)
+			{
+				deallocate();
+			}
+		}
+
+		void setAutoDelete(bool enabled)
+		{
+			mAutoDelete = enabled;
+		}
 
 		TcpSentData clone()
 		{
@@ -99,6 +126,9 @@ namespace rte
 				std::to_string(bufferSize) + ", " +
 				std::to_string(sentSize);
 		}
+
+	private:
+		bool mAutoDelete;
 	};
 
 	class Socket;

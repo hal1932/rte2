@@ -1,4 +1,4 @@
-# encoding: shift-jis
+# encoding: shift_jis
 import sys
 import os
 sys.path.append(os.path.join(os.getcwd(), "..", "SwigPy"))

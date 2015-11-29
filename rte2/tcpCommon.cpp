@@ -61,7 +61,7 @@ namespace rte {
 			return true;
 		}
 
-		assert(false);
+		return false;
 	}
 
 }
